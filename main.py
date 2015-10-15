@@ -1,4 +1,6 @@
 from flask import Flask, render_template
+from models import Pokemon
+
 app = Flask(__name__)
 
 @app.route('/')
@@ -9,13 +11,12 @@ def index():
 
 @app.route('/pokemon/')
 def pokemon_id():
-	#return render_template('index.html')
-    return 'Pokemon Page'
+	return render_template('pokemon.html')
 
 @app.route('/pokemon/<int:id>')
 def pokemon(id):
-	#return render_template('index.html')
-    return 'Pokemon ' + str(id) +  ' Page'
+	
+	return render_template('pokemon_details.html')
 
 #======================================================================#
 
@@ -43,14 +44,13 @@ def move_id(id):
 
 #======================================================================#
 
-@app.route('/route')
-def route():
-    return 'Route Page'
-    #return render_template('index.html')
+@app.route('/location')
+def location():
+    return render_template('location.html')
 
-@app.route('/route/<int:id>')
-def route_id(id):
-    return 'route ' + str(id) +  ' Page'
+@app.route('/location/<int:id>')
+def location_id(id):
+    return 'Location ' + str(id) +  ' Page'
     #return render_template('index.html')
 
 

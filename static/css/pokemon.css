@@ -1,0 +1,14 @@
+.left-panel {
+    float: left;
+    width: calc(20% - 10px);
+    margin-right: 10px;
+}
+
+.right-panel {
+    float: right;
+    width: 80%;
+}
+
+.main-wrapper {
+	margin: 25px;
+}
