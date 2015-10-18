@@ -4,7 +4,9 @@
 		<link rel="stylesheet" type="text/css" href="{{ url_for('static',filename='css/bootstrap.min.css') }}">
 		<link rel="stylesheet" type="text/css" href="{{ url_for('static',filename='css/bootstrap-theme.min.css') }}">
 		<link rel="stylesheet" type="text/css" href="{{ url_for('static',filename='css/pokemon.css') }}">
+		<script src="{{ url_for('static',filename='js/jquery.js') }}"></script>
 		<script src="{{ url_for('static',filename='js/bootstrap.min.js') }}"></script>
+		<script src="{{ url_for('static',filename='js/pokemon.js') }}"></script>
 	</head>
 
 	<body style="overflow: hidden;">
@@ -23,15 +25,102 @@
 
 		<div class="main-wrapper">
 			<div class="left-panel panel panel-primary">
-				<div class="panel-heading">Panel Heading</div>
-	    		<div class="panel-body">Panel Content</div>
+				<div class="panel-heading">#001 Bulbasaur</div>
+	    		<div class="panel-body">
+					<div id="img-panel" class="panel panel-primary">
+			    		<div class="panel-body">
+			    			<img class="poke-img" src="{{ url_for('static',filename='res/001Bulbasaur.png') }}"/>
+			    		</div>
+					</div>
+					<div id="type-panel" class="inner-panel panel panel-primary">
+			    		<div class="panel-heading"><b>Type</b></div>
+	    				<div class="panel-body">Grass / Poison</div>
+					</div>
+					<div id="evo-panel" class="inner-panel panel panel-primary">
+			    		<div class="panel-heading"><b>Evolution Chain</b></div>
+	    				<div class="panel-body">Bulbasaur -> Ivysaur -> Venosaur</div>
+					</div>
+	    		</div>
 			</div>
 
-			<div class="right-panel panel panel-primary">
-				<div class="panel-heading">Panel Heading</div>
-	    		<div class="panel-body">Panel Content</div>
+			<div class="container right-panel">
+				<ul id="poke-tabs" class="nav nav-tabs" role="tablist">
+					<li role="presentation" class="active"><a href="#moves" aria-controls="moves" role="tab" data-toggle="tab">Moves</a></li>
+					<li role="presentation"><a href="#locations" aria-controls="locations" role="tab" data-toggle="tab">Locations</a></li>
+					<li role="presentation"><a href="#trainers" aria-controls="trainers" role="tab" data-toggle="tab">Trainers</a></li>
+				</ul>
+				<div class="tab-content">
+					<div role="tabpanel" class="tab-pane fade in active" id="moves">
+						<table class="table table-hover">
+							<thead>
+								<tr>
+									<th>Name</th>
+									<th>Type</th>
+									<th>PP</th>
+									<th>Power</th>
+									<th>Accuracy</th>
+								</tr>
+							</thead>
+							<tbody>
+								<tr>
+									<td>Tackle</td>
+									<td>Normal</td>
+									<td>35</td>
+									<td>10</td>
+									<td>100</td>
+								</tr>
+							</tbody>
+						</table>
+					</div>
+					<div role="tabpanel" class="tab-pane fade" id="locations">
+						<table class="table table-hover">
+							<thead>
+								<tr>
+									<th>l</th>
+									<th>Type</th>
+									<th>PP</th>
+									<th>Power</th>
+									<th>Accuracy</th>
+								</tr>
+							</thead>
+							<tbody>
+								<tr>
+									<td>Tackle</td>
+									<td>Normal</td>
+									<td>35</td>
+									<td>10</td>
+									<td>100</td>
+								</tr>
+							</tbody>
+						</table>
+					</div>
+					<div role="tabpanel" class="tab-pane fade" id="trainers">
+						<table class="table table-hover">
+							<thead>
+								<tr>
+									<th>t</th>
+									<th>Type</th>
+									<th>PP</th>
+									<th>Power</th>
+									<th>Accuracy</th>
+								</tr>
+							</thead>
+							<tbody>
+								<tr>
+									<td>Tackle</td>
+									<td>Normal</td>
+									<td>35</td>
+									<td>10</td>
+									<td>100</td>
+								</tr>
+							</tbody>
+						</table>
+					</div>
+				</div>
 			</div>
 		</div>
+
+		
 
 	</body>
 </html>
