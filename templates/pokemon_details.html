@@ -6,7 +6,6 @@
 		<link rel="stylesheet" type="text/css" href="{{ url_for('static',filename='css/pokemon.css') }}">
 		<script src="{{ url_for('static',filename='js/jquery.js') }}"></script>
 		<script src="{{ url_for('static',filename='js/bootstrap.min.js') }}"></script>
-		<script src="{{ url_for('static',filename='js/pokemon.js') }}"></script>
 	</head>
 
 	<body style="overflow: hidden;">
@@ -15,7 +14,7 @@
 				<div class="container navbar-left" id="NavigationBar">
 					<a class="navbar-brand" href="index.html"><img alt="PokeMasters" src="res/pokeball.png"></a>
 					<ul class="nav navbar-nav navbar-left">
-						<li><a href="">Pokemon</a></li>
+						<li><a href="/pokemon">Pokemon</a></li>
 						<li><a href="">Trainers</a></li>
 						<li><a href="location.html">Locations</a></li>
 					</ul>
@@ -25,20 +24,71 @@
 
 		<div class="main-wrapper">
 			<div class="left-panel panel panel-primary">
-				<div class="panel-heading">#001 Bulbasaur</div>
+				<div class="panel-heading">#{{ '%03d' % pokemon.id }} {{ pokemon.name }}</div>
 	    		<div class="panel-body">
 					<div id="img-panel" class="panel panel-primary">
 			    		<div class="panel-body">
-			    			<img class="poke-img" src="{{ url_for('static',filename='res/001Bulbasaur.png') }}"/>
+			    			<img class="poke-img" src="{{ url_for('static', filename='res/%s.png' % pokemon.imgPath) }}"/>
 			    		</div>
 					</div>
 					<div id="type-panel" class="inner-panel panel panel-primary">
 			    		<div class="panel-heading"><b>Type</b></div>
-	    				<div class="panel-body">Grass / Poison</div>
+	    				<div class="panel-body">
+	    					{% for type in pokemon.type %}
+	    						{{ type }}
+								{% if not loop.last %}
+									/
+								{% endif %}
+	    					{% endfor %}
+	    				</div>
+					</div>
+					<div id="egg-panel" class="inner-panel panel panel-primary">
+			    		<div class="panel-heading"><b>Egg Group</b></div>
+	    				<div class="panel-body">
+	    					{% for group in pokemon.eggGroup %}
+	    						{{ group }}
+								{% if not loop.last %}
+									/
+								{% endif %}
+	    					{% endfor %}
+	    				</div>
 					</div>
 					<div id="evo-panel" class="inner-panel panel panel-primary">
 			    		<div class="panel-heading"><b>Evolution Chain</b></div>
 	    				<div class="panel-body">Bulbasaur -> Ivysaur -> Venosaur</div>
+					</div>
+					<div id="stats-panel" class="inner-panel panel panel-primary">
+			    		<div class="panel-heading"><b>Base Stats</b></div>
+	    				<div class="panel-body">
+	    					<table class="table">
+	    						<tbody>
+		    						<tr> 
+		    							<td> HP </td>
+		    							<td> {{ pokemon.stats['HP'] }} </td>
+		    						</tr>
+		    						<tr> 
+		    							<td> Attack </td>
+		    							<td> {{ pokemon.stats['ATK'] }} </td>
+		    						</tr>
+		    						<tr> 
+		    							<td> Defense </td>
+		    							<td> {{ pokemon.stats['DEF'] }} </td>
+		    						</tr>
+		    						<tr> 
+		    							<td> Sp. Attack </td>
+		    							<td> {{ pokemon.stats['SPA'] }} </td>
+		    						</tr>
+		    						<tr> 
+		    							<td> Sp. Defense </td>
+		    							<td> {{ pokemon.stats['SPD'] }} </td>
+		    						</tr>
+		    						<tr> 
+		    							<td> Speed </td>
+		    							<td> {{ pokemon.stats['SPE'] }} </td>
+		    						</tr>
+	    						</tbody>
+	    					</table>
+	    				</div>
 					</div>
 	    		</div>
 			</div>
@@ -56,6 +106,7 @@
 								<tr>
 									<th>Name</th>
 									<th>Type</th>
+									<th>Category</th>
 									<th>PP</th>
 									<th>Power</th>
 									<th>Accuracy</th>
@@ -65,6 +116,7 @@
 								<tr>
 									<td>Tackle</td>
 									<td>Normal</td>
+									<td>Physical</td>
 									<td>35</td>
 									<td>10</td>
 									<td>100</td>
@@ -76,20 +128,14 @@
 						<table class="table table-hover">
 							<thead>
 								<tr>
-									<th>l</th>
-									<th>Type</th>
-									<th>PP</th>
-									<th>Power</th>
-									<th>Accuracy</th>
+									<th>Route</th>
+									<th>Region</th
 								</tr>
 							</thead>
 							<tbody>
 								<tr>
-									<td>Tackle</td>
-									<td>Normal</td>
-									<td>35</td>
-									<td>10</td>
-									<td>100</td>
+									<td>1</td>
+									<td>Kanto</td>
 								</tr>
 							</tbody>
 						</table>
@@ -98,20 +144,18 @@
 						<table class="table table-hover">
 							<thead>
 								<tr>
-									<th>t</th>
 									<th>Type</th>
-									<th>PP</th>
-									<th>Power</th>
-									<th>Accuracy</th>
+									<th>Name</th>
+									<th>Region</th>
+									<th>Route</th>
 								</tr>
 							</thead>
 							<tbody>
 								<tr>
-									<td>Tackle</td>
-									<td>Normal</td>
-									<td>35</td>
-									<td>10</td>
-									<td>100</td>
+									<td>Youngster</td>
+									<td>Joey</td>
+									<td>Kanto</td>
+									<td>1</td>
 								</tr>
 							</tbody>
 						</table>

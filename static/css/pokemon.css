@@ -29,3 +29,7 @@
 .inner-panel > .panel-body {
 	padding: 2px;
 }
+
+.pokemon-row:hover { 
+    cursor: pointer; 
+}
