@@ -26,7 +26,13 @@ routes = [
 	}
 ]
 
-function populateRoutes(uri) {
+function populateRoutes(uri, caller) {
+	var locationButtons = document.getElementsByClassName("locationButton");
+	for(var l = 0; l < locationButtons.length; l++)
+		locationButtons[l].style.background = "white";
+
+	caller.style.background = "#aaaaaa";
+
 	var routeTable = document.getElementById("routeTable");
 	console.log(routeTable.rows.length);
 
@@ -41,7 +47,11 @@ function populateRoutes(uri) {
 				var name = row.insertCell(0);
 					name.innerHTML = "<a href=\"#\">" + locations[loc].routes[route] + "</a>";
 				var avgLvl = row.insertCell(1);
-					avgLvl = 0;
+					avgLvl.innerHTML = 0;
+					avgLvl.style = "text-align: center;";
+				var numTrainers = row.insertCell(2);
+					numTrainers.innerHTML = 0;
+					numTrainers.style = "text-align: center;";
 			}
 		}
 	}
