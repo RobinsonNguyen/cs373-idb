@@ -5,6 +5,11 @@
 
 .pkmn-group {
 	position: relative;
-	width: 80%;
-	left: 20px;
+	width: 100%;
+}
+
+.loc-btn {
+	background-color: #71AD64;
+	border: 2px solid #4AA14D;
+	color: white;
 }

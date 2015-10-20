@@ -1,0 +1,16 @@
+.btn-prev {
+	position: relative;
+	left: 4px;
+	padding: 4px;
+}
+
+.btn-next {
+	position: absolute;
+	right: 4px;
+	top: 0px;
+	padding: 4px;
+}
+
+.block {
+	position: relative;
+}
