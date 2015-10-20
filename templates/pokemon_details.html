@@ -55,7 +55,22 @@
 					</div>
 					<div id="evo-panel" class="inner-panel panel panel-primary">
 			    		<div class="panel-heading"><b>Evolution Chain</b></div>
-	    				<div class="panel-body">Bulbasaur -> Ivysaur -> Venosaur</div>
+	    				<div class="panel-body">
+	    					<table class="table">
+	    						<thead>
+	    							<th> To </th>
+	    							<th> Method </th>
+	    						</thead>
+	    						<tbody>
+	    							{% for evo in pokemon.evolution %}
+		    						<tr> 
+		    							<td> {{ evo.to }} </td>
+		    							<td> {{ evo.method }} </td>
+		    						</tr>
+		    						{% endfor %}
+	    						</tbody>
+	    					</table>
+	    				</div>
 					</div>
 					<div id="stats-panel" class="inner-panel panel panel-primary">
 			    		<div class="panel-heading"><b>Base Stats</b></div>
@@ -105,22 +120,16 @@
 							<thead>
 								<tr>
 									<th>Name</th>
-									<th>Type</th>
-									<th>Category</th>
-									<th>PP</th>
-									<th>Power</th>
-									<th>Accuracy</th>
+									<th>Learned By</th>
 								</tr>
 							</thead>
 							<tbody>
-								<tr>
-									<td>Tackle</td>
-									<td>Normal</td>
-									<td>Physical</td>
-									<td>35</td>
-									<td>10</td>
-									<td>100</td>
-								</tr>
+								{% for move in pokemon.moves %}
+									<tr>
+										<td>{{ move.name }}</td>
+										<td>{{ move.learn_type }}</td>
+									</tr>
+								{% endfor %}
 							</tbody>
 						</table>
 					</div>
