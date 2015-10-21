@@ -44,7 +44,7 @@ class Moves:
 
 		self.moves = moves
 
-	def getMoveByName(self, name):
+	def getMoveByName(self, id):
 		for m in self.moves:
-			if m.name is name:
+			if m.id is id:
 				return m
