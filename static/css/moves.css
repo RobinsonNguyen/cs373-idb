@@ -1,3 +1,16 @@
-text{
-	font-size: 1.75em;
+p{
+	font-size: 1.2em;
+}
+
+.data{
+	padding-left: 2em;
+}
+
+.description{
+	padding-left: 4em;
+}
+
+body{
+	background-color: #aaaaaa;
+	color: white;
 }
