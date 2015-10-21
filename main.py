@@ -39,9 +39,9 @@ def index():
 
 #======================================================================#
 
-@app.route('/moves/<path:name>')
-def move(name):
-    move = moveContainer.getMoveByName(name)
+@app.route('/moves/<int:id>')
+def move(id):
+    move = moveContainer.getMoveByName(id)
     return render_template('moves.html', move=move)    #return render_template('index.html')
 
 @app.route('/move/<int:id>')
