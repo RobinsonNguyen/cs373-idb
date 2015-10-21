@@ -5,6 +5,7 @@ class Moves:
 	class move:
 
 		def __init__(self):
+			self.id = 0
 			self.name = ""
 			self.type = ""
 			self.category = ""
@@ -26,7 +27,9 @@ class Moves:
 		for x in data['moves']:
 			m = self.move()
 			for key, value in x.items():
-				if key == 'name':
+				if key == "id":
+					m.id = value
+				elif key == 'name':
 					m.name = value
 				elif key == 'type':
 					m.type = value
