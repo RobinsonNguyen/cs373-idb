@@ -39,7 +39,7 @@ def index():
 
 #======================================================================#
 
-@app.route('/moves/<string:name>')
+@app.route('/moves/<path:name>')
 def move(name):
     move = moveContainer.getMoveByName(name)
     return render_template('moves.html', move=move)    #return render_template('index.html')
