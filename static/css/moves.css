@@ -1,0 +1,26 @@
+p{
+	font-size: 1.2em;
+}
+
+.data{
+	padding-left: 0em;
+}
+
+.description{
+	padding-left: 4em;
+}
+
+body{
+	padding-top: 0;
+	background-color: #aaaaaa;
+	color: white;
+}
+
+.img-poke{
+	width: 130px;
+	height: 130px;
+}
+
+.poke-data{
+	width: 130px;
+}

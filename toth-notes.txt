@@ -1,0 +1,4 @@
+notes for html moves:
+
+pull nav bar from tucker's location.html
+color of background #083139
