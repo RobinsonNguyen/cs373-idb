@@ -4,7 +4,7 @@ from movesModel import Moves
 
 app = Flask(__name__)
 
-pokemonContainer = PokemonContainer()
+# pokemonContainer = PokemonContainer()
 moveContainer = Moves()
 
 @app.route('/')
