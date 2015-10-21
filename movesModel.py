@@ -25,7 +25,7 @@ class Moves:
 
 		for x in data['moves']:
 			m = self.move()
-			for key, value in x:
+			for key, value in x.items():
 				if key == 'name':
 					m.name = value
 				elif key == 'type':
