@@ -64,4 +64,4 @@ def move_id(id):
 
 if __name__ == '__main__':
     app.run(debug = True)
-    app.run(host="174.143.200.132")
+    app.run(host="174.143.200.132:8000")
