@@ -3,7 +3,12 @@
 	<head>
 		<link rel="stylesheet" type="text/css" href="{{ url_for('static',filename='css/bootstrap.min.css') }}">
 		<link rel="stylesheet" type="text/css" href="{{ url_for('static',filename='css/bootstrap-theme.min.css') }}">
+		<link rel="stylesheet" href="{{ url_for('static',filename='css/bootstrap-table.min.css') }}">
+		<link rel="stylesheet" type="text/css" href="{{ url_for('static',filename='css/pokemon.css') }}">
+		<script src="{{ url_for('static',filename='js/jquery.js') }}"></script>
 		<script src="{{ url_for('static',filename='js/bootstrap.min.js') }}"></script>
+		<script src="{{ url_for('static',filename='js/bootstrap-table.min.js') }}"></script>
+		<script src="{{ url_for('static',filename='js/pokemon.js') }}"></script>
 	</head>
 
 	<body style="overflow: hidden;">
@@ -20,8 +25,38 @@
 			</nav>
 		</div>
 
-
-		<p> List all available pokemon models </p>
+	<table id="pokemon-models" data-toggle="table" data-classes="table table-hover">
+		<thead>
+			<tr>
+				<th data-sortable="true">No.</th>
+				<th data-sortable="true">Name</th>
+				<th data-sortable="false">Type</th>
+				<th data-sortable="false">Egg Group</th>
+				<th data-sortable="true">HP</th>
+				<th data-sortable="true">Attack</th>
+				<th data-sortable="true">Defense</th>
+				<th data-sortable="true">Sp. Attack</th>
+				<th data-sortable="true">Sp. Defense</th>
+				<th data-sortable="true">Speed</th>
+			</tr>
+		</thead>
+		<tbody>
+			{% for poke in pokemon %}
+				<tr class="pokemon-row">
+					<td> {{ poke.id }} </td>
+					<td> {{ poke.name }} </td>
+					<td> {{ poke.type }} </td>
+					<td> {{ poke.eggGroup }} </td>
+					<td> {{ poke.stats['HP'] }} </td>
+					<td> {{ poke.stats['ATK'] }} </td>
+					<td> {{ poke.stats['DEF'] }} </td>
+					<td> {{ poke.stats['SPA'] }} </td>
+					<td> {{ poke.stats['SPD'] }} </td>
+					<td> {{ poke.stats['SPE'] }} </td>
+				</tr>
+			{% endfor %}
+		</tbody>
+	</table>
 
 	</body>
 </html>

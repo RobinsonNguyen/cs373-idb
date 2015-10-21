@@ -4,6 +4,7 @@
 		<link rel="stylesheet" type="text/css" href="{{ url_for('static',filename='css/bootstrap.min.css') }}">
 		<link rel="stylesheet" type="text/css" href="{{ url_for('static',filename='css/bootstrap-theme.min.css') }}">
 		<link rel="stylesheet" type="text/css" href="{{ url_for('static',filename='css/pokemon.css') }}">
+		<script src="{{ url_for('static',filename='js/jquery.js') }}"></script>
 		<script src="{{ url_for('static',filename='js/bootstrap.min.js') }}"></script>
 	</head>
 
@@ -13,7 +14,7 @@
 				<div class="container navbar-left" id="NavigationBar">
 					<a class="navbar-brand" href="index.html"><img alt="PokeMasters" src="res/pokeball.png"></a>
 					<ul class="nav navbar-nav navbar-left">
-						<li><a href="">Pokemon</a></li>
+						<li><a href="/pokemon">Pokemon</a></li>
 						<li><a href="">Trainers</a></li>
 						<li><a href="location.html">Locations</a></li>
 					</ul>
@@ -23,15 +24,156 @@
 
 		<div class="main-wrapper">
 			<div class="left-panel panel panel-primary">
-				<div class="panel-heading">Panel Heading</div>
-	    		<div class="panel-body">Panel Content</div>
+				<div class="panel-heading">#{{ '%03d' % pokemon.id }} {{ pokemon.name }}</div>
+	    		<div class="panel-body">
+					<div id="img-panel" class="panel panel-primary">
+			    		<div class="panel-body">
+			    			<img class="poke-img" src="{{ url_for('static', filename='res/%s.png' % pokemon.imgPath) }}"/>
+			    		</div>
+					</div>
+					<div id="type-panel" class="inner-panel panel panel-primary">
+			    		<div class="panel-heading"><b>Type</b></div>
+	    				<div class="panel-body">
+	    					{% for type in pokemon.type %}
+	    						{{ type }}
+								{% if not loop.last %}
+									/
+								{% endif %}
+	    					{% endfor %}
+	    				</div>
+					</div>
+					<div id="egg-panel" class="inner-panel panel panel-primary">
+			    		<div class="panel-heading"><b>Egg Group</b></div>
+	    				<div class="panel-body">
+	    					{% for group in pokemon.eggGroup %}
+	    						{{ group }}
+								{% if not loop.last %}
+									/
+								{% endif %}
+	    					{% endfor %}
+	    				</div>
+					</div>
+					<div id="evo-panel" class="inner-panel panel panel-primary">
+			    		<div class="panel-heading"><b>Evolution Chain</b></div>
+	    				<div class="panel-body">
+	    					<table class="table">
+	    						<thead>
+	    							<th> To </th>
+	    							<th> Method </th>
+	    						</thead>
+	    						<tbody>
+	    							{% for evo in pokemon.evolution %}
+		    						<tr> 
+		    							<td> {{ evo.to }} </td>
+		    							<td> {{ evo.method }} </td>
+		    						</tr>
+		    						{% endfor %}
+	    						</tbody>
+	    					</table>
+	    				</div>
+					</div>
+					<div id="stats-panel" class="inner-panel panel panel-primary">
+			    		<div class="panel-heading"><b>Base Stats</b></div>
+	    				<div class="panel-body">
+	    					<table class="table">
+	    						<tbody>
+		    						<tr> 
+		    							<td> HP </td>
+		    							<td> {{ pokemon.stats['HP'] }} </td>
+		    						</tr>
+		    						<tr> 
+		    							<td> Attack </td>
+		    							<td> {{ pokemon.stats['ATK'] }} </td>
+		    						</tr>
+		    						<tr> 
+		    							<td> Defense </td>
+		    							<td> {{ pokemon.stats['DEF'] }} </td>
+		    						</tr>
+		    						<tr> 
+		    							<td> Sp. Attack </td>
+		    							<td> {{ pokemon.stats['SPA'] }} </td>
+		    						</tr>
+		    						<tr> 
+		    							<td> Sp. Defense </td>
+		    							<td> {{ pokemon.stats['SPD'] }} </td>
+		    						</tr>
+		    						<tr> 
+		    							<td> Speed </td>
+		    							<td> {{ pokemon.stats['SPE'] }} </td>
+		    						</tr>
+	    						</tbody>
+	    					</table>
+	    				</div>
+					</div>
+	    		</div>
 			</div>
 
-			<div class="right-panel panel panel-primary">
-				<div class="panel-heading">Panel Heading</div>
-	    		<div class="panel-body">Panel Content</div>
+			<div class="container right-panel">
+				<ul id="poke-tabs" class="nav nav-tabs" role="tablist">
+					<li role="presentation" class="active"><a href="#moves" aria-controls="moves" role="tab" data-toggle="tab">Moves</a></li>
+					<li role="presentation"><a href="#locations" aria-controls="locations" role="tab" data-toggle="tab">Locations</a></li>
+					<li role="presentation"><a href="#trainers" aria-controls="trainers" role="tab" data-toggle="tab">Trainers</a></li>
+				</ul>
+				<div class="tab-content">
+					<div role="tabpanel" class="tab-pane fade in active" id="moves">
+						<table class="table table-hover">
+							<thead>
+								<tr>
+									<th>Name</th>
+									<th>Learned By</th>
+								</tr>
+							</thead>
+							<tbody>
+								{% for move in pokemon.moves %}
+									<tr>
+										<td>{{ move.name }}</td>
+										<td>{{ move.learn_type }}</td>
+									</tr>
+								{% endfor %}
+							</tbody>
+						</table>
+					</div>
+					<div role="tabpanel" class="tab-pane fade" id="locations">
+						<table class="table table-hover">
+							<thead>
+								<tr>
+									<th>Route</th>
+									<th>Region</th
+								</tr>
+							</thead>
+							<tbody>
+								<tr>
+									<td>1</td>
+									<td>Kanto</td>
+								</tr>
+							</tbody>
+						</table>
+					</div>
+					<div role="tabpanel" class="tab-pane fade" id="trainers">
+						<table class="table table-hover">
+							<thead>
+								<tr>
+									<th>Type</th>
+									<th>Name</th>
+									<th>Region</th>
+									<th>Route</th>
+								</tr>
+							</thead>
+							<tbody>
+								<tr>
+									<td>Youngster</td>
+									<td>Joey</td>
+									<td>Kanto</td>
+									<td>1</td>
+								</tr>
+							</tbody>
+						</table>
+					</div>
+				</div>
 			</div>
 		</div>
+
+		
 
 	</body>
 </html>

@@ -1,7 +1,9 @@
-from flask import Flask, render_template
-from models import Pokemon
+from flask import Flask, render_template, abort
+from models import PokemonContainer
 
 app = Flask(__name__)
+
+pokemonContainer = PokemonContainer()
 
 @app.route('/')
 def index():
@@ -11,12 +13,15 @@ def index():
 
 @app.route('/pokemon/')
 def pokemon_id():
-	return render_template('pokemon.html')
+    pokemon = pokemonContainer.GetAllPokemon()
+    return render_template('pokemon.html', pokemon=pokemon)
 
 @app.route('/pokemon/<int:id>')
 def pokemon(id):
-	
-	return render_template('pokemon_details.html')
+    pokemon = pokemonContainer.GetPokemonById(id)
+    if pokemon is None:
+        abort(404)
+    return render_template('pokemon_details.html', pokemon=pokemon)
 
 #======================================================================#
 
@@ -52,7 +57,6 @@ def location():
 def location_id(id):
     return 'Location ' + str(id) +  ' Page'
     #return render_template('index.html')
-
 
 
 
