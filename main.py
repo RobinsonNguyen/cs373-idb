@@ -1,6 +1,6 @@
 from flask import Flask, render_template, abort
 from models import PokemonContainer
-from moveModels import Moves
+from moveModel import Moves
 
 app = Flask(__name__)
 
