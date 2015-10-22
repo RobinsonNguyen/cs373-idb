@@ -43,14 +43,16 @@ def about():
 @app.route('/moves/<name>')
 def move(name):
     move = moveContainer.getMoveByName(name)
+    if pokemon is None:
+        abort(404)
+
     print(move.pp)
-    return render_template('moves.html', move=move)    #return render_template('index.html')
+    return render_template('moves.html', move=move)
 
 @app.route('/moves/')
 def move_id():
 	moves = moveContainer.getAllMoves()
 	return render_template('allMoves.html', moves=moves)
-    #return render_template('index.html')
 
 #======================================================================#
 

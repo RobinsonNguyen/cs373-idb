@@ -153,5 +153,5 @@ class Moves:
 
 	def getMoveByName(self, name):
 		for m in self.moves:
-			if m.name is name:
+			if m.name == name:
 				return m

@@ -6,7 +6,7 @@ $(document).ready(function(){
 
 	$('.move-row').click(function() {
 		moveName = $(this).find('.move-name').html().trim();
-		location.href = '/move/' + moveName;
+		location.href = '/moves/' + moveName;
 	})
 
 }); 
