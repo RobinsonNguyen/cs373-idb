@@ -43,3 +43,12 @@ th {
 tr {
 	background-color: #A2E0A3;
 }
+
+@font-face {
+	font-family: pkmn;
+	src: url('../fonts/glyphicons-halflings-regular.ttf');
+}
+
+h1 {
+	font-family: pkmn;
+}

@@ -29,10 +29,9 @@ def pokemon(name):
 
 #======================================================================#
 
-# @app.route('/trainer')
-# def trainer():
-#     return 'Trainer Page'
-#     #return render_template('index.html')
+@app.route('/about/')
+def about():
+    return render_template('about.html')
 
 # @app.route('/trainer/<int:id>')
 # def trainer_id(id):
@@ -55,9 +54,9 @@ def move_id():
 
 #======================================================================#
 
-@app.route('/locations/')
-def locations():
-    return render_template('location.html')
+# @app.route('/locations/')
+# def locations():
+#     return render_template('location.html')
 
 @app.route('/location', methods=['GET'])
 def location_id():
