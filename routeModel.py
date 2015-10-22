@@ -66,7 +66,7 @@ class RouteContainer:
 					newPokemon = self.wildPokemon()
 					for val in value:
 						if 'name' in val:
-							newPokemon.name = val['name']
+							newPokemon.name = str(val['name'])
 						if 'img' in val:
 							newPokemon.img = val['img']
 						if 'area' in val:

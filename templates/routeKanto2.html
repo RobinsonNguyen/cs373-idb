@@ -69,7 +69,15 @@
 									<th width="15%">Levels</th>
 									<th width="15%">Rate</th>
 								</tr>
-
+								
+								{% for poke in route.pokemon %}
+									<tr style="background-color: #FFFFFF;">
+										<td>{{ poke.name }}</td>
+										<td>{{ poke.area }}</td>
+										<td>{{ poke.level }}</td>
+										<td>{{ poke.rates }}</td>
+									</tr>
+								{% endfor %}
 								
 							</tbody>
 						</table>
