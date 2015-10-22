@@ -25,10 +25,14 @@ body{
 	width: 130px;
 }
 
-table:hover{
+tr:hover{
 	background-color:  #aaaaaa;
 }
 
-tr:hover{
-	background-color:  #aaaaaa;
+.move-row:hover{
+	background-color: #aaaaaa;
+}
+
+td:hover{
+	background-color: #aaaaaa;
 }
