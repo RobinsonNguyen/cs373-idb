@@ -27,7 +27,7 @@
 
 </head>
 
-<body style="background-color: #083139;">
+<body style="background-color: #4A9EA1;">
 
     <!-- Navigation -->
     <nav class="navbar navbar-inverse navbar-static-top">
@@ -83,7 +83,7 @@
                     <p class="data"><b>Speed:</b> {{pokemon.speed}}</p>
                     <p class="data"><b>Special Attack:</b> {{pokemon.sp_atk}}</p>
                     <p class="data"><b>Special Defense:</b> {{pokemon.sp_def}}</p>
-                    <p class="data"><b>Type(s):</b> {{pokemon.type}}</p>
+                    <p class="data"><b>Type(s):</b> {% for type in pokemon.type %}{{ type }}{% if not loop.last %}/{% endif %}{% endfor %}</p>
             </div>
 
             {% endfor %}
