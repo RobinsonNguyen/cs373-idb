@@ -4,7 +4,7 @@ from movesModel import Moves
 
 app = Flask(__name__)
 
-# pokemonContainer = PokemonContainer()
+pokemonContainer = PokemonContainer()
 moveContainer = Moves()
 
 @app.route('/')
@@ -13,17 +13,17 @@ def index():
 
 #======================================================================#
 
-# @app.route('/pokemon/')
-# def pokemon_id():
-#     pokemon = pokemonContainer.GetAllPokemon()
-#     return render_template('pokemon.html', pokemon=pokemon)
+@app.route('/pokemon/')
+def pokemon_id():
+    pokemon = pokemonContainer.GetAllPokemon()
+    return render_template('pokemon.html', pokemon=pokemon)
 
-# @app.route('/pokemon/<int:id>')
-# def pokemon(id):
-#     pokemon = pokemonContainer.GetPokemonById(id)
-#     if pokemon is None:
-#         abort(404)
-#     return render_template('pokemon_details.html', pokemon=pokemon)
+@app.route('/pokemon/<int:id>')
+def pokemon(id):
+    pokemon = pokemonContainer.GetPokemonById(id)
+    if pokemon is None:
+        abort(404)
+    return render_template('pokemon_details.html', pokemon=pokemon)
 
 #======================================================================#
 
