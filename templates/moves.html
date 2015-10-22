@@ -67,45 +67,53 @@
                 <h1>Pokemon who learn through level up:</h1>
             </div>
 
-            <div class="col-lg-2 thumb">
-                <div align="center">
-                    <h2>{{move.pokemonLVL[0].name}}</h2>
-                    <a class="poke-data" href="#">
-                        <img class="img-poke" src="{{ move.pokemonLVL[0].img }}" alt="">
-                    </a>
-                </div>
-                <p class="data"><b>Learns at:</b> {{move.pokemonLVL[0].lvl}}</p>
-                <p class="data"><b>HP:</b> {{move.pokemonLVL[0].hp}}</p>
-                <p class="data"><b>Attack:</b> {{move.pokemonLVL[0].atk}}</p>
-                <p class="data"><b>Defense:</b> {{move.pokemonLVL[0].defs}}</p>
-                <p class="data"><b>Speed:</b> {{move.pokemonLVL[0].speed}}</p>
-                <p class="data"><b>Special Attack:</b> {{move.pokemonLVL[0].sp_atk}}</p>
-                <p class="data"><b>Special Defense:</b> {{move.pokemonLVL[0].sp_def}}</p>
-                <p class="data"><b>Type(s):</b> {{move.pokemonLVL[0].type}}</p>
-                <p class="data"><b>Abilities:</b> {{move.pokemonLVL[0].abil}}</p>
+            {% for pokemon in move.pokemonLVL %}
+
+                <div class="col-lg-2 thumb">
+                    <div align="center">
+                        <h2>{{pokemon.name}}</h2>
+                        <a class="poke-data" href="#">
+                            <img class="img-poke" src="{{ pokemon.img }}" alt="">
+                        </a>
+                    </div>
+                    <p class="data"><b>Learns at:</b> {{pokemon.lvl}}</p>
+                    <p class="data"><b>HP:</b> {{pokemon.hp}}</p>
+                    <p class="data"><b>Attack:</b> {{pokemon.atk}}</p>
+                    <p class="data"><b>Defense:</b> {{pokemon.defs}}</p>
+                    <p class="data"><b>Speed:</b> {{pokemon.speed}}</p>
+                    <p class="data"><b>Special Attack:</b> {{pokemon.sp_atk}}</p>
+                    <p class="data"><b>Special Defense:</b> {{pokemon.sp_def}}</p>
+                    <p class="data"><b>Type(s):</b> {{pokemon.type}}</p>
+                    <p class="data"><b>Abilities:</b> {{pokemon.abil}}</p>
             </div>
+
+            {% endfor %}
 
             <div class="col-lg-12">
                 <h1>Pokemon who learn through TM:</h1>
             </div>
 
-            <div class="col-lg-2 thumb">
-                <div align="center">
-                    <a class="poke-data" href="#">
-                        <h2>{{move.pokemonTM[0].name}}</h2>
-                        <img class="img-poke" src="{{ move.pokemonTM[0].img }}" alt="">
-                    </a>
+            {% for pokemon in move.pokemonTM %}
+
+                <div class="col-lg-2 thumb">
+                    <div align="center">
+                        <a class="poke-data" href="#">
+                            <h2>{{pokemon.name}}</h2>
+                            <img class="img-poke" src="{{ pokemon.img }}" alt="">
+                        </a>
+                    </div>
+                    <p class="data"><b>Learns at:</b> {{pokemon.lvl}}</p>
+                    <p class="data"><b>HP:</b> {{pokemon.hp}}</p>
+                    <p class="data"><b>Attack:</b> {{pokemon.atk}}</p>
+                    <p class="data"><b>Defense:</b> {{pokemon.defs}}</p>
+                    <p class="data"><b>Speed:</b> {{pokemon.speed}}</p>
+                    <p class="data"><b>Special Attack:</b> {{pokemon.sp_atk}}</p>
+                    <p class="data"><b>Special Defense:</b> {{pokemon.sp_def}}</p>
+                    <p class="data"><b>Type(s):</b> {{pokemon.type}}</p>
+                    <p class="data"><b>Abilities:</b> {{pokemon.abil}}</p>
                 </div>
-                <p class="data"><b>Learns at:</b> {{move.pokemonTM[0].lvl}}</p>
-                <p class="data"><b>HP:</b> {{move.pokemonTM[0].hp}}</p>
-                <p class="data"><b>Attack:</b> {{move.pokemonTM[0].atk}}</p>
-                <p class="data"><b>Defense:</b> {{move.pokemonTM[0].defs}}</p>
-                <p class="data"><b>Speed:</b> {{move.pokemonTM[0].speed}}</p>
-                <p class="data"><b>Special Attack:</b> {{move.pokemonTM[0].sp_atk}}</p>
-                <p class="data"><b>Special Defense:</b> {{move.pokemonTM[0].sp_def}}</p>
-                <p class="data"><b>Type(s):</b> {{move.pokemonTM[0].type}}</p>
-                <p class="data"><b>Abilities:</b> {{move.pokemonTM[0].abil}}</p>
-            </div>
+
+            {% endfor %}
 
         </div>
 
