@@ -63,8 +63,9 @@ class RouteContainer:
 				if key == "routeDesc":
 					newRoute.routeDesc = value
 				if key == "wildPokemon":
-					newPokemon = self.wildPokemon()
 					for val in value:
+						print(val)
+						newPokemon = self.wildPokemon()
 						if 'name' in val:
 							newPokemon.name = str(val['name'])
 						if 'img' in val:
@@ -75,10 +76,10 @@ class RouteContainer:
 							newPokemon.levels = val['levels']
 						if 'rate' in val:
 							newPokemon.rate = val['rate']
-					newRoute.pokemon.append(newPokemon)
+						newRoute.pokemon.append(newPokemon)
 				if key == "trainers":
-					newTrainer = self.trainer()
 					for val in value:
+						newTrainer = self.trainer()
 						if 'name' in val:
 							newTrainer.name = val['name']
 						if 'area' in val:
@@ -93,17 +94,17 @@ class RouteContainer:
 								if "level" in v:
 									newTrainerPokemon.level = v["level"]
 							newTrainer.pokemon.append(newTrainerPokemon)
-					newRoute.trainers.append(newTrainer)
+						newRoute.trainers.append(newTrainer)
 				if key == "items":
-					newItem = self.item()
 					for val in value:
+						newItem = self.item()
 						if "name" in val:
 							newItem.name = val["name"]
 						if "area" in val:
 							newItem.area = val["area"]
 						if "description" in val:
 							newItem.description = val["description"]
-					newRoute.items.append(newItem)
+						newRoute.items.append(newItem)
 			routes.append(newRoute)
 		self.routes = routes;
 

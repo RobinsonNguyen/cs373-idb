@@ -27,3 +27,7 @@
 .nav.navbar-nav > li.active {
 	background-color: #2E2E2E;
 }
+
+.table > tbody > tr > td {
+     vertical-align: middle;
+}
