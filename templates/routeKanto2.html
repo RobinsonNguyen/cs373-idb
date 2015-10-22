@@ -39,13 +39,13 @@
 
 				<div class="panel-body">
 					<div class="block">
-						<button class="btn-sm btn-prev" style="color:black;">Previous Route</button>
-						<button class="btn-sm btn-next" style="color:black;">Next Route</button>
+						<button class="btn-sm btn-prev" style="color:black;">{{ route.prevRoute }}</button>
+						<button class="btn-sm btn-next" style="color:black;">{{ route.nextRoute }}</button>
 					</div>
 				</div>
 				<div class="panel-body" style="color: black;">
 					<img src="../static/res/kanto2.png" width="auto" height="auto" align="left" style="margin-right: 4px;"></img>
-					The quick brown fox jumped over the lazy dog.The quick brown fox jumped over the lazy dog.The quick brown fox jumped over the lazy dog.The quick brown fox jumped over the lazy dog.The quick brown fox jumped over the lazy dog.The quick brown fox jumped over the lazy dog.The quick brown fox jumped over the lazy dog.The quick brown fox jumped over the lazy dog.The quick brown fox jumped over the lazy dog.The quick brown fox jumped over the lazy dog.The quick brown fox jumped over the lazy dog.The quick brown fox jumped over the lazy dog.The quick brown fox jumped over the lazy dog.The quick brown fox jumped over the lazy dog.
+					{{ route.description }}
 				</div>
 				<hr>
 
@@ -72,7 +72,7 @@
 
 								{% for poke in route.pokemon %}
 									<tr style="background-color: #FFFFFF;">
-										<td><img src="{{ url_for('static', filename='res/SPRITES/%s_mini.png' % poke.name) }}"/>{{ poke.name }}</td>
+										<td><img src="{{ url_for('static', filename='res/SPRITES/%s_mini_.png' % poke.name) }}"/>{{ poke.name }}</td>
 										<td>{{ poke.area }}</td>
 										<td>{{ poke.level }}</td>
 										<td>{{ poke.rate }}</td>

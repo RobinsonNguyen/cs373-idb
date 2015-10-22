@@ -26,7 +26,7 @@ class RouteContainer:
 			self.img = ""
 			self.area = ""
 			self.levels = ""
-			self.rates = ""
+			self.rate = ""
 
 	class route:
 		def __init__(self):
@@ -73,8 +73,8 @@ class RouteContainer:
 							newPokemon.area = val['area']
 						if 'levels' in val:
 							newPokemon.levels = val['levels']
-						if 'rates' in val:
-							newPokemon.rates = val['rates']
+						if 'rate' in val:
+							newPokemon.rate = val['rate']
 					newRoute.pokemon.append(newPokemon)
 				if key == "trainers":
 					newTrainer = self.trainer()
