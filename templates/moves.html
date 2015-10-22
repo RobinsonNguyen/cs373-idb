@@ -71,8 +71,8 @@
 
                 <div class="col-lg-2 thumb">
                     <div align="center">
-                        <h2>{{pokemon.name}}</h2>
                         <a class="poke-data" href="#">
+                            <h2>{{pokemon.name}}</h2>
                             <img class="img-poke" src="{{ url_for('static', filename='res/SPRITES/%s' % pokemon.imgPath) }}" alt="">
                         </a>
                     </div>
@@ -101,7 +101,6 @@
                             <img class="img-poke" src="{{ url_for('static', filename='res/SPRITES/%s' % pokemon.imgPath) }}" alt="">
                         </a>
                     </div>
-                    <p class="data"><b>Learns by:</b> {{pokemon.tm}}</p>
                     <p class="data"><b>HP:</b> {{pokemon.hp}}</p>
                     <p class="data"><b>Attack:</b> {{pokemon.atk}}</p>
                     <p class="data"><b>Defense:</b> {{pokemon.defs}}</p>
