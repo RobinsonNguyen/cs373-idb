@@ -138,6 +138,12 @@ class Moves:
 					m.id = value
 				elif key == 'name':
 					m.name = value
+				elif key == 'power':
+					m.power = value
+				elif key == 'accuracy':
+					m.accuracy = value
+				elif key == 'pp':
+					m.pp = value
 			moves.append(m)
 
 		self.Allmoves = moves
