@@ -9,7 +9,7 @@
     <meta name="description" content="">
     <meta name="author" content="">
 
-    <title>{{ move.name }}</title>
+    <title>{{move.name}}</title>
 
     <!-- Bootstrap Core CSS -->
     <link href="../static/css/bootstrap.min.css" rel="stylesheet">
@@ -37,7 +37,7 @@
                     <li><a href="">Pokemon</a></li>
                     <li><a href="">Trainers</a></li>
                     <li><a href="../location.html">Locations</a></li>
-                    <li class="active"><a href="moves.html">Moves</a></li>
+                    <li class="active"><a href="../../moves/">Moves</a></li>
                 </ul>
             </div>
         </nav>
@@ -49,18 +49,18 @@
         <div class="row">
 
             <div class="col-lg-12">
-                <h1 class="page-header">{{ move.name }}</h1>
+                <h1 class="page-header">{{move.name}} ({{move.tm}})</h1>
             </div>
 
             <div class="col-lg-12">
                 <h3><b>Move Data:</b></h3>
-                <p class="data"><b>Type:</b> Water</p>
-                <p class="data"><b>Category:</b> Status</p>
-                <p class="data"><b>Power:</b> --</p>
-                <p class="data"><b>Accuracy:</b> --</p>
-                <p class="data"><b>PP:</b> 5</p>
+                <p class="data"><b>Type:</b> {{move.type}}</p>
+                <p class="data"><b>Category:</b> {{move.category}}</p>
+                <p class="data"><b>Power:</b> {{move.power}}</p>
+                <p class="data"><b>Accuracy:</b> {{move.accuracy}}</p>
+                <p class="data"><b>PP:</b> {{move.pp}}</p>
                 <p class="data"><b>Description:</b> </p>
-                <p class="description">Changes the weather to rain for five turns, during which water moves inflict 50% extra damage, and fire moves inflict half damage. If the user is holding damp-rock, this effect lasts for eight turns. Thunder has 100% accuracy.  If the target has used detect or protect, thunder has a (100 - accuracy)% chance to break through the protection. Solar-beam has half power. Moonlight, morning-sun, and synthesis heal only 1/4 of the user's max HP. Pokémon with swift-swim have doubled original Speed. Pokémon with forecast become water. Pokémon with dry-skin heal 1/8 max HP, Pokémon with hydration are cured of major status effects-effects, and Pokémon with rain-dish heal 1/16 max HP at the end of each turn. </p>
+                <p class="description">{{move.description}}</p>
             </div>
 
             <div class="col-lg-12">
@@ -69,20 +69,20 @@
 
             <div class="col-lg-2 thumb">
                 <div align="center">
-                    <h2>Squirtle</h2>
+                    <h2>{{move.pokemonLVL[0].name}}</h2>
                     <a class="poke-data" href="#">
-                        <img class="img-poke" src="http://pthumb.lisimg.com/image/6194230/130full.jpg" alt="">
+                        <img class="img-poke" src="{{ move.pokemonLVL[0].img }}" alt="">
                     </a>
                 </div>
-                <p class="data"><b>Learns at:</b> 33</p>
-                <p class="data"><b>HP:</b> 44</p>
-                <p class="data"><b>Attack:</b> 48</p>
-                <p class="data"><b>Defense:</b> 65</p>
-                <p class="data"><b>Speed:</b> 43</p>
-                <p class="data"><b>Special Attack:</b> 50</p>
-                <p class="data"><b>Special Defense:</b> 64</p>
-                <p class="data"><b>Type(s):</b> Water</p>
-                <p class="data"><b>Abilities:</b> Rain-dish, Torrent</p>
+                <p class="data"><b>Learns at:</b> {{move.pokemonLVL[0].lvl}}</p>
+                <p class="data"><b>HP:</b> {{move.pokemonLVL[0].hp}}</p>
+                <p class="data"><b>Attack:</b> {{move.pokemonLVL[0].atk}}</p>
+                <p class="data"><b>Defense:</b> {{move.pokemonLVL[0].defs}}</p>
+                <p class="data"><b>Speed:</b> {{move.pokemonLVL[0].speed}}</p>
+                <p class="data"><b>Special Attack:</b> {{move.pokemonLVL[0].sp_atk}}</p>
+                <p class="data"><b>Special Defense:</b> {{move.pokemonLVL[0].sp_def}}</p>
+                <p class="data"><b>Type(s):</b> {{move.pokemonLVL[0].type}}</p>
+                <p class="data"><b>Abilities:</b> {{move.pokemonLVL[0].abil}}</p>
             </div>
 
             <div class="col-lg-12">
@@ -91,20 +91,20 @@
 
             <div class="col-lg-2 thumb">
                 <div align="center">
-                    <h2>Pidgey</h2>
                     <a class="poke-data" href="#">
-                        <img class="img-poke" src="http://pthumb.lisimg.com/image/6195066/130full.jpg" alt="">
+                        <h2>{{move.pokemonTM[0].name}}</h2>
+                        <img class="img-poke" src="{{ move.pokemonTM[0].img }}" alt="">
                     </a>
                 </div>
-                <p class="data"><b>Learns by:</b> TM 18</p>
-                <p class="data"><b>HP:</b> 40</p>
-                <p class="data"><b>Attack:</b> 45</p>
-                <p class="data"><b>Defense:</b> 40</p>
-                <p class="data"><b>Speed:</b> 56</p>
-                <p class="data"><b>Special Attack:</b> 35</p>
-                <p class="data"><b>Special Defense:</b> 35</p>
-                <p class="data"><b>Type(s):</b> Normal/Flying</p>
-                <p class="data"><b>Abilities:</b> Keen-eye, Tangled-feet, Big-pecks</p>
+                <p class="data"><b>Learns at:</b> {{move.pokemonTM[0].lvl}}</p>
+                <p class="data"><b>HP:</b> {{move.pokemonTM[0].hp}}</p>
+                <p class="data"><b>Attack:</b> {{move.pokemonTM[0].atk}}</p>
+                <p class="data"><b>Defense:</b> {{move.pokemonTM[0].defs}}</p>
+                <p class="data"><b>Speed:</b> {{move.pokemonTM[0].speed}}</p>
+                <p class="data"><b>Special Attack:</b> {{move.pokemonTM[0].sp_atk}}</p>
+                <p class="data"><b>Special Defense:</b> {{move.pokemonTM[0].sp_def}}</p>
+                <p class="data"><b>Type(s):</b> {{move.pokemonTM[0].type}}</p>
+                <p class="data"><b>Abilities:</b> {{move.pokemonTM[0].abil}}</p>
             </div>
 
         </div>

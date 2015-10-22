@@ -41,9 +41,8 @@ class PokemonContainer:
 	def ReadPokemonData(self):
 		x = []
 
-		pokemonData = open('./static/json/pokemon_data.txt').read()
-
-		data = json.loads(pokemonData)
+		path = "./static/json/pokemon_data.json"
+		data = json.loads(open(path).read())
 		pokeList = data['pokemon']
 
 		for poke in pokeList:
@@ -53,6 +52,7 @@ class PokemonContainer:
 					p.id = value
 				if key == 'name':
 					p.name = value
+					p.imgPath = value + '_regular_.png'
 				if key == 'hp':
 					p.stats['HP'] = value
 				if key == 'attack':

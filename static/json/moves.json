@@ -1,22 +1,74 @@
 {"moves": [
 	{
-		"id" : 1,
+		"id" : 240,
 		"name": "Rain-dance",
+		"tm": "TM 18",
 		"type": "Water",
 		"category": "Status",
 		"power": "--",
-		"accuracy": "--",
+		"accuracy": "--%",
 		"PP": "5",
-		"description": "Changes the weather to rain for five turns, during which water moves inflict 50% extra damage, and fire moves inflict half damage. If the user is holding damp-rock, this effect lasts for eight turns. Thunder has 100% accuracy.  If the target has used detect or protect, thunder has a (100 - accuracy)% chance to break through the protection. Solar-beam has half power. Moonlight, morning-sun, and synthesis heal only 1/4 of the user's max HP. Pokémon with swift-swim have doubled original Speed. Pokémon with forecast become water. Pokémon with dry-skin heal 1/8 max HP, Pokémon with hydration are cured of major status effects-effects, and Pokémon with rain-dish heal 1/16 max HP at the end of each turn."
+		"description": "Changes the weather to rain for five turns, during which water moves inflict 50% extra damage, and fire moves inflict half damage. If the user is holding damp-rock, this effect lasts for eight turns. Thunder has 100% accuracy.  If the target has used detect or protect, thunder has a (100 - accuracy)% chance to break through the protection. Solar-beam has half power. Moonlight, morning-sun, and synthesis heal only 1/4 of the user's max HP. Pokémon with swift-swim have doubled original Speed. Pokémon with forecast become water. Pokémon with dry-skin heal 1/8 max HP, Pokémon with hydration are cured of major status effects-effects, and Pokémon with rain-dish heal 1/16 max HP at the end of each turn.",
+		"pokemon-byLVL": [{
+			"name": "Squirtle",
+			"lvl": "33",
+			"HP": "44",
+			"attack": "48",
+			"defense": "65",
+			"speed": "43",
+			"sp_atk": "50",
+			"sp_def": "64",
+			"type": "Water",
+			"abilities": "Rain-dish, Torrent",
+			"img": "http://pthumb.lisimg.com/image/6194230/130full.jpg"
+			}],
+		"pokemon-byTM": [{
+			"name": "Pidgey",
+			"tm": "TM 18",
+			"HP": "40",
+			"attack": "45",
+			"defense": "40",
+			"speed": "56",
+			"sp_atk": "35",
+			"sp_def": "35",
+			"type": "Normal/Flying",
+			"abilities": "Keen-eye, Tangled-feet, Big-pecks",
+			"img": "http://pthumb.lisimg.com/image/6195066/130full.jpg"
+			}]
 	},
 	{
-		"id" : 2,
-		"name": "Solar-beam",
-		"type": "Grass",
-		"category": "Special",
-		"power": "120",
-		"accuracy": "100%",
+		"id" : 156,
+		"name": "Rest",
+		"tm": "TM 44",
+		"type": "Psychic",
+		"category": "Status",
+		"power": "--",
+		"accuracy": "--%",
 		"PP": "10",
-		"description": "Inflicts regular damage.  User charges for one turn before attacking. During sunny-day, the charge turn is skipped. During hail, rain-dance, or sandstorm, power is halved. This move cannot be selected by sleep-talk."
+		"description": "User falls to sleep and immediately regains all its HP.  If the user has another major status effect-effect, sleep will replace it.  The user will always wake up after two turns, or one turn with early-bird. This move fail if the Pokémon cannot fall asleep due to uproar, insomnia, or vital-spirit.  It also fails if the Pokémon is at full health or is already asleep.",
+		"pokemon-byLVL": [{
+			"name": "Jigglypuff",
+			"lvl": "29",
+			"HP": "115",
+			"attack": "45",
+			"defense": "20",
+			"speed": "20",
+			"sp_atk": "45",
+			"sp_def": "25",
+			"type": "Normal/Fairy",
+			"abilities": "Cute-charm, Friend-guard",
+			"img": "http://pthumb.lisimg.com/image/6001256/130full.jpg"}],
+		"pokemon-byTM": [{
+			"name": "Wigglytuff",
+			"tm": "TM 44",
+			"HP": "140",
+			"attack": "70",
+			"defense": "45",
+			"speed": "45",
+			"sp_atk": "85",
+			"sp_def": "50",
+			"type": "Normal/Fairy",
+			"abilities": "Cute-charm, Frisk",
+			"img": "http://pthumb.lisimg.com/image/6197331/130full.jpg"}]
 	}
-	]}
+]}

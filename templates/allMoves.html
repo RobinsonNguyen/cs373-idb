@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <title>All Pokemon Moves</title>
+
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static',filename='css/bootstrap.min.css') }}">
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static',filename='css/bootstrap-theme.min.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static',filename='css/bootstrap-table.min.css') }}">
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static',filename='css/moves.css') }}">
+    <script src="{{ url_for('static',filename='js/jquery.js') }}"></script>
+    <script src="{{ url_for('static',filename='js/bootstrap.min.js') }}"></script>
+    <script src="{{ url_for('static',filename='js/bootstrap-table.min.js') }}"></script>
+    <script src="{{ url_for('static',filename='js/moves.js') }}"></script>
+
+</head>
+
+<body style="background-color: #083139;">
+
+    <h3> </h3>
+
+    <!-- Navigation -->
+    <nav class="navbar navbar-inverse navbar-static-top">
+            <div class="container navbar-left">
+                <a class="navbar-brand" href="../index.html"><img alt="PokeMasters" src="../static/res/pokeball.png"></a>
+                <ul class="nav navbar-nav ">
+                    <li><a href="">Pokemon</a></li>
+                    <li><a href="">Trainers</a></li>
+                    <li><a href="../location.html">Locations</a></li>
+                    <li class="active"><a href="moves.html">Moves</a></li>
+                </ul>
+            </div>
+        </nav>
+
+    <table id="move-models" data-toggle="table" data-classes="table table-hover">
+        <thead>
+            <tr>
+                <th data-sortable="true">id</th>
+                <th data-sortable="true">Name</th>
+                <th data-sortable="true">Power</th>
+                <th data-sortable="true">Accuracy</th>
+                <th data-sortable="true">PP</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for move in moves %}
+                <tr class="move-row">
+                    <td> {{ move.id }} </td>
+                    <td> {{ move.name }} </td>
+                    <td> {{ move.power }} </td>
+                    <td> {{ move.accuracy }} </td>
+                    <td> {{ move.pp }} </td>
+                </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+
+</body>
+
+</html>
