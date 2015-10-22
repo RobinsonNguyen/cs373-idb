@@ -59,7 +59,7 @@ def move_id():
 def location():
     return render_template('location.html')
 
-@app.route('/location/', methods=['GET'])
+@app.route('/location', methods=['GET'])
 def location_id():
     route = routeContainer.getRoutesByRegion(request.args.get("region"), request.args.get("name"))
     return render_template("routeKanto2.html", route=route)
