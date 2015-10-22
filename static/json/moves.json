@@ -20,7 +20,7 @@
 		"accuracy": "--%",
 		"PP": "10",
 		"description": "User falls to sleep and immediately regains all its HP.  If the user has another major status effect-effect, sleep will replace it.  The user will always wake up after two turns, or one turn with early-bird. This move fail if the Pokémon cannot fall asleep due to uproar, insomnia, or vital-spirit.  It also fails if the Pokémon is at full health or is already asleep."
-	}
+	},
 	{
 		"id" : 240,
 		"name": "Wake-Up Slap",
@@ -31,5 +31,5 @@
 		"accuracy": "100%",
 		"PP": "10",
 		"description": "Inflicts regular damage.  If the target is sleep, this move has double power, and the target wakes up."
-	},
+	}
 ]}
