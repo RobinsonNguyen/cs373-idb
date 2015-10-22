@@ -61,7 +61,7 @@ def locations():
 
 @app.route('/location', methods=['GET'])
 def location_id():
-    if request.method == 'GET':
+    if request.args.get("region") is not None and request.args.get("name") is not None:
         route = routeContainer.getRouteByRegion(request.args.get("region"), request.args.get("name"))
         return render_template("route_data.html", route=route)
     return render_template('location.html')

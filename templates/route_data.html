@@ -101,8 +101,8 @@
 							<tbody>
 								{% for poke in route.trainers %}
 									<tr>
-										<td rowspan="{{ poke.pokemon|length + 1 }}">{{ poke.name }}</td>
-										<td rowspan="{{ poke.pokemon|length + 1 }}">{{ poke.area }}</td>
+										<td rowspan="{{ poke.pokemon|length }}">{{ poke.name }}</td>
+										<td rowspan="{{ poke.pokemon|length }}">{{ poke.area }}</td>
 									</tr>
 									{% for p in poke.pokemon %}
 										<tr>
@@ -124,7 +124,7 @@
 								</tr>
 							</thead>
 							<tbody>
-								{% for item in route.pokemon %}
+								{% for item in route.items %}
 									<tr>
 										<td>{{ item.name }}</td>
 										<td>{{ item.area }}</td>
