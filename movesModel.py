@@ -24,6 +24,7 @@ class Moves:
 		def __init__(self):
 			self.id = 0
 			self.name = ""
+			self.tm = ""
 			self.type = ""
 			self.category = ""
 			self.power = ""
