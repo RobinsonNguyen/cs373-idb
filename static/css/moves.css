@@ -25,6 +25,10 @@ body{
 	width: 130px;
 }
 
+table:hover{
+	background-color:  #aaaaaa;
+}
+
 tr:hover{
 	background-color:  #aaaaaa;
 }
