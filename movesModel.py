@@ -64,7 +64,7 @@ class Moves:
 					m.power = value
 				elif key == 'accuracy':
 					m.accuracy = value
-				elif key == 'PP':
+				elif key == 'pp':
 					m.pp = value
 				elif key == 'description':
 					m.description = value
