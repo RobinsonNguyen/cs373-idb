@@ -1,80 +1,123 @@
 FORMAT: 1A
-HOST: http://polls.apiblueprint.org/
+HOST: pokemasters.me
 
 # pokemonproject
 
-Polls is a simple API allowing consumers to view polls and vote in them.
+Pokemon API for looking up information on Pokemon, moves, and locations.
 
-## Questions Collection [/questions]
+## Pokemon Collection [/pokemon]
 
-### List All Questions [GET]
+A list of all pokemon
 
+### List All Pokemon [GET]
+  
++ Response 200 (application/json)
+    
+        [
+            {
+                "id": 1,
+                "name": "Bulbasaur"
+            },
+            {
+                "etc..."
+            }
+        ]
+
+## Pokemon [/pokemon/{id}]
+A single pokemon with id provided.
+
+### View Pokemon [GET]
+
++ Parameters
+    + id: None(required, number) - Needed to get unique pokemon.
+
++ Response 200 (application/json)
+
+        {
+            "id": 1,
+            "name": "Bulbasaur"
+        }
+
++ Response 404 (application/json)
+
+        {
+            "error":"No pokemon here"
+        }
+
+## Move Collection [/moves]
+A list of all moves
+
+### List All Moves [GET]
+
++ Response 200 (application/json)
+
+         [
+            {
+                "id": 1,
+                "name": "Rain-dance"
+            },
+            {
+                "etc..."
+            }
+        ]
+        
+## Move [/moves/{id}]
+A single move associated with this id
+        
+### View Move [GET]
+
++ Parameters
+    + id: None(required, number) - ID of unique move.
+    
++ Response 200 (application/json)
+
+        {
+            "id": 1,
+            "name": "Rain-dance"
+        }
+
+## Location Collection [/location]
+A list of all locations
+
+### List All Locations [GET]
 + Response 200 (application/json)
 
         [
             {
-                "question": "Favourite programming language?",
-                "published_at": "2015-08-05T08:40:51.620Z",
-                "choices": [
-                    {
-                        "choice": "Swift",
-                        "votes": 2048
-                    }, {
-                        "choice": "Python",
-                        "votes": 1024
-                    }, {
-                        "choice": "Objective-C",
-                        "votes": 512
-                    }, {
-                        "choice": "Ruby",
-                        "votes": 256
-                    }
-                ]
+                "id": 1,
+                "generation": "1"
+            },
+            {
+                "etc..."
             }
         ]
+        
+## Location [/location/{id}]
+A single location at route id
 
-### Create a New Question [POST]
+### View Location [GET]
 
-You may create your own question using this action. It takes a JSON
-object containing a question and a collection of answers in the
-form of choices.
-
-+ Request (application/json)
++ Parameters
+    + id: None(required, number) - ID of unique location of a certain generation.
+    
++ Response 200 (application/json)
 
         {
-            "question": "Favourite programming language?",
-            "choices": [
-                "Swift",
-                "Python",
-                "Objective-C",
-                "Ruby"
-            ]
+            "id": 1,
+            "generation": "1"
         }
 
-+ Response 201 (application/json)
-
-    + Headers
-
-            Location: /questions/2
-
-    + Body
-
-            {
-                "question": "Favourite programming language?",
-                "published_at": "2015-08-05T08:40:51.620Z",
-                "choices": [
-                    {
-                        "choice": "Swift",
-                        "votes": 0
-                    }, {
-                        "choice": "Python",
-                        "votes": 0
-                    }, {
-                        "choice": "Objective-C",
-                        "votes": 0
-                    }, {
-                        "choice": "Ruby",
-                        "votes": 0
-                    }
-                ]
-            }
+        
+        
+        
+        
+        
+        
+        
+            
+        
+        
+        
+        
+        
+        
