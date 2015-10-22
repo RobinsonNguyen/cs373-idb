@@ -69,7 +69,7 @@
 
             {% endfor %}
 
-            {% if poke in {% for poke in move.pokemonTM[0:1] %} is defined %}{% endfor %}
+            {% if move.pokemonTM[0] is defined %}
                 
                 <div class="col-lg-12">
                     <h1>Pokemon who learn through TM:</h1>
