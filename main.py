@@ -23,7 +23,8 @@ def pokemon_id():
 @app.route('/pokemon/<name>')
 def pokemon(name):
     pokemon = pokemonContainer.GetPokemonByName(name)
-
+    if pokemon is None:
+        abort(404)
     return render_template('pokemon_details.html', pokemon=pokemon)
 
 #======================================================================#
