@@ -40,9 +40,9 @@ def about():
 
 #======================================================================#
 
-@app.route('/moves/<int:id>')
-def move(id):
-    move = moveContainer.getMoveByName(id)
+@app.route('/moves/<name>')
+def move(name):
+    move = moveContainer.getMoveByName(name)
     print(move.pp)
     return render_template('moves.html', move=move)    #return render_template('index.html')
 
@@ -53,10 +53,6 @@ def move_id():
     #return render_template('index.html')
 
 #======================================================================#
-
-@app.route('/locations/')
-def locations():
-    return render_template('location.html')
 
 @app.route('/location/')
 @app.route('/location', methods=['GET'])
@@ -69,4 +65,4 @@ def location_id():
 
 
 if __name__ == '__main__':
-    app.run(host="0.0.0.0", port=8000, debug=True)
+    app.run(host="0.0.0.0", debug=True)

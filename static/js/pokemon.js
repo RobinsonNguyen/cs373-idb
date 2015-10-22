@@ -4,4 +4,9 @@ $(document).ready(function(){
 		location.href = '/pokemon/' + e[1].trim();
 	});
 
+	$('.move-row').click(function() {
+		moveName = $(this).find('.move-name').html().trim();
+		location.href = '/move/' + moveName;
+	})
+
 }); 
