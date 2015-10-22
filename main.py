@@ -1,4 +1,4 @@
-from flask import Flask, render_template, abort
+from flask import Flask, render_template, abort, request
 from models import PokemonContainer
 from movesModel import Moves
 from routeModel import RouteContainer
@@ -66,7 +66,7 @@ def location_id():
     print("What is region? ")
     #//print(test)
     #print(request.args.get("name"))
-    #route = routeContainer.getRoutesByRegion(request.args.get("region"), request.args.get("name"))
+    route = routeContainer.getRoutesByRegion(request.args.get("region"), request.args.get("name"))
     return render_template("routeKanto2.html", route=routeContainer.routes[0])
     #return render_template('index.html')
 
