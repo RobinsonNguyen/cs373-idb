@@ -1,6 +1,6 @@
 {"routes":[
 	{
-		"region":"kanto",
+		"region":"Kanto",
 		"name":"Route 15",
 		"prevRoute":"Route 14",
 		"nextRoute":"Route 16",
