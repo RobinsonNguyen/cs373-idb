@@ -72,7 +72,7 @@
                     <div align="center">
                         <a class="poke-data" href="#">
                             <h2>{{pokemon.name}}</h2>
-                            <img class="img-poke" src="{{ url_for('static', filename='res/SPRITES/%s' % pokemon.imgPath) }}" alt="">
+                            <img class="img-poke" src="{{ url_for('static', filename='res/SPRITES/%s' % pokemon.img) }}" alt="">
                         </a>
                     </div>
                     <p class="data"><b>Learns at:</b> {{pokemon.lvl}}</p>
@@ -97,7 +97,7 @@
                     <div align="center">
                         <a class="poke-data" href="#">
                             <h2>{{pokemon.name}}</h2>
-                            <img class="img-poke" src="{{ url_for('static', filename='res/SPRITES/%s' % pokemon.imgPath) }}" alt="">
+                            <img class="img-poke" src="{{ url_for('static', filename='res/SPRITES/%s' % pokemon.img) }}" alt="">
                         </a>
                     </div>
                     <p class="data"><b>HP:</b> {{pokemon.hp}}</p>
