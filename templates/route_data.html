@@ -91,17 +91,17 @@
 
 
 					<div role="tabpanel" class="tab-pane fade" id="trainers">
-						<table class="table" style="border: 2px solid #4AA14D; color: #000000">
+						<table class="table" style="border: 2px solid #4AA14D; color: #000000" data-toggle="table" data-classes="table table-hover">
 							<tr style="background-color: #71AD64;">
-								<th>Trainer</th>
-								<th>Area</th>
-								<th>Pokemon</th>
+								<th data-sortable="true">Trainer</th>
+								<th data-sortable="true">Area</th>
+								<th data-sortable="true">Pokemon</th>
 							</tr>
 							
 							{% for poke in route.trainers %}
 									<tr style="background-color: #A2E0A3;">
-										<td rowspan="{{ poke.pokemon|length }}">{{ poke.name }}</td>
-										<td rowspan="{{ poke.pokemon|length }}">{{ poke.area }}</td>
+										<td rowspan="{{ poke.pokemon|length + 1 }}">{{ poke.name }}</td>
+										<td rowspan="{{ poke.pokemon|length + 1 }}">{{ poke.area }}</td>
 									</tr>
 									{% for p in poke.pokemon %}
 											<tr>
