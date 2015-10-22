@@ -10,13 +10,13 @@
 		<script src="../static/js/location.js"></script>
 	</head>
 
-	<body style="background-color: #F9F9F9; color:white;">
-		<nav class="navbar navbar-inverse navbar-static-top">
-			<div class="container navbar-left">
-				<a class="navbar-brand" href="index.html"><img alt="PokeMasters" src="../static/res/pokeball.png"></a>
-				<ul class="nav navbar-nav ">
+	<body style="background-color: #4A9EA1; color:white;">
+		<nav class="navbar navbar-static-top" style="background-color: #555555; border: 0px">
+			<div class="container navbar-left" style="background-color: #555555;">
+				<a class="navbar-brand" href="index.html"><img alt="PokeMasters" src="../static/res/pokeball.png" style="position: relative; top: 2px"></a>
+				<ul class="nav navbar-nav">
 					<li><a href="{{ url_for('pokemon_id') }}">Pokemon</a></li>
-					<li><a href="location.html">Locations</a></li>
+					<li class="active"><a href="{{ url_for('location') }}">Locations</a></li>
 					<li><a href="{{ url_for('move_id') }}">Moves</a></li>
 				</ul>
 			</div>
@@ -74,10 +74,10 @@
 								</tr>
 
 								{% for poke in route.pokemon %}
-									<tr style="background-color: #FFFFFF;">
+									<tr style="background-color: #A2E0A3; vertical-align: center;">
 										<td><img src="{{ url_for('static', filename='res/SPRITES/%s_mini_.png' % poke.name) }}"/>{{ poke.name }}</td>
 										<td>{{ poke.area }}</td>
-										<td>{{ poke.level }}</td>
+										<td>{{ poke.levels }}</td>
 										<td>{{ poke.rate }}</td>
 									</tr>
 								{% endfor %}
