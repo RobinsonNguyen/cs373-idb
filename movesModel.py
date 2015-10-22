@@ -151,7 +151,7 @@ class Moves:
 	def getAllMoves(self):
 		return self.Allmoves
 
-	def getMoveByName(self, id):
+	def getMoveByName(self, name):
 		for m in self.moves:
-			if m.id is id:
+			if m.name is name:
 				return m
