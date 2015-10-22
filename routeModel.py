@@ -44,7 +44,9 @@ class RouteContainer:
 		self.readInRoutes()
 
 	def readInRoutes(self):
-		routeData = json.loads(open("./static/json/routes.json").read())
+		inputFile = open("./static/json/routes.json")
+		routeData = json.loads(inputFile.read())
+		inputFile.close()
 		routes = []
 
 		for r in routeData["routes"]:
