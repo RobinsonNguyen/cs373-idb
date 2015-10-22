@@ -41,7 +41,7 @@ class Moves:
 	def ReadMoves(self):
 		pokemonContainer = PokemonContainer()
 		p = pokemonContainer.GetAllPokemon()
-		path = "./static/json/moves.json"
+		path = "./static/json/move_data.json"
 
 		data = json.loads(open(path).read())
 
@@ -64,7 +64,7 @@ class Moves:
 					m.power = value
 				elif key == 'accuracy':
 					m.accuracy = value
-				elif key == 'PP':
+				elif key == 'pp':
 					m.pp = value
 				elif key == 'description':
 					m.description = value
@@ -105,7 +105,7 @@ class Moves:
 		self.moves = moves
 
 	def ReadAllMoves(self):
-		path = "./SomeScrapingData/move_data.txt"
+		path = "./static/json/move_data.json"
 
 		data = json.loads(open(path).read())
 
