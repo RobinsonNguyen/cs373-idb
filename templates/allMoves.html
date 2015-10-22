@@ -42,6 +42,7 @@
     <table id="move-models" data-toggle="table" data-classes="table table-hover">
         <thead>
             <tr>
+                <th data-sortable="true">id</th>
                 <th data-sortable="true">Name</th>
                 <th data-sortable="true">Power</th>
                 <th data-sortable="true">Accuracy</th>
@@ -51,6 +52,7 @@
         <tbody>
             {% for move in moves %}
                 <tr class="move-row">
+                    <td> {{ move.id }} </td>
                     <td> {{ move.name }} </td>
                     <td> {{ move.power }} </td>
                     <td> {{ move.accuracy }} </td>

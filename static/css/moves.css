@@ -24,3 +24,7 @@ body{
 .poke-data{
 	width: 130px;
 }
+
+tr:hover{
+	background-color:  #aaaaaa;
+}
