@@ -41,9 +41,8 @@ class PokemonContainer:
 	def ReadPokemonData(self):
 		x = []
 
-		pokemonData = open('./static/json/pokemon_data.txt').read()
-
-		data = json.loads(pokemonData)
+		path = "./static/json/pokemon_data.json"
+		data = json.loads(open(path).read())
 		pokeList = data['pokemon']
 
 		for poke in pokeList:
