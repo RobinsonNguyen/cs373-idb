@@ -1,5 +1,5 @@
 import json
-from models import PokemonContainer
+from pokemonModel import PokemonContainer
 
 class Moves:
 

@@ -1,5 +1,5 @@
 from flask import Flask, render_template, abort, request
-from models import PokemonContainer
+from pokemonModel import PokemonContainer
 from movesModel import Moves
 from routeModel import RouteContainer
 
