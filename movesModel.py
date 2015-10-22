@@ -41,17 +41,12 @@ class Moves:
 	def ReadMoves(self):
 		pokemonContainer = PokemonContainer()
 		p = pokemonContainer.GetAllPokemon()
-<<<<<<< HEAD
-		path = "./static/json/moves.json"
+
+		path = "./static/json/move_data.json"
 		inputFile = open(path)
 		data = json.loads(inputFile.read())
 		inputFile.close()
-=======
-		path = "./static/json/move_data.json"
 
-		data = json.loads(open(path).read())
-
->>>>>>> 7416ccda5c4b198b0d90c25a825b119e7c0ae5c0
 		moves = []
 
 		for x in data['moves']:
@@ -112,17 +107,12 @@ class Moves:
 		self.moves = moves
 
 	def ReadAllMoves(self):
-<<<<<<< HEAD
-		path = "./SomeScrapingData/move_data.txt"
+
+		path = "./static/json/move_data.json"
 		inputFile = open(path)
 		data = json.loads(inputFile.read())
 		inputFile.close()
-=======
-		path = "./static/json/move_data.json"
 
-		data = json.loads(open(path).read())
-
->>>>>>> 7416ccda5c4b198b0d90c25a825b119e7c0ae5c0
 		moves = []
 
 		for x in data['moves']:
