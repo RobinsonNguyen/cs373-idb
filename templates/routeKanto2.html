@@ -67,14 +67,15 @@
 				<div class="tab-content">
 					<div role="tabpanel" class="tab-pane fade in active" id="pokemon">
 						<table class="table" style="border: 2px solid #4AA14D; color: #000000" data-toggle="table" data-classes="table table-hover">
-							<tbody>
+							<thead>
 								<tr style="background-color: #71AD64;">
 									<th width="55%" data-sortable="true">Pokemon</th>
 									<th width="15%" data-sortable="true">Area</th>
 									<th width="15%" data-sortable="true">Levels</th>
 									<th width="15%" data-sortable="true">Rate</th>
 								</tr>
-
+							</thead>
+							<tbody>
 								{% for poke in route.pokemon %}
 									<tr style="background-color: #A2E0A3;">
 										<td><img src="{{ url_for('static', filename='res/SPRITES/%s_mini_.png' % poke.name) }}"/>{{ poke.name }}</td>

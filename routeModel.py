@@ -84,15 +84,15 @@ class RouteContainer:
 						if 'area' in val:
 							newTrainer.area = val['area']
 						if 'pokemon' in val:
-							newTrainerPokemon = self.trainerPokemon()
 							for v in val["pokemon"]:
+								newTrainerPokemon = self.trainerPokemon()
 								if "name" in v:
 									newTrainerPokemon.name = v["name"]
 								if "img" in v:
 									newTrainerPokemon.img = v["img"]
 								if "level" in v:
 									newTrainerPokemon.level = v["level"]
-							newTrainer.pokemon.append(newTrainerPokemon)
+								newTrainer.pokemon.append(newTrainerPokemon)
 						newRoute.trainers.append(newTrainer)
 				if key == "items":
 					for val in value:
