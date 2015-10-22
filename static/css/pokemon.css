@@ -18,6 +18,12 @@
     max-height: 100%;
 }
 
+.panel > .panel-heading {
+    background-image: none;
+    background-color: #71AD64;
+    border-color: #71AD64;
+}
+
 .inner-panel {
 	text-align: center;
 }
@@ -28,11 +34,11 @@
 
 .inner-panel > .panel-body {
 	padding: 2px;
-    color: white;
+    color: black;
 }
 
 .panel {
-    background-color: #083139;
+    background-color: #A2E0A3;
 }
 
 .pokemon-row:hover { 
@@ -45,21 +51,33 @@
 }
 
 tr {
-    color: white;
+    color: black;
 }
 
 .nav-tabs > li > a{
-  color: white;
+  color: black;
 }
 .nav-tabs > li > a:hover{
-  background-color: #083139 ;
+  background-color: #71AD64 ;
     border: medium none;
     border-radius: 0;
-    color: white;
+    color: black;
 }
 .nav-tabs > li.active > a,
 .nav-tabs > li.active > a:focus,
 .nav-tabs > li.active > a:hover{
-    background-color: #337AB7 ;
-    color: white;
+    background-color: #71AD64 ;
+    color: black;
+}
+
+.table tbody tr > td {
+  background-color: #A2E0A3;
+}
+
+.table thead tr > th {
+  background-color: #71AD64;
+}
+
+.table-hover tbody tr:hover > td {
+  background-color: #71AD64 ;
 }

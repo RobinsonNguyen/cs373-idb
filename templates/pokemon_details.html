@@ -11,7 +11,7 @@
 		<title>{{ pokemon.name }} (Pokemon) - Pokemasters</title>
 	</head>
 
-	<body style="background-color: #083139;">
+	<body style="background-color: #4A9EA1; color:#4A9EA1;">
 		<div>
 			<nav class="navbar navbar-inverse navbar-static-top">
 				<div class="container navbar-left" id="NavigationBar">
@@ -26,15 +26,15 @@
 		</div>
 
 		<div class="main-wrapper">
-			<div class="left-panel panel panel-primary">
+			<div class="left-panel panel panel-success">
 				<div class="panel-heading">#{{ '%03d' % pokemon.id }} {{ pokemon.name }}</div>
 	    		<div class="panel-body">
-					<div id="img-panel" class="panel panel-primary">
+					<div id="img-panel" class="panel panel-success">
 			    		<div class="panel-body poke-img">
 			    			<img class="poke-img" src="{{ url_for('static', filename='res/SPRITES/%s' % pokemon.imgPath) }}"/>
 			    		</div>
 					</div>
-					<div id="type-panel" class="inner-panel panel panel-primary">
+					<div id="type-panel" class="inner-panel panel panel-success">
 			    		<div class="panel-heading"><b>Type</b></div>
 	    				<div class="panel-body">
 	    					{% for type in pokemon.type %}
@@ -45,7 +45,7 @@
 	    					{% endfor %}
 	    				</div>
 					</div>
-					<div id="egg-panel" class="inner-panel panel panel-primary">
+					<div id="egg-panel" class="inner-panel panel panel-success">
 			    		<div class="panel-heading"><b>Egg Group</b></div>
 	    				<div class="panel-body">
 	    					{% for group in pokemon.eggGroup %}
@@ -56,7 +56,7 @@
 	    					{% endfor %}
 	    				</div>
 					</div>
-					<div id="evo-panel" class="inner-panel panel panel-primary">
+					<div id="evo-panel" class="inner-panel panel panel-success">
 			    		<div class="panel-heading"><b>Evolves Into</b></div>
 	    				<div class="panel-body">
 	    						{% for evo in pokemon.evolution %}
@@ -65,7 +65,7 @@
 	    						{% endfor %}
 	    				</div>
 					</div>
-					<div id="stats-panel" class="inner-panel panel panel-primary">
+					<div id="stats-panel" class="inner-panel panel panel-success">
 			    		<div class="panel-heading"><b>Base Stats</b></div>
 	    				<div class="panel-body">
 	    					<table class="table">
