@@ -2,6 +2,23 @@ import json
 
 class Moves:
 
+	class pokemon:
+
+		def __init__(self):
+			self.name = ""
+			self.lvl = ""
+			self.tm = ""
+			self.img = ""
+			self.hp = ""
+			self.atk = ""
+			self.defs = ""
+			self.speed = ""
+			self.sp_atk = ""
+			self.sp_def = ""
+			self.type = ""
+			self.abil = ""
+
+
 	class move:
 
 		def __init__(self):
@@ -13,6 +30,8 @@ class Moves:
 			self.accuracy = ""
 			self.pp = ""
 			self.description = ""
+			self.pokemonLVL= []
+			self.pokemonTM= []
 
 	def __init__(self):
 		self.ReadMoves()
@@ -31,6 +50,8 @@ class Moves:
 					m.id = value
 				elif key == 'name':
 					m.name = value
+				elif key == 'tm':
+					m.tm = value
 				elif key == 'type':
 					m.type = value
 				elif key == 'category':
@@ -41,15 +62,67 @@ class Moves:
 					m.accuracy = value
 				elif key == 'pp':
 					m.pp = value
-				else:
+				elif key == 'description':
 					m.description = value
+				else:
+					p = self.pokemon()
+					if key == 'pokemon-byLVL':
+						for k, v in value.items():
+							if k == 'name':
+								p.name = v
+							elif k == 'lvl':
+								p.lvl = v
+							elif k == 'HP':
+								p.hp = v
+							elif k == 'attack':
+								p.atk = v
+							elif k == 'defense':
+								p.defs = v
+							elif k == 'speed':
+								p.speed = v
+							elif k == 'sp_atk':
+								p.sp_atk = v
+							elif k == 'sp_def':
+								p.sp_def = v
+							elif k == 'type':
+								p.type = v
+							elif k == 'abilities':
+								p.abil = v
+							elif k == 'img':
+								p.img = v
+						m.pokemonLVL.append(p)
+
+					elif key == 'pokemon-byTM':
+						for k, v in value.items():
+							if k == 'name':
+								p.name = v
+							elif k == 'tm':
+								p.lvl = v
+							elif k == 'HP':
+								p.hp = v
+							elif k == 'attack':
+								p.atk = v
+							elif k == 'defense':
+								p.defs = v
+							elif k == 'speed':
+								p.speed = v
+							elif k == 'sp_atk':
+								p.sp_atk = v
+							elif k == 'sp_def':
+								p.sp_def = v
+							elif k == 'type':
+								p.type = v
+							elif k == 'abilities':
+								p.abil = v
+							elif k == 'img':
+								p.img = v
+						m.pokemonTM.append(p)
+
 			moves.append(m)
 
 		self.moves = moves
 
 	def getMoveByName(self, id):
-		print(id)
 		for m in self.moves:
-			print(m)
 			if m.id is id:
 				return m
