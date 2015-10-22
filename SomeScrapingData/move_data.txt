@@ -903,7 +903,7 @@
 		"id":76,
 		"resource_uri":"/api/v1/move/76/",
 		"created":"2013-11-03T15:06:09.675825",
-		"name":"Solarbeam",
+		"name":"Solar beam",
 		"pp":10,
 		"accuracy":100,
 		"description":"Inflicts regular damage.  User charges for one turn before attacking.\n\nDuring sunny-day, the charge turn is skipped.\n\nDuring hail, rain-dance, or sandstorm, power is halved.\n\nThis move cannot be selected by sleep-talk.",

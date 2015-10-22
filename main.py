@@ -46,7 +46,8 @@ def move(id):
 
 @app.route('/moves')
 def move_id():
-    return render_template('moves.html')
+	moves = moveContainer.getAllMoves()
+	return render_template('allMoves.html', move=moves)
     #return render_template('index.html')
 
 #======================================================================#
