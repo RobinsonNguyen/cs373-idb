@@ -58,6 +58,7 @@ def move_id():
 def locations():
     return render_template('location.html')
 
+@app.route('/location/')
 @app.route('/location', methods=['GET'])
 def location_id():
     if request.args.get("region") is not None and request.args.get("name") is not None:
