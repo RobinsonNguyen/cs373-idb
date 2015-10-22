@@ -67,55 +67,55 @@ class Moves:
 				else:
 					p = self.pokemon()
 					if key == 'pokemon-byLVL':
-						for k, v in value.items():
-							if k == 'name':
-								p.name = v
-							elif k == 'lvl':
-								p.lvl = v
-							elif k == 'HP':
-								p.hp = v
-							elif k == 'attack':
-								p.atk = v
-							elif k == 'defense':
-								p.defs = v
-							elif k == 'speed':
-								p.speed = v
-							elif k == 'sp_atk':
-								p.sp_atk = v
-							elif k == 'sp_def':
-								p.sp_def = v
-							elif k == 'type':
-								p.type = v
-							elif k == 'abilities':
-								p.abil = v
-							elif k == 'img':
-								p.img = v
+						for k in value:
+							if 'name' in k:
+								p.name = k['name']
+							elif 'lvl' in k:
+								p.lvl = k['lvl']
+							elif 'HP' in k:
+								p.hp = k['HP']
+							elif 'attack' in k:
+								p.atk = k['attack']
+							elif 'defense' in k:
+								p.defs = k['defense']
+							elif 'speed' in k:
+								p.speed = k['speed']
+							elif 'sp_atk' in k:
+								p.sp_atk = k['sp_atk']
+							elif 'sp_def' in k:
+								p.sp_def = k['sp_def']
+							elif 'type' in k:
+								p.type = k['type']
+							elif 'abilities' in k:
+								p.abil = k['abilities']
+							elif 'img' in k:
+								p.img = k['img']
 						m.pokemonLVL.append(p)
 
 					elif key == 'pokemon-byTM':
-						for k, v in value.items():
-							if k == 'name':
-								p.name = v
-							elif k == 'tm':
-								p.lvl = v
-							elif k == 'HP':
-								p.hp = v
-							elif k == 'attack':
-								p.atk = v
-							elif k == 'defense':
-								p.defs = v
-							elif k == 'speed':
-								p.speed = v
-							elif k == 'sp_atk':
-								p.sp_atk = v
-							elif k == 'sp_def':
-								p.sp_def = v
-							elif k == 'type':
-								p.type = v
-							elif k == 'abilities':
-								p.abil = v
-							elif k == 'img':
-								p.img = v
+						for x in value:
+							if 'name' in k:
+								p.name = k['name']
+							elif 'tm' in k:
+								p.lvl = k['tm']
+							elif 'HP' in k:
+								p.hp = k['HP']
+							elif 'attack' in k:
+								p.atk = k['attack']
+							elif 'defense' in k:
+								p.defs = k['defense']
+							elif 'speed' in k:
+								p.speed = k['speed']
+							elif 'sp_atk' in k:
+								p.sp_atk = k['sp_atk']
+							elif 'sp_def' in k:
+								p.sp_def = k['sp_def']
+							elif 'type' in k:
+								p.type = k['type']
+							elif 'abilities' in k:
+								p.abil = k['abilities']
+							elif 'img' in k:
+								p.img = k['img']
 						m.pokemonTM.append(p)
 
 			moves.append(m)
