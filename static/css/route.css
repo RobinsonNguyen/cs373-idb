@@ -31,3 +31,7 @@
 .table > tbody > tr > td {
      vertical-align: middle;
 }
+
+.table > thead > tr > td {
+	background-color: #71AD64;
+}
