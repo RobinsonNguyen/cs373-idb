@@ -59,10 +59,10 @@ def move_id():
 # def location():
 #     return render_template('location.html')
 
-@app.route('/location', methods=['GET', 'POST'])
+@app.route('/location', methods=['GET'])
 def location_id():
     print("Testing output")
-    #test = request.form.get('region')
+    test = request.args.get('region')
     print("What is region? ")
     #//print(test)
     #print(request.args.get("name"))
