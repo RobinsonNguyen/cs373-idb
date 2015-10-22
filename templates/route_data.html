@@ -99,11 +99,13 @@
 							</tr>
 							
 							{% for poke in route.trainers %}
-									<tr style="background-color: #A2E0A3;">
+									<tr style="background-color: #A2E0A3;" rowspan="{{ len(poke.pokemon) }}">
 										<td>{{ poke.name }}</td>
 										<td>{{ poke.area }}</td>
 										{% for p in poke.pokemon %}
-											<td>{{ p.name }}</td>
+											<tr>
+												<td>{{ p.name }}</td>
+											</tr>
 										{% endfor %}
 									</tr>
 								{% endfor %}
