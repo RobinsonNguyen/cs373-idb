@@ -47,7 +47,7 @@ function populateRoutes(uri, caller) {
 			for(var route in locations[loc].routes) {
 				var row = routeTable.insertRow();
 				var name = row.insertCell(0);
-					name.innerHTML = "<a href=\"" + routes[uri-1].url + ".html\">" + locations[loc].routes[route] + "</a>";
+					name.innerHTML = "<a href=\"?region=" + routes[uri-1].region + "&name=" + routes[uri-1].name + "\">" + locations[loc].routes[route] + "</a>";
 				var avgLvl = row.insertCell(1);
 					avgLvl.innerHTML = 0;
 					avgLvl.style = "text-align: center;";
