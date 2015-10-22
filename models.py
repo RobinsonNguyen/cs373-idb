@@ -52,6 +52,7 @@ class PokemonContainer:
 					p.id = value
 				if key == 'name':
 					p.name = value
+					p.imgPath = value + '_regular_.png'
 				if key == 'hp':
 					p.stats['HP'] = value
 				if key == 'attack':
