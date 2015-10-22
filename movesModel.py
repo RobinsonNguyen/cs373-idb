@@ -1,22 +1,22 @@
 import json
+from models import PokemonContainer
 
 class Moves:
 
 	class pokemon:
 
 		def __init__(self):
+			self.id = 0
 			self.name = ""
-			self.lvl = ""
+			self.lvl = 0
 			self.tm = ""
-			self.img = ""
-			self.hp = ""
-			self.atk = ""
-			self.defs = ""
-			self.speed = ""
-			self.sp_atk = ""
-			self.sp_def = ""
-			self.type = ""
-			self.abil = ""
+			self.hp = 0
+			self.atk = 0
+			self.defs = 0
+			self.speed = 0
+			self.sp_atk = 0
+			self.sp_def = 0
+			self.type = ()
 
 
 	class move:
@@ -39,6 +39,8 @@ class Moves:
 		self.ReadAllMoves()
 
 	def ReadMoves(self):
+		pokemonContainer = PokemonContainer()
+		p = pokemonContainer.GetAllPokemon()
 		path = "./static/json/moves.json"
 
 		data = json.loads(open(path).read())
@@ -66,59 +68,37 @@ class Moves:
 					m.pp = value
 				elif key == 'description':
 					m.description = value
-				else:
-					p = self.pokemon()
-					if key == 'pokemon-byLVL':
-						for k in value:
-							if 'name' in k:
-								p.name = k['name']
-							if 'lvl' in k:
-								p.lvl = k['lvl']
-							if 'HP' in k:
-								p.hp = k['HP']
-							if 'attack' in k:
-								p.atk = k['attack']
-							if 'defense' in k:
-								p.defs = k['defense']
-							if 'speed' in k:
-								p.speed = k['speed']
-							if 'sp_atk' in k:
-								p.sp_atk = k['sp_atk']
-							if 'sp_def' in k:
-								p.sp_def = k['sp_def']
-							if 'type' in k:
-								p.type = k['type']
-							if 'abilities' in k:
-								p.abil = k['abilities']
-							if 'img' in k:
-								p.img = k['img']
-						m.pokemonLVL.append(p)
 
-					elif key == 'pokemon-byTM':
-						for k in value:
-							if 'name' in k:
-								p.name = k['name']
-							if 'tm' in k:
-								p.lvl = k['tm']
-							if 'HP' in k:
-								p.hp = k['HP']
-							if 'attack' in k:
-								p.atk = k['attack']
-							if 'defense' in k:
-								p.defs = k['defense']
-							if 'speed' in k:
-								p.speed = k['speed']
-							if 'sp_atk' in k:
-								p.sp_atk = k['sp_atk']
-							if 'sp_def' in k:
-								p.sp_def = k['sp_def']
-							if 'type' in k:
-								p.type = k['type']
-							if 'abilities' in k:
-								p.abil = k['abilities']
-							if 'img' in k:
-								p.img = k['img']
-						m.pokemonTM.append(p)
+			for x in p:
+				poke = self.pokemon()
+				for y in x.moves:
+					if y.name == m.name:
+						if y.learn_type == "level up":
+							poke.id = x.id
+							poke.name = x.name
+							poke.lvl = y.level
+							poke.hp = x.stats["HP"]
+							poke.atk = x.stats["ATK"]
+							poke.defs = x.stats["DEF"]
+							poke.speed = x.stats["SPE"]
+							poke.sp_atk = x.stats["SPA"]
+							poke.sp_def = x.stats["SPD"]
+							poke.type = x.type
+							poke.img = x.imgPath
+							m.pokemonLVL.append(poke)
+						elif y.learn_type == "machine":
+							poke.id = x.id
+							poke.name = x.name
+							poke.tm = m.tm
+							poke.hp = x.stats["HP"]
+							poke.atk = x.stats["ATK"]
+							poke.defs = x.stats["DEF"]
+							poke.speed = x.stats["SPE"]
+							poke.sp_atk = x.stats["SPA"]
+							poke.sp_def = x.stats["SPD"]
+							poke.type = x.type
+							poke.img = x.imgPath
+							m.pokemonTM.append(poke)
 
 			moves.append(m)
 
