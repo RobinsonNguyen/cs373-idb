@@ -80,9 +80,9 @@ class RouteContainer:
 					newTrainer = self.trainer()
 					for val in value:
 						if 'name' in val:
-							newPokemon.name = val['name']
+							newTrainer.name = val['name']
 						if 'area' in val:
-							newPokemon.area = val['area']
+							newTrainer.area = val['area']
 						if 'pokemon' in val:
 							newTrainerPokemon = self.trainerPokemon()
 							for v in val["pokemon"]:
@@ -111,5 +111,5 @@ class RouteContainer:
 		print(region)
 		print(name)
 		for r in self.routes:
-			if r.region is region and r.name is name:
+			if r.region == region and r.name == name:
 				return r
