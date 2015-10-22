@@ -53,14 +53,14 @@ def move_id():
 
 #======================================================================#
 
-# @app.route('/location')
-# def location():
-#     return render_template('location.html')
+@app.route('/location')
+def location():
+    return render_template('location.html')
 
-# @app.route('/location/<int:id>')
-# def location_id(id):
-#     return 'Location ' + str(id) +  ' Page'
-#     #return render_template('index.html')
+@app.route('/location/<int:id>')
+def location_id(id):
+    return 'Location ' + str(id) +  ' Page'
+    #return render_template('index.html')
 
 
 
