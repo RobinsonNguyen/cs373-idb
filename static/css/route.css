@@ -35,3 +35,11 @@
 .table > thead > tr > td {
 	background-color: #71AD64;
 }
+
+thead {
+	background-color: red;
+}
+
+tr {
+	background-color: blue;
+}
