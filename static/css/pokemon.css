@@ -85,3 +85,8 @@ tr {
 .table-hover tbody tr:hover > td {
   background-color: #71AD64 ;
 }
+
+.poke-panel {
+   padding: 0;
+   margin: 0;
+}

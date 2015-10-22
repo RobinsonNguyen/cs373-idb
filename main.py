@@ -23,8 +23,7 @@ def pokemon_id():
 @app.route('/pokemon/<name>')
 def pokemon(name):
     pokemon = pokemonContainer.GetPokemonByName(name)
-    if pokemon is None:
-        abort(404)
+
     return render_template('pokemon_details.html', pokemon=pokemon)
 
 #======================================================================#
@@ -43,9 +42,8 @@ def about():
 @app.route('/moves/<name>')
 def move(name):
     move = moveContainer.getMoveByName(name)
-    if pokemon is None:
+    if move is None:
         abort(404)
-
     print(move.pp)
     return render_template('moves.html', move=move)
 
