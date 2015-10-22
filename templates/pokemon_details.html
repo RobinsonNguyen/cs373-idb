@@ -6,9 +6,11 @@
 		<link rel="stylesheet" type="text/css" href="{{ url_for('static',filename='css/pokemon.css') }}">
 		<script src="{{ url_for('static',filename='js/jquery.js') }}"></script>
 		<script src="{{ url_for('static',filename='js/bootstrap.min.js') }}"></script>
+
+		<title>{{ pokemon.name }} (Pokemon) - Pokemasters</title>
 	</head>
 
-	<body style="overflow: hidden;">
+	<body style="background-color: #083139;">
 		<div>
 			<nav class="navbar navbar-inverse navbar-static-top">
 				<div class="container navbar-left" id="NavigationBar">
@@ -27,7 +29,7 @@
 				<div class="panel-heading">#{{ '%03d' % pokemon.id }} {{ pokemon.name }}</div>
 	    		<div class="panel-body">
 					<div id="img-panel" class="panel panel-primary">
-			    		<div class="panel-body">
+			    		<div class="panel-body poke-img">
 			    			<img class="poke-img" src="{{ url_for('static', filename='res/SPRITES/%s' % pokemon.imgPath) }}"/>
 			    		</div>
 					</div>
@@ -54,22 +56,12 @@
 	    				</div>
 					</div>
 					<div id="evo-panel" class="inner-panel panel panel-primary">
-			    		<div class="panel-heading"><b>Evolution Chain</b></div>
+			    		<div class="panel-heading"><b>Evolves Into</b></div>
 	    				<div class="panel-body">
-	    					<table class="table">
-	    						<thead>
-	    							<th> To </th>
-	    							<th> Method </th>
-	    						</thead>
-	    						<tbody>
-	    							{% for evo in pokemon.evolution %}
-		    						<tr> 
-		    							<td> {{ evo.to }} </td>
-		    							<td> {{ evo.method }} </td>
-		    						</tr>
-		    						{% endfor %}
-	    						</tbody>
-	    					</table>
+	    						{% for evo in pokemon.evolution %}
+	    							<img src="{{ url_for('static', filename='res/SPRITES/%s_mini_.png' % evo.to) }}"/>
+	    							<a href="#"> {{ evo.to }} </a>
+	    						{% endfor %}
 	    				</div>
 					</div>
 					<div id="stats-panel" class="inner-panel panel panel-primary">
@@ -112,7 +104,6 @@
 				<ul id="poke-tabs" class="nav nav-tabs" role="tablist">
 					<li role="presentation" class="active"><a href="#moves" aria-controls="moves" role="tab" data-toggle="tab">Moves</a></li>
 					<li role="presentation"><a href="#locations" aria-controls="locations" role="tab" data-toggle="tab">Locations</a></li>
-					<li role="presentation"><a href="#trainers" aria-controls="trainers" role="tab" data-toggle="tab">Trainers</a></li>
 				</ul>
 				<div class="tab-content">
 					<div role="tabpanel" class="tab-pane fade in active" id="moves">
@@ -125,7 +116,7 @@
 							</thead>
 							<tbody>
 								{% for move in pokemon.moves %}
-									<tr>
+									<tr class="pokemon-row">
 										<td>{{ move.name }}</td>
 										<td>{{ move.learn_type }}</td>
 									</tr>
@@ -142,29 +133,9 @@
 								</tr>
 							</thead>
 							<tbody>
-								<tr>
+								<tr class="pokemon-row">
 									<td>1</td>
 									<td>Kanto</td>
-								</tr>
-							</tbody>
-						</table>
-					</div>
-					<div role="tabpanel" class="tab-pane fade" id="trainers">
-						<table class="table table-hover">
-							<thead>
-								<tr>
-									<th>Type</th>
-									<th>Name</th>
-									<th>Region</th>
-									<th>Route</th>
-								</tr>
-							</thead>
-							<tbody>
-								<tr>
-									<td>Youngster</td>
-									<td>Joey</td>
-									<td>Kanto</td>
-									<td>1</td>
 								</tr>
 							</tbody>
 						</table>
