@@ -26,7 +26,7 @@
 		<div class="row" style="margin: 4px;">
 			<div class="panel panel-primary col-sm-4" style="background-color: #71AD64; border: 2px solid #4AA14D;">
 				<div class="panel-heading" style="background: #A2E0A3; border: 2px solid #4AA14D;">
-					<h3 class="panel-title" style="text-align: center; color: black;">{{Route Name}}</h3>
+					<h3 class="panel-title" style="text-align: center; color: black;">{{ route.name }}</h3>
 				</div>
 				<div class="text-center">
 					<div class="btn-group" roll="group" style="padding: 4px;" align="center">
@@ -70,18 +70,14 @@
 									<th width="15%">Rate</th>
 								</tr>
 
-								<tr style="background-color: #FFFFFF;">
-									<td>Pidgey</td>
-									<td>Grass</td>
-									<td>2-5</td>
-									<td>55%</td>
-								</tr>
-								<tr style="background-color: #FFFFFF;">
-									<td>Rattata</td>
-									<td>Grass</td>
-									<td>2-4</td>
-									<td>45%</td>
-								</tr>
+								{% for poke in route.pokemon %}
+									<tr style="background-color: #FFFFFF;">
+										<td>{{ poke.name }}</td>
+										<td>{{ poke.area }}</td>
+										<td>{{ poke.level }}</td>
+										<td>{{ poke.rates }}</td>
+									</tr>
+								{% endfor %}
 							</tbody>
 						</table>
 

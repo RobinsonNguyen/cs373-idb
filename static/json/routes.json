@@ -1,0 +1,116 @@
+{"routes":[
+	{
+		"region":"kanto",
+		"name":"Route 15",
+		"prevRoute":"Route 14",
+		"nextRoute":"Route 16",
+		"routeImg":"",
+		"routeDesc":"The route is separated into two halves by a long ledge, placing the northern half on a hill. The northern half can be accessed by using Cut to remove a tree at its eastern entrance on Route 14. Trainers can travel from the northern half to the southern half at any time by hopping the ledge; however, the reverse is not possible.",
+		"wildPokemon":[
+			{
+				"name":"Pidgey",
+				"img":"",
+				"area":"Grass",
+				"levels":"25,27",
+				"rate":"20%"
+			}],
+		"trainers":[
+			{
+				"name":"Jr. Trainer",
+				"area":"North path",
+				"pokemon":[
+					{
+						"name":"Clefairy",
+						"img":"",
+						"level":"33"
+					}]
+			}],
+		"items":[
+			{
+				"name":"TM18(Rain Dance)",
+				"area":"Western portion of the norther half (requires Cut)",
+				"description":"Rain Dance is a non-damaging Water-type move introduced in Generation II."
+			}]
+	},
+	{
+		"region":"Johto",
+		"name":"Route 30",
+		"prevRoute":"Route 29",
+		"nextRoute":"Route 31",
+		"routeImg":"",
+		"routeDesc":"Route 30 is the second route encountered by Trainers in Johto. From its southern terminus at Cherrygrove, the route turns northeast to avoid a ledge on the route that overlooks a patch of grass. Heading south, this ledge can be used to avoid the grass altogether. ",
+		"wildPokemon":[
+			{
+				"name":"Poliwhirl",
+				"img":"",
+				"area":"Surfing",
+				"levels":"20-24",
+				"rate":"10%"
+			}],
+		"trainers":[
+			{
+				"name":"Youngster Joey",
+				"area":"",
+				"pokemon":[
+					{
+						"name":"Rattata",
+						"img":"",
+						"level":"4"
+					}]
+			}],
+		"items":[
+			{
+				"name":"Potion",
+				"area":"Near the entrance to the route, on the eastern side ",
+				"description":"It can be used during or outside of a battle to restore a Pokémon's HP."
+			}]
+	},
+	{
+		"region":"Johto",
+		"name":"Route 31",
+		"prevRoute":"Route 30",
+		"nextRoute":"Route 32",
+		"routeImg":"",
+		"routeDesc":"This route is the third route that Trainers starting in New Bark Town will arrive at.",
+		"wildPokemon":[
+			{
+				"name":"Poliwag",
+				"img":"",
+				"area":"Surfing",
+				"levels":"15-24",
+				"rate":"90%"
+			}],
+		"trainers":[
+			{
+				"name":"Bug Catcher Wade",
+				"area":"",
+				"pokemon":[
+					{
+						"name":"Caterpie",
+						"img":"",
+						"level":"2"
+					},
+					{
+						"name":"Caterpie",
+						"img":"",
+						"level":"2"
+					},
+					{
+						"name":"Weedle",
+						"img":"",
+						"level":"3"
+					},
+					{
+						"name":"Caterpie",
+						"img":"",
+						"level":"2"
+					}]
+			}],
+		"items":[
+			{
+				"name":"TM44 (Rest)",
+				"area":"From the man standing by the small pond after delivering him a Spearow from his friend on Route 35",
+				"description":"A move thing"
+			}]
+	}]
+}
