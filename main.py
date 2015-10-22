@@ -1,11 +1,13 @@
 from flask import Flask, render_template, abort
 from models import PokemonContainer
 from movesModel import Moves
+from routeModel import RouteContainer
 
 app = Flask(__name__)
 
 pokemonContainer = PokemonContainer()
 moveContainer = Moves()
+routeContainer = RouteContainer()
 
 @app.route('/')
 def index():
@@ -57,8 +59,9 @@ def move_id():
 def location():
     return render_template('location.html')
 
-@app.route('/location/<int:id>')
-def location_id(id):
+@app.route('/location/', methods=['GET'])
+def location_id():
+
     return 'Location ' + str(id) +  ' Page'
     #return render_template('index.html')
 
