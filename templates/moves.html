@@ -73,7 +73,7 @@
                     <div align="center">
                         <h2>{{pokemon.name}}</h2>
                         <a class="poke-data" href="#">
-                            <img class="img-poke" src="{{ pokemon.img }}" alt="">
+                            <img class="img-poke" src="{{ url_for('static', filename='res/SPRITES/%s' % pokemon.imgPath) }}" alt="">
                         </a>
                     </div>
                     <p class="data"><b>Learns at:</b> {{pokemon.lvl}}</p>
@@ -84,7 +84,6 @@
                     <p class="data"><b>Special Attack:</b> {{pokemon.sp_atk}}</p>
                     <p class="data"><b>Special Defense:</b> {{pokemon.sp_def}}</p>
                     <p class="data"><b>Type(s):</b> {{pokemon.type}}</p>
-                    <p class="data"><b>Abilities:</b> {{pokemon.abil}}</p>
             </div>
 
             {% endfor %}
@@ -99,10 +98,10 @@
                     <div align="center">
                         <a class="poke-data" href="#">
                             <h2>{{pokemon.name}}</h2>
-                            <img class="img-poke" src="{{ pokemon.img }}" alt="">
+                            <img class="img-poke" src="{{ url_for('static', filename='res/SPRITES/%s' % pokemon.imgPath) }}" alt="">
                         </a>
                     </div>
-                    <p class="data"><b>Learns at:</b> {{pokemon.lvl}}</p>
+                    <p class="data"><b>Learns by:</b> {{pokemon.tm}}</p>
                     <p class="data"><b>HP:</b> {{pokemon.hp}}</p>
                     <p class="data"><b>Attack:</b> {{pokemon.atk}}</p>
                     <p class="data"><b>Defense:</b> {{pokemon.defs}}</p>
@@ -110,7 +109,6 @@
                     <p class="data"><b>Special Attack:</b> {{pokemon.sp_atk}}</p>
                     <p class="data"><b>Special Defense:</b> {{pokemon.sp_def}}</p>
                     <p class="data"><b>Type(s):</b> {{pokemon.type}}</p>
-                    <p class="data"><b>Abilities:</b> {{pokemon.abil}}</p>
                 </div>
 
             {% endfor %}

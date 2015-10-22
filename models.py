@@ -92,6 +92,8 @@ class PokemonContainer:
 								move.name = v
 							if k == 'learn_type':
 								move.learn_type = v
+							if k == 'level':
+								move.level = v
 						moves.append(move)
 					p.moves = moves
 				if key == 'evolutions':
