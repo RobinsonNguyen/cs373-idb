@@ -1,3 +1,7 @@
+body {
+    background-color: #4A9EA1; 
+}
+
 .left-panel {
     float: left;
     width: calc(20% - 10px);
@@ -55,10 +59,11 @@ tr {
 }
 
 .nav-tabs > li > a{
-  color: black;
+    color: black;
+    background-color: #A2E0A3 ;
 }
 .nav-tabs > li > a:hover{
-  background-color: #71AD64 ;
+    background-color: #71AD64 ;
     border: medium none;
     border-radius: 0;
     color: black;
@@ -80,4 +85,9 @@ tr {
 
 .table-hover tbody tr:hover > td {
   background-color: #71AD64 ;
+}
+
+.poke-panel {
+   padding: 0;
+   margin: 0;
 }

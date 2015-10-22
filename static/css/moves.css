@@ -12,8 +12,6 @@ p{
 
 body{
 	padding-top: 0;
-	background-color: #aaaaaa;
-	color: white;
 }
 
 .img-poke{
@@ -30,5 +28,5 @@ tr:hover{
 }
 
 h2{
-	color: white;
+	color: black;
 }

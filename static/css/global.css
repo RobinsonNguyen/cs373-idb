@@ -1,0 +1,16 @@
+body {
+    background-color: #4A9EA1; 
+    color: black;
+}
+
+.table tbody tr > td {
+  background-color: #A2E0A3;
+}
+
+.table thead tr > th {
+  background-color: #71AD64;
+}
+
+.table-hover tbody tr:hover > td {
+  background-color: #71AD64 ;
+}

@@ -1,5 +1,5 @@
 from flask import Flask, render_template, abort, request
-from models import PokemonContainer
+from pokemonModel import PokemonContainer
 from movesModel import Moves
 from routeModel import RouteContainer
 
@@ -43,9 +43,8 @@ def about():
 @app.route('/moves/<name>')
 def move(name):
     move = moveContainer.getMoveByName(name)
-    if pokemon is None:
+    if move is None:
         abort(404)
-
     print(move.pp)
     return render_template('moves.html', move=move)
 

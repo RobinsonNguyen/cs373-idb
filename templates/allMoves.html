@@ -1,43 +1,16 @@
-<!DOCTYPE html>
-<html lang="en">
+{% extends "base.html" %}
 
-<head>
+    {% block head %}
 
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="description" content="">
-    <meta name="author" content="">
+        <link rel="stylesheet" type="text/css" href="{{ url_for('static',filename='css/moves.css') }}">
+        <script src="{{ url_for('static',filename='js/moves.js') }}"></script>
+        <title>Moves - PokeMasters</title>
 
-    <title>Moves - PokeMasters</title>
+    {% endblock %}
 
-    <link rel="stylesheet" type="text/css" href="{{ url_for('static',filename='css/bootstrap.min.css') }}">
-    <link rel="stylesheet" type="text/css" href="{{ url_for('static',filename='css/bootstrap-theme.min.css') }}">
-    <link rel="stylesheet" href="{{ url_for('static',filename='css/bootstrap-table.min.css') }}">
-    <link rel="stylesheet" type="text/css" href="{{ url_for('static',filename='css/pokemon.css') }}">
-    <script src="{{ url_for('static',filename='js/jquery.js') }}"></script>
-    <script src="{{ url_for('static',filename='js/bootstrap.min.js') }}"></script>
-    <script src="{{ url_for('static',filename='js/bootstrap-table.min.js') }}"></script>
-    <script src="{{ url_for('static',filename='js/moves.js') }}"></script>
+    {% block content %}
 
-</head>
-
-<body style="background-color: #4A9EA1; color: white;">
-
-    <h3> </h3>
-
-    <!-- Navigation -->
-    <nav class="navbar navbar-inverse navbar-static-top">
-            <div class="container navbar-left">
-                <a class="navbar-brand" href="../"><img alt="PokeMasters" src="../static/res/pokeball.png"></a>
-                <ul class="nav navbar-nav ">
-                    <li><a href="../pokemon">Pokemon</a></li>
-                    <li><a href="../location">Locations</a></li>
-                    <li class="active"><a href="../moves">Moves</a></li>
-                </ul>
-            </div>
-        </nav>
-
+    <h2 style="text-align: center;">Moves</h2>
     <table id="move-models" data-toggle="table" data-classes="table table-hover">
         <thead>
             <tr>
@@ -60,7 +33,4 @@
             {% endfor %}
         </tbody>
     </table>
-
-</body>
-
-</html>
+    {% endblock %}

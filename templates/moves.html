@@ -1,45 +1,27 @@
-<!DOCTYPE html>
-<html lang="en">
+{% extends "base.html" %}
 
-<head>
+    {% block head %}
 
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="description" content="">
-    <meta name="author" content="">
+        <title>{{move.name}} (Move) - PokeMaster</title>
 
-    <title>{{move.name}} (Move) - PokeMaster</title>
+        <!-- Custom CSS -->
+        <link href="../static/css/thumbnail-gallery.css" rel="stylesheet">
+        <link href="../static/css/moves.css" rel="stylesheet">
+        <!-- jQuery -->
+        <script src="../static/js/jquery.js"></script>
+        <!-- Bootstrap Core JavaScript -->
+        <script src="../static/js/bootstrap.min.js"></script>
 
-    <!-- Bootstrap Core CSS -->
-    <link href="../static/css/bootstrap.min.css" rel="stylesheet">
+        <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+        <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+        <!--[if lt IE 9]>
+            <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+            <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+        <![endif]-->
 
-    <!-- Custom CSS -->
-    <link href="../static/css/thumbnail-gallery.css" rel="stylesheet">
-    <link href="../static/css/moves.css" rel="stylesheet">
+    {% endblock %}
 
-    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
-    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
-    <!--[if lt IE 9]>
-        <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
-        <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
-    <![endif]-->
-
-</head>
-
-<body style="background-color: #4A9EA1; color: white;">
-
-    <!-- Navigation -->
-    <nav class="navbar navbar-inverse navbar-static-top">
-            <div class="container navbar-left">
-                <a class="navbar-brand" href="../../"><img alt="PokeMasters" src="../static/res/pokeball.png"></a>
-                <ul class="nav navbar-nav ">
-                    <li><a href="../../pokemon/">Pokemon</a></li>
-                    <li><a href="../../location">Locations</a></li>
-                    <li class="active"><a href="../">Moves</a></li>
-                </ul>
-            </div>
-        </nav>
+    {% block content %}
 
     <!-- Page Content -->
     <div class="container">
@@ -48,7 +30,7 @@
         <div class="row">
 
             <div class="col-lg-12">
-                <h1 class="page-header">{{move.name}} ({{move.tm}})</h1>
+                <h1 class="page-header">{{move.name}} <!-- ({{move.tm}}) --></h1>
             </div>
 
             <div class="col-lg-12">
@@ -70,7 +52,7 @@
 
                 <div class="col-lg-2 thumb">
                     <div align="center">
-                        <a class="poke-data" href="#">
+                        <a class="poke-data" href="../../pokemon/{{pokemon.name}}">
                             <h2>{{pokemon.name}}</h2>
                             <img class="img-poke" src="{{ url_for('static', filename='res/SPRITES/%s' % pokemon.img) }}" alt="">
                         </a>
@@ -87,29 +69,33 @@
 
             {% endfor %}
 
-            <div class="col-lg-12">
-                <h1>Pokemon who learn through TM:</h1>
-            </div>
-
-            {% for pokemon in move.pokemonTM %}
-
-                <div class="col-lg-2 thumb">
-                    <div align="center">
-                        <a class="poke-data" href="#">
-                            <h2>{{pokemon.name}}</h2>
-                            <img class="img-poke" src="{{ url_for('static', filename='res/SPRITES/%s' % pokemon.img) }}" alt="">
-                        </a>
-                    </div>
-                    <p class="data"><b>HP:</b> {{pokemon.hp}}</p>
-                    <p class="data"><b>Attack:</b> {{pokemon.atk}}</p>
-                    <p class="data"><b>Defense:</b> {{pokemon.defs}}</p>
-                    <p class="data"><b>Speed:</b> {{pokemon.speed}}</p>
-                    <p class="data"><b>Special Attack:</b> {{pokemon.sp_atk}}</p>
-                    <p class="data"><b>Special Defense:</b> {{pokemon.sp_def}}</p>
-                    <p class="data"><b>Type(s):</b> {{pokemon.type}}</p>
+            {% if move.pokemonTM[0] is defined %}
+                
+                <div class="col-lg-12">
+                    <h1>Pokemon who learn through TM:</h1>
                 </div>
 
-            {% endfor %}
+                {% for pokemon in move.pokemonTM %}
+
+                    <div class="col-lg-2 thumb">
+                        <div align="center">
+                            <a class="poke-data" href="../../pokemon/{{pokemon.name}}">
+                                <h2>{{pokemon.name}}</h2>
+                                <img class="img-poke" src="{{ url_for('static', filename='res/SPRITES/%s' % pokemon.img) }}" alt="">
+                            </a>
+                        </div>
+                        <p class="data"><b>HP:</b> {{pokemon.hp}}</p>
+                        <p class="data"><b>Attack:</b> {{pokemon.atk}}</p>
+                        <p class="data"><b>Defense:</b> {{pokemon.defs}}</p>
+                        <p class="data"><b>Speed:</b> {{pokemon.speed}}</p>
+                        <p class="data"><b>Special Attack:</b> {{pokemon.sp_atk}}</p>
+                        <p class="data"><b>Special Defense:</b> {{pokemon.sp_def}}</p>
+                        <p class="data"><b>Type(s):</b> {% for type in pokemon.type %}{{ type }}{% if not loop.last %}/{% endif %}{% endfor %}</p>
+                    </div>
+
+                {% endfor %}
+
+            {% endif %}
 
         </div>
 
@@ -127,12 +113,4 @@
     </div>
     <!-- /.container -->
 
-    <!-- jQuery -->
-    <script src="../static/js/jquery.js"></script>
-
-    <!-- Bootstrap Core JavaScript -->
-    <script src="../static/js/bootstrap.min.js"></script>
-
-</body>
-
-</html>
+{% endblock %}

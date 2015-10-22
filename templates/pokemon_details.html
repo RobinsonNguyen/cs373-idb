@@ -1,32 +1,16 @@
-<!DOCTYPE html>
-<html>
-	<head>
-		<link rel="stylesheet" type="text/css" href="{{ url_for('static',filename='css/bootstrap.min.css') }}">
-		<link rel="stylesheet" type="text/css" href="{{ url_for('static',filename='css/bootstrap-theme.min.css') }}">
+{% extends "base.html" %}
+
+	{% block head %}
 		<link rel="stylesheet" type="text/css" href="{{ url_for('static',filename='css/pokemon.css') }}">
-		<script src="{{ url_for('static',filename='js/jquery.js') }}"></script>
-		<script src="{{ url_for('static',filename='js/bootstrap.min.js') }}"></script>
 		<script src="{{ url_for('static',filename='js/pokemon.js') }}"></script>
 
 		<title>{{ pokemon.name }} (Pokemon) - Pokemasters</title>
-	</head>
 
-	<body style="background-color: #4A9EA1; color: white;">
-		<div>
-			<nav class="navbar navbar-inverse navbar-static-top">
-				<div class="container navbar-left" id="NavigationBar">
-					<a class="navbar-brand" href="../../"><img alt="PokeMasters" src="../static/res/pokeball.png"></a>
-					<ul class="nav navbar-nav navbar-left">
-						<li><a class="active" href="../../pokemon">Pokemon</a></li>
-						<li><a href="../location">Locations</a></li>
-						<li><a href="../moves/">Moves</a></li>
-					</ul>
-				</div>
-			</nav>
-		</div>
+	{% endblock %}
 
+	{% block content %}
 		<div class="main-wrapper">
-			<div class="left-panel panel panel-success">
+			<div class="panel panel-success col-sm-2 poke-panel">
 				<div class="panel-heading">#{{ '%03d' % pokemon.id }} {{ pokemon.name }}</div>
 	    		<div class="panel-body">
 					<div id="img-panel" class="panel panel-success">
@@ -101,7 +85,7 @@
 	    		</div>
 			</div>
 
-			<div class="container right-panel">
+			<div class="container col-sm-10">
 				<ul id="poke-tabs" class="nav nav-tabs" role="tablist">
 					<li role="presentation" class="active"><a href="#moves" aria-controls="moves" role="tab" data-toggle="tab">Moves</a></li>
 					<li role="presentation"><a href="#locations" aria-controls="locations" role="tab" data-toggle="tab">Locations</a></li>
@@ -130,19 +114,21 @@
 							<thead>
 								<tr>
 									<th>Route</th>
-									<th>Region</th
+									<th>Region</th>
+									<th>Method</th>
 								</tr>
 							</thead>
 							<tbody>
+								{% for move in pokemon.moves %}
 								<tr class="pokemon-row">
 									<td>1</td>
 									<td>Kanto</td>
 								</tr>
+								{% endfor %}
 							</tbody>
 						</table>
 					</div>
 				</div>
 			</div>
 		</div>
-	</body>
-</html>
+	{%endblock%}
