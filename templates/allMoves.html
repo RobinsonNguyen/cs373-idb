@@ -17,6 +17,8 @@
     <!-- Custom CSS -->
     <link href="../static/css/thumbnail-gallery.css" rel="stylesheet">
 
+    <script src="../static/js/moves.js"></script>
+
     <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
     <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
     <!--[if lt IE 9]>
@@ -55,7 +57,7 @@
         <tbody>
             {% for move in moves %}
                 <tr class="move-row">
-                    <td href="../moves/'.${{move.id}}.'"> {{ move.name }} </td>
+                    <td> {{ move.name }} </td>
                     <td> {{ move.power }} </td>
                     <td> {{ move.accuracy }} </td>
                     <td> {{ move.pp }} </td>

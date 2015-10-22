@@ -42,6 +42,7 @@ def index():
 @app.route('/moves/<int:id>')
 def move(id):
     move = moveContainer.getMoveByName(id)
+    print(move.pp)
     return render_template('moves.html', move=move)    #return render_template('index.html')
 
 @app.route('/moves')

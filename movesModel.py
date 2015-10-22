@@ -61,7 +61,7 @@ class Moves:
 					m.power = value
 				elif key == 'accuracy':
 					m.accuracy = value
-				elif key == 'pp':
+				elif key == 'PP':
 					m.pp = value
 				elif key == 'description':
 					m.description = value
@@ -71,25 +71,25 @@ class Moves:
 						for k in value:
 							if 'name' in k:
 								p.name = k['name']
-							elif 'lvl' in k:
+							if 'lvl' in k:
 								p.lvl = k['lvl']
-							elif 'HP' in k:
+							if 'HP' in k:
 								p.hp = k['HP']
-							elif 'attack' in k:
+							if 'attack' in k:
 								p.atk = k['attack']
-							elif 'defense' in k:
+							if 'defense' in k:
 								p.defs = k['defense']
-							elif 'speed' in k:
+							if 'speed' in k:
 								p.speed = k['speed']
-							elif 'sp_atk' in k:
+							if 'sp_atk' in k:
 								p.sp_atk = k['sp_atk']
-							elif 'sp_def' in k:
+							if 'sp_def' in k:
 								p.sp_def = k['sp_def']
-							elif 'type' in k:
+							if 'type' in k:
 								p.type = k['type']
-							elif 'abilities' in k:
+							if 'abilities' in k:
 								p.abil = k['abilities']
-							elif 'img' in k:
+							if 'img' in k:
 								p.img = k['img']
 						m.pokemonLVL.append(p)
 
@@ -97,25 +97,25 @@ class Moves:
 						for k in value:
 							if 'name' in k:
 								p.name = k['name']
-							elif 'tm' in k:
+							if 'tm' in k:
 								p.lvl = k['tm']
-							elif 'HP' in k:
+							if 'HP' in k:
 								p.hp = k['HP']
-							elif 'attack' in k:
+							if 'attack' in k:
 								p.atk = k['attack']
-							elif 'defense' in k:
+							if 'defense' in k:
 								p.defs = k['defense']
-							elif 'speed' in k:
+							if 'speed' in k:
 								p.speed = k['speed']
-							elif 'sp_atk' in k:
+							if 'sp_atk' in k:
 								p.sp_atk = k['sp_atk']
-							elif 'sp_def' in k:
+							if 'sp_def' in k:
 								p.sp_def = k['sp_def']
-							elif 'type' in k:
+							if 'type' in k:
 								p.type = k['type']
-							elif 'abilities' in k:
+							if 'abilities' in k:
 								p.abil = k['abilities']
-							elif 'img' in k:
+							if 'img' in k:
 								p.img = k['img']
 						m.pokemonTM.append(p)
 
