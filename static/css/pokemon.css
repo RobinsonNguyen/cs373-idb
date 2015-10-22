@@ -28,8 +28,38 @@
 
 .inner-panel > .panel-body {
 	padding: 2px;
+    color: white;
+}
+
+.panel {
+    background-color: #083139;
 }
 
 .pokemon-row:hover { 
-    cursor: pointer; 
+    cursor: pointer;    
+    color: black;
+}
+
+.poke-img {
+    background-color: white;
+}
+
+tr {
+    color: white;
+}
+
+.nav-tabs > li > a{
+  color: white;
+}
+.nav-tabs > li > a:hover{
+  background-color: #083139 ;
+    border: medium none;
+    border-radius: 0;
+    color: white;
+}
+.nav-tabs > li.active > a,
+.nav-tabs > li.active > a:focus,
+.nav-tabs > li.active > a:hover{
+    background-color: #337AB7 ;
+    color: white;
 }

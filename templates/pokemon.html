@@ -9,9 +9,11 @@
 		<script src="{{ url_for('static',filename='js/bootstrap.min.js') }}"></script>
 		<script src="{{ url_for('static',filename='js/bootstrap-table.min.js') }}"></script>
 		<script src="{{ url_for('static',filename='js/pokemon.js') }}"></script>
+
+		<title>Pokemon - Pokemasters</title>
 	</head>
 
-	<body style="overflow: hidden;">
+	<body style="background-color: #083139;">
 		<div>
 			<nav class="navbar navbar-inverse navbar-static-top">
 				<div class="container navbar-left" id="NavigationBar">
@@ -30,8 +32,6 @@
 			<tr>
 				<th data-sortable="true">No.</th>
 				<th data-sortable="true">Name</th>
-				<th data-sortable="false">Type</th>
-				<th data-sortable="false">Egg Group</th>
 				<th data-sortable="true">HP</th>
 				<th data-sortable="true">Attack</th>
 				<th data-sortable="true">Defense</th>
@@ -45,8 +45,6 @@
 				<tr class="pokemon-row">
 					<td> {{ poke.id }} </td>
 					<td> {{ poke.name }} </td>
-					<td> {{ poke.type }} </td>
-					<td> {{ poke.eggGroup }} </td>
 					<td> {{ poke.stats['HP'] }} </td>
 					<td> {{ poke.stats['ATK'] }} </td>
 					<td> {{ poke.stats['DEF'] }} </td>

@@ -34,6 +34,10 @@ class PokemonContainer:
 		for p in self.pokemon:
 			if p.id is id:
 				return p
+	def GetPokemonByName(self, name):
+		for p in self.pokemon:
+			if p.name == name:
+				return p
 
 	def GetAllPokemon(self):
 		return self.pokemon
@@ -96,7 +100,13 @@ class PokemonContainer:
 						evo = self.Evolution()
 						for k, v in e.items():
 							if k == 'method':
-								evo.method = v
+								if v == 'level_up':
+									evo.method = 'Level Up'
+								if v == 'trade':
+									evo.method = 'Trade'
+								if v == 'stone':
+									evo.method = 'Stone'
+
 							if k == 'to':
 								evo.to = v
 						evolution.append(evo)
