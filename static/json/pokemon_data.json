@@ -1,147 +1,147 @@
 {
    "pokemon":[
       {
-         "national_id":1,
-         "pkdx_id":1,
+         "national_id":16,
+         "pkdx_id":16,
          "egg_groups":[
             {
-               "resource_uri":"/api/v1/egg/7/",
-               "name":"Plant"
-            },
-            {
-               "resource_uri":"/api/v1/egg/1/",
-               "name":"Monster"
+               "resource_uri":"/api/v1/egg/4/",
+               "name":"Flying"
             }
          ],
-         "hp":45,
+         "hp":40,
          "descriptions":[
             {
-               "resource_uri":"/api/v1/description/4/",
-               "name":"bulbasaur_gen_1"
+               "resource_uri":"/api/v1/description/246/",
+               "name":"pidgey_gen_2"
             },
             {
-               "resource_uri":"/api/v1/description/5/",
-               "name":"bulbasaur_gen_1"
+               "resource_uri":"/api/v1/description/247/",
+               "name":"pidgey_gen_3"
             },
             {
-               "resource_uri":"/api/v1/description/6/",
-               "name":"bulbasaur_gen_1"
+               "resource_uri":"/api/v1/description/240/",
+               "name":"pidgey_gen_1"
             },
             {
-               "resource_uri":"/api/v1/description/7/",
-               "name":"bulbasaur_gen_2"
+               "resource_uri":"/api/v1/description/241/",
+               "name":"pidgey_gen_1"
             },
             {
-               "resource_uri":"/api/v1/description/8/",
-               "name":"bulbasaur_gen_2"
+               "resource_uri":"/api/v1/description/242/",
+               "name":"pidgey_gen_1"
             },
             {
-               "resource_uri":"/api/v1/description/9/",
-               "name":"bulbasaur_gen_3"
+               "resource_uri":"/api/v1/description/243/",
+               "name":"pidgey_gen_1"
             },
             {
-               "resource_uri":"/api/v1/description/10/",
-               "name":"bulbasaur_gen_3"
+               "resource_uri":"/api/v1/description/244/",
+               "name":"pidgey_gen_1"
             },
             {
-               "resource_uri":"/api/v1/description/11/",
-               "name":"bulbasaur_gen_3"
+               "resource_uri":"/api/v1/description/255/",
+               "name":"pidgey_gen_6"
             },
             {
-               "resource_uri":"/api/v1/description/12/",
-               "name":"bulbasaur_gen_4"
+               "resource_uri":"/api/v1/description/248/",
+               "name":"pidgey_gen_3"
             },
             {
-               "resource_uri":"/api/v1/description/13/",
-               "name":"bulbasaur_gen_4"
+               "resource_uri":"/api/v1/description/249/",
+               "name":"pidgey_gen_3"
             },
             {
-               "resource_uri":"/api/v1/description/14/",
-               "name":"bulbasaur_gen_4"
+               "resource_uri":"/api/v1/description/250/",
+               "name":"pidgey_gen_4"
             },
             {
-               "resource_uri":"/api/v1/description/15/",
-               "name":"bulbasaur_gen_5"
+               "resource_uri":"/api/v1/description/251/",
+               "name":"pidgey_gen_4"
             },
             {
-               "resource_uri":"/api/v1/description/2/",
-               "name":"bulbasaur_gen_1"
+               "resource_uri":"/api/v1/description/252/",
+               "name":"pidgey_gen_4"
             },
             {
-               "resource_uri":"/api/v1/description/3/",
-               "name":"bulbasaur_gen_1"
+               "resource_uri":"/api/v1/description/253/",
+               "name":"pidgey_gen_5"
+            },
+            {
+               "resource_uri":"/api/v1/description/254/",
+               "name":"pidgey_gen_6"
+            },
+            {
+               "resource_uri":"/api/v1/description/245/",
+               "name":"pidgey_gen_2"
             }
          ],
          "sprites":[
             {
-               "resource_uri":"/api/v1/sprite/2/",
-               "name":"bulbasaur"
-            },
-            {
-               "resource_uri":"/api/v1/sprite/1/",
-               "name":"bulbasaur"
+               "resource_uri":"/api/v1/sprite/17/",
+               "name":"pidgey"
             }
          ],
-         "speed":45,
+         "speed":56,
          "abilities":[
             {
-               "resource_uri":"/api/v1/ability/34/",
-               "name":"chlorophyll"
+               "resource_uri":"/api/v1/ability/51/",
+               "name":"keen-eye"
             },
             {
-               "resource_uri":"/api/v1/ability/65/",
-               "name":"overgrow"
+               "resource_uri":"/api/v1/ability/77/",
+               "name":"tangled-feet"
+            },
+            {
+               "resource_uri":"/api/v1/ability/145/",
+               "name":"big-pecks"
             }
          ],
          "total":0,
-         "ev_yield":"1 special attack",
-         "growth_rate":"medium slow",
-         "defense":49,
+         "ev_yield":"",
+         "growth_rate":"",
+         "defense":40,
          "egg_cycles":0,
          "happiness":0,
-         "attack":49,
-         "modified":"2013-11-30T13:59:47.261100",
+         "attack":45,
+         "modified":"2013-11-23T13:13:24.090509",
          "evolutions":[
             {
                "method":"level_up",
-               "level":16,
-               "resource_uri":"/api/v1/pokemon/2/",
-               "to":"Ivysaur"
+               "level":18,
+               "resource_uri":"/api/v1/pokemon/17/",
+               "to":"Pidgeotto"
             }
          ],
-         "exp":64,
-         "height":"7",
-         "sp_atk":65,
+         "exp":50,
+         "height":"3",
+         "sp_atk":35,
          "types":[
             {
-               "resource_uri":"/api/v1/type/4/",
-               "name":"poison"
+               "resource_uri":"/api/v1/type/1/",
+               "name":"normal"
             },
             {
-               "resource_uri":"/api/v1/type/12/",
-               "name":"grass"
+               "resource_uri":"/api/v1/type/3/",
+               "name":"flying"
             }
          ],
-         "created":"2013-11-03T15:05:41.260678",
-         "resource_uri":"/api/v1/pokemon/1/",
-         "weight":"69",
+         "created":"2013-11-03T15:05:41.299457",
+         "resource_uri":"/api/v1/pokemon/16/",
+         "weight":"18",
          "catch_rate":0,
-         "male_female_ratio":"87.5/12.5",
-         "species":"seed pokemon",
+         "male_female_ratio":"",
+         "species":"",
          "moves":[
             {
-               "resource_uri":"/api/v1/move/20/",
-               "name":"Bind",
-               "learn_type":"tutor"
+               "level":53,
+               "resource_uri":"/api/v1/move/542/",
+               "name":"Hurricane",
+               "learn_type":"level up"
             },
             {
-               "resource_uri":"/api/v1/move/520/",
-               "name":"Grass-pledge",
-               "learn_type":"tutor"
-            },
-            {
-               "resource_uri":"/api/v1/move/497/",
-               "name":"Echoed-voice",
+               "resource_uri":"/api/v1/move/526/",
+               "name":"Work-up",
                "learn_type":"machine"
             },
             {
@@ -150,34 +150,14 @@
                "learn_type":"machine"
             },
             {
-               "resource_uri":"/api/v1/move/474/",
-               "name":"Venoshock",
-               "learn_type":"machine"
-            },
-            {
-               "resource_uri":"/api/v1/move/438/",
-               "name":"Power-whip",
-               "learn_type":"egg move"
-            },
-            {
-               "resource_uri":"/api/v1/move/124/",
-               "name":"Sludge",
-               "learn_type":"egg move"
-            },
-            {
-               "resource_uri":"/api/v1/move/81/",
-               "name":"String-shot",
+               "resource_uri":"/api/v1/move/466/",
+               "name":"Ominous-wind",
                "learn_type":"tutor"
             },
             {
-               "resource_uri":"/api/v1/move/282/",
-               "name":"Knock-off",
+               "resource_uri":"/api/v1/move/257/",
+               "name":"Heat-wave",
                "learn_type":"tutor"
-            },
-            {
-               "resource_uri":"/api/v1/move/447/",
-               "name":"Grass-knot",
-               "learn_type":"machine"
             },
             {
                "resource_uri":"/api/v1/move/445/",
@@ -185,545 +165,36 @@
                "learn_type":"machine"
             },
             {
-               "resource_uri":"/api/v1/move/437/",
-               "name":"Leaf-storm",
-               "learn_type":"egg move"
-            },
-            {
-               "resource_uri":"/api/v1/move/412/",
-               "name":"Energy-ball",
+               "resource_uri":"/api/v1/move/432/",
+               "name":"Defog",
                "learn_type":"machine"
             },
             {
-               "level":37,
-               "resource_uri":"/api/v1/move/402/",
-               "name":"Seed-bomb",
+               "resource_uri":"/api/v1/move/413/",
+               "name":"Brave-bird",
+               "learn_type":"egg move"
+            },
+            {
+               "level":49,
+               "resource_uri":"/api/v1/move/403/",
+               "name":"Air-slash",
                "learn_type":"level up"
             },
             {
-               "level":31,
-               "resource_uri":"/api/v1/move/388/",
-               "name":"Worry-seed",
-               "learn_type":"level up"
-            },
-            {
-               "resource_uri":"/api/v1/move/363/",
-               "name":"Natural-gift",
-               "learn_type":"machine"
-            },
-            {
-               "resource_uri":"/api/v1/move/275/",
-               "name":"Ingrain",
-               "learn_type":"egg move"
-            },
-            {
-               "resource_uri":"/api/v1/move/267/",
-               "name":"Nature-power",
-               "learn_type":"egg move"
-            },
-            {
-               "resource_uri":"/api/v1/move/133/",
-               "name":"Amnesia",
-               "learn_type":"egg move"
-            },
-            {
-               "resource_uri":"/api/v1/move/345/",
-               "name":"Magical-leaf",
-               "learn_type":"egg move"
-            },
-            {
-               "resource_uri":"/api/v1/move/331/",
-               "name":"Bullet-seed",
-               "learn_type":"machine"
-            },
-            {
-               "resource_uri":"/api/v1/move/320/",
-               "name":"Grasswhistle",
-               "learn_type":"egg move"
-            },
-            {
-               "resource_uri":"/api/v1/move/290/",
-               "name":"Secret-power",
-               "learn_type":"machine"
-            },
-            {
-               "resource_uri":"/api/v1/move/263/",
-               "name":"Facade",
-               "learn_type":"machine"
-            },
-            {
-               "resource_uri":"/api/v1/move/249/",
-               "name":"Rock-smash",
-               "learn_type":"machine"
-            },
-            {
-               "resource_uri":"/api/v1/move/188/",
-               "name":"Sludge-bomb",
-               "learn_type":"machine"
-            },
-            {
-               "resource_uri":"/api/v1/move/70/",
-               "name":"Strength",
-               "learn_type":"machine"
-            },
-            {
-               "resource_uri":"/api/v1/move/241/",
-               "name":"Sunny-day",
-               "learn_type":"machine"
-            },
-            {
-               "resource_uri":"/api/v1/move/237/",
-               "name":"Hidden-power",
-               "learn_type":"machine"
-            },
-            {
-               "level":39,
-               "resource_uri":"/api/v1/move/235/",
-               "name":"Synthesis",
-               "learn_type":"level up"
-            },
-            {
-               "level":25,
-               "resource_uri":"/api/v1/move/230/",
-               "name":"Sweet-scent",
-               "learn_type":"level up"
-            },
-            {
-               "resource_uri":"/api/v1/move/219/",
-               "name":"Safeguard",
-               "learn_type":"egg move"
-            },
-            {
-               "resource_uri":"/api/v1/move/218/",
-               "name":"Frustration",
-               "learn_type":"machine"
-            },
-            {
-               "resource_uri":"/api/v1/move/216/",
-               "name":"Return",
-               "learn_type":"machine"
-            },
-            {
-               "resource_uri":"/api/v1/move/214/",
-               "name":"Sleep-talk",
-               "learn_type":"machine"
-            },
-            {
-               "resource_uri":"/api/v1/move/213/",
-               "name":"Attract",
-               "learn_type":"machine"
-            },
-            {
-               "resource_uri":"/api/v1/move/210/",
-               "name":"Fury-cutter",
-               "learn_type":"machine"
-            },
-            {
-               "resource_uri":"/api/v1/move/207/",
-               "name":"Swagger",
-               "learn_type":"machine"
-            },
-            {
-               "resource_uri":"/api/v1/move/204/",
-               "name":"Charm",
-               "learn_type":"egg move"
-            },
-            {
-               "resource_uri":"/api/v1/move/203/",
-               "name":"Endure",
-               "learn_type":"machine"
-            },
-            {
-               "resource_uri":"/api/v1/move/202/",
-               "name":"Giga-drain",
-               "learn_type":"machine"
-            },
-            {
-               "resource_uri":"/api/v1/move/189/",
-               "name":"Mud-slap",
-               "learn_type":"machine"
-            },
-            {
-               "resource_uri":"/api/v1/move/182/",
-               "name":"Protect",
-               "learn_type":"machine"
-            },
-            {
-               "resource_uri":"/api/v1/move/174/",
-               "name":"Curse",
-               "learn_type":"machine"
-            },
-            {
-               "resource_uri":"/api/v1/move/173/",
-               "name":"Snore",
-               "learn_type":"machine"
-            },
-            {
-               "resource_uri":"/api/v1/move/148/",
-               "name":"Flash",
-               "learn_type":"machine"
-            },
-            {
-               "resource_uri":"/api/v1/move/130/",
-               "name":"Skull-bash",
-               "learn_type":"egg move"
-            },
-            {
-               "resource_uri":"/api/v1/move/113/",
-               "name":"Light-screen",
-               "learn_type":"egg move"
-            },
-            {
-               "resource_uri":"/api/v1/move/111/",
-               "name":"Defense-curl",
-               "learn_type":"machine"
-            },
-            {
-               "resource_uri":"/api/v1/move/80/",
-               "name":"Petal-dance",
-               "learn_type":"egg move"
-            },
-            {
-               "resource_uri":"/api/v1/move/29/",
-               "name":"Headbutt",
-               "learn_type":"machine"
-            },
-            {
-               "resource_uri":"/api/v1/move/13/",
-               "name":"Razor-wind",
-               "learn_type":"egg move"
-            },
-            {
-               "resource_uri":"/api/v1/move/164/",
-               "name":"Substitute",
-               "learn_type":"machine"
-            },
-            {
-               "resource_uri":"/api/v1/move/156/",
-               "name":"Rest",
-               "learn_type":"machine"
-            },
-            {
-               "resource_uri":"/api/v1/move/117/",
-               "name":"Bide",
-               "learn_type":"machine"
-            },
-            {
-               "resource_uri":"/api/v1/move/115/",
-               "name":"Reflect",
-               "learn_type":"machine"
-            },
-            {
-               "resource_uri":"/api/v1/move/104/",
-               "name":"Double-team",
-               "learn_type":"machine"
-            },
-            {
-               "resource_uri":"/api/v1/move/102/",
-               "name":"Mimic",
-               "learn_type":"machine"
-            },
-            {
-               "resource_uri":"/api/v1/move/99/",
-               "name":"Rage",
-               "learn_type":"machine"
-            },
-            {
-               "resource_uri":"/api/v1/move/92/",
-               "name":"Toxic",
+               "resource_uri":"/api/v1/move/369/",
+               "name":"U-turn",
                "learn_type":"machine"
             },
             {
                "level":41,
-               "resource_uri":"/api/v1/move/79/",
-               "name":"Sleep-powder",
+               "resource_uri":"/api/v1/move/366/",
+               "name":"Tailwind",
                "learn_type":"level up"
             },
             {
-               "level":20,
-               "resource_uri":"/api/v1/move/77/",
-               "name":"Poisonpowder",
-               "learn_type":"level up"
-            },
-            {
-               "level":48,
-               "resource_uri":"/api/v1/move/76/",
-               "name":"Solarbeam",
-               "learn_type":"level up"
-            },
-            {
-               "level":27,
-               "resource_uri":"/api/v1/move/75/",
-               "name":"Razor-leaf",
-               "learn_type":"level up"
-            },
-            {
-               "level":34,
-               "resource_uri":"/api/v1/move/74/",
-               "name":"Growth",
-               "learn_type":"level up"
-            },
-            {
-               "level":7,
-               "resource_uri":"/api/v1/move/73/",
-               "name":"Leech-seed",
-               "learn_type":"level up"
-            },
-            {
-               "resource_uri":"/api/v1/move/72/",
-               "name":"Mega-drain",
+               "resource_uri":"/api/v1/move/365/",
+               "name":"Pluck",
                "learn_type":"machine"
-            },
-            {
-               "level":1,
-               "resource_uri":"/api/v1/move/45/",
-               "name":"Growl",
-               "learn_type":"level up"
-            },
-            {
-               "resource_uri":"/api/v1/move/38/",
-               "name":"Double-edge",
-               "learn_type":"machine"
-            },
-            {
-               "resource_uri":"/api/v1/move/36/",
-               "name":"Take-down",
-               "learn_type":"machine"
-            },
-            {
-               "resource_uri":"/api/v1/move/34/",
-               "name":"Body-slam",
-               "learn_type":"machine"
-            },
-            {
-               "level":1,
-               "resource_uri":"/api/v1/move/33/",
-               "name":"Tackle",
-               "learn_type":"level up"
-            },
-            {
-               "level":13,
-               "resource_uri":"/api/v1/move/22/",
-               "name":"Vine-whip",
-               "learn_type":"level up"
-            },
-            {
-               "resource_uri":"/api/v1/move/15/",
-               "name":"Cut",
-               "learn_type":"machine"
-            },
-            {
-               "resource_uri":"/api/v1/move/14/",
-               "name":"Swords-dance",
-               "learn_type":"machine"
-            }
-         ],
-         "sp_def":65,
-         "name":"Bulbasaur"
-      },
-      {
-         "national_id":2,
-         "pkdx_id":2,
-         "egg_groups":[
-            {
-               "resource_uri":"/api/v1/egg/7/",
-               "name":"Plant"
-            },
-            {
-               "resource_uri":"/api/v1/egg/1/",
-               "name":"Monster"
-            }
-         ],
-         "hp":60,
-         "descriptions":[
-            {
-               "resource_uri":"/api/v1/description/20/",
-               "name":"ivysaur_gen_1"
-            },
-            {
-               "resource_uri":"/api/v1/description/21/",
-               "name":"ivysaur_gen_2"
-            },
-            {
-               "resource_uri":"/api/v1/description/22/",
-               "name":"ivysaur_gen_2"
-            },
-            {
-               "resource_uri":"/api/v1/description/16/",
-               "name":"ivysaur_gen_1"
-            },
-            {
-               "resource_uri":"/api/v1/description/17/",
-               "name":"ivysaur_gen_1"
-            },
-            {
-               "resource_uri":"/api/v1/description/18/",
-               "name":"ivysaur_gen_1"
-            },
-            {
-               "resource_uri":"/api/v1/description/19/",
-               "name":"ivysaur_gen_1"
-            },
-            {
-               "resource_uri":"/api/v1/description/23/",
-               "name":"ivysaur_gen_3"
-            },
-            {
-               "resource_uri":"/api/v1/description/24/",
-               "name":"ivysaur_gen_3"
-            },
-            {
-               "resource_uri":"/api/v1/description/29/",
-               "name":"ivysaur_gen_5"
-            },
-            {
-               "resource_uri":"/api/v1/description/25/",
-               "name":"ivysaur_gen_3"
-            },
-            {
-               "resource_uri":"/api/v1/description/26/",
-               "name":"ivysaur_gen_4"
-            },
-            {
-               "resource_uri":"/api/v1/description/27/",
-               "name":"ivysaur_gen_4"
-            },
-            {
-               "resource_uri":"/api/v1/description/28/",
-               "name":"ivysaur_gen_4"
-            },
-            {
-               "resource_uri":"/api/v1/description/30/",
-               "name":"ivysaur_gen_6"
-            },
-            {
-               "resource_uri":"/api/v1/description/31/",
-               "name":"ivysaur_gen_6"
-            }
-         ],
-         "sprites":[
-            {
-               "resource_uri":"/api/v1/sprite/3/",
-               "name":"ivysaur"
-            }
-         ],
-         "speed":60,
-         "abilities":[
-            {
-               "resource_uri":"/api/v1/ability/34/",
-               "name":"chlorophyll"
-            },
-            {
-               "resource_uri":"/api/v1/ability/65/",
-               "name":"overgrow"
-            }
-         ],
-         "total":0,
-         "ev_yield":"",
-         "growth_rate":"",
-         "defense":63,
-         "egg_cycles":0,
-         "happiness":0,
-         "attack":62,
-         "modified":"2013-11-23T13:13:23.630416",
-         "evolutions":[
-            {
-               "method":"level_up",
-               "level":32,
-               "resource_uri":"/api/v1/pokemon/3/",
-               "to":"Venusaur"
-            }
-         ],
-         "exp":142,
-         "height":"10",
-         "sp_atk":80,
-         "types":[
-            {
-               "resource_uri":"/api/v1/type/4/",
-               "name":"poison"
-            },
-            {
-               "resource_uri":"/api/v1/type/12/",
-               "name":"grass"
-            }
-         ],
-         "created":"2013-11-03T15:05:41.265680",
-         "resource_uri":"/api/v1/pokemon/2/",
-         "weight":"130",
-         "catch_rate":0,
-         "male_female_ratio":"",
-         "species":"",
-         "moves":[
-            {
-               "resource_uri":"/api/v1/move/20/",
-               "name":"Bind",
-               "learn_type":"tutor"
-            },
-            {
-               "resource_uri":"/api/v1/move/520/",
-               "name":"Grass-pledge",
-               "learn_type":"tutor"
-            },
-            {
-               "resource_uri":"/api/v1/move/497/",
-               "name":"Echoed-voice",
-               "learn_type":"machine"
-            },
-            {
-               "resource_uri":"/api/v1/move/496/",
-               "name":"Round",
-               "learn_type":"machine"
-            },
-            {
-               "resource_uri":"/api/v1/move/474/",
-               "name":"Venoshock",
-               "learn_type":"machine"
-            },
-            {
-               "resource_uri":"/api/v1/move/219/",
-               "name":"Safeguard",
-               "learn_type":"machine"
-            },
-            {
-               "resource_uri":"/api/v1/move/113/",
-               "name":"Light-screen",
-               "learn_type":"machine"
-            },
-            {
-               "resource_uri":"/api/v1/move/81/",
-               "name":"String-shot",
-               "learn_type":"tutor"
-            },
-            {
-               "resource_uri":"/api/v1/move/402/",
-               "name":"Seed-bomb",
-               "learn_type":"tutor"
-            },
-            {
-               "resource_uri":"/api/v1/move/282/",
-               "name":"Knock-off",
-               "learn_type":"tutor"
-            },
-            {
-               "resource_uri":"/api/v1/move/447/",
-               "name":"Grass-knot",
-               "learn_type":"machine"
-            },
-            {
-               "resource_uri":"/api/v1/move/445/",
-               "name":"Captivate",
-               "learn_type":"machine"
-            },
-            {
-               "resource_uri":"/api/v1/move/412/",
-               "name":"Energy-ball",
-               "learn_type":"machine"
-            },
-            {
-               "level":36,
-               "resource_uri":"/api/v1/move/388/",
-               "name":"Worry-seed",
-               "learn_type":"level up"
             },
             {
                "resource_uri":"/api/v1/move/363/",
@@ -731,9 +202,37 @@
                "learn_type":"machine"
             },
             {
-               "resource_uri":"/api/v1/move/331/",
-               "name":"Bullet-seed",
+               "level":37,
+               "resource_uri":"/api/v1/move/355/",
+               "name":"Roost",
+               "learn_type":"level up"
+            },
+            {
+               "resource_uri":"/api/v1/move/253/",
+               "name":"Uproar",
+               "learn_type":"egg move"
+            },
+            {
+               "level":21,
+               "resource_uri":"/api/v1/move/239/",
+               "name":"Twister",
+               "learn_type":"level up"
+            },
+            {
+               "resource_uri":"/api/v1/move/332/",
+               "name":"Aerial-ace",
                "learn_type":"machine"
+            },
+            {
+               "resource_uri":"/api/v1/move/314/",
+               "name":"Air-cutter",
+               "learn_type":"egg move"
+            },
+            {
+               "level":31,
+               "resource_uri":"/api/v1/move/297/",
+               "name":"Featherdance",
+               "learn_type":"level up"
             },
             {
                "resource_uri":"/api/v1/move/290/",
@@ -746,18 +245,8 @@
                "learn_type":"machine"
             },
             {
-               "resource_uri":"/api/v1/move/249/",
-               "name":"Rock-smash",
-               "learn_type":"machine"
-            },
-            {
-               "resource_uri":"/api/v1/move/188/",
-               "name":"Sludge-bomb",
-               "learn_type":"machine"
-            },
-            {
-               "resource_uri":"/api/v1/move/70/",
-               "name":"Strength",
+               "resource_uri":"/api/v1/move/240/",
+               "name":"Rain-dance",
                "learn_type":"machine"
             },
             {
@@ -771,16 +260,9 @@
                "learn_type":"machine"
             },
             {
-               "level":47,
-               "resource_uri":"/api/v1/move/235/",
-               "name":"Synthesis",
-               "learn_type":"level up"
-            },
-            {
-               "level":29,
-               "resource_uri":"/api/v1/move/230/",
-               "name":"Sweet-scent",
-               "learn_type":"level up"
+               "resource_uri":"/api/v1/move/228/",
+               "name":"Pursuit",
+               "learn_type":"egg move"
             },
             {
                "resource_uri":"/api/v1/move/218/",
@@ -803,9 +285,9 @@
                "learn_type":"machine"
             },
             {
-               "resource_uri":"/api/v1/move/210/",
-               "name":"Fury-cutter",
-               "learn_type":"machine"
+               "resource_uri":"/api/v1/move/211/",
+               "name":"Steel-wing",
+               "learn_type":"egg move"
             },
             {
                "resource_uri":"/api/v1/move/207/",
@@ -818,14 +300,24 @@
                "learn_type":"machine"
             },
             {
-               "resource_uri":"/api/v1/move/202/",
-               "name":"Giga-drain",
+               "resource_uri":"/api/v1/move/197/",
+               "name":"Detect",
                "learn_type":"machine"
+            },
+            {
+               "resource_uri":"/api/v1/move/193/",
+               "name":"Foresight",
+               "learn_type":"egg move"
             },
             {
                "resource_uri":"/api/v1/move/189/",
                "name":"Mud-slap",
                "learn_type":"machine"
+            },
+            {
+               "resource_uri":"/api/v1/move/185/",
+               "name":"Faint-attack",
+               "learn_type":"egg move"
             },
             {
                "resource_uri":"/api/v1/move/182/",
@@ -843,19 +335,15 @@
                "learn_type":"machine"
             },
             {
-               "resource_uri":"/api/v1/move/148/",
-               "name":"Flash",
+               "resource_uri":"/api/v1/move/168/",
+               "name":"Thief",
                "learn_type":"machine"
             },
             {
-               "resource_uri":"/api/v1/move/111/",
-               "name":"Defense-curl",
-               "learn_type":"machine"
-            },
-            {
-               "resource_uri":"/api/v1/move/29/",
-               "name":"Headbutt",
-               "learn_type":"machine"
+               "level":1,
+               "resource_uri":"/api/v1/move/33/",
+               "name":"Tackle",
+               "learn_type":"level up"
             },
             {
                "resource_uri":"/api/v1/move/164/",
@@ -866,6 +354,22 @@
                "resource_uri":"/api/v1/move/156/",
                "name":"Rest",
                "learn_type":"machine"
+            },
+            {
+               "resource_uri":"/api/v1/move/143/",
+               "name":"Sky-attack",
+               "learn_type":"machine"
+            },
+            {
+               "resource_uri":"/api/v1/move/129/",
+               "name":"Swift",
+               "learn_type":"machine"
+            },
+            {
+               "level":44,
+               "resource_uri":"/api/v1/move/119/",
+               "name":"Mirror-move",
+               "learn_type":"level up"
             },
             {
                "resource_uri":"/api/v1/move/117/",
@@ -893,55 +397,507 @@
                "learn_type":"machine"
             },
             {
+               "level":12,
+               "resource_uri":"/api/v1/move/98/",
+               "name":"Quick-attack",
+               "learn_type":"level up"
+            },
+            {
+               "level":36,
+               "resource_uri":"/api/v1/move/97/",
+               "name":"Agility",
+               "learn_type":"level up"
+            },
+            {
                "resource_uri":"/api/v1/move/92/",
                "name":"Toxic",
                "learn_type":"machine"
             },
             {
-               "level":46,
-               "resource_uri":"/api/v1/move/79/",
-               "name":"Sleep-powder",
+               "resource_uri":"/api/v1/move/38/",
+               "name":"Double-edge",
+               "learn_type":"machine"
+            },
+            {
+               "resource_uri":"/api/v1/move/36/",
+               "name":"Take-down",
+               "learn_type":"machine"
+            },
+            {
+               "level":5,
+               "resource_uri":"/api/v1/move/28/",
+               "name":"Sand-attack",
                "learn_type":"level up"
             },
             {
-               "level":22,
-               "resource_uri":"/api/v1/move/77/",
-               "name":"Poisonpowder",
+               "resource_uri":"/api/v1/move/19/",
+               "name":"Fly",
+               "learn_type":"machine"
+            },
+            {
+               "level":19,
+               "resource_uri":"/api/v1/move/18/",
+               "name":"Whirlwind",
                "learn_type":"level up"
             },
             {
-               "level":54,
-               "resource_uri":"/api/v1/move/76/",
-               "name":"Solarbeam",
-               "learn_type":"level up"
-            },
-            {
-               "level":30,
-               "resource_uri":"/api/v1/move/75/",
-               "name":"Razor-leaf",
-               "learn_type":"level up"
-            },
-            {
-               "level":38,
-               "resource_uri":"/api/v1/move/74/",
-               "name":"Growth",
+               "level":28,
+               "resource_uri":"/api/v1/move/17/",
+               "name":"Wing-attack",
                "learn_type":"level up"
             },
             {
                "level":1,
-               "resource_uri":"/api/v1/move/73/",
-               "name":"Leech-seed",
+               "resource_uri":"/api/v1/move/16/",
+               "name":"Gust",
                "learn_type":"level up"
             },
             {
-               "resource_uri":"/api/v1/move/72/",
-               "name":"Mega-drain",
+               "resource_uri":"/api/v1/move/13/",
+               "name":"Razor-wind",
+               "learn_type":"machine"
+            }
+         ],
+         "sp_def":35,
+         "name":"Pidgey"
+      },
+      {
+         "national_id":60,
+         "pkdx_id":60,
+         "egg_groups":[
+            {
+               "resource_uri":"/api/v1/egg/2/",
+               "name":"Water1"
+            }
+         ],
+         "hp":40,
+         "descriptions":[
+            {
+               "resource_uri":"/api/v1/description/962/",
+               "name":"poliwag_gen_2"
+            },
+            {
+               "resource_uri":"/api/v1/description/963/",
+               "name":"poliwag_gen_3"
+            },
+            {
+               "resource_uri":"/api/v1/description/956/",
+               "name":"poliwag_gen_1"
+            },
+            {
+               "resource_uri":"/api/v1/description/957/",
+               "name":"poliwag_gen_1"
+            },
+            {
+               "resource_uri":"/api/v1/description/958/",
+               "name":"poliwag_gen_1"
+            },
+            {
+               "resource_uri":"/api/v1/description/959/",
+               "name":"poliwag_gen_1"
+            },
+            {
+               "resource_uri":"/api/v1/description/960/",
+               "name":"poliwag_gen_1"
+            },
+            {
+               "resource_uri":"/api/v1/description/971/",
+               "name":"poliwag_gen_6"
+            },
+            {
+               "resource_uri":"/api/v1/description/964/",
+               "name":"poliwag_gen_3"
+            },
+            {
+               "resource_uri":"/api/v1/description/965/",
+               "name":"poliwag_gen_3"
+            },
+            {
+               "resource_uri":"/api/v1/description/966/",
+               "name":"poliwag_gen_4"
+            },
+            {
+               "resource_uri":"/api/v1/description/967/",
+               "name":"poliwag_gen_4"
+            },
+            {
+               "resource_uri":"/api/v1/description/968/",
+               "name":"poliwag_gen_4"
+            },
+            {
+               "resource_uri":"/api/v1/description/969/",
+               "name":"poliwag_gen_5"
+            },
+            {
+               "resource_uri":"/api/v1/description/970/",
+               "name":"poliwag_gen_6"
+            },
+            {
+               "resource_uri":"/api/v1/description/961/",
+               "name":"poliwag_gen_2"
+            }
+         ],
+         "sprites":[
+            {
+               "resource_uri":"/api/v1/sprite/61/",
+               "name":"poliwag"
+            }
+         ],
+         "speed":90,
+         "abilities":[
+            {
+               "resource_uri":"/api/v1/ability/6/",
+               "name":"damp"
+            },
+            {
+               "resource_uri":"/api/v1/ability/11/",
+               "name":"water-absorb"
+            },
+            {
+               "resource_uri":"/api/v1/ability/33/",
+               "name":"swift-swim"
+            }
+         ],
+         "total":0,
+         "ev_yield":"",
+         "growth_rate":"",
+         "defense":40,
+         "egg_cycles":0,
+         "happiness":0,
+         "attack":50,
+         "modified":"2013-11-23T13:13:25.566754",
+         "evolutions":[
+            {
+               "method":"level_up",
+               "level":25,
+               "resource_uri":"/api/v1/pokemon/61/",
+               "to":"Poliwhirl"
+            }
+         ],
+         "exp":60,
+         "height":"6",
+         "sp_atk":40,
+         "types":[
+            {
+               "resource_uri":"/api/v1/type/11/",
+               "name":"water"
+            }
+         ],
+         "created":"2013-11-03T15:05:41.388462",
+         "resource_uri":"/api/v1/pokemon/60/",
+         "weight":"124",
+         "catch_rate":0,
+         "male_female_ratio":"",
+         "species":"",
+         "moves":[
+            {
+               "resource_uri":"/api/v1/move/503/",
+               "name":"Scald",
+               "learn_type":"machine"
+            },
+            {
+               "resource_uri":"/api/v1/move/496/",
+               "name":"Round",
+               "learn_type":"machine"
+            },
+            {
+               "resource_uri":"/api/v1/move/227/",
+               "name":"Encore",
+               "learn_type":"egg move"
+            },
+            {
+               "resource_uri":"/api/v1/move/270/",
+               "name":"Helping-hand",
+               "learn_type":"tutor"
+            },
+            {
+               "resource_uri":"/api/v1/move/445/",
+               "name":"Captivate",
+               "learn_type":"machine"
+            },
+            {
+               "level":41,
+               "resource_uri":"/api/v1/move/426/",
+               "name":"Mud-bomb",
+               "learn_type":"level up"
+            },
+            {
+               "resource_uri":"/api/v1/move/363/",
+               "name":"Natural-gift",
+               "learn_type":"machine"
+            },
+            {
+               "level":35,
+               "resource_uri":"/api/v1/move/358/",
+               "name":"Wake-up-slap",
+               "learn_type":"level up"
+            },
+            {
+               "level":28,
+               "resource_uri":"/api/v1/move/341/",
+               "name":"Mud-shot",
+               "learn_type":"level up"
+            },
+            {
+               "resource_uri":"/api/v1/move/287/",
+               "name":"Refresh",
+               "learn_type":"egg move"
+            },
+            {
+               "resource_uri":"/api/v1/move/283/",
+               "name":"Endeavor",
+               "learn_type":"egg move"
+            },
+            {
+               "resource_uri":"/api/v1/move/352/",
+               "name":"Water-pulse",
+               "learn_type":"machine"
+            },
+            {
+               "resource_uri":"/api/v1/move/346/",
+               "name":"Water-sport",
+               "learn_type":"egg move"
+            },
+            {
+               "resource_uri":"/api/v1/move/301/",
+               "name":"Ice-ball",
+               "learn_type":"egg move"
+            },
+            {
+               "resource_uri":"/api/v1/move/291/",
+               "name":"Dive",
+               "learn_type":"machine"
+            },
+            {
+               "resource_uri":"/api/v1/move/290/",
+               "name":"Secret-power",
+               "learn_type":"machine"
+            },
+            {
+               "resource_uri":"/api/v1/move/263/",
+               "name":"Facade",
+               "learn_type":"machine"
+            },
+            {
+               "resource_uri":"/api/v1/move/258/",
+               "name":"Hail",
+               "learn_type":"machine"
+            },
+            {
+               "resource_uri":"/api/v1/move/91/",
+               "name":"Dig",
+               "learn_type":"machine"
+            },
+            {
+               "resource_uri":"/api/v1/move/250/",
+               "name":"Whirlpool",
+               "learn_type":"machine"
+            },
+            {
+               "level":25,
+               "resource_uri":"/api/v1/move/240/",
+               "name":"Rain-dance",
+               "learn_type":"level up"
+            },
+            {
+               "resource_uri":"/api/v1/move/237/",
+               "name":"Hidden-power",
+               "learn_type":"machine"
+            },
+            {
+               "resource_uri":"/api/v1/move/218/",
+               "name":"Frustration",
+               "learn_type":"machine"
+            },
+            {
+               "resource_uri":"/api/v1/move/216/",
+               "name":"Return",
+               "learn_type":"machine"
+            },
+            {
+               "resource_uri":"/api/v1/move/214/",
+               "name":"Sleep-talk",
+               "learn_type":"machine"
+            },
+            {
+               "resource_uri":"/api/v1/move/213/",
+               "name":"Attract",
+               "learn_type":"machine"
+            },
+            {
+               "resource_uri":"/api/v1/move/207/",
+               "name":"Swagger",
+               "learn_type":"machine"
+            },
+            {
+               "resource_uri":"/api/v1/move/203/",
+               "name":"Endure",
+               "learn_type":"machine"
+            },
+            {
+               "resource_uri":"/api/v1/move/196/",
+               "name":"Icy-wind",
+               "learn_type":"machine"
+            },
+            {
+               "level":37,
+               "resource_uri":"/api/v1/move/187/",
+               "name":"Belly-drum",
+               "learn_type":"level up"
+            },
+            {
+               "resource_uri":"/api/v1/move/182/",
+               "name":"Protect",
+               "learn_type":"machine"
+            },
+            {
+               "resource_uri":"/api/v1/move/174/",
+               "name":"Curse",
+               "learn_type":"machine"
+            },
+            {
+               "resource_uri":"/api/v1/move/173/",
+               "name":"Snore",
+               "learn_type":"machine"
+            },
+            {
+               "resource_uri":"/api/v1/move/170/",
+               "name":"Mind-reader",
+               "learn_type":"egg move"
+            },
+            {
+               "resource_uri":"/api/v1/move/168/",
+               "name":"Thief",
+               "learn_type":"machine"
+            },
+            {
+               "resource_uri":"/api/v1/move/150/",
+               "name":"Splash",
+               "learn_type":"egg move"
+            },
+            {
+               "resource_uri":"/api/v1/move/127/",
+               "name":"Waterfall",
+               "learn_type":"machine"
+            },
+            {
+               "resource_uri":"/api/v1/move/114/",
+               "name":"Haze",
+               "learn_type":"egg move"
+            },
+            {
+               "resource_uri":"/api/v1/move/111/",
+               "name":"Defense-curl",
+               "learn_type":"machine"
+            },
+            {
+               "resource_uri":"/api/v1/move/54/",
+               "name":"Mist",
+               "learn_type":"egg move"
+            },
+            {
+               "resource_uri":"/api/v1/move/29/",
+               "name":"Headbutt",
+               "learn_type":"machine"
+            },
+            {
+               "resource_uri":"/api/v1/move/164/",
+               "name":"Substitute",
+               "learn_type":"machine"
+            },
+            {
+               "resource_uri":"/api/v1/move/156/",
+               "name":"Rest",
+               "learn_type":"machine"
+            },
+            {
+               "resource_uri":"/api/v1/move/149/",
+               "name":"Psywave",
                "learn_type":"machine"
             },
             {
                "level":1,
-               "resource_uri":"/api/v1/move/45/",
-               "name":"Growl",
+               "resource_uri":"/api/v1/move/145/",
+               "name":"Bubble",
+               "learn_type":"level up"
+            },
+            {
+               "level":38,
+               "resource_uri":"/api/v1/move/133/",
+               "name":"Amnesia",
+               "learn_type":"level up"
+            },
+            {
+               "resource_uri":"/api/v1/move/130/",
+               "name":"Skull-bash",
+               "learn_type":"machine"
+            },
+            {
+               "resource_uri":"/api/v1/move/117/",
+               "name":"Bide",
+               "learn_type":"machine"
+            },
+            {
+               "resource_uri":"/api/v1/move/104/",
+               "name":"Double-team",
+               "learn_type":"machine"
+            },
+            {
+               "resource_uri":"/api/v1/move/102/",
+               "name":"Mimic",
+               "learn_type":"machine"
+            },
+            {
+               "resource_uri":"/api/v1/move/99/",
+               "name":"Rage",
+               "learn_type":"machine"
+            },
+            {
+               "level":16,
+               "resource_uri":"/api/v1/move/95/",
+               "name":"Hypnosis",
+               "learn_type":"level up"
+            },
+            {
+               "resource_uri":"/api/v1/move/94/",
+               "name":"Psychic",
+               "learn_type":"machine"
+            },
+            {
+               "resource_uri":"/api/v1/move/92/",
+               "name":"Toxic",
+               "learn_type":"machine"
+            },
+            {
+               "resource_uri":"/api/v1/move/61/",
+               "name":"Bubblebeam",
+               "learn_type":"machine"
+            },
+            {
+               "resource_uri":"/api/v1/move/59/",
+               "name":"Blizzard",
+               "learn_type":"machine"
+            },
+            {
+               "resource_uri":"/api/v1/move/58/",
+               "name":"Ice-beam",
+               "learn_type":"machine"
+            },
+            {
+               "resource_uri":"/api/v1/move/57/",
+               "name":"Surf",
+               "learn_type":"machine"
+            },
+            {
+               "level":45,
+               "resource_uri":"/api/v1/move/56/",
+               "name":"Hydro-pump",
+               "learn_type":"level up"
+            },
+            {
+               "level":19,
+               "resource_uri":"/api/v1/move/55/",
+               "name":"Water-gun",
                "learn_type":"level up"
             },
             {
@@ -955,172 +911,157 @@
                "learn_type":"machine"
             },
             {
+               "level":31,
                "resource_uri":"/api/v1/move/34/",
                "name":"Body-slam",
-               "learn_type":"machine"
-            },
-            {
-               "level":1,
-               "resource_uri":"/api/v1/move/33/",
-               "name":"Tackle",
                "learn_type":"level up"
             },
             {
-               "level":13,
-               "resource_uri":"/api/v1/move/22/",
-               "name":"Vine-whip",
+               "level":25,
+               "resource_uri":"/api/v1/move/3/",
+               "name":"Doubleslap",
                "learn_type":"level up"
-            },
-            {
-               "resource_uri":"/api/v1/move/15/",
-               "name":"Cut",
-               "learn_type":"machine"
-            },
-            {
-               "resource_uri":"/api/v1/move/14/",
-               "name":"Swords-dance",
-               "learn_type":"machine"
             }
          ],
-         "sp_def":80,
-         "name":"Ivysaur"
+         "sp_def":40,
+         "name":"Poliwag"
       },
       {
-         "national_id":3,
-         "pkdx_id":3,
+         "national_id":61,
+         "pkdx_id":61,
          "egg_groups":[
             {
-               "resource_uri":"/api/v1/egg/7/",
-               "name":"Plant"
-            },
-            {
-               "resource_uri":"/api/v1/egg/1/",
-               "name":"Monster"
+               "resource_uri":"/api/v1/egg/2/",
+               "name":"Water1"
             }
          ],
-         "hp":80,
+         "hp":65,
          "descriptions":[
             {
-               "resource_uri":"/api/v1/description/35/",
-               "name":"venusaur_gen_1"
+               "resource_uri":"/api/v1/description/977/",
+               "name":"poliwhirl_gen_2"
             },
             {
-               "resource_uri":"/api/v1/description/32/",
-               "name":"venusaur_gen_1"
+               "resource_uri":"/api/v1/description/972/",
+               "name":"poliwhirl_gen_1"
             },
             {
-               "resource_uri":"/api/v1/description/33/",
-               "name":"venusaur_gen_1"
+               "resource_uri":"/api/v1/description/973/",
+               "name":"poliwhirl_gen_1"
             },
             {
-               "resource_uri":"/api/v1/description/34/",
-               "name":"venusaur_gen_1"
+               "resource_uri":"/api/v1/description/974/",
+               "name":"poliwhirl_gen_1"
             },
             {
-               "resource_uri":"/api/v1/description/36/",
-               "name":"venusaur_gen_1"
+               "resource_uri":"/api/v1/description/975/",
+               "name":"poliwhirl_gen_1"
             },
             {
-               "resource_uri":"/api/v1/description/37/",
-               "name":"venusaur_gen_2"
+               "resource_uri":"/api/v1/description/976/",
+               "name":"poliwhirl_gen_1"
             },
             {
-               "resource_uri":"/api/v1/description/38/",
-               "name":"venusaur_gen_2"
+               "resource_uri":"/api/v1/description/978/",
+               "name":"poliwhirl_gen_2"
             },
             {
-               "resource_uri":"/api/v1/description/39/",
-               "name":"venusaur_gen_3"
+               "resource_uri":"/api/v1/description/979/",
+               "name":"poliwhirl_gen_3"
             },
             {
-               "resource_uri":"/api/v1/description/40/",
-               "name":"venusaur_gen_3"
+               "resource_uri":"/api/v1/description/980/",
+               "name":"poliwhirl_gen_3"
             },
             {
-               "resource_uri":"/api/v1/description/41/",
-               "name":"venusaur_gen_3"
+               "resource_uri":"/api/v1/description/982/",
+               "name":"poliwhirl_gen_4"
             },
             {
-               "resource_uri":"/api/v1/description/42/",
-               "name":"venusaur_gen_4"
+               "resource_uri":"/api/v1/description/981/",
+               "name":"poliwhirl_gen_3"
             },
             {
-               "resource_uri":"/api/v1/description/43/",
-               "name":"venusaur_gen_4"
+               "resource_uri":"/api/v1/description/983/",
+               "name":"poliwhirl_gen_4"
             },
             {
-               "resource_uri":"/api/v1/description/44/",
-               "name":"venusaur_gen_4"
+               "resource_uri":"/api/v1/description/984/",
+               "name":"poliwhirl_gen_4"
             },
             {
-               "resource_uri":"/api/v1/description/45/",
-               "name":"venusaur_gen_5"
+               "resource_uri":"/api/v1/description/985/",
+               "name":"poliwhirl_gen_5"
             },
             {
-               "resource_uri":"/api/v1/description/47/",
-               "name":"venusaur_gen_6"
+               "resource_uri":"/api/v1/description/986/",
+               "name":"poliwhirl_gen_6"
             },
             {
-               "resource_uri":"/api/v1/description/46/",
-               "name":"venusaur_gen_6"
+               "resource_uri":"/api/v1/description/987/",
+               "name":"poliwhirl_gen_6"
             }
          ],
          "sprites":[
             {
-               "resource_uri":"/api/v1/sprite/4/",
-               "name":"venusaur"
+               "resource_uri":"/api/v1/sprite/62/",
+               "name":"poliwhirl"
             }
          ],
-         "speed":80,
+         "speed":90,
          "abilities":[
             {
-               "resource_uri":"/api/v1/ability/34/",
-               "name":"chlorophyll"
+               "resource_uri":"/api/v1/ability/6/",
+               "name":"damp"
             },
             {
-               "resource_uri":"/api/v1/ability/65/",
-               "name":"overgrow"
+               "resource_uri":"/api/v1/ability/11/",
+               "name":"water-absorb"
+            },
+            {
+               "resource_uri":"/api/v1/ability/33/",
+               "name":"swift-swim"
             }
          ],
          "total":0,
          "ev_yield":"",
          "growth_rate":"",
-         "defense":83,
+         "defense":65,
          "egg_cycles":0,
          "happiness":0,
-         "attack":82,
-         "modified":"2013-11-23T13:13:23.663509",
+         "attack":65,
+         "modified":"2013-11-23T13:13:25.600428",
          "evolutions":[
             {
-               "method":"other",
-               "resource_uri":"/api/v1/pokemon/10033/",
-               "detail":"mega",
-               "to":"Venusaur-mega"
-            }
-         ],
-         "exp":236,
-         "height":"20",
-         "sp_atk":100,
-         "types":[
-            {
-               "resource_uri":"/api/v1/type/4/",
-               "name":"poison"
+               "method":"trade",
+               "resource_uri":"/api/v1/pokemon/186/",
+               "to":"Politoed"
             },
             {
-               "resource_uri":"/api/v1/type/12/",
-               "name":"grass"
+               "method":"stone",
+               "resource_uri":"/api/v1/pokemon/62/",
+               "to":"Poliwrath"
             }
          ],
-         "created":"2013-11-03T15:05:41.268479",
-         "resource_uri":"/api/v1/pokemon/3/",
-         "weight":"1000",
+         "exp":135,
+         "height":"10",
+         "sp_atk":50,
+         "types":[
+            {
+               "resource_uri":"/api/v1/type/11/",
+               "name":"water"
+            }
+         ],
+         "created":"2013-11-03T15:05:41.390744",
+         "resource_uri":"/api/v1/pokemon/61/",
+         "weight":"200",
          "catch_rate":0,
          "male_female_ratio":"",
          "species":"",
          "moves":[
             {
-               "resource_uri":"/api/v1/move/20/",
-               "name":"Bind",
+               "resource_uri":"/api/v1/move/283/",
+               "name":"Endeavor",
                "learn_type":"tutor"
             },
             {
@@ -1129,13 +1070,8 @@
                "learn_type":"machine"
             },
             {
-               "resource_uri":"/api/v1/move/520/",
-               "name":"Grass-pledge",
-               "learn_type":"tutor"
-            },
-            {
-               "resource_uri":"/api/v1/move/497/",
-               "name":"Echoed-voice",
+               "resource_uri":"/api/v1/move/503/",
+               "name":"Scald",
                "learn_type":"machine"
             },
             {
@@ -1144,49 +1080,9 @@
                "learn_type":"machine"
             },
             {
-               "resource_uri":"/api/v1/move/474/",
-               "name":"Venoshock",
-               "learn_type":"machine"
-            },
-            {
-               "resource_uri":"/api/v1/move/219/",
-               "name":"Safeguard",
-               "learn_type":"machine"
-            },
-            {
-               "resource_uri":"/api/v1/move/113/",
-               "name":"Light-screen",
-               "learn_type":"machine"
-            },
-            {
-               "resource_uri":"/api/v1/move/335/",
-               "name":"Block",
+               "resource_uri":"/api/v1/move/270/",
+               "name":"Helping-hand",
                "learn_type":"tutor"
-            },
-            {
-               "resource_uri":"/api/v1/move/81/",
-               "name":"String-shot",
-               "learn_type":"tutor"
-            },
-            {
-               "resource_uri":"/api/v1/move/402/",
-               "name":"Seed-bomb",
-               "learn_type":"tutor"
-            },
-            {
-               "resource_uri":"/api/v1/move/282/",
-               "name":"Knock-off",
-               "learn_type":"tutor"
-            },
-            {
-               "resource_uri":"/api/v1/move/200/",
-               "name":"Outrage",
-               "learn_type":"tutor"
-            },
-            {
-               "resource_uri":"/api/v1/move/447/",
-               "name":"Grass-knot",
-               "learn_type":"machine"
             },
             {
                "resource_uri":"/api/v1/move/445/",
@@ -1194,25 +1090,15 @@
                "learn_type":"machine"
             },
             {
-               "resource_uri":"/api/v1/move/431/",
-               "name":"Rock-climb",
-               "learn_type":"machine"
-            },
-            {
-               "resource_uri":"/api/v1/move/416/",
-               "name":"Giga-impact",
-               "learn_type":"machine"
-            },
-            {
-               "resource_uri":"/api/v1/move/412/",
-               "name":"Energy-ball",
-               "learn_type":"machine"
-            },
-            {
-               "level":39,
-               "resource_uri":"/api/v1/move/388/",
-               "name":"Worry-seed",
+               "level":53,
+               "resource_uri":"/api/v1/move/426/",
+               "name":"Mud-bomb",
                "learn_type":"level up"
+            },
+            {
+               "resource_uri":"/api/v1/move/374/",
+               "name":"Fling",
+               "learn_type":"machine"
             },
             {
                "resource_uri":"/api/v1/move/363/",
@@ -1220,19 +1106,31 @@
                "learn_type":"machine"
             },
             {
-               "level":32,
-               "resource_uri":"/api/v1/move/80/",
-               "name":"Petal-dance",
+               "level":43,
+               "resource_uri":"/api/v1/move/358/",
+               "name":"Wake-up-slap",
                "learn_type":"level up"
             },
             {
-               "resource_uri":"/api/v1/move/338/",
-               "name":"Frenzy-plant",
-               "learn_type":"tutor"
+               "level":1,
+               "resource_uri":"/api/v1/move/346/",
+               "name":"Water-sport",
+               "learn_type":"level up"
             },
             {
-               "resource_uri":"/api/v1/move/331/",
-               "name":"Bullet-seed",
+               "level":32,
+               "resource_uri":"/api/v1/move/341/",
+               "name":"Mud-shot",
+               "learn_type":"level up"
+            },
+            {
+               "resource_uri":"/api/v1/move/352/",
+               "name":"Water-pulse",
+               "learn_type":"machine"
+            },
+            {
+               "resource_uri":"/api/v1/move/291/",
+               "name":"Dive",
                "learn_type":"machine"
             },
             {
@@ -1241,8 +1139,33 @@
                "learn_type":"machine"
             },
             {
+               "resource_uri":"/api/v1/move/280/",
+               "name":"Brick-break",
+               "learn_type":"machine"
+            },
+            {
+               "resource_uri":"/api/v1/move/264/",
+               "name":"Focus-punch",
+               "learn_type":"machine"
+            },
+            {
                "resource_uri":"/api/v1/move/263/",
                "name":"Facade",
+               "learn_type":"machine"
+            },
+            {
+               "resource_uri":"/api/v1/move/258/",
+               "name":"Hail",
+               "learn_type":"machine"
+            },
+            {
+               "resource_uri":"/api/v1/move/91/",
+               "name":"Dig",
+               "learn_type":"machine"
+            },
+            {
+               "resource_uri":"/api/v1/move/250/",
+               "name":"Whirlpool",
                "learn_type":"machine"
             },
             {
@@ -1251,8 +1174,183 @@
                "learn_type":"machine"
             },
             {
-               "resource_uri":"/api/v1/move/188/",
-               "name":"Sludge-bomb",
+               "level":27,
+               "resource_uri":"/api/v1/move/240/",
+               "name":"Rain-dance",
+               "learn_type":"level up"
+            },
+            {
+               "resource_uri":"/api/v1/move/237/",
+               "name":"Hidden-power",
+               "learn_type":"machine"
+            },
+            {
+               "resource_uri":"/api/v1/move/218/",
+               "name":"Frustration",
+               "learn_type":"machine"
+            },
+            {
+               "resource_uri":"/api/v1/move/216/",
+               "name":"Return",
+               "learn_type":"machine"
+            },
+            {
+               "resource_uri":"/api/v1/move/214/",
+               "name":"Sleep-talk",
+               "learn_type":"machine"
+            },
+            {
+               "resource_uri":"/api/v1/move/213/",
+               "name":"Attract",
+               "learn_type":"machine"
+            },
+            {
+               "resource_uri":"/api/v1/move/207/",
+               "name":"Swagger",
+               "learn_type":"machine"
+            },
+            {
+               "resource_uri":"/api/v1/move/203/",
+               "name":"Endure",
+               "learn_type":"machine"
+            },
+            {
+               "resource_uri":"/api/v1/move/197/",
+               "name":"Detect",
+               "learn_type":"machine"
+            },
+            {
+               "resource_uri":"/api/v1/move/196/",
+               "name":"Icy-wind",
+               "learn_type":"machine"
+            },
+            {
+               "resource_uri":"/api/v1/move/189/",
+               "name":"Mud-slap",
+               "learn_type":"machine"
+            },
+            {
+               "level":43,
+               "resource_uri":"/api/v1/move/187/",
+               "name":"Belly-drum",
+               "learn_type":"level up"
+            },
+            {
+               "resource_uri":"/api/v1/move/182/",
+               "name":"Protect",
+               "learn_type":"machine"
+            },
+            {
+               "resource_uri":"/api/v1/move/174/",
+               "name":"Curse",
+               "learn_type":"machine"
+            },
+            {
+               "resource_uri":"/api/v1/move/173/",
+               "name":"Snore",
+               "learn_type":"machine"
+            },
+            {
+               "resource_uri":"/api/v1/move/168/",
+               "name":"Thief",
+               "learn_type":"machine"
+            },
+            {
+               "resource_uri":"/api/v1/move/127/",
+               "name":"Waterfall",
+               "learn_type":"machine"
+            },
+            {
+               "resource_uri":"/api/v1/move/111/",
+               "name":"Defense-curl",
+               "learn_type":"machine"
+            },
+            {
+               "resource_uri":"/api/v1/move/29/",
+               "name":"Headbutt",
+               "learn_type":"machine"
+            },
+            {
+               "resource_uri":"/api/v1/move/8/",
+               "name":"Ice-punch",
+               "learn_type":"machine"
+            },
+            {
+               "resource_uri":"/api/v1/move/164/",
+               "name":"Substitute",
+               "learn_type":"machine"
+            },
+            {
+               "resource_uri":"/api/v1/move/156/",
+               "name":"Rest",
+               "learn_type":"machine"
+            },
+            {
+               "resource_uri":"/api/v1/move/149/",
+               "name":"Psywave",
+               "learn_type":"machine"
+            },
+            {
+               "level":1,
+               "resource_uri":"/api/v1/move/145/",
+               "name":"Bubble",
+               "learn_type":"level up"
+            },
+            {
+               "level":41,
+               "resource_uri":"/api/v1/move/133/",
+               "name":"Amnesia",
+               "learn_type":"level up"
+            },
+            {
+               "resource_uri":"/api/v1/move/130/",
+               "name":"Skull-bash",
+               "learn_type":"machine"
+            },
+            {
+               "resource_uri":"/api/v1/move/118/",
+               "name":"Metronome",
+               "learn_type":"machine"
+            },
+            {
+               "resource_uri":"/api/v1/move/117/",
+               "name":"Bide",
+               "learn_type":"machine"
+            },
+            {
+               "resource_uri":"/api/v1/move/104/",
+               "name":"Double-team",
+               "learn_type":"machine"
+            },
+            {
+               "resource_uri":"/api/v1/move/102/",
+               "name":"Mimic",
+               "learn_type":"machine"
+            },
+            {
+               "resource_uri":"/api/v1/move/99/",
+               "name":"Rage",
+               "learn_type":"machine"
+            },
+            {
+               "level":1,
+               "resource_uri":"/api/v1/move/95/",
+               "name":"Hypnosis",
+               "learn_type":"level up"
+            },
+            {
+               "resource_uri":"/api/v1/move/94/",
+               "name":"Psychic",
+               "learn_type":"machine"
+            },
+            {
+               "resource_uri":"/api/v1/move/92/",
+               "name":"Toxic",
+               "learn_type":"machine"
+            },
+            {
+               "resource_uri":"/api/v1/move/90/",
+               "name":"Fissure",
                "learn_type":"machine"
             },
             {
@@ -1266,197 +1364,50 @@
                "learn_type":"machine"
             },
             {
-               "resource_uri":"/api/v1/move/241/",
-               "name":"Sunny-day",
+               "resource_uri":"/api/v1/move/69/",
+               "name":"Seismic-toss",
                "learn_type":"machine"
             },
             {
-               "resource_uri":"/api/v1/move/237/",
-               "name":"Hidden-power",
+               "resource_uri":"/api/v1/move/68/",
+               "name":"Counter",
                "learn_type":"machine"
             },
             {
-               "level":53,
-               "resource_uri":"/api/v1/move/235/",
-               "name":"Synthesis",
-               "learn_type":"level up"
-            },
-            {
-               "level":29,
-               "resource_uri":"/api/v1/move/230/",
-               "name":"Sweet-scent",
-               "learn_type":"level up"
-            },
-            {
-               "resource_uri":"/api/v1/move/218/",
-               "name":"Frustration",
+               "resource_uri":"/api/v1/move/66/",
+               "name":"Submission",
                "learn_type":"machine"
             },
             {
-               "resource_uri":"/api/v1/move/216/",
-               "name":"Return",
+               "resource_uri":"/api/v1/move/61/",
+               "name":"Bubblebeam",
                "learn_type":"machine"
             },
             {
-               "resource_uri":"/api/v1/move/214/",
-               "name":"Sleep-talk",
+               "resource_uri":"/api/v1/move/59/",
+               "name":"Blizzard",
                "learn_type":"machine"
             },
             {
-               "resource_uri":"/api/v1/move/213/",
-               "name":"Attract",
+               "resource_uri":"/api/v1/move/58/",
+               "name":"Ice-beam",
                "learn_type":"machine"
             },
             {
-               "resource_uri":"/api/v1/move/210/",
-               "name":"Fury-cutter",
+               "resource_uri":"/api/v1/move/57/",
+               "name":"Surf",
                "learn_type":"machine"
             },
             {
-               "resource_uri":"/api/v1/move/207/",
-               "name":"Swagger",
-               "learn_type":"machine"
-            },
-            {
-               "resource_uri":"/api/v1/move/203/",
-               "name":"Endure",
-               "learn_type":"machine"
-            },
-            {
-               "resource_uri":"/api/v1/move/202/",
-               "name":"Giga-drain",
-               "learn_type":"machine"
-            },
-            {
-               "resource_uri":"/api/v1/move/189/",
-               "name":"Mud-slap",
-               "learn_type":"machine"
-            },
-            {
-               "resource_uri":"/api/v1/move/182/",
-               "name":"Protect",
-               "learn_type":"machine"
-            },
-            {
-               "resource_uri":"/api/v1/move/174/",
-               "name":"Curse",
-               "learn_type":"machine"
-            },
-            {
-               "resource_uri":"/api/v1/move/173/",
-               "name":"Snore",
-               "learn_type":"machine"
-            },
-            {
-               "resource_uri":"/api/v1/move/148/",
-               "name":"Flash",
-               "learn_type":"machine"
-            },
-            {
-               "resource_uri":"/api/v1/move/111/",
-               "name":"Defense-curl",
-               "learn_type":"machine"
-            },
-            {
-               "resource_uri":"/api/v1/move/46/",
-               "name":"Roar",
-               "learn_type":"machine"
-            },
-            {
-               "resource_uri":"/api/v1/move/29/",
-               "name":"Headbutt",
-               "learn_type":"machine"
-            },
-            {
-               "resource_uri":"/api/v1/move/164/",
-               "name":"Substitute",
-               "learn_type":"machine"
-            },
-            {
-               "resource_uri":"/api/v1/move/156/",
-               "name":"Rest",
-               "learn_type":"machine"
-            },
-            {
-               "resource_uri":"/api/v1/move/117/",
-               "name":"Bide",
-               "learn_type":"machine"
-            },
-            {
-               "resource_uri":"/api/v1/move/115/",
-               "name":"Reflect",
-               "learn_type":"machine"
-            },
-            {
-               "resource_uri":"/api/v1/move/104/",
-               "name":"Double-team",
-               "learn_type":"machine"
-            },
-            {
-               "resource_uri":"/api/v1/move/102/",
-               "name":"Mimic",
-               "learn_type":"machine"
-            },
-            {
-               "resource_uri":"/api/v1/move/99/",
-               "name":"Rage",
-               "learn_type":"machine"
-            },
-            {
-               "resource_uri":"/api/v1/move/92/",
-               "name":"Toxic",
-               "learn_type":"machine"
-            },
-            {
-               "level":55,
-               "resource_uri":"/api/v1/move/79/",
-               "name":"Sleep-powder",
-               "learn_type":"level up"
-            },
-            {
-               "level":22,
-               "resource_uri":"/api/v1/move/77/",
-               "name":"Poisonpowder",
-               "learn_type":"level up"
-            },
-            {
-               "level":65,
-               "resource_uri":"/api/v1/move/76/",
-               "name":"Solarbeam",
-               "learn_type":"level up"
-            },
-            {
-               "level":30,
-               "resource_uri":"/api/v1/move/75/",
-               "name":"Razor-leaf",
-               "learn_type":"level up"
-            },
-            {
-               "level":43,
-               "resource_uri":"/api/v1/move/74/",
-               "name":"Growth",
+               "level":49,
+               "resource_uri":"/api/v1/move/56/",
+               "name":"Hydro-pump",
                "learn_type":"level up"
             },
             {
                "level":1,
-               "resource_uri":"/api/v1/move/73/",
-               "name":"Leech-seed",
-               "learn_type":"level up"
-            },
-            {
-               "resource_uri":"/api/v1/move/72/",
-               "name":"Mega-drain",
-               "learn_type":"machine"
-            },
-            {
-               "resource_uri":"/api/v1/move/63/",
-               "name":"Hyper-beam",
-               "learn_type":"machine"
-            },
-            {
-               "level":1,
-               "resource_uri":"/api/v1/move/45/",
-               "name":"Growl",
+               "resource_uri":"/api/v1/move/55/",
+               "name":"Water-gun",
                "learn_type":"level up"
             },
             {
@@ -1470,35 +1421,30 @@
                "learn_type":"machine"
             },
             {
+               "level":33,
                "resource_uri":"/api/v1/move/34/",
                "name":"Body-slam",
-               "learn_type":"machine"
-            },
-            {
-               "level":1,
-               "resource_uri":"/api/v1/move/33/",
-               "name":"Tackle",
                "learn_type":"level up"
             },
             {
-               "level":1,
-               "resource_uri":"/api/v1/move/22/",
-               "name":"Vine-whip",
+               "resource_uri":"/api/v1/move/25/",
+               "name":"Mega-kick",
+               "learn_type":"machine"
+            },
+            {
+               "resource_uri":"/api/v1/move/5/",
+               "name":"Mega-punch",
+               "learn_type":"machine"
+            },
+            {
+               "level":26,
+               "resource_uri":"/api/v1/move/3/",
+               "name":"Doubleslap",
                "learn_type":"level up"
-            },
-            {
-               "resource_uri":"/api/v1/move/15/",
-               "name":"Cut",
-               "learn_type":"machine"
-            },
-            {
-               "resource_uri":"/api/v1/move/14/",
-               "name":"Swords-dance",
-               "learn_type":"machine"
             }
          ],
-         "sp_def":100,
-         "name":"Venusaur"
+         "sp_def":50,
+         "name":"Poliwhirl"
       }
    ]
 }
