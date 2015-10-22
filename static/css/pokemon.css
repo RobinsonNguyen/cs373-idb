@@ -1,3 +1,7 @@
+body {
+    background-color: #4A9EA1; 
+}
+
 .left-panel {
     float: left;
     width: calc(20% - 10px);

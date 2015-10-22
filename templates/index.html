@@ -1,27 +1,20 @@
-<!DOCTYPE html>
-<html>
-	<head>
-		<link rel="stylesheet" type="text/css" href="../static/css/bootstrap.min.css">
-		<link rel="stylesheet" type="text/css" href="../static/css/bootstrap-theme.min.css">
+{% extends "base.html" %}
+
+	{% block head %}
 		<link rel="stylesheet" type="text/css" href="../static/css/route.css">
-		<script src="../static/js/bootstrap.min.js"></script>
-
 		<title>PokeMasters</title>
-	</head>
+	{% endblock %}
 
-	<body style="background-color: #4A9EA1; color:white;">
-		<nav class="navbar navbar-static-top" style="background-color: #555555; border: 0px">
-			<div class="container navbar-left" style="background-color: #555555;">
-				<a class="navbar-brand" href="{{ url_for('index') }}"><img alt="PokeMasters" src="../static/res/pokeball.png" style="position: relative; top: 2px"></a>
-				<ul class="nav navbar-nav">
-					<li><a href="{{ url_for('pokemon_id') }}">Pokemon</a></li>
-					<li><a href="{{ url_for('location_id') }}">Locations</a></li>
-					<li><a href="{{ url_for('move_id') }}">Moves</a></li>
-				</ul>
-			</div>
-		</nav>
+	{% block content %}
 		<div class="col-sm-12" style="max-height: calc(80%)" algin="center">
 			<img src="../static/res/Pokemon_Logo.png" style="max-width: 100%"/>
 		</div>
-	</body>
-</html>
+
+		<div class="text-center col-sm-12" style="position:relative; top: 50px">
+			<div class="btn-group" roll="group" style="padding: 4px;" align="center">
+				<button type="button" class="btn btn-sm" style="color:black;">Pokemon</button>
+				<button type="button" class="btn btn-sm" style="color:black;">Locations</button>
+				<button type="button" class="btn btn-sm" style="color:black;">Moves</button>
+			</div>
+		</div>
+	{% endblock %}

@@ -1,31 +1,14 @@
-<!DOCTYPE html>
-<html>
-	<head>
-		<link rel="stylesheet" type="text/css" href="../static/css/bootstrap.min.css">
-		<link rel="stylesheet" type="text/css" href="../static/css/bootstrap-theme.min.css">
-		<link rel="stylesheet" href="{{ url_for('static',filename='css/bootstrap-table.min.css') }}">
+{% extends "base.html" %}
+
+	{% block head %}
 		<link rel="stylesheet" type="text/css" href="../static/css/location.css">
 		<link rel="stylesheet" type="text/css" href="../static/css/route.css">
-		<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
-		<script src="../static/js/bootstrap.min.js"></script>
-		<script src="{{ url_for('static',filename='js/bootstrap-table.min.js') }}"></script>
 		<script src="../static/js/location.js"></script>
 
 		<title>{{route.name}} (Route) - PokeMasters</title>
-	</head>
+	{% endblock %}
 
-	<body style="background-color: #4A9EA1; color:white;">
-		<nav class="navbar navbar-static-top" style="background-color: #555555; border: 0px">
-			<div class="container navbar-left" style="background-color: #555555;">
-				<a class="navbar-brand" href="{{ url_for('index') }}"><img alt="PokeMasters" src="../static/res/pokeball.png" style="position: relative; top: 2px"></a>
-				<ul class="nav navbar-nav">
-					<li><a href="{{ url_for('pokemon_id') }}">Pokemon</a></li>
-					<li class="active"><a href="{{ url_for('location_id') }}">Locations</a></li>
-					<li><a href="{{ url_for('move_id') }}">Moves</a></li>
-				</ul>
-			</div>
-		</nav>
-
+	{% block content %}
 		<div class="row" style="margin: 4px;">
 			<div class="panel panel-primary col-sm-4" style="background-color: #71AD64; border: 2px solid #4AA14D;">
 				<div class="panel-heading" style="background: #A2E0A3; border: 2px solid #4AA14D;">
@@ -147,5 +130,4 @@
 				$(this).tab('show')
 			})
 		</script>
-	</body>
-</html>
+	{% endblock %}

@@ -1,62 +1,42 @@
-<!DOCTYPE html>
-<html>
-	<head>
-		<link rel="stylesheet" type="text/css" href="{{ url_for('static',filename='css/bootstrap.min.css') }}">
-		<link rel="stylesheet" type="text/css" href="{{ url_for('static',filename='css/bootstrap-theme.min.css') }}">
-		<link rel="stylesheet" href="{{ url_for('static',filename='css/bootstrap-table.min.css') }}">
+{% extends "base.html" %}
+
+	{% block head %}
 		<link rel="stylesheet" type="text/css" href="{{ url_for('static',filename='css/pokemon.css') }}">
-		<script src="{{ url_for('static',filename='js/jquery.js') }}"></script>
-		<script src="{{ url_for('static',filename='js/bootstrap.min.js') }}"></script>
-		<script src="{{ url_for('static',filename='js/bootstrap-table.min.js') }}"></script>
 		<script src="{{ url_for('static',filename='js/pokemon.js') }}"></script>
 
 		<title>Pokemon - PokeMasters</title>
-	</head>
 
-	<body style="background-color: #4A9EA1; color: white;">
-		<div>
-			<nav class="navbar navbar-inverse navbar-static-top">
-				<div class="container navbar-left" id="NavigationBar">
-					<a class="navbar-brand" href="../"><img alt="PokeMasters" src="../static/res/pokeball.png"></a>
-					<ul class="nav navbar-nav navbar-left">
-						<li><a class="active" href="../pokemon/">Pokemon</a></li>
-						<li><a href="../location/">Locations</a></li>
-						<li><a href="../moves/">Moves</a></li>
-					</ul>
-				</div>
-			</nav>
-		</div>
+	{% endblock %}
 
+	{% block content %}
 		<h2 style="text-align: center;">Pokemon</h2>
 
-	<table id="pokemon-models" data-toggle="table" data-classes="table table-hover">
-		<thead>
-			<tr>
-				<th data-sortable="true">No.</th>
-				<th data-sortable="true">Name</th>
-				<th data-sortable="true">HP</th>
-				<th data-sortable="true">Attack</th>
-				<th data-sortable="true">Defense</th>
-				<th data-sortable="true">Sp. Attack</th>
-				<th data-sortable="true">Sp. Defense</th>
-				<th data-sortable="true">Speed</th>
-			</tr>
-		</thead>
-		<tbody>
-			{% for poke in pokemon %}
-				<tr class="pokemon-row">
-					<td> {{ poke.id }} </td>
-					<td> {{ poke.name }} </td>
-					<td> {{ poke.stats['HP'] }} </td>
-					<td> {{ poke.stats['ATK'] }} </td>
-					<td> {{ poke.stats['DEF'] }} </td>
-					<td> {{ poke.stats['SPA'] }} </td>
-					<td> {{ poke.stats['SPD'] }} </td>
-					<td> {{ poke.stats['SPE'] }} </td>
+		<table id="pokemon-models" data-toggle="table" data-classes="table table-hover">
+			<thead>
+				<tr>
+					<th data-sortable="true">No.</th>
+					<th data-sortable="true">Name</th>
+					<th data-sortable="true">HP</th>
+					<th data-sortable="true">Attack</th>
+					<th data-sortable="true">Defense</th>
+					<th data-sortable="true">Sp. Attack</th>
+					<th data-sortable="true">Sp. Defense</th>
+					<th data-sortable="true">Speed</th>
 				</tr>
-			{% endfor %}
-		</tbody>
-	</table>
-
-	</body>
-</html>
+			</thead>
+			<tbody>
+				{% for poke in pokemon %}
+					<tr class="pokemon-row">
+						<td> {{ poke.id }} </td>
+						<td> {{ poke.name }} </td>
+						<td> {{ poke.stats['HP'] }} </td>
+						<td> {{ poke.stats['ATK'] }} </td>
+						<td> {{ poke.stats['DEF'] }} </td>
+						<td> {{ poke.stats['SPA'] }} </td>
+						<td> {{ poke.stats['SPD'] }} </td>
+						<td> {{ poke.stats['SPE'] }} </td>
+					</tr>
+				{% endfor %}
+			</tbody>
+		</table>
+	{% endblock %}
