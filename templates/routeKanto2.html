@@ -69,10 +69,10 @@
 						<table class="table" style="border: 2px solid #4AA14D; color: #000000" data-toggle="table" data-classes="table table-hover">
 							<tbody>
 								<tr style="background-color: #71AD64;">
-									<th width="55%">Pokemon</th>
-									<th width="15%">Area</th>
-									<th width="15%">Levels</th>
-									<th width="15%">Rate</th>
+									<th width="55%" data-sortable="true">Pokemon</th>
+									<th width="15%" data-sortable="true">Area</th>
+									<th width="15%" data-sortable="true">Levels</th>
+									<th width="15%" data-sortable="true">Rate</th>
 								</tr>
 
 								{% for poke in route.pokemon %}
@@ -92,9 +92,9 @@
 					<div role="tabpanel" class="tab-pane fade" id="trainers">
 						<table class="table" style="border: 2px solid #4AA14D; color: #000000">
 							<tr style="background-color: #71AD64;">
-								<th style="vertical-align: middle;">Trainer</th>
-								<th style="vertical-align: middle;">Area</th>
-								<th style="vertical-align: middle;">Pokemon</th>
+								<th>Trainer</th>
+								<th>Area</th>
+								<th>Pokemon</th>
 							</tr>
 							
 							{% for poke in route.trainers %}

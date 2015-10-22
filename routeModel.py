@@ -64,7 +64,6 @@ class RouteContainer:
 					newRoute.routeDesc = value
 				if key == "wildPokemon":
 					for val in value:
-						print(val)
 						newPokemon = self.wildPokemon()
 						if 'name' in val:
 							newPokemon.name = str(val['name'])

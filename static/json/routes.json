@@ -65,13 +65,53 @@
 			}],
 		"trainers":[
 			{
-				"name":"Jr. Trainer",
-				"area":"North path",
+				"name":"Biker Ernest",
+				"area":"South path (East to West)",
 				"pokemon":[
 					{
-						"name":"Clefairy",
+						"name":"Koffing",
 						"img":"",
-						"level":"33"
+						"level":"25"
+					},
+					{
+						"name":"Koffing",
+						"img":"",
+						"level":"25"
+					},
+					{
+						"name":"Weezing",
+						"img":"",
+						"level":"25"
+					},
+					{
+						"name":"Koffing",
+						"img":"",
+						"level":"25"
+					},
+					{
+						"name":"Grimer",
+						"img":"",
+						"level":"25"
+					}]
+			},
+			{
+				"name":"Biker Alex",
+				"area":"South path (East to West)",
+				"pokemon":[
+					{
+						"name":"Koffing",
+						"img":"",
+						"level":"28"
+					},
+					{
+						"name":"Grimer",
+						"img":"",
+						"level":"28"
+					},
+					{
+						"name":"Weezing",
+						"img":"",
+						"level":"28"
 					}]
 			}],
 		"items":[
