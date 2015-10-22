@@ -108,6 +108,8 @@ class RouteContainer:
 		self.routes = routes;
 
 	def getRouteByRegion(self, region, name):
+		print(region)
+		print(name)
 		for r in self.routes:
 			if r.region is region and r.name is name:
 				return r
