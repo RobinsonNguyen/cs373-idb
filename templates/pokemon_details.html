@@ -60,7 +60,7 @@
 	    				<div class="panel-body">
 	    						{% for evo in pokemon.evolution %}
 	    							<img src="{{ url_for('static', filename='res/SPRITES/%s_mini_.png' % evo.to) }}"/>
-	    							<a href="#"> {{ evo.to }} </a>
+	    							<a href="/pokemon/{{ evo.to }}"> {{ evo.to }} </a>
 	    						{% endfor %}
 	    				</div>
 					</div>
