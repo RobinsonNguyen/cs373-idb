@@ -55,7 +55,7 @@ def move_id():
 
 #======================================================================#
 
-@app.route('/locations')
+@app.route('/location/')
 def location():
     return render_template('location.html')
 

@@ -13,6 +13,27 @@
 				"area":"Grass",
 				"levels":"25,27",
 				"rate":"20%"
+			},
+			{
+				"name":"Oddish",
+				"img":"",
+				"area":"Grass",
+				"levels":"22,24,26",
+				"rate":"35%"
+			},
+			{
+				"name":"Bellsprout",
+				"img":"",
+				"area":"Grass",
+				"levels":"22,24,26",
+				"rate":"35%"
+			},
+			{
+				"name":"Venonat",
+				"img":"",
+				"area":"Grass",
+				"levels":"24,26",
+				"rate":"30%"
 			}],
 		"trainers":[
 			{
