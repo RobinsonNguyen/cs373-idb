@@ -35,6 +35,7 @@ class Moves:
 
 	def __init__(self):
 		self.ReadMoves()
+		self.ReadAllMoves()
 
 	def ReadMoves(self):
 		path = "./static/json/moves.json"
@@ -93,7 +94,7 @@ class Moves:
 						m.pokemonLVL.append(p)
 
 					elif key == 'pokemon-byTM':
-						for x in value:
+						for k in value:
 							if 'name' in k:
 								p.name = k['name']
 							elif 'tm' in k:
@@ -121,6 +122,27 @@ class Moves:
 			moves.append(m)
 
 		self.moves = moves
+
+	def ReadAllMoves(self):
+		path = "./SomeScrapingData/move_data.txt"
+
+		data = json.loads(open(path).read())
+
+		moves = []
+
+		for x in data['moves']:
+			m = self.move()
+			for key, value in x.items():
+				if key == "id":
+					m.id = value
+				elif key == 'name':
+					m.name = value
+			moves.append(m)
+
+		self.Allmoves = moves
+
+	def getAllMoves(self):
+		return self.Allmoves
 
 	def getMoveByName(self, id):
 		for m in self.moves:
