@@ -72,7 +72,7 @@
 
 								{% for poke in route.pokemon %}
 									<tr style="background-color: #FFFFFF;">
-										<td><img src="{{ url_for('static', filename='/res/SPRITES/%s_mini.png' % poke.name) }}"{{ poke.name }}</td>
+										<td><img src="{{ url_for('static', filename='res/SPRITES/%s_mini.png' % poke.name) }}"/>{{ poke.name }}</td>
 										<td>{{ poke.area }}</td>
 										<td>{{ poke.level }}</td>
 										<td>{{ poke.rate }}</td>
