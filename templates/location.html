@@ -4,19 +4,19 @@
 		<link rel="stylesheet" type="text/css" href="../static/css/bootstrap.min.css">
 		<link rel="stylesheet" type="text/css" href="../static/css/bootstrap-theme.min.css">
 		<link rel="stylesheet" type="text/css" href="../static/css/location.css">
+		<link rel="stylesheet" type="text/css" href="../static/css/route.css">
 		<script src="../static/js/bootstrap.min.js"></script>
 		<script src="../static/js/location.js"></script>
 	</head>
 
-	<body style="background-color: #083139;">
-		<nav class="navbar navbar-inverse navbar-static-top">
-			<div class="container navbar-left">
-				<a class="navbar-brand" href="index.html"><img alt="PokeMasters" src="../static/res/pokeball.png"></a>
-				<ul class="nav navbar-nav ">
-					<li><a href="">Pokemon</a></li>
-					<li><a href="">Trainers</a></li>
-					<li class="active"><a href="location.html">Locations</a></li>
-					<li><a href="">Moves</a></li>
+	<body style="background-color: #4A9EA1; color:white;">
+		<nav class="navbar navbar-static-top" style="background-color: #555555; border: 0px">
+			<div class="container navbar-left" style="background-color: #555555;">
+				<a class="navbar-brand" href="index.html"><img alt="PokeMasters" src="../static/res/pokeball.png" style="position: relative; top: 2px"></a>
+				<ul class="nav navbar-nav">
+					<li><a href="{{ url_for('pokemon_id') }}">Pokemon</a></li>
+					<li class="active"><a href="{{ url_for('locations') }}">Locations</a></li>
+					<li><a href="{{ url_for('move_id') }}">Moves</a></li>
 				</ul>
 			</div>
 		</nav>
