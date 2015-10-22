@@ -56,7 +56,7 @@ def move_id():
 #======================================================================#
 
 @app.route('/locations/')
-def location():
+def locations():
     return render_template('location.html')
 
 @app.route('/location', methods=['GET'])
