@@ -61,8 +61,8 @@ def location():
 
 @app.route('/location/', methods=['GET'])
 def location_id():
-
-    return 'Location ' + str(id) +  ' Page'
+    route = routeContainer.getRoutesByRegion(request.args.get("region"), request.args.get("name"))
+    return render_template("routeKanto2.html", route=route)
     #return render_template('index.html')
 
 
