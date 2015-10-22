@@ -62,6 +62,8 @@ def move_id():
 @app.route('/location', methods=['GET'])
 def location_id():
     print("Testing output")
+    print(request.args.get("region"))
+    print(request.args.get("name"))
     route = routeContainer.getRoutesByRegion(request.args.get("region"), request.args.get("name"))
     return render_template("routeKanto2.html", route=route)
     #return render_template('index.html')
