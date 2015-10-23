@@ -50,6 +50,7 @@
             </div>
 
             {% for p in move.pokemonLVL | batch(6) %}
+                <div class="row">
                 {% for pokemon in p %}
 
                     <div class="col-lg-2 thumb">
@@ -70,6 +71,7 @@
                     </div>
 
                 {% endfor %}
+                </div>
             {% endfor %}
 
 
@@ -80,6 +82,7 @@
                 </div>
 
                 {% for p in move.pokemonTM | batch(6) %}
+                    <div class="row">
                     {% for pokemon in p %}
 
                         <div class="col-lg-2 thumb">
@@ -97,8 +100,9 @@
                             <p class="data"><b>Special Defense:</b> {{pokemon.sp_def}}</p>
                             <p class="data"><b>Type(s):</b> {% for type in pokemon.type %}{{ type }}{% if not loop.last %}/{% endif %}{% endfor %}</p>
                         </div>
-                        
+
                     {% endfor %}
+                    <div>
                 {% endfor %}
 
             {% endif %}
