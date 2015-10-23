@@ -47,7 +47,7 @@ status:
 
 
 model.html: models.py
-	pydoc3 -w model
+	pydoc3 -w models
 
 models.log:
 	git log > IDB1.log

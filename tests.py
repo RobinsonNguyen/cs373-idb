@@ -1,8 +1,9 @@
 #!/usr/bin/env python3
 from unittest import main, TestCase
-from pokemonModel import PokemonContainer
-from movesModel import Moves
-from routeModel import RouteContainer
+# from pokemonModel import PokemonContainer
+# from movesModel import Moves
+# from routeModel import RouteContainer
+from models import PokemonContainer, Moves, RouteContainer
 
 class UnitTestModels(TestCase):
 	def test_pokemon_1(self):
