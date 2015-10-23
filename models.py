@@ -107,7 +107,6 @@ class PokemonContainer:
 					for l in value:
 						location = self.Location()
 						for k, v in l.items():
-							print(v)
 							if k == 'game':
 								location.game = v
 							if k == 'method':
