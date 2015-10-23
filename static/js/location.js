@@ -2,7 +2,7 @@ locations = [
 	{
 		uri: 1,
 		name: "Kanto",
-		routes: ["Route 15", "Route 2"]
+		routes: ["Route 15"]
 	},
 	{
 		uri: 2,
