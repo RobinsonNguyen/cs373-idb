@@ -91,12 +91,14 @@
 									<tr>
 										<td rowspan="{{ poke.pokemon|length }}">{{ poke.name }}</td>
 										<td rowspan="{{ poke.pokemon|length }}">{{ poke.area }}</td>
+										<td> {{ poke.pokemon[0].name }}
 									</tr>
 									{% for p in poke.pokemon %}
-										
-											<td>{{ p.name }}</td>
-											<td>{{ p.level }}</td>
-										
+										{{% if loop.index > 0 %}}
+											<tr>
+												<td>{{ p.name }}</td>
+											</tr>
+										{% endif %}
 									{% endfor %}
 								{% endfor %}
 							</tbody>
