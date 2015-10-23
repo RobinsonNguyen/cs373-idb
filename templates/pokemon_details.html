@@ -115,15 +115,20 @@
 								<tr>
 									<th>Game</th>
 									<th>Route</th>
-									<th>Method</th>
 								</tr>
 							</thead>
 							<tbody>
 								{% for loc in pokemon.locations %}
 									<tr class="pokemon-row">
 										<td>{{loc.game}}</td>
-										<td>{{loc.method}}</td>
-										<td>m</td>
+										<td>
+										{% for r in loc.routes %}
+											<a href="#" data-region="{{loc.game}}" class="route" id="{{r}}">{{r}}</a>
+										{% endfor %}
+										{% for o in loc.other %}
+											{{o}}
+										{% endfor %}
+										</td>
 									</tr>
 								{% endfor %}
 							</tbody>
