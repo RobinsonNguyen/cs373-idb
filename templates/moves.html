@@ -44,40 +44,16 @@
                 <p class="description">{{move.description}}</p>
             </div>
 
+        </div>
+
 
             <div class="col-lg-12">
                 <h1>Pokemon who learn through level up:</h1>
             </div>
 
-            {% for pokemon in move.pokemonLVL | batch(6) %}
-
-                <div class="col-lg-2 thumb">
-                    <div align="center">
-                        <a class="poke-data" href="../../pokemon/{{pokemon.name}}">
-                            <h2>{{pokemon.name}}</h2>
-                            <img class="img-poke" src="{{ url_for('static', filename='res/SPRITES/%s' % pokemon.img) }}" alt="">
-                        </a>
-                    </div>
-                    <p class="data"><b>Learns at:</b> {{pokemon.lvl}}</p>
-                    <p class="data"><b>HP:</b> {{pokemon.hp}}</p>
-                    <p class="data"><b>Attack:</b> {{pokemon.atk}}</p>
-                    <p class="data"><b>Defense:</b> {{pokemon.defs}}</p>
-                    <p class="data"><b>Speed:</b> {{pokemon.speed}}</p>
-                    <p class="data"><b>Special Attack:</b> {{pokemon.sp_atk}}</p>
-                    <p class="data"><b>Special Defense:</b> {{pokemon.sp_def}}</p>
-                    <p class="data"><b>Type(s):</b> {% for type in pokemon.type %}{{ type }}{% if not loop.last %}/{% endif %}{% endfor %}</p>
-            </div>
-
-            {% endfor %}
-
-
-            {% if move.pokemonTM[0] is defined %}
-                
-                <div class="col-lg-12">
-                    <h1>Pokemon who learn through TM:</h1>
-                </div>
-
-                {% for pokemon in move.pokemonTM | batch(6) %}
+            {% for p in move.pokemonLVL | batch(6) %}
+                <div class="row">
+                {% for pokemon in p %}
 
                     <div class="col-lg-2 thumb">
                         <div align="center">
@@ -86,6 +62,7 @@
                                 <img class="img-poke" src="{{ url_for('static', filename='res/SPRITES/%s' % pokemon.img) }}" alt="">
                             </a>
                         </div>
+                        <p class="data"><b>Learns at:</b> {{pokemon.lvl}}</p>
                         <p class="data"><b>HP:</b> {{pokemon.hp}}</p>
                         <p class="data"><b>Attack:</b> {{pokemon.atk}}</p>
                         <p class="data"><b>Defense:</b> {{pokemon.defs}}</p>
@@ -96,10 +73,41 @@
                     </div>
 
                 {% endfor %}
+                </div>
+            {% endfor %}
+
+
+            {% if move.pokemonTM[0] is defined %}
+                
+                <div class="col-lg-12">
+                    <h1>Pokemon who learn through TM:</h1>
+                </div>
+
+                {% for p in move.pokemonTM | batch(6) %}
+                    <div class="row col-lg-12">
+                    {% for pokemon in p %}
+
+                        <div class="col-lg-2 thumb">
+                            <div align="center">
+                                <a class="poke-data" href="../../pokemon/{{pokemon.name}}">
+                                    <h2>{{pokemon.name}}</h2>
+                                    <img class="img-poke" src="{{ url_for('static', filename='res/SPRITES/%s' % pokemon.img) }}" alt="">
+                                </a>
+                            </div>
+                            <p class="data"><b>HP:</b> {{pokemon.hp}}</p>
+                            <p class="data"><b>Attack:</b> {{pokemon.atk}}</p>
+                            <p class="data"><b>Defense:</b> {{pokemon.defs}}</p>
+                            <p class="data"><b>Speed:</b> {{pokemon.speed}}</p>
+                            <p class="data"><b>Special Attack:</b> {{pokemon.sp_atk}}</p>
+                            <p class="data"><b>Special Defense:</b> {{pokemon.sp_def}}</p>
+                            <p class="data"><b>Type(s):</b> {% for type in pokemon.type %}{{ type }}{% if not loop.last %}/{% endif %}{% endfor %}</p>
+                        </div>
+
+                    {% endfor %}
+                    <div>
+                {% endfor %}
 
             {% endif %}
-
-        </div>
 
         <hr>
 
