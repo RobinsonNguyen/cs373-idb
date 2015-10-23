@@ -94,7 +94,7 @@
 										<td> {{ poke.pokemon[0].name }}
 									</tr>
 									{% for p in poke.pokemon %}
-										{{% if loop.index > 0 %}}
+										{% if loop.index > 0 %}
 											<tr>
 												<td>{{ p.name }}</td>
 											</tr>
