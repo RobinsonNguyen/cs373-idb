@@ -108,9 +108,9 @@ class PokemonContainer:
 						location = self.Location()
 						for k, v in l.items():
 							if k == 'game':
-								location.name = v
+								location.game = v
 							if k == 'method':
-								location.learn_type = v
+								location.method = v
 						locations.append(location)
 					p.locations = locations
 				if key == 'evolutions':
