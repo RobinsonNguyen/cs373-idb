@@ -74,7 +74,7 @@ class UnitTestModels(TestCase):
 		self.assertEqual(allRoutes.routes[0].nextRoute, "Route 16")
 		self.assertEqual(allRoutes.routes[0].pokemon[0].name, "Oddish")
 		self.assertEqual(allRoutes.routes[0].trainers[1].name, "Biker Alex")
-		self.assertEqual(allRoutes.routes[0].items[0].name, "TM18(Rain Dance)")
+		self.assertEqual(allRoutes.routes[0].items[0].name, "Rain-dance")
 
 	def test_location_2(self):
 		allRoutes = RouteContainer()
@@ -92,7 +92,7 @@ class UnitTestModels(TestCase):
 		self.assertEqual(allRoutes.routes[2].nextRoute, "Route 32")
 		self.assertEqual(allRoutes.routes[2].pokemon[0].name, "Poliwag")
 		self.assertEqual(allRoutes.routes[2].trainers[0].name, "Bug Catcher Wade")
-		self.assertEqual(allRoutes.routes[2].items[0].name, "TM44 (Rest)")
+		self.assertEqual(allRoutes.routes[2].items[0].name, "Rest")
 
 if __name__ == "__main__" : 
 	main()
