@@ -1,7 +1,5 @@
 from flask import Flask, render_template, abort, request
-from pokemonModel import PokemonContainer
-from movesModel import Moves
-from routeModel import RouteContainer
+from models import PokemonContainer, Moves, RouteContainer
 
 app = Flask(__name__)
 
