@@ -1,7 +1,7 @@
 $(document).ready(function(){
 	
 	$('#pokemon-models').on('click-row.bs.table', function(row, e) {
-		location.href = '/pokemon/' + e[0].html().trim();
+		location.href = '/pokemon/' + e[1].trim();
 	});
 
 }); 

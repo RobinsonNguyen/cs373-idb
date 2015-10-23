@@ -55,7 +55,7 @@
 						<table id="pokemon-models" class="table" style="border: 2px solid #4AA14D; color: #000000" data-toggle="table" data-classes="table table-hover">
 							<thead>
 								<tr>
-									<th width="55%" data-sortable="true">Pokemon</th>
+									<th width="55%" data-sortable="true" rowspan="2">Pokemon</th>
 									<th width="15%" data-sortable="true">Area</th>
 									<th width="15%" data-sortable="true">Levels</th>
 									<th width="15%" data-sortable="true">Rate</th>
@@ -64,7 +64,8 @@
 							<tbody>
 								{% for poke in route.pokemon %}
 									<tr>
-										<td><img src="{{ url_for('static', filename='res/SPRITES/%s_mini_.png' % poke.name) }}"/>{{ poke.name }}</td>
+										<td><img src="{{ url_for('static', filename='res/SPRITES/%s_mini_.png' % poke.name) }}"/></td>
+										<td>{{ poke.name }}</td>
 										<td>{{ poke.area }}</td>
 										<td>{{ poke.levels }}</td>
 										<td>{{ poke.rate }}</td>
