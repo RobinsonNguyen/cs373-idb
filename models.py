@@ -49,7 +49,7 @@ class PokemonContainer:
 	def ReadPokemonData(self):
 		x = []
 
-		path = "./static/json/pokemon_data_Version1.json"
+		path = "./static/json/pokemon_data_Version2.json"
 		inputFile = open(path)
 		data = json.loads(inputFile.read())
 		inputFile.close()
@@ -108,9 +108,9 @@ class PokemonContainer:
 						location = self.Location()
 						for k, v in l.items():
 							if k == 'game':
-								move.name = v
+								location.name = v
 							if k == 'method':
-								move.learn_type = v
+								location.learn_type = v
 						locations.append(location)
 					p.locations = locations
 				if key == 'evolutions':
