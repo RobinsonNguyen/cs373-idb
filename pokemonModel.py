@@ -14,9 +14,13 @@ class PokemonContainer:
 			self.to = ""
 			self.method = ""
 			self.level = 0
+			
+	class Location:
+		def __init__(self):
+			self.method = ""
+			self.game = ""
 
 	class Pokemon:
-
 		def __init__ (self):
 			self.id = 0
 			self.name = ""
@@ -96,6 +100,17 @@ class PokemonContainer:
 								move.level = v
 						moves.append(move)
 					p.moves = moves
+				if key == 'locations':
+					locations = []
+					for l in value:
+						location = self.Location()
+						for k, v in l.items():
+							if k == 'game':
+								move.name = v
+							if k == 'method':
+								move.learn_type = v
+						locations.append(location)
+					p.locations = locations
 				if key == 'evolutions':
 					evolution = []
 					for e in value:
