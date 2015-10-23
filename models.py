@@ -17,7 +17,8 @@ class PokemonContainer:
 			
 	class Location:
 		def __init__(self):
-			self.method = ""
+			self.other = []
+			self.routes = []
 			self.game = ""
 
 	class Pokemon:
@@ -110,7 +111,16 @@ class PokemonContainer:
 							if k == 'game':
 								location.game = v
 							if k == 'method':
-								location.method = v
+								methods = v.split(',')
+								routes = []
+								others = []
+								for m in methods:
+									if "Route" in m:
+										routes.append(m)
+									else:
+										others.append(m)
+								location.other = others
+								location.routes = routes
 						locations.append(location)
 					p.locations = locations
 				if key == 'evolutions':
