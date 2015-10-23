@@ -113,17 +113,18 @@
 						<table class="table table-hover">
 							<thead>
 								<tr>
+									<th>Game</th>
 									<th>Route</th>
-									<th>Region</th>
 									<th>Method</th>
 								</tr>
 							</thead>
 							<tbody>
-								{% for move in pokemon.moves %}
-								<tr class="pokemon-row">
-									<td>1</td>
-									<td>Kanto</td>
-								</tr>
+								{% for loc in pokemon.locations %}
+									<tr class="pokemon-row">
+										<td>{{loc.game}}</td>
+										<td>{{loc.method}}</td>
+										<td>m</td>
+									</tr>
 								{% endfor %}
 							</tbody>
 						</table>

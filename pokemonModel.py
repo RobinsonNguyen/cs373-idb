@@ -123,7 +123,6 @@ class PokemonContainer:
 									evo.method = 'Trade'
 								if v == 'stone':
 									evo.method = 'Stone'
-
 							if k == 'to':
 								evo.to = v
 						evolution.append(evo)
