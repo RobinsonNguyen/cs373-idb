@@ -109,7 +109,7 @@ class PokemonContainer:
 						for k, v in l.items():
 							print(v)
 							if k == 'game':
-								location.name = v
+								location.game = v
 							if k == 'method':
 								location.method = v
 						locations.append(location)
