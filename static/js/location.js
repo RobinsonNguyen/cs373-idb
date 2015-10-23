@@ -15,22 +15,39 @@ routes = [
 	{
 		region: "Kanto",
 		name: "Route 15",
-		pokemon: ["Pidgey", "Rattata"]
+		pokemon: ["Pidgey", "Rattata"],
+		level: 15,
+		trainers: 5,
+		money: 300,
+		pkmnAmnt: 6
+
 	},
 	{
-		region: "Kanto",
-		name: "Route 2",
-		pokemon: ["Pidgey", "Rattata"]
+		region: "Johto",
+		name: "Route 32",
+		pokemon: ["Pidgey", "Rattata"],
+		level: 28,
+		trainers: 3,
+		money: 500,
+		pkmnAmnt: 3
 	},
 	{
 		region: "Johto",
 		name: "Route 30",
-		pokemon: ["Pidgey", "Zapdos"]
+		pokemon: ["Pidgey", "Zapdos"],
+		level: 35,
+		trainers: 6,
+		money: 1200,
+		pkmnAmnt: 7
 	},
 	{
 		region: "Johto",
 		name: "Route 31",
-		pokemon: ["Pidgey", "Zapdos"]
+		pokemon: ["Pidgey", "Zapdos"],
+		level: 20,
+		trainers: 1,
+		money: 300,
+		pkmnAmnt: 9
 	}
 ]
 
@@ -58,11 +75,17 @@ function populateRoutes(uri, caller) {
 						var name = row.insertCell(0);
 							name.innerHTML = "<a href=\"?region=" + routes[r].region + "&name=" + routes[r].name + "\">" + locations[loc].routes[route] + "</a>";
 						var avgLvl = row.insertCell(1);
-							avgLvl.innerHTML = 0;
+							avgLvl.innerHTML = routes[r].level;
 							avgLvl.style = "text-align: center;";
 						var numTrainers = row.insertCell(2);
-							numTrainers.innerHTML = 0;
+							numTrainers.innerHTML = routes[r].trainers;
 							numTrainers.style = "text-align: center;";
+						var money = row.insertCell(3);
+							money.innerHTML = routes[r].money;
+							money.style = "text-align: center;";
+						var pkmn = row.insertCell(4);
+							pkmn.innerHTML = routes[r].pkmnAmt;
+							pkmn.style = "text-align: center;";
 					}
 				}
 			}

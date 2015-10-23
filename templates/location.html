@@ -24,12 +24,17 @@
 			<h2 style="color: white;" align="center">Routes</h2>
 			<div class="container pkmn-group">
 				<div class="panel panel-default">
-					<table id="routeTable" class="table">
-						<tr>
-							<th>Route Name</th>
-							<th style="text-align: center;">Average Level</th>
-							<th style="text-align: center;"># of Trainers</th>
-						</tr>
+					<table id="routeTable" class="table" data-toggle="table" data-classes="table table-hover">
+						<thead>
+							<tr>
+								<th>Route Name</th>
+								<th style="text-align: center;" data-sortable="true">Average Level</th>
+								<th style="text-align: center;" data-sortable="true"># of Trainers</th>
+								<th style="text-align: center;" data-sortable="true">Avg money earned</th>
+								<th style="text-align: center;" data-sortable="true"># of different Pokemon</th>
+							</tr>
+						</thead>
+						<tbody></tbody>
 					</table>
 				</div>
 			</div>
