@@ -50,7 +50,7 @@
             </div>
 
             {% for p in move.pokemonLVL | batch(6) %}
-                <div class="row">
+                <div class="row col-lg-12">
                 {% for pokemon in p %}
 
                     <div class="col-lg-2 thumb">
@@ -82,7 +82,7 @@
                 </div>
 
                 {% for p in move.pokemonTM | batch(6) %}
-                    <div class="row">
+                    <div class="row col-lg-12">
                     {% for pokemon in p %}
 
                         <div class="col-lg-2 thumb">
