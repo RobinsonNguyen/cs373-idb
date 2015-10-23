@@ -93,10 +93,10 @@
 										<td rowspan="{{ poke.pokemon|length }}">{{ poke.area }}</td>
 									</tr>
 									{% for p in poke.pokemon %}
-										<tr>
+										
 											<td>{{ p.name }}</td>
 											<td>{{ p.level }}</td>
-										</tr>
+										
 									{% endfor %}
 								{% endfor %}
 							</tbody>
