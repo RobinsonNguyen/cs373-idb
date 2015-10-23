@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 from unittest import main, TestCase
-from models import PokemonContainer
+from pokemonModel import PokemonContainer
 from movesModel import Moves
 from routeModel import RouteContainer
 
@@ -9,7 +9,7 @@ class UnitTestModels(TestCase):
 		pokemonList = PokemonContainer()
 		self.assertEqual(pokemonList.pokemon[0].id, 1)
 		self.assertEqual(pokemonList.pokemon[0].name,"Bulbasaur")
-		self.assertEqual(pokemonList.pokemon[1].type[0], "poison")
+		self.assertEqual(pokemonList.pokemon[0].type[0], "poison")
 		self.assertEqual(pokemonList.pokemon[0].stats['HP'], 45)
 		self.assertEqual(pokemonList.pokemon[0].stats['SPE'], 45)
 		self.assertEqual(pokemonList.pokemon[0].stats['DEF'], 49)
@@ -51,18 +51,21 @@ class UnitTestModels(TestCase):
 
 	def test_move_1(self):
 		allMoves = Moves()
-		self.assertEqual(allMoves.moves[0].id, 240)
-		self.assertEqual(allMoves.moves[0].name, "Rain-dance")
-		self.assertEqual(allMoves.moves[0].type, "Water")
+		self.assertEqual(allMoves.moves[239].id, 240)
+		self.assertEqual(allMoves.moves[239].name, "Rain-dance")
+		self.assertEqual(allMoves.moves[239].power, 0)
 
 	def test_move_2(self):
 		allMoves = Moves()
-		self.assertEqual(allMoves.moves[1].id, 156)
-		self.assertEqual(allMoves.moves[1].name, "Rest")
-		self.assertEqual(allMoves.moves[1].type, "Psychic")
+		self.assertEqual(allMoves.moves[155].id, 156)
+		self.assertEqual(allMoves.moves[155].name, "Rest")
+		self.assertEqual(allMoves.moves[155].power, 0)
 
 	def test_move_3(self):
-		pass
+		allMoves = Moves()
+		self.assertEqual(allMoves.moves[357].id, 358)
+		self.assertEqual(allMoves.moves[357].name, "Wake-up-slap")
+		self.assertEqual(allMoves.moves[357].power, 60)
 
 	def test_location_1(self):
 		allRoutes = RouteContainer()
@@ -82,7 +85,7 @@ class UnitTestModels(TestCase):
 		self.assertEqual(allRoutes.routes[1].trainers[0].name, "Youngster Joey")
 		self.assertEqual(allRoutes.routes[1].items[0].name, "Potion")
 
-	def test_location_2(self):
+	def test_location_3(self):
 		allRoutes = RouteContainer()
 		self.assertEqual(allRoutes.routes[2].region, "Johto")
 		self.assertEqual(allRoutes.routes[2].name, "Route 31")
