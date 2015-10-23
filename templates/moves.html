@@ -49,7 +49,7 @@
                 <h1>Pokemon who learn through level up:</h1>
             </div>
 
-            {% for pokemon in move.pokemonLVL %}
+            {% for pokemon in move.pokemonLVL | batch(6) %}
 
                 <div class="col-lg-2 thumb">
                     <div align="center">
