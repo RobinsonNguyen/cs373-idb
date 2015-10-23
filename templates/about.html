@@ -6,7 +6,8 @@
 	{% endblock %}
 
 	{% block content %}
-		<h2 class="blog-post-title">Pokemasters</h2>
+		<h2 class="blog-post-title" align="center">Pokemasters</h2>
+		<hr>
 		<div class="cointainer-fluid">
 			<div class="row">
 				<div class="col-md-4">
@@ -52,8 +53,12 @@
 				<div class="col-md-8">
 					<p></p>
 					<div style="text-align:left; margin-bottom:90px">
-						<p><b>About me:</b></p>
-						<p><b>Responsibilities:</b></p>
+						<p><b>About me:</b>
+							I am a senior at UT. I enjoy playing Pokemon, discussing Pokemon, and theorizing about Pokemon in the real world. I also love sushi and playing Super Smash Brothers and being a squid and/or kid while playing Splatoon
+						</p>
+						<p><b>Responsibilities:</b>
+							Scraping data from serebii and Bulbapedia and formatting the data in a way that can be dynamically pulled (such as JSON).
+						</p>
 						<p>Num stuff</p>
 					</div>
 					<p></p>
@@ -99,5 +104,12 @@
 		</div>
 		<div>
 			Data
+
+
+			Serebii and Bulbapedia were both scraped using Java, and finding the html tags that surrounded and made up the data we wanted. Made heavy use of how html was structured in order to get exactly the data we needed across all Pokemon pages for both websites. Partial web-crawler that got links to all pages on the site from the site. RestfulPokemon API was scraper by just called GETs to the JSON objects, and storing them into separate json files that can be used dynamically with the site.
 		</div>
+
+
+
+
 	{% endblock %}

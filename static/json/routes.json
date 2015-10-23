@@ -116,7 +116,7 @@
 			}],
 		"items":[
 			{
-				"name":"TM18(Rain Dance)",
+				"name":"Rain-dance",
 				"area":"Western portion of the norther half (requires Cut)",
 				"description":"Rain Dance is a non-damaging Water-type move introduced in Generation II."
 			}]
@@ -197,7 +197,7 @@
 			}],
 		"items":[
 			{
-				"name":"TM44 (Rest)",
+				"name":"Rest",
 				"area":"From the man standing by the small pond after delivering him a Spearow from his friend on Route 35",
 				"description":"A move thing"
 			}]
