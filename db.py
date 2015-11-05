@@ -96,3 +96,4 @@ def create_db():
     db.drop_all()
     db.create_all()
     create_pokemon()
+    create_moves()
