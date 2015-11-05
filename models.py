@@ -282,11 +282,10 @@ class Moves(db.ALL_MOVES):
 		self.Allmoves = moves
 
 	def getAllMoves(self):
-		return self.Allmoves
+		return db.execute('select * from ALL_MOVES', [1]).first()
 
 	def getMoveByName(self, name):
-		s = all_moves.select(all_moves.c.MOVE_NAME == name)
-		return s
+		return all_moves.select(all_moves.c.MOVE_NAME == name).execute().first()
 
 class RouteContainer:
 
