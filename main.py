@@ -1,5 +1,6 @@
 from flask import Flask, render_template, abort, request, jsonify
 from models import *
+from db import create_db
 
 import subprocess
 
@@ -139,4 +140,5 @@ def delete_moves(id):
 '''
 
 if __name__ == '__main__':
+    create_db()
     app.run(host="0.0.0.0", port=8000, debug=True)
