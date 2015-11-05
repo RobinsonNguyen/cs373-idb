@@ -8,7 +8,6 @@ from models import Pokemon, Move
 
 class UnitTestModels(TestCase):
 	def test_pokemon_1(self):
-		pass
         c = Pokemon.query.filter_by(id=1)
 
         self.assertEqual(c[0].id, "1")
