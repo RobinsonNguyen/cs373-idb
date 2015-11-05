@@ -184,7 +184,7 @@ class Moves:
 		pokemonContainer = PokemonContainer()
 		p = pokemonContainer.GetAllPokemon()
 
-		path = "./static/json/move_data.json"
+		path = "./static/json/moves_final.json"
 		inputFile = open(path)
 		data = json.loads(inputFile.read())
 		inputFile.close()
@@ -250,7 +250,7 @@ class Moves:
 
 	def ReadAllMoves(self):
 
-		path = "./static/json/move_data.json"
+		path = "./static/json/moves_final.json"
 		inputFile = open(path)
 		data = json.loads(inputFile.read())
 		inputFile.close()
