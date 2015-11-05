@@ -1,6 +1,6 @@
 from flask import Flask, render_template, abort, request, jsonify
 from models import PokemonContainer, Moves, RouteContainer
-from flask.ext.sqlalchemy import sqlalchemy
+from flask.ext.sqlalchemy import SQLAlchemy
 
 app = Flask(__name__)
 app.config['SQLALCHEMY_DATABASE_URI'] = 'mysql://root:pokemon@localhost/pokemasters'
