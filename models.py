@@ -1,4 +1,9 @@
 import json
+from sqlalchemy import *
+from main import db
+
+metadata = BoundMetaData(db)
+all_moves = Table('ALL_MOVES', metadata, autoload=True)
 
 class PokemonContainer:
 
@@ -143,7 +148,9 @@ class PokemonContainer:
 			x.append(p)
 		self.pokemon = x
 
-class Moves:
+class Moves(db.ALL_MOVES):
+
+
 
 	class pokemon:
 
@@ -278,9 +285,8 @@ class Moves:
 		return self.Allmoves
 
 	def getMoveByName(self, name):
-		for m in self.moves:
-			if m.name == name:
-				return m
+		s = all_moves.select(all_moves.c.MOVE_NAME == name)
+		return s
 
 class RouteContainer:
 
