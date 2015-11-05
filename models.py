@@ -103,6 +103,7 @@ class Pokemon(db.Model):
 	def get(name):
 		return Pokemon.query.filter_by(name=name).first()
 
+	@staticmethod
 	def get_id(id):
 		return Pokemon.query.filter_by(id=id).first()
 		
