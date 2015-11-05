@@ -1,5 +1,5 @@
 import json
-from sqlalchemy import *
+from SQLAlchemy import *
 from main import db
 
 metadata = BoundMetaData(db)
