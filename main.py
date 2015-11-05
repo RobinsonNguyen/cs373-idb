@@ -113,15 +113,21 @@ def moves(name=None):
 	return render_template('allMoves.html', moves=Move.get_all())
 
 #=============API==========#
-'''
-#@app.route('/api/v1.0/moves/', methods=['GET'])
+
+@app.route('/api/v1.0/moves/', methods=['GET'])
 def get_moves():
-    return jsonify({'moves': 'test'})
+    moves = Move.get_all()
+    moves_list = []
+    for move in moves:
+        moves_list.append({c.name: getattr(move, c.name) for c in move.__table__.columns})
+    return jsonify({'moves': moves_list})
 
 @app.route('/api/v1.0/moves/<int:id>/', methods=['GET'])
 def get_moves_id(id):
-    return jsonify({'moves': 'test'})
-
+    move = Move.get_id(id)
+    move_dic = {c.name: getattr(move, c.name) for c in move.__table__.columns}
+    return jsonify({'moves': move_dic})
+'''
 @app.route('/api/v1.0/moves/', methods=['POST'])
 def create_moves():
     if not request.json:

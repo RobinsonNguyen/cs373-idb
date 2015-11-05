@@ -51,6 +51,10 @@ class Move(db.Model):
 	@staticmethod
 	def get(move):
 		return Move.query.filter_by(name=move).first()
+
+	@staticmethod
+	def get_id(id):
+		return Move.query.filter_by(id=id).first()
 		
 
 	
