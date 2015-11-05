@@ -167,8 +167,8 @@ class Moves:
 			self.id = 0
 			self.name = ""
 			self.tm = ""
-			self.type = ""
-			self.category = ""
+			self.types = ""
+			self.categories = ""
 			self.power = ""
 			self.accuracy = ""
 			self.pp = ""
@@ -201,9 +201,9 @@ class Moves:
 				elif key == 'tm':
 					m.tm = value
 				elif key == 'type':
-					m.type = value
+					m.types = value
 				elif key == 'category':
-					m.category = value
+					m.categories = value
 				elif key == 'power':
 					m.power = value
 				elif key == 'accuracy':

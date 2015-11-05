@@ -64,7 +64,6 @@ def move(name):
     move = moveContainer.getMoveByName(name)
     if move is None:
         abort(404)
-    move.type = "T_T"
     print(move.pp)
     return render_template('moves.html', move=move)
 
