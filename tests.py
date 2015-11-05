@@ -8,8 +8,8 @@ from models import Pokemon, Move
 
 class UnitTestModels(TestCase):
 	def test_pokemon_1(self):
+		c = Pokemon.get_id(1)
 		self.assertEqual("1", "1")
-		# c = Pokemon.get_id(1)
 		# self.assertEqual(c[0].id, 1)
 		# self.assertEqual(c[0].name, 'Bulbasaur')
 		# self.assertEqual(c[0].hp, 45)
