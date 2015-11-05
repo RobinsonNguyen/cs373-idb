@@ -212,6 +212,7 @@ class Moves:
 					m.pp = value
 				elif key == 'description':
 					m.description = value
+			m.type = "awesome"
 
 			for x in p:
 				poke = self.pokemon()
