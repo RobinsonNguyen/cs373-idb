@@ -72,7 +72,8 @@ def pokemon(name=None):
 @app.route('/api/v1.0/pokemon/', methods=['GET'])
 def get_pokemon():
     pokemon = Pokemon.as_dict(Pokemon.get_all())
-    return jsonify({'pokemon': pokemon})
+    poke_dic = {c.name: getattr(pokemon, c.name) for c in pokemon.__table__.columns}
+    return jsonify({'pokemon': poke_dic})
 
 @app.route('/api/v1.0/pokemon/<int:id>/', methods=['GET'])
 def get_pokemon_id(id):
