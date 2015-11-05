@@ -6,10 +6,10 @@ import json
 from models import *
 
 class PokemonContainer():
-    self.id = 0
-    self.name = ""
-    self.stats = {}
-    self.imgPath = ""
+    id = 0
+    name = ""
+    stats = {}
+    imgPath = ""
 
 def create_pokemon():
 
