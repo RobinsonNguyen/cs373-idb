@@ -19,8 +19,7 @@ def about():
 
 @app.route('/api/v1.0/tests/', methods=['GET'])
 def get_test_results():
-    args = ['python.exe', 'tests.py']
-    script = subprocess.Popen(args, stdout=subprocess.PIPE, stderr=subprocess.PIPE)
+    script = subprocess.Popen("make test", shell=True, stdout=subprocess.PIPE, stderr=subprocess.PIPE)
     try:
         errs, out = script.communicate()
     except:
