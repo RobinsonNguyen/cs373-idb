@@ -21,10 +21,10 @@ def about():
 def get_test_results():
     script = subprocess.Popen("make test", shell=True, stdout=subprocess.PIPE, stderr=subprocess.PIPE)
     try:
-        errs, out = script.communicate()
+        out, errs = script.communicate()
     except:
         script.kill()
-    return jsonify({'results': { 'out':out.decode(), 'err':errs.decode() } })
+    return jsonify({'results': out.decode() })
 	
 # --------
 # location
