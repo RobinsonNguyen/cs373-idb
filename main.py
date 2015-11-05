@@ -71,12 +71,12 @@ def pokemon(name=None):
 
 @app.route('/api/v1.0/pokemon/', methods=['GET'])
 def get_pokemon():
-    pokemon = Pokemon.get_all()
+    pokemon = Pokemon.as_dict(Pokemon.get_all())
     return jsonify({'pokemon': pokemon})
 
 @app.route('/api/v1.0/pokemon/<int:id>/', methods=['GET'])
 def get_pokemon_id(id):
-    pokemon = Pokemon.get_id(id)
+    pokemon = Pokemon.as_dict(Pokemon.get_id(id))
     return jsonify({'pokemon': pokemon})
 
 @app.route('/api/v1.0/pokemon', methods=['POST'])

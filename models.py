@@ -77,6 +77,9 @@ class Pokemon(db.Model):
 		
 	def __repr__(self):
 		return '<name {}>'.format(self.name)
+
+	def as_dict(self):
+       return {c.name: getattr(self, c.name) for c in self.__table__.columns}
 	
 	@property
 	def serialize(self):
