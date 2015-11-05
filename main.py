@@ -24,7 +24,7 @@ def get_test_results():
         errs, out = script.communicate()
     except:
         script.kill()
-    return jsonify({'results': out.decode() })
+    return jsonify({'results': { 'out':out.decode(), 'err':errs.decode() } })
 	
 # --------
 # location
