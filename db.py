@@ -15,6 +15,7 @@ def create_pokemon():
 
     for poke in pokeList:
         p = object()
+        p.stats = {}
         for key, value in poke.items():
             if key == 'pkdx_id':
                 p.id = value
@@ -47,7 +48,7 @@ def create_pokemon():
                         if k == 'name':
                             egg_groups.append(v)
                 p.eggGroup = egg_groups
-                
+
         pokemon = Pokemon(p.name, p.stats['HP'], p.stats['ATK'], p.stats['DEF'], p.stats['SPA'], p.stats['SPD'], p.stats['SPE'])
         db.session.add(character)
         db.session.commit()
