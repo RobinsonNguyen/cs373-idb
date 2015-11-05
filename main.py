@@ -25,7 +25,7 @@ def get_test_results():
         errs, out = script.communicate()
     except:
         script.kill()
-    return jsonify({'results': {'out':out.decode(), 'err':errs.decode()} })
+    return jsonify({'results': out.decode() })
 	
 # --------
 # location
@@ -69,7 +69,7 @@ def pokemon(name=None):
     return render_template('pokemon.html', pokemon=Pokemon.get_all())
 	
 #=============API==========#
-'''
+
 @app.route('/api/v1.0/pokemon/', methods=['GET'])
 def get_pokemon():
     return jsonify({'pokemon': 'test'})
@@ -82,7 +82,6 @@ def get_pokemon_id(id):
 def create_pokemon():
     if not request.json:
         abort(400)
-
     return jsonify({'pokemon': 'test'}), 201
 
 @app.route('/api/v1.0/pokemon/<int:id>', methods=['PUT'])
@@ -94,7 +93,6 @@ def update_pokemon(id):
 @app.route('/api/v1.0/pokemon/<int:id>', methods=['DELETE'])
 def delete_task(id):
     return jsonify({'result': True})
-'''
 
 # -----
 # moves
