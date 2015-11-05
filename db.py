@@ -11,6 +11,13 @@ class PokemonContainer():
     stats = {}
     imgPath = ""
 
+class MoveContainer():
+    id = 0
+    name = ""
+    power = 0
+    accuracy = 0
+    pp = 0
+
 def create_pokemon():
 
     path = "./static/json/pokemon_data_Version2.json"
@@ -58,6 +65,31 @@ def create_pokemon():
         pokemon = Pokemon(p.name, p.stats['HP'], p.stats['ATK'], p.stats['DEF'], p.stats['SPA'], p.stats['SPD'], p.stats['SPE'], p.imgPath)
         db.session.add(pokemon)
         db.session.commit()
+
+def create_moves():
+    path = "./static/json/moves_final.json"
+    inputFile = open(path)
+    data = json.loads(inputFile.read())
+    inputFile.close()
+
+    for x in data['moves']:
+        m = MoveContainer()
+        for key, value in x.items():
+            if key == "id":
+                m.id = value
+            elif key == 'name':
+                m.name = value
+            elif key == 'power':
+                m.power = value
+            elif key == 'accuracy':
+                m.accuracy = value
+            elif key == 'pp':
+                m.pp = value
+        move = Move(m.name, "", "", m.power, m.accuracy, m.pp, "")
+        db.session.add(move)
+        db.session.commit()
+        # name, type, category, power, accuracy, pp, description):
+
 
 def create_db():
     db.session.commit()

@@ -83,7 +83,7 @@ def get_pokemon_id(id):
     pokemon = Pokemon.get_id(id)
     poke_dic = {c.name: getattr(pokemon, c.name) for c in pokemon.__table__.columns}
     return jsonify({'pokemon': poke_dic})
-
+'''
 @app.route('/api/v1.0/pokemon', methods=['POST'])
 def create_pokemon():
     if not request.json:
@@ -99,6 +99,7 @@ def update_pokemon(id):
 @app.route('/api/v1.0/pokemon/<int:id>', methods=['DELETE'])
 def delete_task(id):
     return jsonify({'result': True})
+'''
 
 # -----
 # moves

@@ -146,8 +146,6 @@ class PokemonContainer:
 
 class Moves():
 
-
-
 	class pokemon:
 
 		def __init__(self):
