@@ -5,6 +5,12 @@ import json
 
 from models import *
 
+class PokemonContainer():
+    self.id = 0
+    self.name = ""
+    self.stats = {}
+    self.imgPath = ""
+
 def create_pokemon():
 
     path = "./static/json/pokemon_data_Version2.json"
@@ -14,7 +20,7 @@ def create_pokemon():
     pokeList = data['pokemon']
 
     for poke in pokeList:
-        p = object()
+        p = PokemonContainer()
         p.stats = {}
         for key, value in poke.items():
             if key == 'pkdx_id':
