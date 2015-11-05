@@ -58,6 +58,7 @@ class Pokemon(db.Model):
 	__tablename__ = "pokemon"
 	id = db.Column(db.Integer, primary_key=True)
 	name = db.Column(db.VARCHAR(50))
+	imgPath = db.Column(db.VARCHAR(50))
 	hp = db.Column(db.Integer)
 	attack = db.Column(db.Integer)
 	defense = db.Column(db.Integer)
@@ -66,7 +67,7 @@ class Pokemon(db.Model):
 	speed = db.Column(db.Integer)
 	stats = []
 	
-	def __init__(self, name, hp, attack, defense, spAttack, spDefense, speed):
+	def __init__(self, name, hp, attack, defense, spAttack, spDefense, speed, imgPath):
 		self.name = name
 		self.hp = hp
 		self.attack = attack
@@ -74,6 +75,7 @@ class Pokemon(db.Model):
 		self.spAttack = spAttack
 		self.spDefense = spDefense
 		self.speed = speed
+		self.imgPath = imgPath
 		
 	def __repr__(self):
 		return '<name {}>'.format(self.name)

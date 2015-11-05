@@ -55,10 +55,9 @@ def create_pokemon():
                             egg_groups.append(v)
                 p.eggGroup = egg_groups
 
-        pokemon = Pokemon(p.name, p.stats['HP'], p.stats['ATK'], p.stats['DEF'], p.stats['SPA'], p.stats['SPD'], p.stats['SPE'])
+        pokemon = Pokemon(p.name, p.stats['HP'], p.stats['ATK'], p.stats['DEF'], p.stats['SPA'], p.stats['SPD'], p.stats['SPE'], p.imgPath)
         db.session.add(pokemon)
         db.session.commit()
-
 
 def create_db():
     db.session.commit()
