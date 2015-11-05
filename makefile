@@ -51,3 +51,8 @@ model.html: models.py
 
 models.log:
 	git log > IDB1.log
+
+test: tests.py
+	coverage3 run    --branch tests.py >  tests.out 2>&1
+	coverage3 report --omit=*site-packages* -m  >> tests.out
+	cat tests.out

@@ -2,7 +2,8 @@
 
 	{% block head %}
 		<title>About - PokeMasters</title>
-
+		<link rel="stylesheet" type="text/css" href="{{ url_for('static',filename='css/about.css') }}">
+		<script src="{{ url_for('static',filename='js/about.js') }}"></script>
 	{% endblock %}
 
 	{% block content %}
@@ -126,6 +127,16 @@
 						</p>
 					</div>
 					<p></p>
+				</div>
+			</div>
+			<hr>
+			<div class="row">
+				<div class="col-md-12" style="text-align:center;">
+					<button id="do-unit-tests" type="button" class="btn btn-default" style="font-size:20px">Run Unit Tests</button>
+					<div class="unit-test-output">
+						<p id="unit-test-results">
+						</p>
+					</div>
 				</div>
 			</div>
 		</div>

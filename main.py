@@ -1,6 +1,8 @@
 from flask import Flask, render_template, abort, request, jsonify
 from models import *
 
+import subprocess
+
 # -----
 # index
 # -----
@@ -14,10 +16,20 @@ def index():
 @app.route('/about')
 def about():
     return render_template('about.html')
+
+@app.route('/api/v1.0/tests/', methods=['GET'])
+def get_test_results():
+    args = ['python.exe', 'tests.py']
+    script = subprocess.Popen(args, stdout=subprocess.PIPE, stderr=subprocess.PIPE)
+    try:
+        errs, out = script.communicate()
+    except:
+        script.kill()
+    return jsonify({'results': out.decode()})
 	
 # --------
 # location
-# --------	
+# --------	 
 '''
 #=============API==========#
 @app.route('/api/v1.0/locations/', methods=['GET'])
@@ -53,7 +65,7 @@ def delete_locations(id):
 @app.route('/pokemon/<name>/')
 def pokemon(name=None):
     if name is not None:
-		return render_template('pokemon_details.html', pokemon=Pokemon.get(name))
+        return render_template('pokemon_details.html', pokemon=Pokemon.get(name))
     return render_template('pokemon.html', pokemon=Pokemon.get_all())
 	
 #=============API==========#
