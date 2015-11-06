@@ -113,15 +113,13 @@
 						<table class="table table-hover">
 							<thead>
 								<tr>
-									<th>Game</th>
 									<th>Location</th>
 								</tr>
 							</thead>
 							<tbody>
 								{% for loc in locations %}
 									<tr class="pokemon-row">
-										<td>{{loc.ROUTE_POKEMON_GEN}}</td>
-										<td class="route">
+										<td class="route" id="{{loc.ROUTE_NAME}}">
 											{{loc.ROUTE_NAME}}
 										</td>
 									</tr>
