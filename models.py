@@ -8,7 +8,7 @@ db = SQLAlchemy(app)
 
 class Move(db.Model):
 	__tablename__ = 'ALL_MOVES'
-	id = db.Column(db.Integer, primary_key=True)
+	MOVE_ID = db.Column(db.Integer, primary_key=True)
 	MOVE_NAME = db.Column(db.VARCHAR(50))
 	MOVE_TYPE = db.Column(db.VARCHAR(50))
 	MOVE_CATEGORY = db.Column(db.VARCHAR(50))
@@ -149,45 +149,45 @@ class Routes(db.Model):
 		self.ROUTE_MAIN_DESCRIPTION = main;
 		self.ROUTE_TRIVIA = trivia;
 
-class Trainers(db.Model):
-	__tablename__ = "ALL_TRAINERS"
+# class Trainers(db.Model):
+# 	__tablename__ = "ALL_TRAINERS"
 
-	TRAINER_NAME = db.Column(db.VARCHAR(50))
-	TRAINER_GEN = db.Column(db.VARCHAR(50))
-	TRAINER_ROUTE_NAME = db.Column(db.VARCHAR(50))
-	TRAINER_POKEMON = db.Column(db.VARCHAR(50))
-	TRAINER_LEVEL = db.Column(db.VARCHAR(50))
+# 	TRAINER_NAME = db.Column(db.VARCHAR(50))
+# 	TRAINER_GEN = db.Column(db.VARCHAR(50))
+# 	TRAINER_ROUTE_NAME = db.Column(db.VARCHAR(50))
+# 	TRAINER_POKEMON = db.Column(db.VARCHAR(50))
+# 	TRAINER_LEVEL = db.Column(db.VARCHAR(50))
 
-	def __init__(self, name, gen, route, pokemon, level):
-		self.TRAINER_NAME = name
-		self.TRAINER_GEN = gen
-		self.TRAINER_ROUTE = route
-		self.TRAINER_POKEMON = pokemon
-		self.TRAINER_LEVEL = level
+# 	def __init__(self, name, gen, route, pokemon, level):
+# 		self.TRAINER_NAME = name
+# 		self.TRAINER_GEN = gen
+# 		self.TRAINER_ROUTE = route
+# 		self.TRAINER_POKEMON = pokemon
+# 		self.TRAINER_LEVEL = level
 
-class Abilities(db.Model):
-	__tablename__ = "POKEMON_ABILITIES"
+# class Abilities(db.Model):
+# 	__tablename__ = "POKEMON_ABILITIES"
 
-	POKEMON_ID = db.Column(db.Integer)
-	POKEMON_NAME = db.Column(db.VARCHAR(50))
-	POKEMON_ABILITY = db.Column(db.VARCHAR(50))
+# 	POKEMON_ID = db.Column(db.Integer)
+# 	POKEMON_NAME = db.Column(db.VARCHAR(50))
+# 	POKEMON_ABILITY = db.Column(db.VARCHAR(50))
 
-	def __init__(self, name, ability):
-		self.POKEMON_NAME = name
-		self.POKEMON_ABILITY = ability
+# 	def __init__(self, name, ability):
+# 		self.POKEMON_NAME = name
+# 		self.POKEMON_ABILITY = ability
 
-class Evolutions(db.Model):
-	__tablename__ = "POKEMON_EVOLUTIONS"
+# class Evolutions(db.Model):
+# 	__tablename__ = "POKEMON_EVOLUTIONS"
 
-	POKEMON_ID = db.Column(db.Integer)
-	POKEMON_NAME = db.Column(db.VARCHAR(50))
-	POKEMON_EVOLUTION = db.Column(db.VARCHAR(50))
-	POKEMON_EVOLVE_METHOD = db.Column(db.VARCHAR(50))
-	POKEMON_EVOLVE_LEVEL = db.Column(db.Integer)
+# 	POKEMON_ID = db.Column(db.Integer)
+# 	POKEMON_NAME = db.Column(db.VARCHAR(50))
+# 	POKEMON_EVOLUTION = db.Column(db.VARCHAR(50))
+# 	POKEMON_EVOLVE_METHOD = db.Column(db.VARCHAR(50))
+# 	POKEMON_EVOLVE_LEVEL = db.Column(db.Integer)
 
-	def __init__(self, name, evolution, method, level):
-		self.POKEMON_NAME = name
-		self.POKEMON_EVOLUTION = evolution
-		self.POKEMON_EVOLVE_METHOD = method
-		self.POKEMON_EVOLVE_LEVEL = level
+# 	def __init__(self, name, evolution, method, level):
+# 		self.POKEMON_NAME = name
+# 		self.POKEMON_EVOLUTION = evolution
+# 		self.POKEMON_EVOLVE_METHOD = method
+# 		self.POKEMON_EVOLVE_LEVEL = level
 
