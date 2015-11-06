@@ -37,8 +37,8 @@ def location_id():
         route = routeContainer.getRouteByRegion(request.args.get("region"), request.args.get("name"))
         if route is None:
             abort(404)
-        return render_template("route_data.html", route=route)
-    return render_template('location.html')
+        return render_template("route_data.html", route=Routes.get(request.args.get("name"),request.args.get("region")))
+    return render_template('location.html', routes=Routes.get_all())
 '''
 #=============API==========#
 @app.route('/api/v1.0/locations/', methods=['GET'])
