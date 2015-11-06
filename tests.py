@@ -17,7 +17,7 @@ class UnitTestModels(TestCase):
 		self.assertEqual(p['POKEMON_DEF'], 49)
 		self.assertEqual(p['POKEMON_SPATK'], 65)
 		self.assertEqual(p['POKEMON_SPDEF'], 65)
-		self.assertEqual(p['POKEMON_SPEED'], 45)
+		self.assertEqual(p['POKEMON_SPD'], 45)
 
 	def test_pokemon_2(self):
 		pokemon = Pokemon.get('Bulbasaur')
@@ -29,7 +29,7 @@ class UnitTestModels(TestCase):
 		self.assertEqual(p['POKEMON_DEF'], 49)
 		self.assertEqual(p['POKEMON_SPATK'], 65)
 		self.assertEqual(p['POKEMON_SPDEF'], 65)
-		self.assertEqual(p['POKEMON_SPEED'], 45)
+		self.assertEqual(p['POKEMON_SPD'], 45)
 
 
 	def test_pokemon_3(self):
