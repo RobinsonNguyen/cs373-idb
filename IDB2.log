@@ -1,3 +1,1503 @@
+commit c54b2a24ed380914a97dfb36e5ee3a2fe087e00a
+Merge: a5edbd1 a994f57
+Author: Tucker Long <tl7877@cs.utexas.edu>
+Date:   Thu Nov 5 21:40:53 2015 -0600
+
+    Merge branch 'master' of 172.99.75.69:/home/git/cs373-idb
+
+commit a5edbd1c72b10e7d8ebba13076fb28fd3d86f887
+Author: Tucker Long <tl7877@cs.utexas.edu>
+Date:   Thu Nov 5 21:40:42 2015 -0600
+
+    Removing descriptions
+
+commit a994f57326e9acddae28f5bb4f64c5e0ab31c6bf
+Author: David Toth <dtoth@cs.utexas.edu>
+Date:   Thu Nov 5 21:40:02 2015 -0600
+
+    fixed move page to take out stuff
+
+commit d4e6b97446bd85eed10eedad920008ed69299a93
+Merge: 3594f4c 7a6fe21
+Author: Tucker Long <tl7877@cs.utexas.edu>
+Date:   Thu Nov 5 21:39:20 2015 -0600
+
+    Merge branch 'master' of 172.99.75.69:/home/git/cs373-idb
+
+commit 3594f4ca806f38688393dea01de798201755b30d
+Author: Tucker Long <tl7877@cs.utexas.edu>
+Date:   Thu Nov 5 21:39:11 2015 -0600
+
+    Fixing description for routes
+
+commit 7a6fe2171af35db0d92760dfd6f0426dec0cfc49
+Merge: ea5d2ab 5fbe87f
+Author: David Toth <dtoth@cs.utexas.edu>
+Date:   Thu Nov 5 21:38:09 2015 -0600
+
+    Merge branch 'master' of https://github.com/RobinsonNguyen/cs373-pokemon
+
+commit ea5d2aba2b12eabe142d7dc75c0811d419a05e5a
+Author: David Toth <dtoth@cs.utexas.edu>
+Date:   Thu Nov 5 21:38:05 2015 -0600
+
+    added egg and tutor to move page
+
+commit 5fbe87fe98b4e955f4110f9a828ebce8ea04f6d8
+Merge: 7f5f265 cb2d4a1
+Author: Robinson Nguyen <robinson_nguyen@hotmail.com>
+Date:   Thu Nov 5 21:37:15 2015 -0600
+
+    Merge branch 'master' of github.com:RobinsonNguyen/cs373-idb
+
+commit 7f5f265d72d0c2667619261b31c2fca59c5ecde0
+Author: Robinson Nguyen <robinson_nguyen@hotmail.com>
+Date:   Thu Nov 5 21:37:09 2015 -0600
+
+    Changing UML Diagram
+
+commit cb2d4a1bb4eef72eaeb509998edecfc0dd6e44ef
+Merge: b62344f e8fc24a
+Author: Tucker Long <tl7877@cs.utexas.edu>
+Date:   Thu Nov 5 21:36:06 2015 -0600
+
+    Merge branch 'master' of https://github.com/RobinsonNguyen/cs373-idb
+
+commit b62344fc0078178ba9f20507e376349861b244c1
+Author: Tucker Long <tl7877@cs.utexas.edu>
+Date:   Thu Nov 5 21:36:03 2015 -0600
+
+    Removing broken images
+
+commit e8fc24a3a1aa32cc2b5042f6bc6be5a446eced14
+Author: David Toth <dtoth@cs.utexas.edu>
+Date:   Thu Nov 5 21:35:39 2015 -0600
+
+    added egg and tutor to move page
+
+commit 01d1eb3a9261d7394865fff7b94f5ccef532146e
+Author: Robinson Nguyen <robinson_nguyen@hotmail.com>
+Date:   Thu Nov 5 21:34:23 2015 -0600
+
+    Trying Unit Tests
+
+commit ea1da6ba17b3f5b57619f0829a76359ad795cc29
+Merge: cb14b6c 0fe15e2
+Author: Robinson Nguyen <robinson_nguyen@hotmail.com>
+Date:   Thu Nov 5 21:32:44 2015 -0600
+
+    Merge branch 'master' of github.com:RobinsonNguyen/cs373-idb
+
+commit cb14b6c7fd69d69ae065dd53bf6e8ea3636bd6f9
+Author: Robinson Nguyen <robinson_nguyen@hotmail.com>
+Date:   Thu Nov 5 21:32:41 2015 -0600
+
+    Trying Unit Tests
+
+commit 0fe15e25eac9aa99be6550a3c15e98dc434e8330
+Merge: 24aae61 6b35298
+Author: Tucker Long <tl7877@cs.utexas.edu>
+Date:   Thu Nov 5 21:31:47 2015 -0600
+
+    Merge branch 'master' of 172.99.75.69:/home/git/cs373-idb
+
+commit 24aae61f5e22964daec536528418dfc3c5956fb8
+Author: Tucker Long <tl7877@cs.utexas.edu>
+Date:   Thu Nov 5 21:31:40 2015 -0600
+
+    trying to fix images
+
+commit 6b35298f7337c23375321792e95188aef2aa56f0
+Author: Robinson Nguyen <robinson_nguyen@hotmail.com>
+Date:   Thu Nov 5 21:31:16 2015 -0600
+
+    Trying Unit Tests
+
+commit fb89868ca26789af13a3283a9e0410fcbc73f960
+Author: Robinson Nguyen <robinson_nguyen@hotmail.com>
+Date:   Thu Nov 5 21:28:02 2015 -0600
+
+    Trying Unit Tests
+
+commit 4df94c74c6ac324213ae4caab8c926c8f4ca187f
+Merge: 67b8fc8 36687fc
+Author: Robinson Nguyen <robinson_nguyen@hotmail.com>
+Date:   Thu Nov 5 21:25:30 2015 -0600
+
+    Merge branch 'master' of 172.99.75.69:/home/git/cs373-idb
+
+commit 67b8fc8551d2f0a5fbf5ea8661a6ea0f69bdfb3f
+Merge: e13cfac 90280ac
+Author: Robinson Nguyen <robinson_nguyen@hotmail.com>
+Date:   Thu Nov 5 21:25:13 2015 -0600
+
+    Merge branch 'master' of github.com:RobinsonNguyen/cs373-idb
+
+commit 36687fc933267b9c07a92fa1c51e8fe4a6612c22
+Merge: 90280ac 0cc8ce8
+Author: Tucker Long <tl7877@cs.utexas.edu>
+Date:   Thu Nov 5 21:25:11 2015 -0600
+
+    Merge branch 'master' of 172.99.75.69:/home/git/cs373-idb
+
+commit e13cfac4a739e6135ce00e14cd2b6f60636fd419
+Author: Robinson Nguyen <robinson_nguyen@hotmail.com>
+Date:   Thu Nov 5 21:25:09 2015 -0600
+
+    Trying Unit Tests
+
+commit 90280acba548700a3d6e9b2e73ed9bee2a524256
+Merge: 92c9b72 b8e7fb6
+Author: Tucker Long <tl7877@cs.utexas.edu>
+Date:   Thu Nov 5 21:24:52 2015 -0600
+
+    MMerge branch 'master' of https://github.com/RobinsonNguyen/cs373-idb
+
+commit 92c9b72746e02ac6d5c52c6391789c4e17c7a30f
+Author: Tucker Long <tl7877@cs.utexas.edu>
+Date:   Thu Nov 5 21:24:41 2015 -0600
+
+    renaming folders
+
+commit 0cc8ce8de29970bdd9ead9f72f8aecb5a806e84f
+Merge: b8e7fb6 3a6c37d
+Author: Robinson Nguyen <robinson_nguyen@hotmail.com>
+Date:   Thu Nov 5 21:23:02 2015 -0600
+
+    Merge branch 'master' of 172.99.75.69:/home/git/cs373-idb
+
+commit b8e7fb65844ea04566a8ceb157ac6d73670b4e7c
+Merge: 0a76754 50f5794
+Author: Robinson Nguyen <robinson_nguyen@hotmail.com>
+Date:   Thu Nov 5 21:22:48 2015 -0600
+
+    Merge branch 'master' of github.com:RobinsonNguyen/cs373-idb
+
+commit 0a76754cad6c05c791bda68c695abeb05840bd16
+Author: Robinson Nguyen <robinson_nguyen@hotmail.com>
+Date:   Thu Nov 5 21:22:43 2015 -0600
+
+    Trying Unit Tests
+
+commit 3a6c37de5ce041ea00ca18f43748d933a5c051c0
+Merge: 50f5794 5b08b97
+Author: David Toth <dtoth@cs.utexas.edu>
+Date:   Thu Nov 5 21:21:26 2015 -0600
+
+    Merge branch 'master' of 172.99.75.69:/home/git/cs373-idb
+
+commit 50f5794b368c9932b976d23ea93625a45ca010a6
+Merge: e29d4c6 e0c3468
+Author: David Toth <dtoth@cs.utexas.edu>
+Date:   Thu Nov 5 21:21:00 2015 -0600
+
+    Merge branch 'master' of https://github.com/RobinsonNguyen/cs373-pokemon
+
+commit e29d4c6d2dc21bc0c37c6541b78dd62696c4a216
+Author: David Toth <dtoth@cs.utexas.edu>
+Date:   Thu Nov 5 21:20:47 2015 -0600
+
+    fixing foreignkey
+
+commit 5b08b977f1d97166a673341fae170639d5542224
+Merge: e0c3468 632ed91
+Author: Robinson Nguyen <robinson_nguyen@hotmail.com>
+Date:   Thu Nov 5 21:20:17 2015 -0600
+
+    Merge branch 'master' of 172.99.75.69:/home/git/cs373-idb
+
+commit e0c3468fe4360c6b35fcf398aaf483902ce82a82
+Merge: d7ebe52 3117fa0
+Author: Robinson Nguyen <robinson_nguyen@hotmail.com>
+Date:   Thu Nov 5 21:19:53 2015 -0600
+
+    Merge branch 'master' of github.com:RobinsonNguyen/cs373-idb
+
+commit d7ebe52cad3618f3fd594ebbda73ab18414de999
+Author: Robinson Nguyen <robinson_nguyen@hotmail.com>
+Date:   Thu Nov 5 21:19:47 2015 -0600
+
+    Trying Unit Tests
+
+commit 632ed915f01420fe087ad1147a06b53da9206180
+Merge: 67c91a6 3117fa0
+Author: Tucker Long <tl7877@cs.utexas.edu>
+Date:   Thu Nov 5 21:19:34 2015 -0600
+
+    Merge branch 'master' of 172.99.75.69:/home/git/cs373-idb
+
+commit 67c91a6ab28710b90044e5d4e3d62ed3e07d533a
+Author: Tucker Long <tl7877@cs.utexas.edu>
+Date:   Thu Nov 5 21:19:20 2015 -0600
+
+    Fixing src
+
+commit 3117fa03206735992dca4a8d36107f1a420bec21
+Author: David Toth <dtoth@cs.utexas.edu>
+Date:   Thu Nov 5 21:17:57 2015 -0600
+
+    fixing foreignkey
+
+commit 821bbd6ebc3decc72def4a04c74985a4866fb41c
+Merge: e295604 8abe650
+Author: David Toth <dtoth@cs.utexas.edu>
+Date:   Thu Nov 5 21:16:23 2015 -0600
+
+    Merge branch 'master' of 172.99.75.69:/home/git/cs373-idb
+
+commit e2956045f32a0a0706f0873fcc97c519f2074b25
+Author: David Toth <dtoth@cs.utexas.edu>
+Date:   Thu Nov 5 21:15:24 2015 -0600
+
+    fixing foreignkey
+
+commit 8abe650e6b31fce4d1d0991e630f516873b0c5d1
+Merge: 644c10c 52f36c4
+Author: Tucker Long <tl7877@cs.utexas.edu>
+Date:   Thu Nov 5 21:10:24 2015 -0600
+
+    Merge branch 'master' of 172.99.75.69:/home/git/cs373-idb
+
+commit 644c10cbcc48b7453fc5493621024afb331b7617
+Author: Tucker Long <tl7877@cs.utexas.edu>
+Date:   Thu Nov 5 21:10:17 2015 -0600
+
+    Fixing src
+
+commit 52f36c4406f21dd3dda16c3287a4b9751bfe911f
+Merge: 05aeb3d 4fb84d0
+Author: David Toth <dtoth@cs.utexas.edu>
+Date:   Thu Nov 5 21:09:58 2015 -0600
+
+    Merge branch 'master' of 172.99.75.69:/home/git/cs373-idb
+
+commit 05aeb3d21eaaedf846c02ad5384b058adaf8ad18
+Merge: ac38683 ad37a15
+Author: David Toth <dtoth@cs.utexas.edu>
+Date:   Thu Nov 5 21:09:43 2015 -0600
+
+    Merge branch 'master' of 172.99.75.69:/home/git/cs373-idb
+
+commit 4fb84d057dd43aab7e36b75968d1c185a104b414
+Merge: 83a16f6 ad37a15
+Author: Robinson Nguyen <robinson_nguyen@hotmail.com>
+Date:   Thu Nov 5 21:09:31 2015 -0600
+
+    Merge branch 'master' of 172.99.75.69:/home/git/cs373-idb
+
+commit ac386830098d1b852217f09378aaf0dbbfd6a366
+Merge: c620f77 83a16f6
+Author: David Toth <dtoth@cs.utexas.edu>
+Date:   Thu Nov 5 21:09:27 2015 -0600
+
+    Merge branch 'master' of https://github.com/RobinsonNguyen/cs373-pokemon
+
+commit c620f770737b90747d0cf46ccd863a4d9b9b5615
+Author: David Toth <dtoth@cs.utexas.edu>
+Date:   Thu Nov 5 21:09:18 2015 -0600
+
+    trying to fix join in sqlaclhemy
+
+commit 83a16f6554eac9950c7dda66915b2063250c1b20
+Merge: cd7b1bf a6c66e4
+Author: Robinson Nguyen <robinson_nguyen@hotmail.com>
+Date:   Thu Nov 5 21:08:53 2015 -0600
+
+    Merge branch 'master' of github.com:RobinsonNguyen/cs373-idb
+
+commit ad37a15aecc65f5b0fedc936f339b55832536730
+Author: Tucker Long <tl7877@cs.utexas.edu>
+Date:   Thu Nov 5 21:08:38 2015 -0600
+
+    Fixing img links
+
+commit fab25faf59a8520551ed886b3d47967accf74c6b
+Merge: 5dc0502 5cdec0b
+Author: Tucker Long <tl7877@cs.utexas.edu>
+Date:   Thu Nov 5 21:07:03 2015 -0600
+
+    Merge branch 'master' of 172.99.75.69:/home/git/cs373-idb
+
+commit 5dc05027292fdae5519f4062cf5de111f65b87fa
+Author: Tucker Long <tl7877@cs.utexas.edu>
+Date:   Thu Nov 5 21:06:48 2015 -0600
+
+    Fixing base and images
+
+commit 5cdec0b114fae6b0c51176af4674e0736c665c54
+Merge: a6c66e4 c4902a3
+Author: David Toth <dtoth@cs.utexas.edu>
+Date:   Thu Nov 5 21:06:30 2015 -0600
+
+    Merge branch 'master' of 172.99.75.69:/home/git/cs373-idb
+
+commit a6c66e4761d87b860709d0c5058cc310d3ace9e1
+Author: David Toth <dtoth@cs.utexas.edu>
+Date:   Thu Nov 5 21:06:03 2015 -0600
+
+    open issue trying to fix join in sqlaclhemy
+
+commit c4902a3823f39eb0ec6f49ab444a9a1b380565c6
+Merge: d29ddd7 36b8d53
+Author: Brett Kercher <brettkercher@utexas.edu>
+Date:   Thu Nov 5 21:05:00 2015 -0600
+
+    Merge branch 'master' of 172.99.75.69:/home/git/cs373-idb
+
+commit d29ddd7cd4e165367a8c1ee3e8b1b8905ee5457d
+Author: Brett Kercher <brettkercher@utexas.edu>
+Date:   Thu Nov 5 21:04:53 2015 -0600
+
+    Location api
+
+commit cd7b1bfd5c722450d43f1056aca78d258dc56363
+Author: Robinson Nguyen <robinson_nguyen@hotmail.com>
+Date:   Thu Nov 5 21:03:09 2015 -0600
+
+    Trying Unit Tests
+
+commit 36b8d537bdf35ce1d79ce99daca3c5471cb1972b
+Merge: c674475 c9817b1
+Author: Tucker Long <tl7877@cs.utexas.edu>
+Date:   Thu Nov 5 21:02:08 2015 -0600
+
+    Merge branch 'master' of 172.99.75.69:/home/git/cs373-idb
+
+commit c6744755659691f439774accdc9e303ec1853f4e
+Author: Tucker Long <tl7877@cs.utexas.edu>
+Date:   Thu Nov 5 21:01:20 2015 -0600
+
+    Hotfix 0.0.1 missing paren
+
+commit c9817b18605fd53f8e5e9cfbfa4295885c2bc2af
+Merge: f77f138 ef15f62
+Author: David Toth <dtoth@cs.utexas.edu>
+Date:   Thu Nov 5 21:00:25 2015 -0600
+
+    Merge branch 'master' of 172.99.75.69:/home/git/cs373-idb
+
+commit ef15f624cc4b9979fe97524a87eba00189dce5e6
+Merge: f2434a5 90afc79
+Author: Tucker Long <tl7877@cs.utexas.edu>
+Date:   Thu Nov 5 20:59:54 2015 -0600
+
+    Merge branch 'master' of 172.99.75.69:/home/git/cs373-idb
+
+commit f77f138150fcb9ddf6d58312cdc21035c0f693e2
+Merge: a5da7e4 264159b
+Author: David Toth <dtoth@cs.utexas.edu>
+Date:   Thu Nov 5 20:59:50 2015 -0600
+
+    Merge branch 'master' of https://github.com/RobinsonNguyen/cs373-pokemon
+
+commit a5da7e43f4aace9946c7ffdf271e416bab4f7c12
+Author: David Toth <dtoth@cs.utexas.edu>
+Date:   Thu Nov 5 20:59:34 2015 -0600
+
+    html changes to moves
+
+commit 90afc79028822eef414f1c7c5af066675f8ec7ef
+Author: Brett Kercher <brettkercher@utexas.edu>
+Date:   Thu Nov 5 20:59:29 2015 -0600
+
+    Add location api
+
+commit f2434a530377a2c985a85894894ce209747f3b73
+Merge: 1d3d913 0a6240c
+Author: Tucker Long <tl7877@cs.utexas.edu>
+Date:   Thu Nov 5 20:59:28 2015 -0600
+
+    Merge branch 'master' of 172.99.75.69:/home/git/cs373-idb
+
+commit 1d3d9130f1b725d130fbdcca2983930a188f91b2
+Author: Tucker Long <tl7877@cs.utexas.edu>
+Date:   Thu Nov 5 20:59:20 2015 -0600
+
+    Adding images to catch types
+
+commit 0a6240c8e7552866acdd1a5dacef923141f1891b
+Merge: 264159b 581401a
+Author: Robinson Nguyen <robinson_nguyen@hotmail.com>
+Date:   Thu Nov 5 20:58:12 2015 -0600
+
+    Merge branch 'master' of 172.99.75.69:/home/git/cs373-idb
+
+commit 264159bf30a90faf1f3d622c50409fc3867d8df2
+Author: Robinson Nguyen <robinson_nguyen@hotmail.com>
+Date:   Thu Nov 5 20:57:45 2015 -0600
+
+    Trying Unit Tests
+
+commit 581401ae7f08534c3bb926fea3db8398b7afa80b
+Merge: af6adab 0dc09e0
+Author: Brett Kercher <brettkercher@utexas.edu>
+Date:   Thu Nov 5 20:56:22 2015 -0600
+
+    Merge branch 'master' of 172.99.75.69:/home/git/cs373-idb
+
+commit af6adab6d41904931add9cac8101b72e6a2b341e
+Author: Brett Kercher <brettkercher@utexas.edu>
+Date:   Thu Nov 5 20:56:11 2015 -0600
+
+    add pokemon abilities instead of egg groups
+
+commit 0dc09e07e929e9782723f022b854a057655c77b1
+Author: Robinson Nguyen <robinson_nguyen@hotmail.com>
+Date:   Thu Nov 5 20:55:54 2015 -0600
+
+    Trying Unit Tests
+
+commit b9f740e1e4b6b7c7664a395ab160985bb66e05aa
+Merge: 71998ec b28cc98
+Author: Robinson Nguyen <robinson_nguyen@hotmail.com>
+Date:   Thu Nov 5 20:53:17 2015 -0600
+
+    Merge branch 'master' of 172.99.75.69:/home/git/cs373-idb
+
+commit b28cc988ec36544cc8e413d9c2b0f5a1d7d1a734
+Merge: a720f66 20574f4
+Author: Brett Kercher <brettkercher@utexas.edu>
+Date:   Thu Nov 5 20:53:04 2015 -0600
+
+    Merge branch 'master' of 172.99.75.69:/home/git/cs373-idb
+
+commit 71998ec756ac501c22b871fa7086b8da402e0759
+Author: Robinson Nguyen <robinson_nguyen@hotmail.com>
+Date:   Thu Nov 5 20:52:41 2015 -0600
+
+    Trying Unit Tests
+
+commit 20574f4aa33b67945b6975379a678a5b78408833
+Merge: 33bc64c 9eaa6f6
+Author: Tucker Long <tl7877@cs.utexas.edu>
+Date:   Thu Nov 5 20:50:25 2015 -0600
+
+    Merge branch 'master' of 172.99.75.69:/home/git/cs373-idb
+
+commit a720f662609cf24c5e33c6bef6ee7eb6059d9a44
+Merge: 0445bc2 9eaa6f6
+Author: Brett Kercher <brettkercher@utexas.edu>
+Date:   Thu Nov 5 20:50:23 2015 -0600
+
+    Merge branch 'master' of 172.99.75.69:/home/git/cs373-idb
+
+commit 33bc64cbb122137f3b18587d85686a14d5faac2f
+Author: Tucker Long <tl7877@cs.utexas.edu>
+Date:   Thu Nov 5 20:50:18 2015 -0600
+
+    Trying to fix ascii character messup?
+
+commit 0445bc2226485ca3daffbfd7ba7729c1cafc211e
+Author: Brett Kercher <brettkercher@utexas.edu>
+Date:   Thu Nov 5 20:50:17 2015 -0600
+
+    Fix pokemon evo
+
+commit 9eaa6f6b6567564623abaa14e1764dad067c503f
+Merge: 0a2cd3e 3961ad4
+Author: Robinson Nguyen <robinson_nguyen@hotmail.com>
+Date:   Thu Nov 5 20:47:01 2015 -0600
+
+    Merge branch 'master' of 172.99.75.69:/home/git/cs373-idb
+
+commit 0a2cd3e0588f545a3fc4ef723e94807dbd92b436
+Author: Robinson Nguyen <robinson_nguyen@hotmail.com>
+Date:   Thu Nov 5 20:43:48 2015 -0600
+
+    Trying Unit Tests
+
+commit 3961ad4c187c3d717dc9db521785af87e0da1e4f
+Author: Brett Kercher <brettkercher@utexas.edu>
+Date:   Thu Nov 5 20:41:43 2015 -0600
+
+    Link from pokemon to route
+
+commit 9f53b11eca95ef6e76aff93ad6ef0e1f0c978980
+Merge: 9a75299 fad93ef
+Author: Tucker Long <tl7877@cs.utexas.edu>
+Date:   Thu Nov 5 20:36:26 2015 -0600
+
+    Merge branch 'master' of https://github.com/RobinsonNguyen/cs373-idb
+
+commit 9a75299b25bb9ebcd417cf03bf82984fb0a6c436
+Author: Tucker Long <tl7877@cs.utexas.edu>
+Date:   Thu Nov 5 20:36:15 2015 -0600
+
+    removing first filter from routepokemon
+
+commit fad93ef8ca1632181431ad54589d0f59da628015
+Merge: 4774894 7d95afa
+Author: David Toth <dtoth@cs.utexas.edu>
+Date:   Thu Nov 5 20:35:57 2015 -0600
+
+    Merge branch 'master' of 172.99.75.69:/home/git/cs373-idb
+
+commit 477489430f2a4f9a9a4d23a1c50a2d83e8d5a4bf
+Merge: 1338cd8 67a0c3c
+Author: David Toth <dtoth@cs.utexas.edu>
+Date:   Thu Nov 5 20:35:43 2015 -0600
+
+    Merge branch 'master' of https://github.com/RobinsonNguyen/cs373-pokemon
+
+commit 1338cd8496343d55a087e635734c1d756baebe9e
+Author: David Toth <dtoth@cs.utexas.edu>
+Date:   Thu Nov 5 20:35:37 2015 -0600
+
+    mychanges for html and model/main.py
+
+commit 7d95afafc02f6aa74253305fad9b4a6aa24dc8d6
+Merge: 5fbbcfe 4c3abd9
+Author: Tucker Long <tl7877@cs.utexas.edu>
+Date:   Thu Nov 5 20:35:15 2015 -0600
+
+    Merge branch 'master' of 172.99.75.69:/home/git/cs373-idb
+
+commit 5fbbcfeb0500a54173a436006ce750a2e0a8e496
+Author: Tucker Long <tl7877@cs.utexas.edu>
+Date:   Thu Nov 5 20:35:01 2015 -0600
+
+    Adding pokemon to route page
+
+commit 4c3abd9eee28907b905f0720171a30c8a7cc78a4
+Author: Brett Kercher <brettkercher@utexas.edu>
+Date:   Thu Nov 5 20:34:43 2015 -0600
+
+    switched name to evo name
+
+commit 0b38b7e93f34ec8119ffe5cd8d18f96936a66195
+Author: Brett Kercher <brettkercher@utexas.edu>
+Date:   Thu Nov 5 20:33:20 2015 -0600
+
+    Added evolutions back to pokemon
+
+commit 33bb5c3ef669ba04c4ba6e99c55061a65fba4896
+Merge: 232d1eb 78f7e02
+Author: Brett Kercher <brettkercher@utexas.edu>
+Date:   Thu Nov 5 20:30:20 2015 -0600
+
+    :q
+    :q
+    terge branch 'master' of 172.99.75.69:/home/git/cs373-idb
+
+commit 232d1eb6c0377c9ba995ac4c7066b7ef056b6978
+Author: Brett Kercher <brettkercher@utexas.edu>
+Date:   Thu Nov 5 20:30:12 2015 -0600
+
+    get all types, not first
+
+commit 78f7e029bfa95b7f0ba9a358cafa1eca51df3c65
+Author: Tucker Long <tl7877@cs.utexas.edu>
+Date:   Thu Nov 5 20:30:04 2015 -0600
+
+    silly static
+
+commit a4c57a390f563933956e7c2674b6ede28fd91a06
+Merge: 132a3d7 87456b3
+Author: Tucker Long <tl7877@cs.utexas.edu>
+Date:   Thu Nov 5 20:27:55 2015 -0600
+
+    Merge branch 'master' of 172.99.75.69:/home/git/cs373-idb
+
+commit 132a3d7a0cec3102de4ecfb7a3b431b2170336b0
+Author: Tucker Long <tl7877@cs.utexas.edu>
+Date:   Thu Nov 5 20:27:45 2015 -0600
+
+    Unbounded get error?
+
+commit 87456b3f90157882dc1eb7d9fb0c8bf09950d517
+Author: Brett Kercher <brettkercher@utexas.edu>
+Date:   Thu Nov 5 20:27:19 2015 -0600
+
+    type to types
+
+commit 0fe259de8eea0b23716b515a0802972199b5708f
+Merge: 56be727 67a0c3c
+Author: Brett Kercher <brettkercher@utexas.edu>
+Date:   Thu Nov 5 20:26:47 2015 -0600
+
+    Merge branch 'master' of 172.99.75.69:/home/git/cs373-idb
+
+commit 56be7277e9de44ee0a64af3b8ad79aa708ed8d52
+Author: Brett Kercher <brettkercher@utexas.edu>
+Date:   Thu Nov 5 20:26:41 2015 -0600
+
+    Types back yo
+
+commit 67a0c3c541737e94842cbd96315a9b895b4a847c
+Merge: 7233b21 e62c4ba
+Author: Tucker Long <tl7877@cs.utexas.edu>
+Date:   Thu Nov 5 20:24:31 2015 -0600
+
+    Merge branch 'master' of 172.99.75.69:/home/git/cs373-idb
+
+commit 7233b210ee09423d62d6634e6b467553ced0895d
+Author: Tucker Long <tl7877@cs.utexas.edu>
+Date:   Thu Nov 5 20:24:22 2015 -0600
+
+    I am positive it works?
+
+commit e62c4ba833afba5df9d5a5803be8971b6b15cafb
+Merge: d50e663 5cf8d96
+Author: Brett Kercher <brettkercher@utexas.edu>
+Date:   Thu Nov 5 20:20:16 2015 -0600
+
+    Fixed merge conflict
+
+commit d50e66326f16bf5c2a2ee3bceefbe3583a9dddae
+Author: Brett Kercher <brettkercher@utexas.edu>
+Date:   Thu Nov 5 20:18:44 2015 -0600
+
+    Add locations back to pokemon
+
+commit 5cf8d96e3b15149e48a5c9c3c85c4e3bf57d88ce
+Author: Tucker Long <tl7877@cs.utexas.edu>
+Date:   Thu Nov 5 20:18:30 2015 -0600
+
+    Adding in name indexing
+
+commit 4dd359f757d0e8b9c38b38dcd113c7c2d86c6509
+Merge: 1f5e946 199c1ab
+Author: David Toth <dtoth@cs.utexas.edu>
+Date:   Thu Nov 5 20:18:05 2015 -0600
+
+    Merge branch 'master' of 172.99.75.69:/home/git/cs373-idb
+
+commit 1f5e946f40a4ca77bdb4dd2e63b9b99bba1200c0
+Merge: 4065ef9 d425f23
+Author: David Toth <dtoth@cs.utexas.edu>
+Date:   Thu Nov 5 20:17:54 2015 -0600
+
+    Merge branch 'master' of https://github.com/RobinsonNguyen/cs373-pokemon
+
+commit 199c1abc70f3bbbf14e7786aa2ee4bd77963d335
+Author: Tucker Long <tl7877@cs.utexas.edu>
+Date:   Thu Nov 5 20:17:46 2015 -0600
+
+    removing locaiton from base
+
+commit d425f23dbdc46d3925b400b93b5df5d43c566543
+Author: Tucker Long <tl7877@cs.utexas.edu>
+Date:   Thu Nov 5 20:15:47 2015 -0600
+
+    extra paren
+
+commit 2879f71fd453ffea0dfb0cf56ee33c50294cda0d
+Author: Tucker Long <tl7877@cs.utexas.edu>
+Date:   Thu Nov 5 20:14:17 2015 -0600
+
+    Adding in base redirection to location
+
+commit 34b2ff07526c7e0844cb971e40d1920af310922f
+Author: Tucker Long <tl7877@cs.utexas.edu>
+Date:   Thu Nov 5 20:11:08 2015 -0600
+
+    Fixing 404 error on routes
+
+commit a45027af275792ffae2a5be7a8cd43f1a7144d9e
+Author: Tucker Long <tl7877@cs.utexas.edu>
+Date:   Thu Nov 5 20:09:18 2015 -0600
+
+    removing locaiton from base
+
+commit 8c19a5e875326f8dacf5ec5c35a3a71f013eb835
+Merge: 76b31e0 77094e3
+Author: Tucker Long <tl7877@cs.utexas.edu>
+Date:   Thu Nov 5 20:05:55 2015 -0600
+
+    Merge branch 'master' of 172.99.75.69:/home/git/cs373-idb
+
+commit 76b31e0616698dabc6f1240bae3bc7e7caaf8af3
+Author: Tucker Long <tl7877@cs.utexas.edu>
+Date:   Thu Nov 5 20:05:33 2015 -0600
+
+    Adding route page info fixes
+
+commit 77094e3c3e9fbe4aaff477c382ef658cf1fbafcf
+Author: Brett Kercher <brettkercher@utexas.edu>
+Date:   Thu Nov 5 20:01:04 2015 -0600
+
+    Use pokemonmoves table instead of pokemon
+
+commit 8775b918ce39e824640e298dd70ad39a7f88d454
+Author: Brett Kercher <brettkercher@utexas.edu>
+Date:   Thu Nov 5 20:00:11 2015 -0600
+
+    made methods static
+
+commit c5eb2b1320becf52bbf40e8dc386d872dc14d00a
+Merge: 108d560 119bbc9
+Author: Brett Kercher <brettkercher@utexas.edu>
+Date:   Thu Nov 5 19:59:21 2015 -0600
+
+    Merge branch 'master' of 172.99.75.69:/home/git/cs373-idb
+
+commit 108d560cbd8930a6f6ccc836eeb9c49c62e1440c
+Author: Brett Kercher <brettkercher@utexas.edu>
+Date:   Thu Nov 5 19:59:06 2015 -0600
+
+    Pokemon moves
+
+commit 119bbc9a93b01274b8c008d1e3447f7dc13d2c76
+Merge: 37af682 6aeea84
+Author: Tucker Long <tl7877@cs.utexas.edu>
+Date:   Thu Nov 5 19:57:48 2015 -0600
+
+    Merge branch 'master' of 172.99.75.69:/home/git/cs373-idb
+
+commit 37af6824788e9bbd54c156a72cf288553ca3d575
+Author: Tucker Long <tl7877@cs.utexas.edu>
+Date:   Thu Nov 5 19:57:40 2015 -0600
+
+    Updating modesl and main to display routes
+
+commit 4065ef90ea39d8ee8d5eda9a8fcf3a5aa2990e10
+Merge: d667b07 6aeea84
+Author: David Toth <dtoth@cs.utexas.edu>
+Date:   Thu Nov 5 19:56:27 2015 -0600
+
+    Merge branch 'master' of 172.99.75.69:/home/git/cs373-idb
+
+commit 6aeea848316fbca411ae2e493a65b45a1f013182
+Author: Brett Kercher <brettkercher@utexas.edu>
+Date:   Thu Nov 5 19:55:23 2015 -0600
+
+    Moves in pokemon
+
+commit d667b07a400037bbf8abd5a488ae694db8f21d61
+Merge: d0c2f5b 5c493ca
+Author: Tucker Long <tl7877@cs.utexas.edu>
+Date:   Thu Nov 5 19:54:12 2015 -0600
+
+    Merge branch 'master' of https://github.com/RobinsonNguyen/cs373-idb
+
+commit d0c2f5b31c05294c2b166177f0d55135ff1d4a40
+Author: Tucker Long <tl7877@cs.utexas.edu>
+Date:   Thu Nov 5 19:54:08 2015 -0600
+
+    Updating locaitons table
+
+commit aadbd8949223e9f05a975d0d1e6caad88b0eb719
+Merge: 2afd379 5c493ca
+Author: Brett Kercher <brettkercher@utexas.edu>
+Date:   Thu Nov 5 19:45:56 2015 -0600
+
+    Merge branch 'master' of 172.99.75.69:/home/git/cs373-idb
+
+commit 2afd379e76f1c08a618838187d89e3721e9bc205
+Author: Brett Kercher <brettkercher@utexas.edu>
+Date:   Thu Nov 5 19:45:43 2015 -0600
+
+    pokemon image
+
+commit 5c493caec10e1c5e32f3cb68092ac0d69c8006a7
+Author: David Toth <dtoth@cs.utexas.edu>
+Date:   Thu Nov 5 19:45:13 2015 -0600
+
+    only changed all moves html
+
+commit 0b04ec2196b10409ea3876d8c45045d79adcb0e3
+Merge: a41d15c ef90cc8
+Author: Tucker Long <tl7877@cs.utexas.edu>
+Date:   Thu Nov 5 19:43:03 2015 -0600
+
+    Merge branch 'master' of https://github.com/RobinsonNguyen/cs373-idb
+
+commit a41d15c0eb207f9323f73f7c4e82eddaecd2d464
+Author: Tucker Long <tl7877@cs.utexas.edu>
+Date:   Thu Nov 5 19:43:01 2015 -0600
+
+    lots of classes added to model to relate to sql database
+
+commit ef90cc8549073aa605b83597d3163bfd7e7e75ab
+Author: David Toth <dtoth@cs.utexas.edu>
+Date:   Thu Nov 5 19:42:02 2015 -0600
+
+    only changed all moves html
+
+commit ecb27ed7dd74cd79e876064fdb8f176c7bdf4d29
+Merge: f6465f1 2bde2e0
+Author: Tucker Long <tl7877@cs.utexas.edu>
+Date:   Thu Nov 5 19:40:44 2015 -0600
+
+    lots of classes added to model to relate to sql database
+
+commit f6465f13d701d34af48989a02b21b2e74f159cc6
+Author: Tucker Long <tl7877@cs.utexas.edu>
+Date:   Thu Nov 5 19:37:16 2015 -0600
+
+    lots of classes added to model to relate to sql database
+
+commit 2bde2e07bf5cb5ed4d2847e86364ca885997c66d
+Author: Brett Kercher <brettkercher@utexas.edu>
+Date:   Thu Nov 5 19:36:26 2015 -0600
+
+    Add first move unit test
+
+commit 3540bb5b2ba59bdb3e538c633a7343c48dfe99f9
+Author: Brett Kercher <brettkercher@utexas.edu>
+Date:   Thu Nov 5 19:34:07 2015 -0600
+
+    Add first move unit test
+
+commit 722dbbce845c79c5dc09712e6757a0c88669034b
+Author: Brett Kercher <brettkercher@utexas.edu>
+Date:   Thu Nov 5 19:33:02 2015 -0600
+
+    fix speed to spd
+
+commit 99fd75c39645e87f67ffb402739b94b444ad0501
+Author: Brett Kercher <brettkercher@utexas.edu>
+Date:   Thu Nov 5 19:32:18 2015 -0600
+
+    took out move unti test
+
+commit 85b7bf8b5a6e15eae68fc8e2f5bda09a53616b8d
+Author: Brett Kercher <brettkercher@utexas.edu>
+Date:   Thu Nov 5 19:31:27 2015 -0600
+
+    Fixed unit tests for new names
+
+commit c2ef627397a46c7c17b6859386d42a1a2dd2a56f
+Author: Brett Kercher <brettkercher@utexas.edu>
+Date:   Thu Nov 5 19:25:26 2015 -0600
+
+    Typo in pokemon html
+
+commit 8f94b1ed7070db1ccd7ba891e8e573fcbc3280a3
+Author: Brett Kercher <brettkercher@utexas.edu>
+Date:   Thu Nov 5 19:22:08 2015 -0600
+
+    Renamed pokemon details page
+
+commit 1d0e76d2bef701ae98a5c8fecbabcfa18b52c19e
+Author: Brett Kercher <brettkercher@utexas.edu>
+Date:   Thu Nov 5 19:20:39 2015 -0600
+
+    Convert pokemon to new names
+
+commit 44ef3c05c27b1150f3c4d8182b80735e3e15fc4f
+Author: Brett Kercher <brettkercher@utexas.edu>
+Date:   Thu Nov 5 19:17:37 2015 -0600
+
+    name change in html
+
+commit 0dfbf9d1b5b9e761ec0971d6a7eee46a408ff856
+Author: Brett Kercher <brettkercher@utexas.edu>
+Date:   Thu Nov 5 19:15:19 2015 -0600
+
+    model fixes
+
+commit 077e1e1c4645c258581537e0630263681fddc309
+Author: Brett Kercher <brettkercher@utexas.edu>
+Date:   Thu Nov 5 19:13:56 2015 -0600
+
+    type
+
+commit 43cafe5fec9e99543af1b7debbaa6a5ca94a7208
+Merge: 698a4b5 b431136
+Author: Brett Kercher <brettkercher@utexas.edu>
+Date:   Thu Nov 5 19:12:22 2015 -0600
+
+    fix merge conflicts
+
+commit 698a4b513730c08e729c3155683bb907e2e59b05
+Author: Brett Kercher <brettkercher@utexas.edu>
+Date:   Thu Nov 5 19:10:43 2015 -0600
+
+    tests and model stuff
+
+commit b431136c9763e67468674bddb5e9f0a6510056cf
+Author: Tucker Long <tl7877@cs.utexas.edu>
+Date:   Thu Nov 5 19:10:08 2015 -0600
+
+    updated models
+
+commit bf969b587f6d1e524c92d3abc62603efb1d64703
+Author: Brett Kercher <brettkercher@utexas.edu>
+Date:   Thu Nov 5 18:47:56 2015 -0600
+
+    g
+
+commit d98da5c364f86497f9a979f335fa9813231561a3
+Author: Brett Kercher <brettkercher@utexas.edu>
+Date:   Thu Nov 5 18:46:03 2015 -0600
+
+    do nothing on test move???
+
+commit a334f4d451913409f13d3f6be19c71437c80e0dc
+Author: Brett Kercher <brettkercher@utexas.edu>
+Date:   Thu Nov 5 18:45:27 2015 -0600
+
+    fix first move unit test
+
+commit 37a0d3e422657660d7ca7acfa4481963281b5e28
+Author: Brett Kercher <brettkercher@utexas.edu>
+Date:   Thu Nov 5 18:44:45 2015 -0600
+
+    add first move unit test
+
+commit bbaadd1343f0c78865adf1fd4224a9d24dab601b
+Author: Brett Kercher <brettkercher@utexas.edu>
+Date:   Thu Nov 5 18:43:49 2015 -0600
+
+    add final poke unit test
+
+commit a8f2171479b940fde4f2edc72c277becbacdc946
+Author: David Toth <dtoth@cs.utexas.edu>
+Date:   Thu Nov 5 18:43:28 2015 -0600
+
+    added list of all tables in db (not brett's)
+
+commit e288b490e369f9eb958c1611d6791e4998152920
+Author: Brett Kercher <brettkercher@utexas.edu>
+Date:   Thu Nov 5 18:43:25 2015 -0600
+
+    add 3rd poke unit test
+
+commit 2da223aa8493aa5f01ce120249a7268151c56409
+Author: Brett Kercher <brettkercher@utexas.edu>
+Date:   Thu Nov 5 18:42:59 2015 -0600
+
+    add second pokemon unit test
+
+commit f48c5dcc8bbd3ec97a19963ef7c36db2ff852f52
+Author: Brett Kercher <brettkercher@utexas.edu>
+Date:   Thu Nov 5 18:42:29 2015 -0600
+
+    removed like everything
+
+commit c486b4d474dc7bc1ef9728c024f313fde26e74d0
+Author: Brett Kercher <brettkercher@utexas.edu>
+Date:   Thu Nov 5 18:41:07 2015 -0600
+
+    removed moves tests
+
+commit c422bf6fde692213368dec63d2d951f44f57a014
+Author: Brett Kercher <brettkercher@utexas.edu>
+Date:   Thu Nov 5 18:40:33 2015 -0600
+
+    removed old unit tests
+
+commit 0c2d8fe56c29c60a3136524ed3ee35e9b2423316
+Author: Brett Kercher <brettkercher@utexas.edu>
+Date:   Thu Nov 5 18:39:47 2015 -0600
+
+    f
+
+commit 66a7de60ea8990745674356a59ef0c2c22080a1c
+Author: Brett Kercher <brettkercher@utexas.edu>
+Date:   Thu Nov 5 18:38:41 2015 -0600
+
+    syntax error in moves
+
+commit 334c9d562f0046dc3a3eccf63d30bf0272946120
+Author: Brett Kercher <brettkercher@utexas.edu>
+Date:   Thu Nov 5 18:36:26 2015 -0600
+
+    Tests for moves
+
+commit 47a6512d7368272ae31382c90779ace52acbd9ca
+Author: Brett Kercher <brettkercher@utexas.edu>
+Date:   Thu Nov 5 18:27:36 2015 -0600
+
+    Added rest of pokemon unit tests
+
+commit ce7a7a740f198f50165097e412f412e6e32608d4
+Author: Brett Kercher <brettkercher@utexas.edu>
+Date:   Thu Nov 5 18:24:38 2015 -0600
+
+    ignore more extra files
+
+commit 572b3fcf4698429b8bb377a4c8fcb1953f9ed7fb
+Author: Brett Kercher <brettkercher@utexas.edu>
+Date:   Thu Nov 5 18:23:20 2015 -0600
+
+    Omit files in test
+
+commit 369a028fd4967f92002b4b8639ad4b35550e90b6
+Author: Brett Kercher <brettkercher@utexas.edu>
+Date:   Thu Nov 5 18:21:06 2015 -0600
+
+    formatting again
+
+commit 2ab79116d83288e4cfd9865b9fd3cc4d3e60f416
+Author: Brett Kercher <brettkercher@utexas.edu>
+Date:   Thu Nov 5 18:20:17 2015 -0600
+
+    Unit test formatting
+
+commit aeaa4d221dadf451cc2d8a06654b8e303610572b
+Author: Brett Kercher <brettkercher@utexas.edu>
+Date:   Thu Nov 5 18:18:21 2015 -0600
+
+    First unit test done
+
+commit 9a600bf579d34cfe0411763539f33af6bcce4df4
+Merge: 92357a9 0eed6c3
+Author: Brett Kercher <brettkercher@utexas.edu>
+Date:   Thu Nov 5 18:15:32 2015 -0600
+
+    Merge branch 'master' of 172.99.75.69:/home/git/cs373-idb
+
+commit 0eed6c3a4872e5261c1a9c8e4d87293fbced17af
+Author: Brett Kercher <brettkercher@utexas.edu>
+Date:   Thu Nov 5 18:07:52 2015 -0600
+
+    Now?
+
+commit 6c15d4a6e201cde0e4ccee4c6d579c4eb763cf93
+Author: Brett Kercher <brettkercher@utexas.edu>
+Date:   Thu Nov 5 18:06:20 2015 -0600
+
+    g
+
+commit c8ba52f9722607aaf801dd44b1bc72116e2d0dbb
+Author: Brett Kercher <brettkercher@utexas.edu>
+Date:   Thu Nov 5 18:05:02 2015 -0600
+
+    unit test
+
+commit 4ac010d354580b94f138a4821573d649a10dc2c6
+Author: Brett Kercher <brettkercher@utexas.edu>
+Date:   Thu Nov 5 18:00:57 2015 -0600
+
+    more unit tests
+
+commit 815112b40be6f8dfcc1406fed9e203b3eea3cf6b
+Author: Brett Kercher <brettkercher@utexas.edu>
+Date:   Thu Nov 5 17:58:41 2015 -0600
+
+    slightly less trivial unit test
+
+commit 655773c9e785a0f1e59e237fdc81227378835f75
+Author: Brett Kercher <brettkercher@utexas.edu>
+Date:   Thu Nov 5 17:53:00 2015 -0600
+
+    simple unit test test
+
+commit 31ce24fdd81c5d0541501c8e8dd92666f73e6b0e
+Author: Brett Kercher <brettkercher@utexas.edu>
+Date:   Thu Nov 5 17:51:09 2015 -0600
+
+    update unit test
+
+commit a7930a4599068e0ceb96e07c420d86d5d03bcf07
+Author: Brett Kercher <brettkercher@utexas.edu>
+Date:   Thu Nov 5 17:48:03 2015 -0600
+
+    uhh
+
+commit 01110b84f48c90f12adfc2389a5b352f9c57fa08
+Author: Brett Kercher <brettkercher@utexas.edu>
+Date:   Thu Nov 5 17:39:56 2015 -0600
+
+    debug
+
+commit f92e1e4198169ef9fe28226a93df6855fcf6b1ee
+Author: Brett Kercher <brettkercher@utexas.edu>
+Date:   Thu Nov 5 17:36:25 2015 -0600
+
+    removed pass from test
+
+commit 985a71a553ba0979f8f2b067453c5634dc552f4f
+Author: Brett Kercher <brettkercher@utexas.edu>
+Date:   Thu Nov 5 17:34:11 2015 -0600
+
+    updated unit test
+
+commit d1cac257608b8a56335eec1c82bc438fe0a2f20b
+Author: Brett Kercher <brettkercher@utexas.edu>
+Date:   Thu Nov 5 17:26:09 2015 -0600
+
+    readd location routes
+
+commit b3d2a0acf0109e82d1a51c7696d90de100f703e3
+Author: Brett Kercher <brettkercher@utexas.edu>
+Date:   Thu Nov 5 17:18:37 2015 -0600
+
+    moves api
+
+commit f0a14a3fcf2845c483c69415a4eb09ffd076e4b1
+Author: Brett Kercher <brettkercher@utexas.edu>
+Date:   Thu Nov 5 16:57:52 2015 -0600
+
+    create moves on app startup
+
+commit c62ad7113447085e5b9a1d092eddce555d00887d
+Author: Brett Kercher <brettkercher@utexas.edu>
+Date:   Thu Nov 5 16:56:51 2015 -0600
+
+    populate move table
+
+commit a5cf05918050f98db68ab5353dc12b9058a19894
+Author: Brett Kercher <brettkercher@utexas.edu>
+Date:   Thu Nov 5 16:39:13 2015 -0600
+
+    Adding img path to db
+
+commit 53308d0d5c47be2ea5aa36574a725aaecf265468
+Author: Brett Kercher <brettkercher@utexas.edu>
+Date:   Thu Nov 5 16:35:20 2015 -0600
+
+    add pokemon to db
+
+commit ae6bd734e7b0adb1849833939083515498e43232
+Author: Brett Kercher <brettkercher@utexas.edu>
+Date:   Thu Nov 5 16:34:38 2015 -0600
+
+    fix class syntax
+
+commit 132d81858ea6aac22ecd2abedebd04a2f6be7a9d
+Author: Brett Kercher <brettkercher@utexas.edu>
+Date:   Thu Nov 5 16:33:48 2015 -0600
+
+    created poke class to hold data
+
+commit d82bc07dfbb76638f820e21cda34633dec276c4b
+Author: Brett Kercher <brettkercher@utexas.edu>
+Date:   Thu Nov 5 16:32:08 2015 -0600
+
+    add stats to obj
+
+commit 13cedae9f9fbf38e33eb9ab2ad08bb46d7213d29
+Author: Brett Kercher <brettkercher@utexas.edu>
+Date:   Thu Nov 5 16:30:55 2015 -0600
+
+    removed move / location data from pokemon json parsing
+
+commit 029f45f89ce70062d959c758bd06c6820fcd2ce6
+Author: Brett Kercher <brettkercher@utexas.edu>
+Date:   Thu Nov 5 16:27:13 2015 -0600
+
+    creating pokemon table
+
+commit 92357a9e630bae57d720fb39c687f4e0d8d462e2
+Author: David Toth <dtoth7012@gmail.com>
+Date:   Thu Nov 5 16:10:24 2015 -0600
+
+    deleted corrupt data
+
+commit 18ef5c6bd35578f72ac596c1fd90e3fce0f68449
+Author: Brett Kercher <brettkercher@utexas.edu>
+Date:   Thu Nov 5 16:09:42 2015 -0600
+
+    list of rows to list of dictionaries
+
+commit d178301b7deb02773e4c28ac97eb7e50c10660fb
+Author: Brett Kercher <brettkercher@utexas.edu>
+Date:   Thu Nov 5 16:06:53 2015 -0600
+
+    small bug fix
+
+commit 993e7242ded7bdbaccb44ab89517760b8eb0341c
+Author: Brett Kercher <brettkercher@utexas.edu>
+Date:   Thu Nov 5 16:06:10 2015 -0600
+
+    api for all pokemon
+
+commit c016dd00521c0909b3b118caeaee277930c1892b
+Author: Brett Kercher <brettkercher@utexas.edu>
+Date:   Thu Nov 5 16:05:22 2015 -0600
+
+    small bug fix
+
+commit b25ff839e64f46cb7a804a217730c4807e8939b0
+Author: Brett Kercher <brettkercher@utexas.edu>
+Date:   Thu Nov 5 16:01:43 2015 -0600
+
+    trying something else for serializing
+
+commit 9456e2851274edbfb59c3b0d2448c33352faa6db
+Author: Brett Kercher <brettkercher@utexas.edu>
+Date:   Thu Nov 5 15:57:44 2015 -0600
+
+    testing serializable stuff
+
+commit 85cda78e43a3203ac5f5b7d4ad5ae265a04cfce5
+Author: Brett Kercher <brettkercher@utexas.edu>
+Date:   Thu Nov 5 15:49:21 2015 -0600
+
+    return pokemon instead of test string
+
+commit 2daf9b32e4ca338a1fab908fb9a5a5138c208667
+Author: Brett Kercher <brettkercher@utexas.edu>
+Date:   Thu Nov 5 15:48:49 2015 -0600
+
+    static pokemon method
+
+commit baf891a26ac8a65d57b7e02f2a29443a1f241061
+Author: Brett Kercher <brettkercher@utexas.edu>
+Date:   Thu Nov 5 15:46:31 2015 -0600
+
+    api for all pokemon and single pokemon
+
+commit be9399c73a95eef6aca90a5e0a5081d061eb3d4e
+Author: Brett Kercher <brettkercher@utexas.edu>
+Date:   Thu Nov 5 15:39:24 2015 -0600
+
+    one more formatting change again
+
+commit 5f0e5fd346275dc666a8643e82ef39b659665c19
+Author: Brett Kercher <brettkercher@utexas.edu>
+Date:   Thu Nov 5 15:34:56 2015 -0600
+
+    one more formatting change
+
+commit 50e7ac3dceefb6aae6041b137787ddbc3b7d8812
+Author: Brett Kercher <brettkercher@utexas.edu>
+Date:   Thu Nov 5 15:33:03 2015 -0600
+
+    formatting
+
+commit 85951c82c9799ed1a947da9581af30f061f2c6b7
+Author: Brett Kercher <brettkercher@utexas.edu>
+Date:   Thu Nov 5 15:22:42 2015 -0600
+
+    fixed about unit tests hopefully
+
+commit 526bd0f592f767cfb7d55c4c10be9c6323483e69
+Author: Brett Kercher <brettkercher@utexas.edu>
+Date:   Thu Nov 5 15:20:10 2015 -0600
+
+    debug messages, still not working on server
+
+commit e4eeb8ab8fe644085b36d1dfb10a6541d91bcc99
+Author: Brett Kercher <brettkercher@utexas.edu>
+Date:   Thu Nov 5 15:13:52 2015 -0600
+
+    use coverage2 instead of 3
+
+commit bcdade87f5fee4ddf0080c810d4f52768411aedb
+Author: Brett Kercher <brettkercher@utexas.edu>
+Date:   Thu Nov 5 15:00:23 2015 -0600
+
+    update make file?
+
+commit 8febc0f6ba45f0c8f54061f4da2f8e94932b9036
+Author: Brett Kercher <brettkercher@utexas.edu>
+Date:   Thu Nov 5 14:57:03 2015 -0600
+
+    fix for about tests on server?
+
+commit 7e60e2580b355cb5631cb2af3d48944964ddc5a0
+Author: Brett Kercher <brettkercher@utexas.edu>
+Date:   Thu Nov 5 14:41:21 2015 -0600
+
+    pokemon api
+
+commit 84a6e555892de4b0eb9b798bb38dadc14ff85b95
+Author: Brett Kercher <brettkercher@utexas.edu>
+Date:   Thu Nov 5 14:36:44 2015 -0600
+
+    fix for about page unit tests
+
+commit 500f8599b6f8d8f09153f8b6c061e52ade42ee2f
+Author: Brett Kercher <brettkercher@utexas.edu>
+Date:   Thu Nov 5 14:34:01 2015 -0600
+
+    log to console
+
+commit 0ee8fd32e2dc447869f4ea5798804a160d38824c
+Author: Brett Kercher <brettkercher@utexas.edu>
+Date:   Thu Nov 5 14:28:45 2015 -0600
+
+    Run Unit tests from about page
+
+commit b935138478b88f8669dfc3859618e329825b245d
+Author: David Toth <dtoth7012@gmail.com>
+Date:   Thu Nov 5 13:24:03 2015 -0600
+
+    added Route info json to static
+
+commit 081f1aa2589967739338adab2e8cd152ff8ba54c
+Author: sirtuck32 <t.long32@hotmail.com>
+Date:   Thu Nov 5 03:27:46 2015 -0600
+
+    Pushing up sql stuff
+
+commit 57988e8e4c1cf19befe4ca89da719e6756851f3a
+Author: David Toth <dtoth@cs.utexas.edu>
+Date:   Wed Nov 4 21:39:20 2015 -0600
+
+    website breaking code incoming
+
+commit dd26b5a8a90cdd1675ec1aeb69019d905144f61c
+Author: David Toth <dtoth@cs.utexas.edu>
+Date:   Wed Nov 4 21:38:33 2015 -0600
+
+    website breaking code incoming
+
+commit cbe212186bf6f4307d23f290f5bc8aadc0d7fc64
+Author: David Toth <dtoth@cs.utexas.edu>
+Date:   Wed Nov 4 21:24:16 2015 -0600
+
+    website breaking code incoming
+
+commit f41fea8bc0aef29af0e0ba6f30f63174aa4d3b48
+Author: David Toth <dtoth@cs.utexas.edu>
+Date:   Wed Nov 4 21:18:07 2015 -0600
+
+    website breaking code incoming
+
+commit 9240b9f30b1656efbb5102b9917e60f0fbadfb9e
+Author: David Toth <dtoth@cs.utexas.edu>
+Date:   Wed Nov 4 20:10:50 2015 -0600
+
+    modified and created new moves json for php
+
+commit eed1cac4d086c8df4af6714053d1b523875df612
+Author: David Toth <dtoth@cs.utexas.edu>
+Date:   Wed Nov 4 19:32:33 2015 -0600
+
+    modified and created new moves json for php
+
+commit 11fdd480152efda04f9bf9b38909e70deaf163e9
+Author: David Toth <dtoth@cs.utexas.edu>
+Date:   Wed Nov 4 18:33:18 2015 -0600
+
+    T_T
+
+commit 94ef89221c9787b2581f72fe79857f20416aba1e
+Author: David Toth <dtoth@cs.utexas.edu>
+Date:   Wed Nov 4 18:30:10 2015 -0600
+
+    T_T
+
+commit 5e6c4e30dd14d374f19a80db26a131f95d4530ff
+Author: David Toth <dtoth@cs.utexas.edu>
+Date:   Wed Nov 4 18:28:57 2015 -0600
+
+    T_T
+
+commit 919a48cde274d5e37d53b0d6a5229d7c8d4db2d0
+Author: David Toth <dtoth@cs.utexas.edu>
+Date:   Wed Nov 4 18:27:48 2015 -0600
+
+    T_T
+
+commit bac4f4e053a176aa36c55c1ceb18ec77b7c54f6e
+Author: David Toth <dtoth@cs.utexas.edu>
+Date:   Wed Nov 4 18:15:36 2015 -0600
+
+    working out issues move types
+
+commit 4f12a24cbfc253d0b5d6227bdb722f1e67f89732
+Author: David Toth <dtoth@cs.utexas.edu>
+Date:   Wed Nov 4 18:12:47 2015 -0600
+
+    working out issues move types
+
+commit 786ec63178a54f9b020e28730c2032538e9501c3
+Author: David Toth <dtoth@cs.utexas.edu>
+Date:   Wed Nov 4 18:10:33 2015 -0600
+
+    open issue pushing to production not working
+
+commit 1bd456921de460ea747e934e0627d06a448ccaed
+Merge: cf421d3 1bab596
+Author: Tucker Long <tl7877@cs.utexas.edu>
+Date:   Wed Nov 4 18:02:30 2015 -0600
+
+    Merge branch 'master' of 172.99.75.69:/home/git/cs373-idb
+
+commit cf421d36f5c7c772fe2c5a80684f1960a19b6ad6
+Merge: 7d1bf2d 58ec6e9
+Author: Tucker Long <tl7877@cs.utexas.edu>
+Date:   Wed Nov 4 18:00:45 2015 -0600
+
+    Merge branch 'master' of https://github.com/RobinsonNguyen/cs373-pokemon
+
+commit 58ec6e92f8f38087240ebbeff843d0af6133ab28
+Author: David Toth <dtoth@cs.utexas.edu>
+Date:   Wed Nov 4 17:55:36 2015 -0600
+
+    changed so move class would be reading moves_final.json file
+
+commit 6dddc4e0a0cdd51816f630c577e38bc6361b7989
+Author: Joao Marcos Eloy <jomeloy@gmail.com>
+Date:   Tue Nov 3 15:36:08 2015 -0600
+
+    added description json to somescrapingdata
+
+commit 1bab596751112379e77ffb4094f0ca48d16bf80d
+Merge: b084c78 7d1bf2d
+Author: Brett Kercher <brettkercher@utexas.edu>
+Date:   Tue Nov 3 15:20:51 2015 -0600
+
+    Merge branch 'master' of 172.99.75.69:/home/git/cs373-idb
+
+commit b084c7860fdab085bf97cac4790109149a855f29
+Author: Brett Kercher <brettkercher@utexas.edu>
+Date:   Tue Nov 3 15:19:59 2015 -0600
+
+    Added routes for API
+
+commit 651c24bc07a798e8690741d92bea92a340b4d94d
+Author: Joao Marcos Eloy <jomeloy@gmail.com>
+Date:   Tue Nov 3 12:33:45 2015 -0600
+
+    finished moves scraping
+
+commit 28705cf6a38d5097f565d2e7b78827d86eb075c8
+Author: Joao Marcos Eloy <jomeloy@gmail.com>
+Date:   Fri Oct 30 14:30:48 2015 -0500
+
+    adding routeimgs 4/4
+
+commit cf680464fe74c681e34987d1bb4da260ce612c5c
+Author: Joao Marcos Eloy <jomeloy@gmail.com>
+Date:   Fri Oct 30 14:26:19 2015 -0500
+
+    adding Routeimgs p3
+
+commit 0a9f349079811e71db6c41147856a333ca31e653
+Author: Joao Marcos Eloy <jomeloy@gmail.com>
+Date:   Fri Oct 30 14:25:31 2015 -0500
+
+    adding Routeimgs p2
+
+commit 1e5358c90e1f399cdf9b5cc37abde75bee48eee5
+Author: Joao Marcos Eloy <jomeloy@gmail.com>
+Date:   Fri Oct 30 14:24:35 2015 -0500
+
+    adding routeimg p1
+
+commit 790789ff6be836bb8093f837cfe9ea2a41faa622
+Author: Joao Marcos Eloy <jomeloy@gmail.com>
+Date:   Fri Oct 30 12:49:17 2015 -0500
+
+    adding Wild Pokemon Method sprites
+
+commit 69dea34010cba758794529a67f167dada9138eb7
+Author: Joao Marcos Eloy <jomeloy@gmail.com>
+Date:   Fri Oct 30 12:48:38 2015 -0500
+
+    adding Trainer Sprites
+
+commit bda1d5f0e757d1cdc9ad9c11d01548fd0b135cfc
+Author: Joao Marcos Eloy <jomeloy@gmail.com>
+Date:   Fri Oct 30 12:46:11 2015 -0500
+
+    adding item sprites
+
+commit 4c6e6d7c810b78552ddf9864ebfa92c2f2109779
+Author: Joao Marcos Eloy <jomeloy@gmail.com>
+Date:   Fri Oct 30 12:44:56 2015 -0500
+
+    adding route scraping
+
+commit 7d1bf2d3464533aa0cd8c6fba9f68b0e5c4078c8
+Author: Tucker Long <tl7877@cs.utexas.edu>
+Date:   Thu Oct 29 15:09:41 2015 -0500
+
+    rackspace testings
+
+commit f4d555bf6030c8294bd0b008f50a65dc8d6d5bd9
+Author: Tucker Long <tl7877@cs.utexas.edu>
+Date:   Thu Oct 22 21:47:14 2015 -0500
+
+    Adding log
+
 commit 17e18663082f4e952d0348d531bae9d6be98bf76
 Author: Tucker Long <tl7877@cs.utexas.edu>
 Date:   Thu Oct 22 21:44:53 2015 -0500
