@@ -214,7 +214,7 @@ class Types(db.Model):
 
 	@staticmethod
 	def get_pokemon_types(name):
-		return Types.query.filter_by(POKEMON_NAME=name).first()
+		return Types.query.filter_by(POKEMON_NAME=name)
 
 class Locations(db.Model):
 	__tablename__ = "POKEMON_LOCATIONS"
