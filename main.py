@@ -72,7 +72,7 @@ def delete_locations(id):
 @app.route('/pokemon/<name>/')
 def pokemon(name=None):
     if name is not None:
-        return render_template('pokemon_details.html', pokemon=Pokemon.get(name), moves=PokemonMoves.get_for_pokemon(name), locations=RoutePokemon.get_pokemon_routes(name))
+        return render_template('pokemon_details.html', pokemon=Pokemon.get(name), moves=PokemonMoves.get_for_pokemon(name), locations=RoutePokemon.get_pokemon_routes(name), types=Types.get_pokemon_types(name))
     return render_template('pokemon.html', pokemon=Pokemon.get_all())
 	
 #=============API==========#

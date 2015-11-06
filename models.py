@@ -212,6 +212,10 @@ class Types(db.Model):
 		self.POKEMON_NAME = name
 		self.POKEMON_TYPE = type
 
+	@staticmethod
+	def get_pokemon_types(name):
+		return Types.query.filter_by(POKEMON_NAME=name).first()
+
 class Locations(db.Model):
 	__tablename__ = "POKEMON_LOCATIONS"
 
