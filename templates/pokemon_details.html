@@ -118,16 +118,17 @@
 								</tr>
 							</thead>
 							<tbody>
-								{% for loc in pokemon.locations %}
+								{% for loc in locations %}
 									<tr class="pokemon-row">
-										<td>{{loc.game}}</td>
+										<td>{{loc.ROUTE_POKEMON_GEN}}</td>
 										<td>
-										{% for r in loc.routes %}
+											{{loc.ROUTE_NAME}}
+										<!-- {% for r in loc.routes %}
 											<a href="#" data-region="{{loc.game}}" class="route" id="{{r}}">{{r}}</a>
 										{% endfor %}
 										{% for o in loc.other %}
 											{{o}}
-										{% endfor %}
+										{% endfor %} -->
 										</td>
 									</tr>
 								{% endfor %}
