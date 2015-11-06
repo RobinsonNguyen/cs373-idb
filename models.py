@@ -265,6 +265,14 @@ class PokemonMoves(db.Model):
 	def get_for_machine(move_name):
 		return Pokemon.query.join(PokemonMoves).filter_by(POKEMON_MOVE=move_name, POKEMON_LEARN_TYPE='machine')
 
+	@staticmethod
+	def get_for_egg(move_name):
+		return Pokemon.query.join(PokemonMoves).filter_by(POKEMON_MOVE=move_name, POKEMON_LEARN_TYPE='egg move')
+
+	@staticmethod
+	def get_for_tutor(move_name):
+		return Pokemon.query.join(PokemonMoves).filter_by(POKEMON_MOVE=move_name, POKEMON_LEARN_TYPE='tutor')
+
 class RouteImages(db.Model):
 	__tablename__ = "ROUTE_IMGS"
 
