@@ -10,7 +10,7 @@ class UnitTestModels(TestCase):
 	def test_pokemon_1(self):
 		pokemon = Pokemon.get_id(1)
 		p = {c.name: getattr(pokemon, c.name) for c in pokemon.__table__.columns}
-		self.assertEqual(p.id, 1)
+		self.assertEqual(p['id'], 1)
 		# self.assertEqual(c[0].name, 'Bulbasaur')
 		# self.assertEqual(c[0].hp, 45)
 		# self.assertEqual(c[0].attack, 49)
