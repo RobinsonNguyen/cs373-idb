@@ -112,9 +112,9 @@ class UnitTestModels(TestCase):
 		# self.assertEqual(allRoutes.routes[1].items[0].name, "Potion")
 
 	def test_location_3(self):
-		location = Routes.get_all()
+		locations = Routes.get_all()
 		p = []
-		for route in routes:
+		for route in locations:
 			p.append({c.name: getattr(route, c.name) for c in route.__table__.columns})
 		self.assertEqual(p[0]['ID'], 1)
 		self.assertEqual(p[0]['ROUTE_NAME'], 'Pallet Town')
