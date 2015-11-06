@@ -2,7 +2,7 @@
 
     {% block head %}
 
-        <title>{{move.name}} (Move) - PokeMaster</title>
+        <title>{{move.MOVE_NAME}} (Move) - PokeMaster</title>
 
         <!-- Custom CSS -->
         <link href="../static/css/thumbnail-gallery.css" rel="stylesheet">
@@ -30,18 +30,18 @@
         <div class="row">
 
             <div class="col-lg-12">
-                <h1 class="page-header">{{move.name}} <!-- ({{move.tm}}) --></h1>
+                <h1 class="page-header">{{move.MOVE_NAME}} <!-- ({{move.tm}}) --></h1>
             </div>
 
             <div class="col-lg-12">
                 <h3><b>Move Data:</b></h3>
-                <p class="data"><b>Type:</b> {{move.type}}</p>
-                <p class="data"><b>Category:</b> {{move.category}}</p>
-                <p class="data"><b>Power:</b> {{move.power}}</p>
-                <p class="data"><b>Accuracy:</b> {{move.accuracy}}</p>
-                <p class="data"><b>PP:</b> {{move.pp}}</p>
+                <p class="data"><b>Type:</b> {{move.MOVE_TYPE}}</p>
+                <p class="data"><b>Category:</b> {{move.MOVE_CATEGORY}}</p>
+                <p class="data"><b>Power:</b> {{move.MOVE_POWER}}</p>
+                <p class="data"><b>Accuracy:</b> {{move.MOVE_ACCURACY}}</p>
+                <p class="data"><b>PP:</b> {{move.MOVE_PP}}</p>
                 <p class="data"><b>Description:</b> </p>
-                <p class="description">{{move.description}}</p>
+                <p class="description">{{move.MOVE_DESCRIPTION}}</p>
             </div>
 
         </div>
@@ -52,25 +52,24 @@
                 <h1>Pokemon who learn through level up:</h1>
             </div>
 
-            {% for p in move.pokemonLVL | batch(6) %}
+            {% for p in pokemonLVL | batch(6) %}
                 <div class="row">
                 {% for pokemon in p %}
 
                     <div class="col-lg-2 thumb">
                         <div align="center">
-                            <a class="poke-data" href="../../pokemon/{{pokemon.name}}">
-                                <h2>{{pokemon.name}}</h2>
-                                <img class="img-poke" src="{{ url_for('static', filename='res/SPRITES/%s' % pokemon.img) }}" alt="">
+                            <a class="poke-data" href="../../pokemon/{{pokemon.POKEMON_NAME}}">
+                                <h2>{{pokemon.POKEMON_NAME}}</h2>
+                                <img class="img-poke" src="{{ url_for('static', filename='res/SPRITES/%s' % pokemon.POKEMON_IMG) }}" alt="">
                             </a>
                         </div>
-                        <p class="data"><b>Learns at:</b> {{pokemon.lvl}}</p>
-                        <p class="data"><b>HP:</b> {{pokemon.hp}}</p>
-                        <p class="data"><b>Attack:</b> {{pokemon.atk}}</p>
-                        <p class="data"><b>Defense:</b> {{pokemon.defs}}</p>
-                        <p class="data"><b>Speed:</b> {{pokemon.speed}}</p>
-                        <p class="data"><b>Special Attack:</b> {{pokemon.sp_atk}}</p>
-                        <p class="data"><b>Special Defense:</b> {{pokemon.sp_def}}</p>
-                        <p class="data"><b>Type(s):</b> {% for type in pokemon.type %}{{ type }}{% if not loop.last %}/{% endif %}{% endfor %}</p>
+                        <p class="data"><b>Learns at:</b> {{pokemon.POKEMON_LEVEL}}</p>
+                        <p class="data"><b>HP:</b> {{pokemon.POKEMON_HP}}</p>
+                        <p class="data"><b>Attack:</b> {{pokemon.POKEMON_ATK}}</p>
+                        <p class="data"><b>Defense:</b> {{pokemon.POKEMON_DEF}}</p>
+                        <p class="data"><b>Speed:</b> {{pokemon.POKEMON_SPD}}</p>
+                        <p class="data"><b>Special Attack:</b> {{pokemon.POKEMON_SPATK}}</p>
+                        <p class="data"><b>Special Defense:</b> {{pokemon.POKEMON_SPDEF}}</p>
                     </div>
 
                 {% endfor %}
@@ -78,7 +77,7 @@
             {% endfor %}
 
 
-            {% if move.pokemonTM[0] is defined %}
+            {% if pokemonTM[0] is defined %}
 
                 <hr>
                 
@@ -86,24 +85,23 @@
                     <h1>Pokemon who learn through TM:</h1>
                 </div>
 
-                {% for p in move.pokemonTM | batch(6) %}
+                {% for p in pokemonTM | batch(6) %}
                     <div class="row">
                     {% for pokemon in p %}
 
                         <div class="col-lg-2 thumb">
                             <div align="center">
-                                <a class="poke-data" href="../../pokemon/{{pokemon.name}}">
-                                    <h2>{{pokemon.name}}</h2>
-                                    <img class="img-poke" src="{{ url_for('static', filename='res/SPRITES/%s' % pokemon.img) }}" alt="">
+                                <a class="poke-data" href="../../pokemon/{{pokemon.POKEMON_NAME}}">
+                                    <h2>{{pokemon.POKEMON_NAME}}</h2>
+                                    <img class="img-poke" src="{{ url_for('static', filename='res/SPRITES/%s' % pokemon.POKEMON_IMG) }}" alt="">
                                 </a>
                             </div>
-                            <p class="data"><b>HP:</b> {{pokemon.hp}}</p>
-                            <p class="data"><b>Attack:</b> {{pokemon.atk}}</p>
-                            <p class="data"><b>Defense:</b> {{pokemon.defs}}</p>
-                            <p class="data"><b>Speed:</b> {{pokemon.speed}}</p>
-                            <p class="data"><b>Special Attack:</b> {{pokemon.sp_atk}}</p>
-                            <p class="data"><b>Special Defense:</b> {{pokemon.sp_def}}</p>
-                            <p class="data"><b>Type(s):</b> {% for type in pokemon.type %}{{ type }}{% if not loop.last %}/{% endif %}{% endfor %}</p>
+                            <p class="data"><b>HP:</b> {{pokemon.POKEMON_HP}}</p>
+                            <p class="data"><b>Attack:</b> {{pokemon.POKEMON_ATK}}</p>
+                            <p class="data"><b>Defense:</b> {{pokemon.POKEMON_DEF}}</p>
+                            <p class="data"><b>Speed:</b> {{pokemon.POKEMON_SPD}}</p>
+                            <p class="data"><b>Special Attack:</b> {{pokemon.POKEMON_SPATK}}</p>
+                            <p class="data"><b>Special Defense:</b> {{pokemon.POKEMON_SPDEF}}</p>
                         </div>
 
                     {% endfor %}
