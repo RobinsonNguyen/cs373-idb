@@ -303,6 +303,9 @@ class RoutePokemon(db.Model):
 		self.ROUTE_POKEMON_METHOD = pMethod
 		self.ROUTE_METHOD_IMG = pImg
 
+	@staticmethod
+	def get_pokemon_routes(poke_name):
+		return RoutePokemon.query.filter_by(ROUTE_POKEMON_NAME=poke_name)
 	def get(routeName):
 		return RoutePokemon.query.filter_by(ROUTE_NAME=routeName)
 
