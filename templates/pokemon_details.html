@@ -11,7 +11,7 @@
 	{% block content %}
 		<div class="main-wrapper">
 			<div class="panel panel-success col-sm-2 poke-panel">
-				<div class="panel-heading">#{{ '%03d' % pokemon.id }} {{ pokemon.name }}</div>
+				<div class="panel-heading">#{{ '%03d' % pokemon.POKEMON_ID }} {{ pokemon.POKEMON_NAME }}</div>
 	    		<div class="panel-body">
 					<div id="img-panel" class="panel panel-success">
 			    		<div class="panel-body poke-img">
@@ -56,27 +56,27 @@
 	    						<tbody>
 		    						<tr> 
 		    							<td> HP </td>
-		    							<td> {{ pokemon.hp }} </td>
+		    							<td> {{ pokemon.POKEMON_HP }} </td>
 		    						</tr>
 		    						<tr> 
 		    							<td> Attack </td>
-		    							<td> {{ pokemon.attack }} </td>
+		    							<td> {{ pokemon.POKEMON_ATK }} </td>
 		    						</tr>
 		    						<tr> 
 		    							<td> Defense </td>
-		    							<td> {{ pokemon.defense }} </td>
+		    							<td> {{ pokemon.POKEMON_DEF }} </td>
 		    						</tr>
 		    						<tr> 
 		    							<td> Sp. Attack </td>
-		    							<td> {{ pokemon.spAttack }} </td>
+		    							<td> {{ pokemon.POKEMON_SPATK }} </td>
 		    						</tr>
 		    						<tr> 
 		    							<td> Sp. Defense </td>
-		    							<td> {{ pokemon.spDefense }} </td>
+		    							<td> {{ pokemon.POKEMON_SPDEF }} </td>
 		    						</tr>
 		    						<tr> 
 		    							<td> Speed </td>
-		    							<td> {{ pokemon.speed }} </td>
+		    							<td> {{ pokemon.POKEMON_SPEED }} </td>
 		    						</tr>
 	    						</tbody>
 	    					</table>
