@@ -31,14 +31,12 @@ def get_test_results():
 # location
 # --------	 
 @app.route('/location/')
-@app.route('/location', methods=['GET'])
+@app.route('/locations/')
+@app.route('/location/<name>')
 def location_id():
-    if request.args.get("region") is not None and request.args.get("name") is not None:
-        route = routeContainer.getRouteByRegion(request.args.get("region"), request.args.get("name"))
-        if route is None:
-            abort(404)
-        return render_template("route_data.html", route=route)
-    return render_template('location.html')
+    if name is not None:
+        return render_template("route_data.html", route=Routes.get(name), pokemon=RoutePokemon.get(name))
+    return render_template('location.html', routes=Routes.get_all())
 '''
 #=============API==========#
 @app.route('/api/v1.0/locations/', methods=['GET'])
@@ -74,7 +72,7 @@ def delete_locations(id):
 @app.route('/pokemon/<name>/')
 def pokemon(name=None):
     if name is not None:
-        return render_template('pokemon_details.html', pokemon=Pokemon.get(name))
+        return render_template('pokemon_details.html', pokemon=Pokemon.get(name), moves=PokemonMoves.get_for_pokemon(name))
     return render_template('pokemon.html', pokemon=Pokemon.get_all())
 	
 #=============API==========#

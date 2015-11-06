@@ -144,6 +144,14 @@ class Routes(db.Model):
 		self.ROUTE_MAIN_DESCRIPTION = main;
 		self.ROUTE_TRIVIA = trivia;
 
+	@staticmethod
+	def get_all():
+		return Routes.query.all()
+		
+	@staticmethod
+	def get(name, region):
+		return Routes.query.filter_by(ROUTE_NAME=name).first()
+
 class Trainers(db.Model):
 	__tablename__ = "ALL_TRAINERS"
 
@@ -236,11 +244,13 @@ class PokemonMoves(db.Model):
 		self.POKEMON_LEARN_TYPE = type
 		self.POKEMON_LEVEL_LEARNED = level
 
+	@staticmethod
 	def get_for_pokemon(poke_name):
-		return Pokemon.query.filter_by(POKEMON_NAME=poke_name)
+		return PokemonMoves.query.filter_by(POKEMON_NAME=poke_name)
 
+	@staticmethod
 	def get_for_move(move_name):
-		return Pokemon.query.filter_by(POKEMON_MOVE=move_name)
+		return PokemonMoves.query.filter_by(POKEMON_MOVE=move_name)
 
 class RouteImages(db.Model):
 	__tablename__ = "ROUTE_IMGS"
@@ -292,6 +302,9 @@ class RoutePokemon(db.Model):
 		self.ROUTE_POKEMON_RATE = pRate
 		self.ROUTE_POKEMON_METHOD = pMethod
 		self.ROUTE_METHOD_IMG = pImg
+
+	def get(routeName):
+		return RoutePokemon.query.filter_by(ROUTE_NAME=routeName)
 
 class RouteTrainers(db.Model):
 	__tablename__ = "ROUTE_TRAINERS"
