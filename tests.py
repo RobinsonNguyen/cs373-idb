@@ -10,26 +10,26 @@ class UnitTestModels(TestCase):
 	def test_pokemon_1(self):
 		pokemon = Pokemon.get_id(1)
 		p = {c.name: getattr(pokemon, c.name) for c in pokemon.__table__.columns}
-		self.assertEqual(p['id'], 1)
-		self.assertEqual(p['name'], 'Bulbasaur')
-		self.assertEqual(p['hp'], 45)
-		self.assertEqual(p['attack'], 49)
-		self.assertEqual(p['defense'], 49)
-		self.assertEqual(p['spAttack'], 65)
-		self.assertEqual(p['spDefense'], 65)
-		self.assertEqual(p['speed'], 45)
+		self.assertEqual(p['POKEMON_ID'], 1)
+		self.assertEqual(p['POKEMON_NAME'], 'Bulbasaur')
+		self.assertEqual(p['POKEMON_HP'], 45)
+		self.assertEqual(p['POKEMON_ATK'], 49)
+		self.assertEqual(p['POKEMON_DEF'], 49)
+		self.assertEqual(p['POKEMON_SPATK'], 65)
+		self.assertEqual(p['POKEMON_SPDEF'], 65)
+		self.assertEqual(p['POKEMON_SPEED'], 45)
 
 	def test_pokemon_2(self):
 		pokemon = Pokemon.get('Bulbasaur')
 		p = {c.name: getattr(pokemon, c.name) for c in pokemon.__table__.columns}
-		self.assertEqual(p['id'], 1)
-		self.assertEqual(p['name'], 'Bulbasaur')
-		self.assertEqual(p['hp'], 45)
-		self.assertEqual(p['attack'], 49)
-		self.assertEqual(p['defense'], 49)
-		self.assertEqual(p['spAttack'], 65)
-		self.assertEqual(p['spDefense'], 65)
-		self.assertEqual(p['speed'], 45)
+		self.assertEqual(p['POKEMON_ID'], 1)
+		self.assertEqual(p['POKEMON_NAME'], 'Bulbasaur')
+		self.assertEqual(p['POKEMON_HP'], 45)
+		self.assertEqual(p['POKEMON_ATK'], 49)
+		self.assertEqual(p['POKEMON_DEF'], 49)
+		self.assertEqual(p['POKEMON_SPATK'], 65)
+		self.assertEqual(p['POKEMON_SPDEF'], 65)
+		self.assertEqual(p['POKEMON_SPEED'], 45)
 
 
 	def test_pokemon_3(self):
@@ -37,20 +37,20 @@ class UnitTestModels(TestCase):
 		p = []
 		for poke in pokemon:
 			p.append({c.name: getattr(poke, c.name) for c in poke.__table__.columns})
-		self.assertEqual(p[0]['id'], 1)
-		self.assertEqual(p[0]['name'], 'Bulbasaur')
-		self.assertEqual(p[1]['id'], 2)
-		self.assertEqual(p[1]['name'], 'Ivysaur')
+		self.assertEqual(p[0]['POKEMON_ID'], 1)
+		self.assertEqual(p[0]['POKEMON_NAME'], 'Bulbasaur')
+		self.assertEqual(p[1]['POKEMON_ID'], 2)
+		self.assertEqual(p[1]['POKEMON_NAME'], 'Ivysaur')
 
 
 	def test_moves_1(self):
 		m = Move.get_id(1)
-		# p = {c.name: getattr(move, c.name) for c in move.__table__.columns}
-		# self.assertEqual(p['id'], 1)
-		# self.assertEqual(p['name'], 'Pound')
-		# self.assertEqual(p['power'], 45)
-		# self.assertEqual(p['accuracy'], 49)
-		# self.assertEqual(p['pp'], 49)
+		p = {c.name: getattr(move, c.name) for c in move.__table__.columns}
+		self.assertEqual(p['MOVE_ID'], 1)
+		self.assertEqual(p['MOVE_NAME'], 'Pound')
+		self.assertEqual(p['MOVE_POWER'], 45)
+		self.assertEqual(p['MOVE_ACCURACY'], 49)
+		self.assertEqual(p['MOVE_PP'], 49)
 
 	# def test_moves_2(self):
 	# 	move = Move.get('Pound')
