@@ -240,7 +240,7 @@ class PokemonMoves(db.Model):
 	__tablename__ = "POKEMON_MOVES"
 
 	ID = db.Column(db.Integer, primary_key=True)
-	POKEMON_ID = db.Column(db.Integer)
+	POKEMON_ID = db.Column(db.Integer, db.ForeignKey("ALL_POKEMON.POKEMON_ID"))
 	POKEMON_NAME = db.Column(db.VARCHAR(50))
 	POKEMON_MOVE = db.Column(db.VARCHAR(50))
 	POKEMON_LEARN_TYPE = db.Column(db.VARCHAR(50))
@@ -259,11 +259,11 @@ class PokemonMoves(db.Model):
 
 	@staticmethod
 	def get_for_level(move_name):
-		return Pokemon.query.join(PokemonMoves.POKEMON_ID).filter_by(POKEMON_MOVE=move_name, POKEMON_LEARN_TYPE='level up')
+		return Pokemon.query.join(PokemonMoves).filter_by(POKEMON_MOVE=move_name, POKEMON_LEARN_TYPE='level up')
 
 	@staticmethod
 	def get_for_machine(move_name):
-		return Pokemon.query.join(PokemonMoves.POKEMON_ID).filter_by(POKEMON_MOVE=move_name, POKEMON_LEARN_TYPE='machine')
+		return Pokemon.query.join(PokemonMoves).filter_by(POKEMON_MOVE=move_name, POKEMON_LEARN_TYPE='machine')
 
 class RouteImages(db.Model):
 	__tablename__ = "ROUTE_IMGS"
