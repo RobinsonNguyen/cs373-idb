@@ -110,6 +110,72 @@
 
             {% endif %}
 
+            {% if pokemonEGG[0] is defined %}
+
+                <hr>
+                
+                <div class="col-lg-12">
+                    <h1>Pokemon who learn through hatching:</h1>
+                </div>
+
+                {% for p in pokemonEGG | batch(6) %}
+                    <div class="row">
+                    {% for pokemon in p %}
+
+                        <div class="col-lg-2 thumb">
+                            <div align="center">
+                                <a class="poke-data" href="../../pokemon/{{pokemon.POKEMON_NAME}}">
+                                    <h2>{{pokemon.POKEMON_NAME}}</h2>
+                                    <img class="img-poke" src="{{ url_for('static', filename='res/SPRITES/%s' % pokemon.POKEMON_IMG) }}" alt="">
+                                </a>
+                            </div>
+                            <p class="data"><b>HP:</b> {{pokemon.POKEMON_HP}}</p>
+                            <p class="data"><b>Attack:</b> {{pokemon.POKEMON_ATK}}</p>
+                            <p class="data"><b>Defense:</b> {{pokemon.POKEMON_DEF}}</p>
+                            <p class="data"><b>Speed:</b> {{pokemon.POKEMON_SPD}}</p>
+                            <p class="data"><b>Special Attack:</b> {{pokemon.POKEMON_SPATK}}</p>
+                            <p class="data"><b>Special Defense:</b> {{pokemon.POKEMON_SPDEF}}</p>
+                        </div>
+
+                    {% endfor %}
+                    </div>
+                {% endfor %}
+
+            {% endif %}
+
+            {% if pokemonTUT[0] is defined %}
+
+                <hr>
+                
+                <div class="col-lg-12">
+                    <h1>Pokemon who learn through tutor:</h1>
+                </div>
+
+                {% for p in pokemonTUT | batch(6) %}
+                    <div class="row">
+                    {% for pokemon in p %}
+
+                        <div class="col-lg-2 thumb">
+                            <div align="center">
+                                <a class="poke-data" href="../../pokemon/{{pokemon.POKEMON_NAME}}">
+                                    <h2>{{pokemon.POKEMON_NAME}}</h2>
+                                    <img class="img-poke" src="{{ url_for('static', filename='res/SPRITES/%s' % pokemon.POKEMON_IMG) }}" alt="">
+                                </a>
+                            </div>
+                            <p class="data"><b>HP:</b> {{pokemon.POKEMON_HP}}</p>
+                            <p class="data"><b>Attack:</b> {{pokemon.POKEMON_ATK}}</p>
+                            <p class="data"><b>Defense:</b> {{pokemon.POKEMON_DEF}}</p>
+                            <p class="data"><b>Speed:</b> {{pokemon.POKEMON_SPD}}</p>
+                            <p class="data"><b>Special Attack:</b> {{pokemon.POKEMON_SPATK}}</p>
+                            <p class="data"><b>Special Defense:</b> {{pokemon.POKEMON_SPDEF}}</p>
+                        </div>
+
+                    {% endfor %}
+                    </div>
+                {% endfor %}
+
+            {% endif %}
+
         <hr>
 
         <!-- Footer -->
