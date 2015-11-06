@@ -21,8 +21,8 @@
 					<div id="type-panel" class="inner-panel panel panel-success">
 			    		<div class="panel-heading"><b>Type</b></div>
 	    				<div class="panel-body">
-	    					{% for type in pokemon.type %}
-	    						{{ type }}
+	    					{% for t in types %}
+	    						{{ t.POKEMON_TYPE }}
 								{% if not loop.last %}
 									/
 								{% endif %}
@@ -43,9 +43,9 @@
 					<div id="evo-panel" class="inner-panel panel panel-success">
 			    		<div class="panel-heading"><b>Evolves Into</b></div>
 	    				<div class="panel-body">
-	    						{% for evo in pokemon.evolution %}
-	    							<img src="{{ url_for('static', filename='res/SPRITES/%s_mini_.png' % evo.to) }}"/>
-	    							<a href="/pokemon/{{ evo.to }}"> {{ evo.to }} </a>
+	    						{% for evo in evos %}
+	    							<img src="{{ url_for('static', filename='res/SPRITES/%s_mini_.png' % evo.POKEMON_EVOLUTION) }}"/>
+	    							<a href="/pokemon/{{ evo.POKEMON_EVOLUTION }}"> {{ evo.POKEMON_EVOLUTION }} </a>
 	    						{% endfor %}
 	    				</div>
 					</div>
@@ -114,21 +114,15 @@
 							<thead>
 								<tr>
 									<th>Game</th>
-									<th>Route</th>
+									<th>Location</th>
 								</tr>
 							</thead>
 							<tbody>
 								{% for loc in locations %}
 									<tr class="pokemon-row">
 										<td>{{loc.ROUTE_POKEMON_GEN}}</td>
-										<td>
+										<td class="route">
 											{{loc.ROUTE_NAME}}
-										<!-- {% for r in loc.routes %}
-											<a href="#" data-region="{{loc.game}}" class="route" id="{{r}}">{{r}}</a>
-										{% endfor %}
-										{% for o in loc.other %}
-											{{o}}
-										{% endfor %} -->
 										</td>
 									</tr>
 								{% endfor %}

@@ -199,6 +199,10 @@ class Evolutions(db.Model):
 		self.POKEMON_EVOLVE_METHOD = method
 		self.POKEMON_EVOLVE_LEVEL = level
 
+	@staticmethod
+	def get_pokemon_evo(name):
+		return Evolutions.query.filter_by(POKEMON_EVOLUTION=name)
+
 class Types(db.Model):
 	__tablename__ = "POKEMON_TYPES"
 
@@ -211,6 +215,10 @@ class Types(db.Model):
 		self.POKEMON_ID = id
 		self.POKEMON_NAME = name
 		self.POKEMON_TYPE = type
+
+	@staticmethod
+	def get_pokemon_types(name):
+		return Types.query.filter_by(POKEMON_NAME=name)
 
 class Locations(db.Model):
 	__tablename__ = "POKEMON_LOCATIONS"
@@ -310,8 +318,10 @@ class RoutePokemon(db.Model):
 	@staticmethod
 	def get_pokemon_routes(poke_name):
 		return RoutePokemon.query.filter_by(ROUTE_POKEMON_NAME=poke_name)
+		
+	@staticmethod
 	def get(routeName):
-		return RoutePokemon.query.filter_by(ROUTE_NAME=routeName)
+		return RoutePokemon.query.filter_by(ROUTE_NAME=routeName).first()
 
 class RouteTrainers(db.Model):
 	__tablename__ = "ROUTE_TRAINERS"

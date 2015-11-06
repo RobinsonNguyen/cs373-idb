@@ -63,7 +63,7 @@
 								</tr>
 							</thead>
 							<tbody>
-								{% for poke in route.pokemon %}
+								{% for poke in pokemon %}
 									<tr>
 										<td><img src="{{ url_for('static', filename='res/SPRITES/%s_mini_.png' % poke.name) }}"/></td>
 										<td>{{ poke.ROUTE_POKEMON_NAME }}</td>
