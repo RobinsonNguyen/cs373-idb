@@ -32,15 +32,15 @@ class UnitTestModels(TestCase):
 		self.assertEqual(p['speed'], 45)
 
 
-	# def test_pokemon_3(self):
-	# 	pokemon = Pokemon.get_all()
-	# 	p = []
-	# 	for poke in pokemon:
-	# 		p.append({c.name: getattr(poke, c.name) for c in poke.__table__.columns})
-	# 	self.assertEqual(p[0]['id'], 1)
-	# 	self.assertEqual(p[0]['name'], 'Bulbasaur')
-	# 	self.assertEqual(p[1]['id'], 2)
-	# 	self.assertEqual(p[1]['name'], 'Ivysaur')
+	def test_pokemon_3(self):
+		pokemon = Pokemon.get_all()
+		p = []
+		for poke in pokemon:
+			p.append({c.name: getattr(poke, c.name) for c in poke.__table__.columns})
+		self.assertEqual(p[0]['id'], 1)
+		self.assertEqual(p[0]['name'], 'Bulbasaur')
+		self.assertEqual(p[1]['id'], 2)
+		self.assertEqual(p[1]['name'], 'Ivysaur')
 
 	# def test_pokemon_4(self):
 	# 	p = Pokemon('Jimmy', 1,2,3,4,5,6,'image')
