@@ -11,7 +11,6 @@ $(document).ready(function(){
 
 	$('.route').click(function() {
 		route = $(this).attr('id').trim();
-
 		location.href = '/location/' + route;
 	});
 

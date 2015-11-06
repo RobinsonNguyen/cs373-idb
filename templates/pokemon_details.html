@@ -30,12 +30,12 @@
 	    				</div>
 					</div>
 					<div id="egg-panel" class="inner-panel panel panel-success">
-			    		<div class="panel-heading"><b>Egg Group</b></div>
+			    		<div class="panel-heading"><b>Abilities</b></div>
 	    				<div class="panel-body">
-	    					{% for group in pokemon.eggGroup %}
-	    						{{ group }}
+	    					{% for a in abilities %}
+	    						{{ a.POKEMON_ABILITY }}
 								{% if not loop.last %}
-									/
+									,
 								{% endif %}
 	    					{% endfor %}
 	    				</div>
@@ -76,7 +76,7 @@
 		    						</tr>
 		    						<tr> 
 		    							<td> Speed </td>
-		    							<td> {{ pokemon.POKEMON_SPEED }} </td>
+		    							<td> {{ pokemon.POKEMON_SPD }} </td>
 		    						</tr>
 	    						</tbody>
 	    					</table>

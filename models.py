@@ -175,6 +175,10 @@ class Abilities(db.Model):
 		self.POKEMON_NAME = name
 		self.POKEMON_ABILITY = ability
 
+	@staticmethod
+	def get_pokemon_abilities(name):
+		return Abilities.query.filter_by(POKEMON_NAME=name)
+
 class Evolutions(db.Model):
 	__tablename__ = "POKEMON_EVOLUTIONS"
 
@@ -194,7 +198,7 @@ class Evolutions(db.Model):
 
 	@staticmethod
 	def get_pokemon_evo(name):
-		return Evolutions.query.filter_by(POKEMON_EVOLUTION=name)
+		return Evolutions.query.filter_by(POKEMON_NAME=name)
 
 class Types(db.Model):
 	__tablename__ = "POKEMON_TYPES"
