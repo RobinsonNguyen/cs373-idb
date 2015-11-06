@@ -150,7 +150,7 @@ class Routes(db.Model):
 		
 	@staticmethod
 	def get(name, region):
-		return Routes.query.filter_by(ROUTE_NAME=name).filter_by(ROUTE_REGION=region).first()
+		return Routes.query.filter_by(ROUTE_NAME=name).first()
 
 class Trainers(db.Model):
 	__tablename__ = "ALL_TRAINERS"
@@ -306,6 +306,8 @@ class RoutePokemon(db.Model):
 	@staticmethod
 	def get_pokemon_routes(poke_name):
 		return RoutePokemon.query.filter_by(ROUTE_POKEMON_NAME=poke_name)
+	def get(routeName):
+		return RoutePokemon.query.filter_by(ROUTE_NAME=routeName)
 
 class RouteTrainers(db.Model):
 	__tablename__ = "ROUTE_TRAINERS"
