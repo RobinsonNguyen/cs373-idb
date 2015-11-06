@@ -83,17 +83,12 @@ class UnitTestModels(TestCase):
 	# 	self.assertEqual(p.description, 'A strong punch')
 
 	def test_location_1(self):
-		# location = Location.get_id(1)
-		# p = {c.name: getattr(location, c.name) for c in location.__table__.columns}
-		# self.assertEqual(p['id'], 1)
-		# self.assertEqual(p['name'], 'Bulbasaur')
-		# self.assertEqual(p['hp'], 45)
-		# self.assertEqual(p['attack'], 49)
-		# self.assertEqual(p['defense'], 49)
-		# self.assertEqual(p['spAttack'], 65)
-		# self.assertEqual(p['spDefense'], 65)
-		# self.assertEqual(p['speed'], 45)
-		pass
+		location = Routes.get('Pallet Town')
+		p = {c.name: getattr(location, c.name) for c in location.__table__.columns}
+		self.assertEqual(p['ID'], 1)
+		self.assertEqual(p['ROUTE_NAME'], 'Pallet Town')
+		self.assertEqual(p['ROUTE_REGION'], 'Kanto')
+
 		# allRoutes = RouteContainer()
 		# self.assertEqual(allRoutes.routes[0].region, "Kanto")
 		# self.assertEqual(allRoutes.routes[0].name, "Route 15")
@@ -103,7 +98,11 @@ class UnitTestModels(TestCase):
 		# self.assertEqual(allRoutes.routes[0].items[0].name, "Rain-dance")
 
 	def test_location_2(self):
-		pass
+		location = Routes.get_id(1)
+		p = {c.name: getattr(location, c.name) for c in location.__table__.columns}
+		self.assertEqual(p['ID'], 1)
+		self.assertEqual(p['ROUTE_NAME'], 'Pallet Town')
+		self.assertEqual(p['ROUTE_REGION'], 'Kanto')
 		# allRoutes = RouteContainer()
 		# self.assertEqual(allRoutes.routes[1].region, "Johto")
 		# self.assertEqual(allRoutes.routes[1].name, "Route 30")
@@ -112,8 +111,14 @@ class UnitTestModels(TestCase):
 		# self.assertEqual(allRoutes.routes[1].trainers[0].name, "Youngster Joey")
 		# self.assertEqual(allRoutes.routes[1].items[0].name, "Potion")
 
-	def test_location_3(self):
-		pass
+	# def test_location_3(self):
+	# 	location = Routes.get_all()
+	# 	p = []
+	# 	for route in routes:
+	# 		p.append({c.name: getattr(route, c.name) for c in move.__table__.columns})
+	# 	self.assertEqual(p[0]['ID'], 1)
+	# 	self.assertEqual(p[0]['ROUTE_NAME'], 'Pallet Town')
+	# 	self.assertEqual(p[0]['ROUTE_REGION'], 'Kanto')
 		# allRoutes = RouteContainer()
 		# self.assertEqual(allRoutes.routes[2].region, "Johto")
 		# self.assertEqual(allRoutes.routes[2].name, "Route 31")
