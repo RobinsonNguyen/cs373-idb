@@ -43,11 +43,11 @@ class UnitTestModels(TestCase):
 		self.assertEqual(p[1]['POKEMON_NAME'], 'Ivysaur')
 
 
-	# def test_moves_1(self):
-	# 	move = Move.get_id(1)
-	# 	p = {c.name: getattr(move, c.name) for c in move.__table__.columns}
-	# 	self.assertEqual(p['MOVE_ID'], 1)
-	# 	self.assertEqual(p['MOVE_NAME'], 'Pound')
+	def test_moves_1(self):
+		move = Move.get_id(1)
+		p = {c.name: getattr(move, c.name) for c in move.__table__.columns}
+		self.assertEqual(p['MOVE_ID'], 1)
+		self.assertEqual(p['MOVE_NAME'], 'Pound')
 		# self.assertEqual(p['MOVE_POWER'], 45)
 		# self.assertEqual(p['MOVE_ACCURACY'], 49)
 		# self.assertEqual(p['MOVE_PP'], 49)
