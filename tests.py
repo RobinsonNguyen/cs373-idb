@@ -19,39 +19,39 @@ class UnitTestModels(TestCase):
 		self.assertEqual(p['spDefense'], 65)
 		self.assertEqual(p['speed'], 45)
 
-	def test_pokemon_2(self):
-		pokemon = Pokemon.get('Bulbasaur')
-		p = {c.name: getattr(pokemon, c.name) for c in pokemon.__table__.columns}
-		self.assertEqual(p['id'], 1)
-		self.assertEqual(p['name'], 'Bulbasaur')
-		self.assertEqual(p['hp'], 45)
-		self.assertEqual(p['attack'], 49)
-		self.assertEqual(p['defense'], 49)
-		self.assertEqual(p['spAttack'], 65)
-		self.assertEqual(p['spDefense'], 65)
-		self.assertEqual(p['speed'], 45)
+	# def test_pokemon_2(self):
+	# 	pokemon = Pokemon.get('Bulbasaur')
+	# 	p = {c.name: getattr(pokemon, c.name) for c in pokemon.__table__.columns}
+	# 	self.assertEqual(p['id'], 1)
+	# 	self.assertEqual(p['name'], 'Bulbasaur')
+	# 	self.assertEqual(p['hp'], 45)
+	# 	self.assertEqual(p['attack'], 49)
+	# 	self.assertEqual(p['defense'], 49)
+	# 	self.assertEqual(p['spAttack'], 65)
+	# 	self.assertEqual(p['spDefense'], 65)
+	# 	self.assertEqual(p['speed'], 45)
 
 
-	def test_pokemon_3(self):
-		pokemon = Pokemon.get_all()
-		p = []
-		for poke in pokemon:
-			p.append({c.name: getattr(poke, c.name) for c in poke.__table__.columns})
-		self.assertEqual(p[0]['id'], 1)
-		self.assertEqual(p[0]['name'], 'Bulbasaur')
-		self.assertEqual(p[1]['id'], 2)
-		self.assertEqual(p[1]['name'], 'Ivysaur')
+	# def test_pokemon_3(self):
+	# 	pokemon = Pokemon.get_all()
+	# 	p = []
+	# 	for poke in pokemon:
+	# 		p.append({c.name: getattr(poke, c.name) for c in poke.__table__.columns})
+	# 	self.assertEqual(p[0]['id'], 1)
+	# 	self.assertEqual(p[0]['name'], 'Bulbasaur')
+	# 	self.assertEqual(p[1]['id'], 2)
+	# 	self.assertEqual(p[1]['name'], 'Ivysaur')
 
-	def test_pokemon_4(self):
-		p = Pokemon('Jimmy', 1,2,3,4,5,6,'image')
-		self.assertEqual(p.name, 'Jimmy')
-		self.assertEqual(p.hp, 1)
-		self.assertEqual(p.attack, 1)
-		self.assertEqual(p.defense, 1)
-		self.assertEqual(p.spAttack, 1)
-		self.assertEqual(p.spDefense, 1)
-		self.assertEqual(p.speed, 1)
-		self.assertEqual(p.imgPath, "image")
+	# def test_pokemon_4(self):
+	# 	p = Pokemon('Jimmy', 1,2,3,4,5,6,'image')
+	# 	self.assertEqual(p.name, 'Jimmy')
+	# 	self.assertEqual(p.hp, 1)
+	# 	self.assertEqual(p.attack, 1)
+	# 	self.assertEqual(p.defense, 1)
+	# 	self.assertEqual(p.spAttack, 1)
+	# 	self.assertEqual(p.spDefense, 1)
+	# 	self.assertEqual(p.speed, 1)
+	# 	self.assertEqual(p.imgPath, "image")
 
 	def test_moves_1(self):
 		pass
