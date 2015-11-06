@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 from unittest import main, TestCase
-from models import Pokemon, Move
+from models import *
 # from pokemonModel import PokemonContainer
 # from movesModel import Moves
 # from routeModel import RouteContainer
@@ -41,6 +41,56 @@ class UnitTestModels(TestCase):
 		self.assertEqual(p[0]['name'], 'Bulbasaur')
 		self.assertEqual(p[1]['id'], 2)
 		self.assertEqual(p[1]['name'], 'Ivysaur')
+
+	def test_pokemon_4(self):
+		p = Pokemon('Jimmy', 1,2,3,4,5,6,'image')
+		self.assertEqual(p.name, 'Jimmy')
+		self.assertEqual(p.hp, 1)
+		self.assertEqual(p.attack, 1)
+		self.assertEqual(p.defense, 1)
+		self.assertEqual(p.spAttack, 1)
+		self.assertEqual(p.spDefense, 1)
+		self.assertEqual(p.speed, 1)
+		self.assertEqual(p.imgPath, "image")
+
+	def test_moves_1(self):
+		move = Move.get_id(1)
+		p = {c.name: getattr(move, c.name) for c in move.__table__.columns}
+		self.assertEqual(p['id'], 1)
+		self.assertEqual(p['name'], 'Pound')
+		self.assertEqual(p['power'], 45)
+		self.assertEqual(p['accuracy'], 49)
+		self.assertEqual(p['pp'], 49)
+
+	def test_moves_2(self):
+		move = Move.get('Pound')
+		p = {c.name: getattr(move, c.name) for c in move.__table__.columns}
+		self.assertEqual(p['id'], 1)
+		self.assertEqual(p['name'], 'Pound')
+		self.assertEqual(p['power'], 45)
+		self.assertEqual(p['accuracy'], 49)
+		self.assertEqual(p['pp'], 49)
+
+
+	def test_moves_3(self):
+		moves = Move.get_all()
+		p = []
+		for move in moves:
+			p.append({c.name: getattr(move, c.name) for c in poke.__table__.columns})
+		self.assertEqual(p[0]['id'], 1)
+		self.assertEqual(p[0]['name'], 'Pound')
+		self.assertEqual(p[1]['id'], 2)
+		#self.assertEqual(p[1]['name'], 'Ivysaur')
+
+	def test_moves_4(self):
+		p = Move('Punch', 'fighting', 'physical', 300, 100, 100, 'A strong punch')
+		self.assertEqual(p.name, 'Punch')
+		self.assertEqual(p.type, 'fighting')
+		self.assertEqual(p.category, 'physical')
+		self.assertEqual(p.power, 300)
+		self.assertEqual(p.accuracy, 100)
+		self.assertEqual(p.pp, 100)
+		self.assertEqual(p.description, 'A strong punch')
 
 	def test_move_1(self):
 		pass
