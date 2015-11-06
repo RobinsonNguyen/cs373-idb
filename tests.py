@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 from unittest import main, TestCase
-from models import Pokemon, Move
+from models import Pokemon, Move, Routes
 # from pokemonModel import PokemonContainer
 # from movesModel import Moves
 # from routeModel import RouteContainer
@@ -82,12 +82,12 @@ class UnitTestModels(TestCase):
 	# 	self.assertEqual(p.pp, 100)
 	# 	self.assertEqual(p.description, 'A strong punch')
 
-	# def test_location_1(self):
-	# 	location = Routes.get('Pallet Town')
-	# 	p = {c.name: getattr(location, c.name) for c in location.__table__.columns}
-	# 	self.assertEqual(p['ID'], 1)
-	# 	self.assertEqual(p['ROUTE_NAME'], 'Pallet Town')
-	# 	self.assertEqual(p['ROUTE_REGION'], 'Kanto')
+	def test_location_1(self):
+		location = Routes.get('Pallet Town')
+		p = {c.name: getattr(location, c.name) for c in location.__table__.columns}
+		self.assertEqual(p['ID'], 1)
+		self.assertEqual(p['ROUTE_NAME'], 'Pallet Town')
+		self.assertEqual(p['ROUTE_REGION'], 'Kanto')
 
 		# allRoutes = RouteContainer()
 		# self.assertEqual(allRoutes.routes[0].region, "Kanto")
