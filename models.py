@@ -144,6 +144,14 @@ class Routes(db.Model):
 		self.ROUTE_MAIN_DESCRIPTION = main;
 		self.ROUTE_TRIVIA = trivia;
 
+	@staticmethod
+	def get_all():
+		return Routes.query.all()
+		
+	@staticmethod
+	def get(name, region):
+		return Routes.query.filter_by(ROUTE_NAME=name).filter_by(ROUTE_REGION=region).first()
+
 class Trainers(db.Model):
 	__tablename__ = "ALL_TRAINERS"
 
