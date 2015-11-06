@@ -44,7 +44,7 @@ class UnitTestModels(TestCase):
 
 
 	def test_moves_1(self):
-		move = Move.get_id(1)
+		m = Move.get_id(1)
 		# p = {c.name: getattr(move, c.name) for c in move.__table__.columns}
 		# self.assertEqual(p['id'], 1)
 		# self.assertEqual(p['name'], 'Pound')
@@ -83,6 +83,16 @@ class UnitTestModels(TestCase):
 	# 	self.assertEqual(p.description, 'A strong punch')
 
 	def test_location_1(self):
+		# location = Location.get_id(1)
+		# p = {c.name: getattr(location, c.name) for c in location.__table__.columns}
+		# self.assertEqual(p['id'], 1)
+		# self.assertEqual(p['name'], 'Bulbasaur')
+		# self.assertEqual(p['hp'], 45)
+		# self.assertEqual(p['attack'], 49)
+		# self.assertEqual(p['defense'], 49)
+		# self.assertEqual(p['spAttack'], 65)
+		# self.assertEqual(p['spDefense'], 65)
+		# self.assertEqual(p['speed'], 45)
 		pass
 		# allRoutes = RouteContainer()
 		# self.assertEqual(allRoutes.routes[0].region, "Kanto")
