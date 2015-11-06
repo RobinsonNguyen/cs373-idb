@@ -90,7 +90,7 @@ class Pokemon(db.Model):
 			'atk' : self.POKEMON_ATK, 
 			'def' : self.POKEMON_DEF, 
 			'spa' : self.POKEMON_SPATK, 
-			'spd' : self.POKEMON_SPD, 
+			'spd' : self.POKEMON_SPDEF, 
 			'spe' : self.POKEMON_SPD,
 			'moves' : test()}
 		print(dtest)
