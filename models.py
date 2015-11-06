@@ -240,7 +240,7 @@ class PokemonMoves(db.Model):
 	__tablename__ = "POKEMON_MOVES"
 
 	ID = db.Column(db.Integer, primary_key=True)
-	POKEMON_ID = db.Column(db.Integer)
+	POKEMON_ID = db.Column(db.Integer, db.ForeignKey("ALL_POKEMON.POKEMON_ID"))
 	POKEMON_NAME = db.Column(db.VARCHAR(50))
 	POKEMON_MOVE = db.Column(db.VARCHAR(50))
 	POKEMON_LEARN_TYPE = db.Column(db.VARCHAR(50))
