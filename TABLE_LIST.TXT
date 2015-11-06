@@ -1,0 +1,161 @@
++------------------+-------------+------+-----+---------+-------+
+| Field            | Type        | Null | Key | Default | Extra |
++------------------+-------------+------+-----+---------+-------+
+| MOVE_NAME        | varchar(50) | NO   | PRI | NULL    |       |
+| MOVE_TYPE        | varchar(50) | YES  |     | NULL    |       |
+| MOVE_CATEGORY    | varchar(50) | YES  |     | NULL    |       |
+| MOVE_POWER       | int(11)     | YES  |     | NULL    |       |
+| MOVE_ACCURACY    | int(11)     | YES  |     | NULL    |       |
+| MOVE_PP          | int(11)     | YES  |     | NULL    |       |
+| MOVE_DESCRIPTION | blob        | YES  |     | NULL    |       |
++------------------+-------------+------+-----+---------+-------+
+7 rows in set (0.00 sec)
+
+mysql> show columns FROM ALL_POKEMON;
++----------------+-------------+------+-----+---------+-------+
+| Field          | Type        | Null | Key | Default | Extra |
++----------------+-------------+------+-----+---------+-------+
+| POKEMON_ID     | int(11)     | NO   | PRI | NULL    |       |
+| POKEMON_NAME   | varchar(50) | NO   |     | NULL    |       |
+| POKEMON_HP     | int(11)     | NO   |     | NULL    |       |
+| POKEMON_ATK    | int(11)     | NO   |     | NULL    |       |
+| POKEMON_DEF    | int(11)     | NO   |     | NULL    |       |
+| POKEMON_SPATK  | int(11)     | NO   |     | NULL    |       |
+| POKEMON_SPDEF  | int(11)     | NO   |     | NULL    |       |
+| POKEMON_SPD    | int(11)     | NO   |     | NULL    |       |
+| POKEMON_HEIGHT | int(11)     | YES  |     | NULL    |       |
+| POKEMON_WEIGHT | int(11)     | YES  |     | NULL    |       |
++----------------+-------------+------+-----+---------+-------+
+10 rows in set (0.00 sec)
+
+mysql> show columns FROM ALL_ROUTES;
++------------------------+--------------+------+-----+---------+-------+
+| Field                  | Type         | Null | Key | Default | Extra |
++------------------------+--------------+------+-----+---------+-------+
+| ROUTE_NAME             | varchar(50)  | NO   | PRI | NULL    |       |
+| ROUTE_REGION           | varchar(50)  | NO   |     | NULL    |       |
+| ROUTE_NORTH_EXIT       | varchar(50)  | YES  |     | NULL    |       |
+| ROUTE_SOUTH_EXIT       | varchar(50)  | YES  |     | NULL    |       |
+| ROUTE_EAST_EXIT        | varchar(50)  | YES  |     | NULL    |       |
+| ROUTE_WEST_EXIT        | varchar(50)  | YES  |     | NULL    |       |
+| ROUTE_ACCESS_TO        | varchar(50)  | YES  |     | NULL    |       |
+| ROUTE_MINI_DESCRIPTION | varchar(256) | YES  |     | NULL    |       |
+| ROUTE_MAIN_DESCRIPTION | blob         | YES  |     | NULL    |       |
+| ROUTE_TRIVIA           | blob         | YES  |     | NULL    |       |
++------------------------+--------------+------+-----+---------+-------+
+10 rows in set (0.00 sec)
+
+mysql> show columns FROM ALL_TRAINERS;
++--------------------+-------------+------+-----+---------+-------+
+| Field              | Type        | Null | Key | Default | Extra |
++--------------------+-------------+------+-----+---------+-------+
+| TRAINER_NAME       | varchar(50) | NO   |     | NULL    |       |
+| TRAINER_GEN        | varchar(50) | NO   |     | NULL    |       |
+| TRAINER_ROUTE_NAME | varchar(50) | NO   |     | NULL    |       |
+| TRAINER_POKEMON    | varchar(50) | YES  |     | NULL    |       |
+| TRAINER_LEVEL      | varchar(50) | NO   |     | NULL    |       |
++--------------------+-------------+------+-----+---------+-------+
+5 rows in set (0.00 sec)
+
+mysql> show columns FROM POKEMON_ABILITIES;
++-----------------+-------------+------+-----+---------+-------+
+| Field           | Type        | Null | Key | Default | Extra |
++-----------------+-------------+------+-----+---------+-------+
+| POKEMON_ID      | int(11)     | NO   |     | NULL    |       |
+| POKEMON_NAME    | varchar(50) | NO   |     | NULL    |       |
+| POKEMON_ABILITY | varchar(50) | NO   |     | NULL    |       |
++-----------------+-------------+------+-----+---------+-------+
+3 rows in set (0.00 sec)
+
+mysql> show columns FROM POKEMON_EVOLUTIONS;
++-----------------------+-------------+------+-----+---------+-------+
+| Field                 | Type        | Null | Key | Default | Extra |
++-----------------------+-------------+------+-----+---------+-------+
+| POKEMON_ID            | int(11)     | NO   |     | NULL    |       |
+| POKEMON_NAME          | varchar(50) | NO   |     | NULL    |       |
+| POKEMON_EVOLUTION     | varchar(50) | NO   |     | NULL    |       |
+| POKEMON_EVOLVE_METHOD | varchar(50) | NO   |     | NULL    |       |
+| POKEMON_EVOLVE_LEVEL  | int(11)     | YES  |     | NULL    |       |
++-----------------------+-------------+------+-----+---------+-------+
+5 rows in set (0.00 sec)
+
+mysql> show columns FROM POKEMON_TYPES;
++--------------+-------------+------+-----+---------+-------+
+| Field        | Type        | Null | Key | Default | Extra |
++--------------+-------------+------+-----+---------+-------+
+| POKEMON_ID   | int(11)     | NO   |     | NULL    |       |
+| POKEMON_NAME | varchar(50) | NO   |     | NULL    |       |
+| POKEMON_TYPE | varchar(50) | NO   |     | NULL    |       |
++--------------+-------------+------+-----+---------+-------+
+3 rows in set (0.00 sec)
+
+mysql> show columns FROM POKEMON_LOCATIONS;
++----------------+-------------+------+-----+---------+-------+
+| Field          | Type        | Null | Key | Default | Extra |
++----------------+-------------+------+-----+---------+-------+
+| POKEMON_ID     | int(11)     | NO   |     | NULL    |       |
+| POKEMON_NAME   | varchar(50) | NO   |     | NULL    |       |
+| POKEMON_GAME   | varchar(50) | NO   |     | NULL    |       |
+| POKEMON_METHOD | varchar(50) | NO   |     | NULL    |       |
++----------------+-------------+------+-----+---------+-------+
+4 rows in set (0.00 sec)
+
+mysql> show columns FROM POKEMON_MOVES;
++-----------------------+-------------+------+-----+---------+-------+
+| Field                 | Type        | Null | Key | Default | Extra |
++-----------------------+-------------+------+-----+---------+-------+
+| POKEMON_ID            | int(11)     | NO   |     | NULL    |       |
+| POKEMON_NAME          | varchar(50) | NO   |     | NULL    |       |
+| POKEMON_MOVE          | varchar(50) | NO   |     | NULL    |       |
+| POKEMON_LEARN_TYPE    | varchar(50) | NO   |     | NULL    |       |
+| POKEMON_LEVEL_LEARNED | int(11)     | YES  |     | NULL    |       |
++-----------------------+-------------+------+-----+---------+-------+
+5 rows in set (0.00 sec)
+
+mysql> show columns FROM ROUTE_IMGS;
++------------+--------------+------+-----+---------+-------+
+| Field      | Type         | Null | Key | Default | Extra |
++------------+--------------+------+-----+---------+-------+
+| ROUTE_NAME | varchar(50)  | NO   |     | NULL    |       |
+| ROUTE_GEN  | varchar(50)  | NO   |     | NULL    |       |
+| ROUTE_IMG  | varchar(256) | NO   |     | NULL    |       |
++------------+--------------+------+-----+---------+-------+
+3 rows in set (0.00 sec)
+
+mysql> show columns FROM ROUTE_ITEMS;
++-------------------+--------------+------+-----+---------+-------+
+| Field             | Type         | Null | Key | Default | Extra |
++-------------------+--------------+------+-----+---------+-------+
+| ROUTE_NAME        | varchar(50)  | NO   |     | NULL    |       |
+| ROUTE_ITEM_NAME   | varchar(50)  | NO   |     | NULL    |       |
+| ROUTE_ITEM_IMG    | varchar(256) | NO   |     | NULL    |       |
+| ROUTE_ITEM_GAMES  | varchar(256) | NO   |     | NULL    |       |
+| ROUTE_ITEM_METHOD | blob         | NO   |     | NULL    |       |
++-------------------+--------------+------+-----+---------+-------+
+5 rows in set (0.00 sec)
+
+mysql> show columns FROM ROUTE_POKEMON;
++----------------------+--------------+------+-----+---------+-------+
+| Field                | Type         | Null | Key | Default | Extra |
++----------------------+--------------+------+-----+---------+-------+
+| ROUTE_NAME           | varchar(50)  | NO   |     | NULL    |       |
+| ROUTE_POKEMON_NAME   | varchar(50)  | NO   |     | NULL    |       |
+| ROUTE_POKEMON_GEN    | varchar(50)  | NO   |     | NULL    |       |
+| ROUTE_POKEMON_LEVELS | varchar(50)  | YES  |     | NULL    |       |
+| ROUTE_POKEMON_RATE   | varchar(50)  | YES  |     | NULL    |       |
+| ROUTE_POKEMON_METHOD | varchar(50)  | NO   |     | NULL    |       |
+| ROUTE_METHOD_IMG     | varchar(256) | NO   |     | NULL    |       |
++----------------------+--------------+------+-----+---------+-------+
+7 rows in set (0.00 sec)
+
+mysql> show columns FROM ROUTE_TRAINERS;
++----------------------+--------------+------+-----+---------+-------+
+| Field                | Type         | Null | Key | Default | Extra |
++----------------------+--------------+------+-----+---------+-------+
+| ROUTE_NAME           | varchar(50)  | NO   |     | NULL    |       |
+| ROUTE_TRAINER_NAME   | varchar(50)  | NO   |     | NULL    |       |
+| ROUTE_TRAINER_GEN    | varchar(50)  | NO   |     | NULL    |       |
+| ROUTE_TRAINER_REWARD | varchar(50)  | YES  |     | NULL    |       |
+| ROUTE_TRAINER_IMG    | varchar(256) | NO   |     | NULL    |       |
++----------------------+--------------+------+-----+---------+-------+
+5 rows in set (0.00 sec)
