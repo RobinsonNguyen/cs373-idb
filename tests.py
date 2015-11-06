@@ -48,18 +48,18 @@ class UnitTestModels(TestCase):
 		p = {c.name: getattr(move, c.name) for c in move.__table__.columns}
 		self.assertEqual(p['MOVE_ID'], 1)
 		self.assertEqual(p['MOVE_NAME'], 'Pound')
-		# self.assertEqual(p['MOVE_POWER'], 45)
-		# self.assertEqual(p['MOVE_ACCURACY'], 49)
-		# self.assertEqual(p['MOVE_PP'], 49)
+		self.assertEqual(p['MOVE_POWER'], 40)
+		self.assertEqual(p['MOVE_ACCURACY'], 100)
+		self.assertEqual(p['MOVE_PP'], 35)
 
-	# def test_moves_2(self):
-	# 	move = Move.get('Pound')
-	# 	p = {c.name: getattr(move, c.name) for c in move.__table__.columns}
-	# 	self.assertEqual(p['id'], 1)
-	# 	#self.assertEqual(p['name'], 'Pound')
-	# 	#self.assertEqual(p['power'], 45)
-	# 	#self.assertEqual(p['accuracy'], 49)
-	# 	#self.assertEqual(p['pp'], 49)
+	def test_moves_2(self):
+		move = Move.get('Pound')
+		p = {c.name: getattr(move, c.name) for c in move.__table__.columns}
+		self.assertEqual(p['MOVE_ID'], 1)
+		self.assertEqual(p['MOVE_NAME'], 'Pound')
+		self.assertEqual(p['MOVE_POWER'], 40)
+		self.assertEqual(p['MOVE_ACCURACY'], 100)
+		self.assertEqual(p['MOVE_PP'], 35)
 
 
 	# def test_moves_3(self):
