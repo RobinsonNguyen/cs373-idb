@@ -115,7 +115,7 @@ class UnitTestModels(TestCase):
 		location = Routes.get_all()
 		p = []
 		for route in routes:
-			p.append({c.name: getattr(route, c.name) for c in location.__table__.columns})
+			p.append({c.name: getattr(route, c.name) for c in route.__table__.columns})
 		self.assertEqual(p[0]['ID'], 1)
 		self.assertEqual(p[0]['ROUTE_NAME'], 'Pallet Town')
 		self.assertEqual(p[0]['ROUTE_REGION'], 'Kanto')
