@@ -1,5 +1,6 @@
 from flask import Flask, render_template, abort, request, jsonify
 from models import *
+from db import create_db
 
 import subprocess
 
@@ -13,7 +14,7 @@ def index():
 # --------
 # about
 # --------	
-@app.route('/about')
+@app.route('/about/')
 def about():
     return render_template('about.html')
 
@@ -24,11 +25,20 @@ def get_test_results():
         out, errs = script.communicate()
     except:
         script.kill()
-    return jsonify({'results': out.decode() })
+    return jsonify({'results': {'out':out.decode(), 'err':errs.decode()} })
 	
 # --------
 # location
 # --------	 
+@app.route('/location/')
+@app.route('/location', methods=['GET'])
+def location_id():
+    if request.args.get("region") is not None and request.args.get("name") is not None:
+        route = routeContainer.getRouteByRegion(request.args.get("region"), request.args.get("name"))
+        if route is None:
+            abort(404)
+        return render_template("route_data.html", route=route)
+    return render_template('location.html')
 '''
 #=============API==========#
 @app.route('/api/v1.0/locations/', methods=['GET'])
@@ -72,13 +82,17 @@ def pokemon(name=None):
 @app.route('/api/v1.0/pokemon/', methods=['GET'])
 def get_pokemon():
     pokemon = Pokemon.get_all()
-    return jsonify({'pokemon': pokemon})
+    poke_list = []
+    for poke in pokemon:
+        poke_list.append({c.name: getattr(poke, c.name) for c in poke.__table__.columns})
+    return jsonify({'pokemon': poke_list})
 
 @app.route('/api/v1.0/pokemon/<int:id>/', methods=['GET'])
 def get_pokemon_id(id):
     pokemon = Pokemon.get_id(id)
-    return jsonify({'pokemon': 'test'})
-
+    poke_dic = {c.name: getattr(pokemon, c.name) for c in pokemon.__table__.columns}
+    return jsonify({'pokemon': poke_dic})
+'''
 @app.route('/api/v1.0/pokemon', methods=['POST'])
 def create_pokemon():
     if not request.json:
@@ -94,6 +108,7 @@ def update_pokemon(id):
 @app.route('/api/v1.0/pokemon/<int:id>', methods=['DELETE'])
 def delete_task(id):
     return jsonify({'result': True})
+'''
 
 # -----
 # moves
@@ -107,15 +122,21 @@ def moves(name=None):
 	return render_template('allMoves.html', moves=Move.get_all())
 
 #=============API==========#
-'''
-#@app.route('/api/v1.0/moves/', methods=['GET'])
+
+@app.route('/api/v1.0/moves/', methods=['GET'])
 def get_moves():
-    return jsonify({'moves': 'test'})
+    moves = Move.get_all()
+    moves_list = []
+    for move in moves:
+        moves_list.append({c.name: getattr(move, c.name) for c in move.__table__.columns})
+    return jsonify({'moves': moves_list})
 
 @app.route('/api/v1.0/moves/<int:id>/', methods=['GET'])
 def get_moves_id(id):
-    return jsonify({'moves': 'test'})
-
+    move = Move.get_id(id)
+    move_dic = {c.name: getattr(move, c.name) for c in move.__table__.columns}
+    return jsonify({'moves': move_dic})
+'''
 @app.route('/api/v1.0/moves/', methods=['POST'])
 def create_moves():
     if not request.json:
@@ -135,4 +156,5 @@ def delete_moves(id):
 '''
 
 if __name__ == '__main__':
+    create_db()
     app.run(host="0.0.0.0", port=8000, debug=True)

@@ -1,5 +1,6 @@
 #!/usr/bin/env python3
 from unittest import main, TestCase
+from models import Pokemon, Move
 # from pokemonModel import PokemonContainer
 # from movesModel import Moves
 # from routeModel import RouteContainer
@@ -7,20 +8,16 @@ from unittest import main, TestCase
 
 class UnitTestModels(TestCase):
 	def test_pokemon_1(self):
-		pass
-		# pokemonList = PokemonContainer()
-		# self.assertEqual(pokemonList.pokemon[0].id, 1)
-		# self.assertEqual(pokemonList.pokemon[0].name,"Bulbasaur")
-		# self.assertEqual(pokemonList.pokemon[0].type[0], "poison")
-		# self.assertEqual(pokemonList.pokemon[0].stats['HP'], 45)
-		# self.assertEqual(pokemonList.pokemon[0].stats['SPE'], 45)
-		# self.assertEqual(pokemonList.pokemon[0].stats['DEF'], 49)
-		# self.assertEqual(pokemonList.pokemon[0].stats['ATK'], 49)
-		# self.assertEqual(pokemonList.pokemon[0].stats['SPA'], 65)
-		# self.assertEqual(pokemonList.pokemon[0].stats['SPD'], 65)
-		# self.assertEqual(pokemonList.pokemon[0].eggGroup[0], "Plant")
-		# self.assertEqual(pokemonList.pokemon[0].moves[2].name, "Echoed-voice")
-		# self.assertEqual(pokemonList.pokemon[0].evolution[0].to, "Ivysaur")
+		pokemon = Pokemon.get_id(1)
+		p = {c.name: getattr(pokemon, c.name) for c in pokemon.__table__.columns}
+		self.assertEqual(p['id'], 1)
+		# self.assertEqual(c[0].name, 'Bulbasaur')
+		# self.assertEqual(c[0].hp, 45)
+		# self.assertEqual(c[0].attack, 49)
+		# self.assertEqual(c[0].defense, 49)
+		# self.assertEqual(c[0].spAttack, 65)
+		# self.assertEqual(c[0].spDefense, 65)
+		# self.assertEqual(c[0].speed, 45)
 
 	def test_pokemon_2(self):
 		pass
