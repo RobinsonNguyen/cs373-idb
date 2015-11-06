@@ -48,11 +48,11 @@
 
         <hr>
 
-            <div class="col-lg-12">
-                <h1>Pokemon who learn through level up:</h1>
-            </div>
-
             {% if pokemonLVL[0] is defined %}
+
+                <div class="col-lg-12">
+                    <h1>Pokemon who learn through level up:</h1>
+                </div>
 
                 {% for p in pokemonLVL | batch(6) %}
                     <div class="row">
