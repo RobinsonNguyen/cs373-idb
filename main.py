@@ -33,7 +33,7 @@ def get_test_results():
 @app.route('/location/')
 @app.route('/locations/')
 @app.route('/location/<name>')
-def location_id():
+def location_id(name=None):
     if name is not None:
         return render_template("route_data.html", route=Routes.get(name), pokemon=RoutePokemon.get(name))
     return render_template('location.html', routes=Routes.get_all())
@@ -72,11 +72,10 @@ def delete_locations(id):
 @app.route('/pokemon/<name>/')
 def pokemon(name=None):
     if name is not None:
-        return render_template('pokemon_details.html', pokemon=Pokemon.get(name), moves=PokemonMoves.get_for_pokemon(name))
+        return render_template('pokemon_details.html', pokemon=Pokemon.get(name), moves=PokemonMoves.get_for_pokemon(name), locations=RoutePokemon.get_pokemon_routes(name))
     return render_template('pokemon.html', pokemon=Pokemon.get_all())
 	
 #=============API==========#
-
 @app.route('/api/v1.0/pokemon/', methods=['GET'])
 def get_pokemon():
     pokemon = Pokemon.get_all()
