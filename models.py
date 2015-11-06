@@ -150,7 +150,7 @@ class Routes(db.Model):
 		self.ROUTE_TRIVIA = trivia;
 
 class Trainers(db.Model):
-	__tablename__ = "ALL_TRIANERS"
+	__tablename__ = "ALL_TRAINERS"
 
 	TRAINER_NAME = db.Column(db.VARCHAR(50))
 	TRAINER_GEN = db.Column(db.VARCHAR(50))
