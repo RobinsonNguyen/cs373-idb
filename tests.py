@@ -56,7 +56,7 @@ class UnitTestModels(TestCase):
 	def test_moves_1(self):
 		move = Move.get_id(1)
 		p = {c.name: getattr(move, c.name) for c in move.__table__.columns}
-		#self.assertEqual(p['id'], 1)
+		self.assertEqual(p['id'], 1)
 		#self.assertEqual(p['name'], 'Pound')
 		#self.assertEqual(p['power'], 45)
 		#self.assertEqual(p['accuracy'], 49)
@@ -91,27 +91,6 @@ class UnitTestModels(TestCase):
 	# 	self.assertEqual(p.accuracy, 100)
 	# 	self.assertEqual(p.pp, 100)
 	# 	self.assertEqual(p.description, 'A strong punch')
-
-	def test_move_1(self):
-		pass
-		# allMoves = Moves()
-		# self.assertEqual(allMoves.moves[239].id, 240)
-		# self.assertEqual(allMoves.moves[239].name, "Rain-dance")
-		# self.assertEqual(allMoves.moves[239].power, 0)
-
-	def test_move_2(self):
-		pass
-		# allMoves = Moves()
-		# self.assertEqual(allMoves.moves[155].id, 156)
-		# self.assertEqual(allMoves.moves[155].name, "Rest")
-		# self.assertEqual(allMoves.moves[155].power, 0)
-
-	def test_move_3(self):
-		pass
-		# allMoves = Moves()
-		# self.assertEqual(allMoves.moves[357].id, 358)
-		# self.assertEqual(allMoves.moves[357].name, "Wake-up-slap")
-		# self.assertEqual(allMoves.moves[357].power, 60)
 
 	def test_location_1(self):
 		pass
