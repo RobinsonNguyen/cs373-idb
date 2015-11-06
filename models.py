@@ -246,11 +246,11 @@ class PokemonMoves(db.Model):
 
 	@staticmethod
 	def get_for_pokemon(poke_name):
-		return Pokemon.query.filter_by(POKEMON_NAME=poke_name)
+		return PokemonMoves.query.filter_by(POKEMON_NAME=poke_name)
 
 	@staticmethod
 	def get_for_move(move_name):
-		return Pokemon.query.filter_by(POKEMON_MOVE=move_name)
+		return PokemonMoves.query.filter_by(POKEMON_MOVE=move_name)
 
 class RouteImages(db.Model):
 	__tablename__ = "ROUTE_IMGS"
