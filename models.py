@@ -244,9 +244,11 @@ class PokemonMoves(db.Model):
 		self.POKEMON_LEARN_TYPE = type
 		self.POKEMON_LEVEL_LEARNED = level
 
+	@staticmethod
 	def get_for_pokemon(poke_name):
 		return Pokemon.query.filter_by(POKEMON_NAME=poke_name)
 
+	@staticmethod
 	def get_for_move(move_name):
 		return Pokemon.query.filter_by(POKEMON_MOVE=move_name)
 
