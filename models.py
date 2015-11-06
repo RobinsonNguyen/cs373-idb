@@ -199,6 +199,10 @@ class Evolutions(db.Model):
 		self.POKEMON_EVOLVE_METHOD = method
 		self.POKEMON_EVOLVE_LEVEL = level
 
+	@staticmethod
+	def get_pokemon_evo(name):
+		return Evolutions.query.filter_by(POKEMON_EVOLUTION=name)
+
 class Types(db.Model):
 	__tablename__ = "POKEMON_TYPES"
 
@@ -214,7 +218,7 @@ class Types(db.Model):
 
 	@staticmethod
 	def get_pokemon_types(name):
-		return Types.query.filter_by(POKEMON_NAME=name).first()
+		return Types.query.filter_by(POKEMON_NAME=name)
 
 class Locations(db.Model):
 	__tablename__ = "POKEMON_LOCATIONS"

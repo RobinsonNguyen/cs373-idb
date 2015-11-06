@@ -43,9 +43,9 @@
 					<div id="evo-panel" class="inner-panel panel panel-success">
 			    		<div class="panel-heading"><b>Evolves Into</b></div>
 	    				<div class="panel-body">
-	    						{% for evo in pokemon.evolution %}
-	    							<img src="{{ url_for('static', filename='res/SPRITES/%s_mini_.png' % evo.to) }}"/>
-	    							<a href="/pokemon/{{ evo.to }}"> {{ evo.to }} </a>
+	    						{% for evo in evos %}
+	    							<img src="{{ url_for('static', filename='res/SPRITES/%s_mini_.png' % evo.POKEMON_EVOLUTION) }}"/>
+	    							<a href="/pokemon/{{ evo.POKEMON_EVOLUTION }}"> {{ evo.POKEMON_EVOLUTION }} </a>
 	    						{% endfor %}
 	    				</div>
 					</div>
