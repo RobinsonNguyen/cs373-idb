@@ -321,7 +321,7 @@ class RoutePokemon(db.Model):
 		
 	@staticmethod
 	def get(routeName):
-		return RoutePokemon.query.filter_by(ROUTE_NAME=routeName).first()
+		return RoutePokemon.query.filter_by(ROUTE_NAME=routeName)
 
 class RouteTrainers(db.Model):
 	__tablename__ = "ROUTE_TRAINERS"
