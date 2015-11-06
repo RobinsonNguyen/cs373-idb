@@ -44,7 +44,7 @@ class UnitTestModels(TestCase):
 
 
 	def test_moves_1(self):
-		m = Move.get_id(1)
+		move = Move.get_id(1)
 		p = {c.name: getattr(move, c.name) for c in move.__table__.columns}
 		self.assertEqual(p['MOVE_ID'], 1)
 		self.assertEqual(p['MOVE_NAME'], 'Pound')
