@@ -16,9 +16,12 @@
 				<tr>
 					<th data-sortable="true">Name</th>
 					<th data-sortable="true">Region</th>
+					<th data-sortable="true">North Exit</th>
+					<th data-sortable="true">South Exit</th>
+					<th data-sortable="true">East Exit</th>
+					<th data-sortable="true">West Exit</th>
 					<th data-sortable="true">Access To</th>
 					<th data-sortable="true">Description</th>
-					<th data-sortable="true">Trivia</th>
 				</tr>
 			</thead>
 			<tbody>
@@ -26,9 +29,13 @@
 					<tr class="route-row">
 						<td> {{ route.ROUTE_NAME }} </td>
 						<td> {{ route.ROUTE_REGION }} </td>
+						<td> {{ route.ROUTE_NORTH_EXIT }} </td>
+						<td> {{ route.ROUTE_SOUTH_EXIT }} </td>
+						<td> {{ route.ROUTE_EAST_EXIT }} </td>
+						<td> {{ route.ROUTE_WEST_EXIT }} </td>
 						<td> {{ route.ROUTE_ACCESS_TO }} </td>
 						<td> {{ route.ROUTE_MINI_DESCRIPTION }} </td>
-						<td> {{ route.ROUTE_TRIVIA }} </td>
+						
 					</tr>
 				{% endfor %}
 			</tbody>
