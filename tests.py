@@ -11,13 +11,13 @@ class UnitTestModels(TestCase):
 		pokemon = Pokemon.get_id(1)
 		p = {c.name: getattr(pokemon, c.name) for c in pokemon.__table__.columns}
 		self.assertEqual(p['id'], 1)
-		# self.assertEqual(c[0].name, 'Bulbasaur')
-		# self.assertEqual(c[0].hp, 45)
-		# self.assertEqual(c[0].attack, 49)
-		# self.assertEqual(c[0].defense, 49)
-		# self.assertEqual(c[0].spAttack, 65)
-		# self.assertEqual(c[0].spDefense, 65)
-		# self.assertEqual(c[0].speed, 45)
+		self.assertEqual(p['name'], 'Bulbasaur')
+		self.assertEqual(p['hp'], 45)
+		self.assertEqual(p['attack'], 49)
+		self.assertEqual(p['defense'], 49)
+		self.assertEqual(p['spAttack'], 65)
+		self.assertEqual(p['spDefense'], 65)
+		self.assertEqual(p['speed'], 45)
 
 	def test_pokemon_2(self):
 		pass
