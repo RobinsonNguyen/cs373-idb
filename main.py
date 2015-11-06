@@ -32,10 +32,10 @@ def get_test_results():
 # --------	 
 @app.route('/location/')
 @app.route('/locations/')
-@app.route('/location', methods=['GET'])
+@app.route('/location/<name>')
 def location_id():
-    if request.args.get("region") is not None and request.args.get("name") is not None:
-        return render_template("route_data.html", route=Routes.get(request.args.get("name"), pokemon=RoutePokemon.get(request.args.get("name"))))
+    if name is not None:
+        return render_template("route_data.html", route=Routes.get(name), pokemon=RoutePokemon.get(name)))
     return render_template('location.html', routes=Routes.get_all())
 '''
 #=============API==========#
