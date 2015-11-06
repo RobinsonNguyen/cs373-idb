@@ -53,6 +53,6 @@ models.log:
 	git log > IDB1.log
 
 test: tests.py
-	coverage2 run --omit=*requests*,*numpy*,*SQLAlchemy*    --branch tests.py >  tests.out 2>&1
+	coverage2 run --omit=*requests*,*numpy*,*SQLAlchemy*,*dist-packages*    --branch tests.py >  tests.out 2>&1
 	coverage2 report --omit=*site-packages* -m  >> tests.out
 	cat tests.out
