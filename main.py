@@ -48,8 +48,10 @@ def get_locations():
     return jsonify({'locations': loc_list})
 
 @app.route('/api/v1.0/locations/<int:id>/', methods=['GET'])
-def get_locations_id(id):
-    return jsonify({'locations': 'test'})
+def get_locations_name(id):
+    location = Routes.get_id(id)
+    loc_dic = {c.name: getattr(location, c.name) for c in location.__table__.columns}
+    return jsonify({'location': loc_dic})
 '''
 @app.route('/api/v1.0/locations/', methods=['POST'])
 def create_locations():

@@ -113,8 +113,8 @@ class Pokemon(db.Model):
 
 class Routes(db.Model):
 	__tablename__ = "ALL_ROUTES"
-
-	ROUTE_NAME = db.Column(db.VARCHAR(50), primary_key=True)
+	ID = db.Column(db.Integer, primary_key=True)
+	ROUTE_NAME = db.Column(db.VARCHAR(50))
 	ROUTE_REGION = db.Column(db.VARCHAR(50))
 	ROUTE_NORTH_EXIT = db.Column(db.VARCHAR(50))
 	ROUTE_SOUTH_EXIT = db.Column(db.VARCHAR(50))
@@ -144,6 +144,10 @@ class Routes(db.Model):
 	@staticmethod
 	def get(name):
 		return Routes.query.filter_by(ROUTE_NAME=name).first()
+
+	@staticmethod
+	def get_id(id):
+		return Routes.query.filter_by(ID=id).first()
 
 class Trainers(db.Model):
 	__tablename__ = "ALL_TRAINERS"
