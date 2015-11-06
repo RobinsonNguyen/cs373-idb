@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 from unittest import main, TestCase
-from models import *
+from models import Pokemon, Move
 # from pokemonModel import PokemonContainer
 # from movesModel import Moves
 # from routeModel import RouteContainer
@@ -44,8 +44,7 @@ class UnitTestModels(TestCase):
 
 
 	def test_moves_1(self):
-		pass
-		# move = Move.get_id(1)
+		move = Move.get_id(1)
 		# p = {c.name: getattr(move, c.name) for c in move.__table__.columns}
 		# self.assertEqual(p['id'], 1)
 		# self.assertEqual(p['name'], 'Pound')
