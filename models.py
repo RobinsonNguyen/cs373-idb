@@ -116,17 +116,6 @@ class Pokemon(db.Model):
 	@staticmethod
 	def get_id(id):
 		return Pokemon.query.filter_by(POKEMON_ID=id).first()
-		
-class Pokemon_Moves(db.Model):
-	__tablename__ = "pokemon_moves"
-
-	id = db.Column(db.Integer, primary_key=True)
-	pokemon_id = db.Column(db.Integer)
-	move_id = db.Column(db.Integer)
-	
-	def __init__(self, pokemon_id, move_id):
-		self.pokemon_id = pokemon_id
-		self.move_id = move_id
 
 
 class Routes(db.Model):
@@ -254,6 +243,12 @@ class PokemonMoves(db.Model):
 		self.POKEMON_MOVE = move
 		self.POKEMON_LEARN_TYPE = type
 		self.POKEMON_LEVEL_LEARNED = level
+
+	def get_for_pokemon(poke_name):
+		return Pokemon.query.filter_by(POKEMON_NAME=poke_name)
+
+	def get_for_move(move_name):
+		return Pokemon.query.filter_by(POKEMON_MOVE=move_name)
 
 class RouteImages(db.Model):
 	__tablename__ = "ROUTE_IMGS"
