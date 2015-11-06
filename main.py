@@ -37,16 +37,20 @@ def location_id(name=None):
     if name is not None:
         return render_template("route_data.html", route=Routes.get(name), pokemon=RoutePokemon.get(name))
     return render_template('location.html', routes=Routes.get_all())
-'''
+
 #=============API==========#
 @app.route('/api/v1.0/locations/', methods=['GET'])
 def get_locations():
-    return jsonify({'locations': 'test'})
+    locations = Routes.get_all()
+    loc_list = []
+    for l in locations:
+        loc_list.append({c.name: getattr(l, c.name) for c in l.__table__.columns})
+    return jsonify({'locations': loc_list})
 
 @app.route('/api/v1.0/locations/<int:id>/', methods=['GET'])
 def get_locations_id(id):
     return jsonify({'locations': 'test'})
-
+'''
 @app.route('/api/v1.0/locations/', methods=['POST'])
 def create_locations():
     if not request.json:
