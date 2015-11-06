@@ -43,34 +43,34 @@ class UnitTestModels(TestCase):
 		self.assertEqual(p[1]['POKEMON_NAME'], 'Ivysaur')
 
 
-	def test_moves_1(self):
-		move = Move.get_id(1)
-		p = {c.name: getattr(move, c.name) for c in move.__table__.columns}
-		self.assertEqual(p['MOVE_ID'], 1)
-		self.assertEqual(p['MOVE_NAME'], 'Pound')
-		self.assertEqual(p['MOVE_POWER'], 40)
-		self.assertEqual(p['MOVE_ACCURACY'], 100)
-		self.assertEqual(p['MOVE_PP'], 35)
+	# def test_moves_1(self):
+	# 	move = Move.get_id(1)
+	# 	p = {c.name: getattr(move, c.name) for c in move.__table__.columns}
+	# 	self.assertEqual(p['MOVE_ID'], 1)
+	# 	self.assertEqual(p['MOVE_NAME'], 'Pound')
+		# self.assertEqual(p['MOVE_POWER'], 45)
+		# self.assertEqual(p['MOVE_ACCURACY'], 49)
+		# self.assertEqual(p['MOVE_PP'], 49)
 
-	def test_moves_2(self):
-		move = Move.get('Pound')
-		p = {c.name: getattr(move, c.name) for c in move.__table__.columns}
-		self.assertEqual(p['MOVE_ID'], 1)
-		self.assertEqual(p['MOVE_NAME'], 'Pound')
-		self.assertEqual(p['MOVE_POWER'], 40)
-		self.assertEqual(p['MOVE_ACCURACY'], 100)
-		self.assertEqual(p['MOVE_PP'], 35)
+	# def test_moves_2(self):
+	# 	move = Move.get('Pound')
+	# 	p = {c.name: getattr(move, c.name) for c in move.__table__.columns}
+	# 	self.assertEqual(p['id'], 1)
+	# 	#self.assertEqual(p['name'], 'Pound')
+	# 	#self.assertEqual(p['power'], 45)
+	# 	#self.assertEqual(p['accuracy'], 49)
+	# 	#self.assertEqual(p['pp'], 49)
 
 
-	def test_moves_3(self):
-		moves = Move.get_all()
-		p = []
-		for move in moves:
-			p.append({c.name: getattr(move, c.name) for c in move.__table__.columns})
-		self.assertEqual(p[0]['MOVE_ID'], 1)
-		self.assertEqual(p[0]['MOVE_NAME'], 'Pound')
-		self.assertEqual(p[1]['MOVE_ID'], 2)
-		self.assertEqual(p[1]['MOVE_NAME'], 'Karate-chop')
+	# def test_moves_3(self):
+	# 	moves = Move.get_all()
+	# 	p = []
+	# 	for move in moves:
+	# 		p.append({c.name: getattr(move, c.name) for c in move.__table__.columns})
+	# 	self.assertEqual(p[0]['id'], 1)
+	# 	self.assertEqual(p[0]['name'], 'Pound')
+	# 	self.assertEqual(p[1]['id'], 2)
+	# 	#self.assertEqual(p[1]['name'], 'Ivysaur')
 
 	# def test_moves_4(self):
 	# 	p = Move('Punch', 'fighting', 'physical', 300, 100, 100, 'A strong punch')
