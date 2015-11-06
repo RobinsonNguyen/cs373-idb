@@ -24,11 +24,12 @@
         <tbody>
             {% for move in moves %}
                 <tr class="move-row">
-                    <td> {{ move.id }} </td>
-                    <td> {{ move.name }} </td>
-                    <td> {{ move.power }} </td>
-                    <td> {{ move.accuracy }} </td>
-                    <td> {{ move.pp }} </td>
+                    <td> {{ move.MOVE_NAME }} </td>
+                    <td> {{ move.MOVE_TYPE }} </td>
+                    <td> {{ move.MOVE_CATEGORY }} </td>
+                    <td> {{ move.MOVE_POWER }} </td>
+                    <td> {{ move.MOVE_ACCURACY }} </td>
+                    <td> {{ move.MOVE_PP }} </td>
                 </tr>
             {% endfor %}
         </tbody>
