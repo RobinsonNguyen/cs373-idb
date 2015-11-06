@@ -149,7 +149,7 @@ class Routes(db.Model):
 		return Routes.query.all()
 		
 	@staticmethod
-	def get(name, region):
+	def get(name):
 		return Routes.query.filter_by(ROUTE_NAME=name).first()
 
 class Trainers(db.Model):
