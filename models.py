@@ -199,6 +199,10 @@ class Evolutions(db.Model):
 		self.POKEMON_EVOLVE_METHOD = method
 		self.POKEMON_EVOLVE_LEVEL = level
 
+	@staticmethod
+	def get_pokemon_evo(name):
+		return Evolutions.query.filter_by(POKEMON_NAME=POKEMON_EVOLUTION)
+
 class Types(db.Model):
 	__tablename__ = "POKEMON_TYPES"
 
