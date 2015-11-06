@@ -115,7 +115,7 @@ def delete_task(id):
 @app.route('/moves/<name>')
 def moves(name=None):
 	if name is not None:
-		return render_template('moves.html', move=Move.get(name))
+		return render_template('moves.html', move=Move.get(name), pokemonLVL=PokemonMoves.get_for_level(name), pokemonTM=PokemonMoves.get_for_machine(name))
 	# change name of the above html to move and the below one to moves
 	return render_template('allMoves.html', moves=Move.get_all())
 
