@@ -42,26 +42,15 @@ class UnitTestModels(TestCase):
 		self.assertEqual(p[1]['id'], 2)
 		self.assertEqual(p[1]['name'], 'Ivysaur')
 
-	def test_pokemon_4(self):
-		p = Pokemon('Jimmy', 1,2,3,4,5,6,'image')
-		self.assertEqual(p.name, 'Jimmy')
-		self.assertEqual(p.hp, 1)
-		self.assertEqual(p.attack, 1)
-		self.assertEqual(p.defense, 1)
-		self.assertEqual(p.spAttack, 1)
-		self.assertEqual(p.spDefense, 1)
-		self.assertEqual(p.speed, 1)
-		self.assertEqual(p.imgPath, "image")
 
 	def test_moves_1(self):
-		pass
-		#move = Move.get_id(1)
-		#p = {c.name: getattr(move, c.name) for c in move.__table__.columns}
-		#self.assertEqual(p['id'], 1)
-		#self.assertEqual(p['name'], 'Pound')
-		#self.assertEqual(p['power'], 45)
-		#self.assertEqual(p['accuracy'], 49)
-		#self.assertEqual(p['pp'], 49)
+		move = Move.get_id(1)
+		p = {c.name: getattr(move, c.name) for c in move.__table__.columns}
+		self.assertEqual(p['id'], 1)
+		self.assertEqual(p['name'], 'Pound')
+		self.assertEqual(p['power'], 45)
+		self.assertEqual(p['accuracy'], 49)
+		self.assertEqual(p['pp'], 49)
 
 	# def test_moves_2(self):
 	# 	move = Move.get('Pound')
