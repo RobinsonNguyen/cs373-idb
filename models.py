@@ -105,11 +105,11 @@ class Pokemon(db.Model):
 		
 	@staticmethod
 	def get(name):
-		return Pokemon.query.filter_by(name=name).first()
+		return Pokemon.query.filter_by(POKEMON_NAME=name).first()
 
 	@staticmethod
 	def get_id(id):
-		return Pokemon.query.filter_by(id=id).first()
+		return Pokemon.query.filter_by(POKEMON_ID=id).first()
 		
 class Pokemon_Moves(db.Model):
 	__tablename__ = "pokemon_moves"
