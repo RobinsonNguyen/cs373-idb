@@ -33,7 +33,7 @@ def get_test_results():
 @app.route('/location/')
 @app.route('/locations/')
 @app.route('/location/<name>')
-def location_id():
+def location_id(name=None):
     if name is not None:
         return render_template("route_data.html", route=Routes.get(name), pokemon=RoutePokemon.get(name))
     return render_template('location.html', routes=Routes.get_all())
