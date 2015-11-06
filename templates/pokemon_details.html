@@ -100,10 +100,10 @@
 								</tr>
 							</thead>
 							<tbody>
-								{% for move in pokemon.moves %}
+								{% for move in moves %}
 									<tr class="pokemon-row move-row">
-										<td class="move-name">{{ move.name }}</td>
-										<td>{{ move.learn_type }}</td>
+										<td class="move-name">{{ move.POKEMON_MOVE }}</td>
+										<td>{{ move.POKEMON_LEARN_TYPE }}</td>
 									</tr>
 								{% endfor %}
 							</tbody>
