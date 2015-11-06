@@ -68,9 +68,12 @@ class Pokemon(db.Model):
 	POKEMON_SPATK = db.Column(db.Integer)
 	POKEMON_SPDEF = db.Column(db.Integer)
 	POKEMON_SPD = db.Column(db.Integer)
+	POKEMON_HEIGHT = db.Column(db.Integer)
+	POKEMON_WEIGHT = db.Column(db.Integer)
+	POKEMON_IMG = db.Column(db.VARCHAR(256))
 	
 	
-	def __init__(self, name, hp, attack, defense, spAttack, spDefense, speed):
+	def __init__(self, name, hp, attack, defense, spAttack, spDefense, speed, height, weight, img):
 		self.POKEMON_NAME = name
 		self.POKEMON_HP = hp
 		self.POKEMON_ATK = attack
@@ -78,6 +81,9 @@ class Pokemon(db.Model):
 		self.POKEMON_SPATK = spAttack
 		self.POKEMON_SPDEF = spDefense
 		self.POKEMON_SPD = speed
+		self.POKEMON_HEIGHT = height
+		self.POKEMON_WEIGHT = weight
+		self.POKEMON_IMG = img
 		
 	def __repr__(self):
 		return '<name {}>'.format(self.name)
@@ -152,6 +158,7 @@ class Routes(db.Model):
 class Trainers(db.Model):
 	__tablename__ = "ALL_TRAINERS"
 
+	ID = db.Column(db.Integer, primary_key=True)
 	TRAINER_NAME = db.Column(db.VARCHAR(50))
 	TRAINER_GEN = db.Column(db.VARCHAR(50))
 	TRAINER_ROUTE_NAME = db.Column(db.VARCHAR(50))
@@ -168,26 +175,145 @@ class Trainers(db.Model):
 class Abilities(db.Model):
 	__tablename__ = "POKEMON_ABILITIES"
 
+	ID = db.Column(db.Integer, primary_key=True)
 	POKEMON_ID = db.Column(db.Integer)
 	POKEMON_NAME = db.Column(db.VARCHAR(50))
 	POKEMON_ABILITY = db.Column(db.VARCHAR(50))
 
-	def __init__(self, name, ability):
+	def __init__(self, id, name, ability):
+		self.POKEMON_ID = id
 		self.POKEMON_NAME = name
 		self.POKEMON_ABILITY = ability
 
 class Evolutions(db.Model):
 	__tablename__ = "POKEMON_EVOLUTIONS"
 
+	ID = db.Column(db.Integer, primary_key=True)
 	POKEMON_ID = db.Column(db.Integer)
 	POKEMON_NAME = db.Column(db.VARCHAR(50))
 	POKEMON_EVOLUTION = db.Column(db.VARCHAR(50))
 	POKEMON_EVOLVE_METHOD = db.Column(db.VARCHAR(50))
 	POKEMON_EVOLVE_LEVEL = db.Column(db.Integer)
 
-	def __init__(self, name, evolution, method, level):
+	def __init__(self, id, name, evolution, method, level):
+		self.POKEMON_ID = id
 		self.POKEMON_NAME = name
 		self.POKEMON_EVOLUTION = evolution
 		self.POKEMON_EVOLVE_METHOD = method
 		self.POKEMON_EVOLVE_LEVEL = level
+
+class Types(db.Model):
+	__tablename__ = "POKEMON_TYPES"
+
+	ID = db.Column(db.Integer, primary_key=True)
+	POKEMON_ID = db.Column(db.Integer)
+	POKEMON_NAME = db.Column(db.VARCHAR(50))
+	POKEMON_TYPE = db.Column(db.VARCHAR(50))
+
+	def __init__(self, id, name, type):
+		self.POKEMON_ID = id
+		self.POKEMON_NAME = name
+		self.POKEMON_TYPE = type
+
+class Locations(db.Model):
+	__tablename__ = "POKEMON_LOCATIONS"
+
+	ID = db.Column(db.Integer, primary_key=True)
+	POKEMON_ID = db.Column(db.Integer)
+	POKMEON_NAME = db.Column(db.VARCHAR(50))
+	POKEMON_GAME = db.Column(db.VARCHAR(50))
+	POKEMON_METHOD = db.Column(db.VARCHAR(50))
+
+	def __init__(self, id, name, game, method):
+		self.POKEMON_ID = id
+		self.POKEMON_NAME = name
+		self.POKEMON_GAME = game
+		self.POKEMON_METHOD = method
+
+class PokemonMoves(db.Model):
+	__tablename__ = "POKEMON_MOVES"
+
+	ID = db.Column(db.Integer, primary_key=True)
+	POKEMON_ID = db.Column(db.Integer)
+	POKEMON_NAME = db.Column(db.VARCHAR(50))
+	POKEMON_MOVE = db.Column(db.VARCHAR(50))
+	POKEMON_LEARN_TYPE = db.Column(db.VARCHAR(50))
+	POKEMON_LEVEL_LEARNED = db.Column(db.Integer)
+
+	def __init__(self, id, name, move, type, level):
+		self.POKEMON_ID = id
+		self.POKEMON_NAME = name
+		self.POKEMON_MOVE = move
+		self.POKEMON_LEARN_TYPE = type
+		self.POKEMON_LEVEL_LEARNED = level
+
+class RouteImages(db.Model):
+	__tablename__ = "ROUTE_IMGS"
+
+	ID = db.Column(db.Integer, primary_key=True)
+	ROUTE_NAME = db.Column(db.VARCHAR(50))
+	ROUTE_GEN = db.Column(db.VARCHAR(50))
+	ROUTE_IMG = db.Column(db.VARCHAR(256))
+
+	def __init__(self, name, gen, img):
+		self.ROUTE_NAME = name
+		self.ROUTE_GEN = gen
+		self.ROUTE_IMG = img
+
+class RouteItems(db.Model):
+	__tablename__ = "ROUTE_ITEMS"
+
+	ID = db.Column(db.Integer, primary_key=True)
+	ROUTE_NAME = db.Column(db.VARCHAR(50))
+	ROUTE_ITEM_NAME = db.Column(db.VARCHAR(50))
+	ROUTE_ITEM_IMG = db.Column(db.VARCHAR(50))
+	ROUTE_ITEM_GAMES = db.Column(db.VARCHAR(256))
+	ROUTE_ITEM_METHOD = db.Column(db.VARCHAR(256))
+
+	def __init__(self, rName, iName, iImage, iGame, iMethod):
+		self.ROUTE_NAME = rName
+		self.ROUTE_ITEM_NAME = iName
+		self.ROUTE_ITEM_IMG = iImage
+		self.ROUTE_ITEM_GAMES = iGame
+		self.ROUTE_ITEM_METHOD = iMethod
+
+class RoutePokemon(db.Model):
+	__tablename__ = "ROUTE_POKEMON"
+
+	ID = db.Column(db.Integer, primary_key=True)
+	ROUTE_NAME = db.Column(db.VARCHAR(50))
+	ROUTE_POKEMON_NAME = db.Column(db.VARCHAR(50))
+	ROUTE_POKEMON_GEN = db.Column(db.VARCHAR(50))
+	ROUTE_POKEMON_LEVELS = db.Column(db.VARCHAR(50))
+	ROUTE_POKEMON_RATE = db.Column(db.VARCHAR(50))
+	ROUTE_POKEMON_METHOD = db.Column(db.VARCHAR(50))
+	ROUTE_METHOD_IMG = db.Column(db.VARCHAR(256))
+
+	def __init__(self, rName, pName, pGen, pLevel, pRate, pMethod, pImg):
+		self.ROUTE_NAME = rName
+		self.ROUTE_POKEMON_NAME = pName
+		self.ROUTE_POKEMON_GEN = pGen
+		self.ROUTE_POKEMON_LEVELS = pLevel
+		self.ROUTE_POKEMON_RATE = pRate
+		self.ROUTE_POKEMON_METHOD = pMethod
+		self.ROUTE_METHOD_IMG = pImg
+
+class RouteTrainers(db.Model):
+	__tablename__ = "ROUTE_TRAINERS"
+
+	ID = db.Column(db.Integer, primary_key=True)
+	ROUTE_NAME = db.Column(db.VARCHAR(50))
+	ROUTE_TRAINER_NAME = db.Column(db.VARCHAR(50))
+	ROUTE_TRIANER_GEN = db.Column(db.VARCHAR(50))
+	ROUTE_TRAINER_REWARD = db.Column(db.VARCHAR(50))
+	ROUTE_TRAINER_IMG = db.Column(db.VARCHAR(256))
+
+	def __init__(self, name, tName, tGen, tReward, tImg):
+		self.ROUTE_NAME = name
+		self.ROUTE_TRAINER_NAME = tName
+		self.ROUTE_TRAINER_GEN = tGen
+		self.ROUTE_TRAINER_REWARD = tReward
+		self.ROUTE_TRAINER_IMG = tImg
+
+
 
