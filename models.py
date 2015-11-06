@@ -26,13 +26,6 @@ class Move(db.Model):
 		self.MOVE_PP = pp
 		self.MOVE_DESCRIPTION = description
 		
-	def __repr__(self):
-		"""
-        Return representation of this move in format
-        <name {}> where {} is move's name
-        """
-		return '<name {}>'.format(self.name)
-		
 	@property
 	def serialize(self):
 		return {
@@ -257,12 +250,8 @@ class PokemonMoves(db.Model):
 		return PokemonMoves.query.filter_by(POKEMON_NAME=poke_name)
 
 	@staticmethod
-	def get_for_level(move_name):
-		return PokemonMoves.query.join(Pokemon).filter_by(POKEMON_MOVE=move_name, POKEMON_LEARN_TYPE='level up')
-
-	@staticmethod
-	def get_for_machine(move_name):
-		return PokemonMoves.query.join(Pokemon).filter_by(POKEMON_MOVE=move_name, POKEMON_LEARN_TYPE='machine')
+	def get_for_move(move_name):
+		return PokemonMoves.query.filter_by(POKEMON_MOVE=move_name)
 
 class RouteImages(db.Model):
 	__tablename__ = "ROUTE_IMGS"
