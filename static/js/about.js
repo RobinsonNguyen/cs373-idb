@@ -5,7 +5,7 @@ $(document).ready(function (){
     $.ajax({
       url: '../api/v1.0/tests/'
     }).success(function(result) {
-      console.log(result['results']);
+      console.log(result['results']['out']);
       $('#unit-test-results').text(result['results']);
       $('#unit-test-results').css('white-space', 'pre-wrap');
     });
