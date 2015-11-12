@@ -317,11 +317,11 @@ class RoutePokemon(db.Model):
 
 	def __init__(self, rName, pName, pGen, pLevel, pRate, pMethod, pImg):
 		self.ROUTE_NAME = rName
-		self.ROUTE_POKEMON_NAME = pName
+		self.ROUTE_POKEMON_NAME = str(pName)
 		self.ROUTE_POKEMON_GEN = pGen
 		self.ROUTE_POKEMON_LEVELS = pLevel
 		self.ROUTE_POKEMON_RATE = pRate
-		self.ROUTE_POKEMON_METHOD = pMethod
+		self.ROUTE_POKEMON_METHOD = str(pMethod)
 		self.ROUTE_METHOD_IMG = pImg
 
 	@staticmethod
