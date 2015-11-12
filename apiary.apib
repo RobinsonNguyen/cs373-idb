@@ -5,7 +5,7 @@ HOST: pokemasters.me
 
 Pokemon API for looking up information on Pokemon, moves, and locations.
 
-## Pokemon Collection [/pokemon]
+## Pokemon Collection [/api/v1.0/pokemon]
 
 A list of all pokemon
 
@@ -23,7 +23,7 @@ A list of all pokemon
             }
         ]
 
-## Pokemon [/pokemon/{id}]
+## Pokemon [/api/v1.0/pokemon/{id}]
 A single pokemon with id provided.
 
 ### View Pokemon [GET]
@@ -44,7 +44,7 @@ A single pokemon with id provided.
             "error":"No pokemon here"
         }
 
-## Move Collection [/moves]
+## Move Collection [/api/v1.0/moves]
 A list of all moves
 
 ### List All Moves [GET]
@@ -61,7 +61,7 @@ A list of all moves
             }
         ]
         
-## Move [/moves/{id}]
+## Move [/api/v1.0/moves/{id}]
 A single move associated with this id
         
 ### View Move [GET]
@@ -76,7 +76,7 @@ A single move associated with this id
             "name": "Rain-dance"
         }
 
-## Location Collection [/location]
+## Location Collection [/api/v1.0/location]
 A list of all locations
 
 ### List All Locations [GET]
@@ -92,7 +92,7 @@ A list of all locations
             }
         ]
         
-## Location [/location/{id}]
+## Location [/api/v1.0/location/{id}]
 A single location at route id
 
 ### View Location [GET]

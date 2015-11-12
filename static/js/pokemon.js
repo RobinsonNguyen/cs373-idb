@@ -11,11 +11,7 @@ $(document).ready(function(){
 
 	$('.route').click(function() {
 		route = $(this).attr('id').trim();
-		region = gameToRegion[$(this).attr('data-region').trim()];
-		console.log(region);
-		console.log(route);
-
-		location.href = '/location?region=' + region + '&name=' + route;
+		location.href = '/location/' + route;
 	});
 
 }); 

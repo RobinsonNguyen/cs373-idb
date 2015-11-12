@@ -11,18 +11,18 @@
 	{% block content %}
 		<div class="main-wrapper">
 			<div class="panel panel-success col-sm-2 poke-panel">
-				<div class="panel-heading">#{{ '%03d' % pokemon.id }} {{ pokemon.name }}</div>
+				<div class="panel-heading">#{{ '%03d' % pokemon.POKEMON_ID }} {{ pokemon.POKEMON_NAME }}</div>
 	    		<div class="panel-body">
 					<div id="img-panel" class="panel panel-success">
 			    		<div class="panel-body poke-img">
-			    			<img class="poke-img" src="{{ url_for('static', filename='res/SPRITES/%s' % pokemon.imgPath) }}"/>
+			    			<img class="poke-img" src="{{ url_for('static', filename='res/SPRITES/%s' % pokemon.POKEMON_IMG) }}"/>
 			    		</div>
 					</div>
 					<div id="type-panel" class="inner-panel panel panel-success">
 			    		<div class="panel-heading"><b>Type</b></div>
 	    				<div class="panel-body">
-	    					{% for type in pokemon.type %}
-	    						{{ type }}
+	    					{% for t in types %}
+	    						{{ t.POKEMON_TYPE }}
 								{% if not loop.last %}
 									/
 								{% endif %}
@@ -30,12 +30,12 @@
 	    				</div>
 					</div>
 					<div id="egg-panel" class="inner-panel panel panel-success">
-			    		<div class="panel-heading"><b>Egg Group</b></div>
+			    		<div class="panel-heading"><b>Abilities</b></div>
 	    				<div class="panel-body">
-	    					{% for group in pokemon.eggGroup %}
-	    						{{ group }}
+	    					{% for a in abilities %}
+	    						{{ a.POKEMON_ABILITY }}
 								{% if not loop.last %}
-									/
+									,
 								{% endif %}
 	    					{% endfor %}
 	    				</div>
@@ -43,9 +43,9 @@
 					<div id="evo-panel" class="inner-panel panel panel-success">
 			    		<div class="panel-heading"><b>Evolves Into</b></div>
 	    				<div class="panel-body">
-	    						{% for evo in pokemon.evolution %}
-	    							<img src="{{ url_for('static', filename='res/SPRITES/%s_mini_.png' % evo.to) }}"/>
-	    							<a href="/pokemon/{{ evo.to }}"> {{ evo.to }} </a>
+	    						{% for evo in evos %}
+	    							<img src="{{ url_for('static', filename='res/SPRITES/%s_mini_.png' % evo.POKEMON_EVOLUTION) }}"/>
+	    							<a href="/pokemon/{{ evo.POKEMON_EVOLUTION }}"> {{ evo.POKEMON_EVOLUTION }} </a>
 	    						{% endfor %}
 	    				</div>
 					</div>
@@ -56,27 +56,27 @@
 	    						<tbody>
 		    						<tr> 
 		    							<td> HP </td>
-		    							<td> {{ pokemon.hp }} </td>
+		    							<td> {{ pokemon.POKEMON_HP }} </td>
 		    						</tr>
 		    						<tr> 
 		    							<td> Attack </td>
-		    							<td> {{ pokemon.attack }} </td>
+		    							<td> {{ pokemon.POKEMON_ATK }} </td>
 		    						</tr>
 		    						<tr> 
 		    							<td> Defense </td>
-		    							<td> {{ pokemon.defense }} </td>
+		    							<td> {{ pokemon.POKEMON_DEF }} </td>
 		    						</tr>
 		    						<tr> 
 		    							<td> Sp. Attack </td>
-		    							<td> {{ pokemon.spAttack }} </td>
+		    							<td> {{ pokemon.POKEMON_SPATK }} </td>
 		    						</tr>
 		    						<tr> 
 		    							<td> Sp. Defense </td>
-		    							<td> {{ pokemon.spDefense }} </td>
+		    							<td> {{ pokemon.POKEMON_SPDEF }} </td>
 		    						</tr>
 		    						<tr> 
 		    							<td> Speed </td>
-		    							<td> {{ pokemon.speed }} </td>
+		    							<td> {{ pokemon.POKEMON_SPD }} </td>
 		    						</tr>
 	    						</tbody>
 	    					</table>
@@ -100,10 +100,10 @@
 								</tr>
 							</thead>
 							<tbody>
-								{% for move in pokemon.moves %}
+								{% for move in moves %}
 									<tr class="pokemon-row move-row">
-										<td class="move-name">{{ move.name }}</td>
-										<td>{{ move.learn_type }}</td>
+										<td class="move-name">{{ move.POKEMON_MOVE }}</td>
+										<td>{{ move.POKEMON_LEARN_TYPE }}</td>
 									</tr>
 								{% endfor %}
 							</tbody>
@@ -113,21 +113,14 @@
 						<table class="table table-hover">
 							<thead>
 								<tr>
-									<th>Game</th>
-									<th>Route</th>
+									<th>Location</th>
 								</tr>
 							</thead>
 							<tbody>
-								{% for loc in pokemon.locations %}
+								{% for loc in locations %}
 									<tr class="pokemon-row">
-										<td>{{loc.game}}</td>
-										<td>
-										{% for r in loc.routes %}
-											<a href="#" data-region="{{loc.game}}" class="route" id="{{r}}">{{r}}</a>
-										{% endfor %}
-										{% for o in loc.other %}
-											{{o}}
-										{% endfor %}
+										<td class="route" id="{{loc.ROUTE_NAME}}">
+											{{loc.ROUTE_NAME}}
 										</td>
 									</tr>
 								{% endfor %}

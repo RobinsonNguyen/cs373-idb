@@ -3,63 +3,38 @@
 	{% block head %}
 		<link rel="stylesheet" type="text/css" href="../static/css/location.css">
 		<link rel="stylesheet" type="text/css" href="../static/css/route.css">
+		<script src="{{ url_for('static',filename='js/location.js') }}"></script>
 
 		<title>Locations - PokeMasters</title>
 	{% endblock %}
 
 	{% block content %}
+		<h2 style="text-align: center;">Locations</h2>
 
-		<h2 style="color: white;" align="center">Locations</h2>
-
-		<div class="text-center">
-			<div class="btn-group" roll="group" style="padding: 4px;" align="center">
-				<button type="button" class="btn btn-sm" style="color:black;">Kanto</button>
-				<button type="button" class="btn btn-sm" style="color:black;">Johto</button>
-			</div>
-		</div>
-
-
-		<div id="routes">
-			<h2 style="color: white;" align="center">Routes</h2>
-			<div class="container pkmn-group">
-				<div class="panel panel-default">
-					<table id="routeTable" class="table" data-toggle="table" data-classes="table table-hover">
-						<thead>
-							<tr>
-								<th data-sortable="true">Route Name</th>
-								<th style="text-align: center;" data-sortable="true">Average Level</th>
-								<th style="text-align: center;" data-sortable="true"># of Trainers</th>
-								<th style="text-align: center;" data-sortable="true">Avg money earned</th>
-								<th style="text-align: center;" data-sortable="true"># of different Pokemon</th>
-							</tr>
-						</thead>
-						<tbody>
-							<tr>
-								<td><a href="?region=Kanto&name=Route 15"/>Kanto - Route 15</td>
-								<td>20</td>
-								<td>3</td>
-								<td>300</td>
-								<td>6</td>
-							</tr>
-
-							<tr>
-								<td><a href="?region=Johto&name=Route 30"/>Johto - Route 30</td>
-								<td>25</td>
-								<td>5</td>
-								<td>600</td>
-								<td>3</td>
-							</tr>
-
-							<tr>
-								<td><a href="?region=Kanto&name=Route 31"/>Johto - Route 31</td>
-								<td>22</td>
-								<td>1</td>
-								<td>1200</td>
-								<td>8</td>
-							</tr>
-						</tbody>
-					</table>
-				</div>
-			</div>
-		</div>
+		<table id="route-models" data-toggle="table" data-classes="table table-hover">
+			<thead>
+				<tr>
+					<th data-sortable="true">Name</th>
+					<th data-sortable="true">Region</th>
+					<th data-sortable="true">North Exit</th>
+					<th data-sortable="true">South Exit</th>
+					<th data-sortable="true">East Exit</th>
+					<th data-sortable="true">West Exit</th>
+					<th data-sortable="true">Access To</th>
+				</tr>
+			</thead>
+			<tbody>
+				{% for route in routes %}
+					<tr class="route-row">
+						<td> {{ route.ROUTE_NAME }} </td>
+						<td> {{ route.ROUTE_REGION }} </td>
+						<td> {{ route.ROUTE_NORTH_EXIT }} </td>
+						<td> {{ route.ROUTE_SOUTH_EXIT }} </td>
+						<td> {{ route.ROUTE_EAST_EXIT }} </td>
+						<td> {{ route.ROUTE_WEST_EXIT }} </td>
+						<td> {{ route.ROUTE_ACCESS_TO }} </td>
+					</tr>
+				{% endfor %}
+			</tbody>
+		</table>
 	{% endblock %}

@@ -6,14 +6,14 @@
 		<script src="../static/js/location.js"></script>
 		<script src="{{ url_for('static',filename='js/route.js') }}"></script>
 
-		<title>{{route.name}} (Route) - PokeMasters</title>
+		<title>{{route.ROUTE_NAME}} (Route) - PokeMasters</title>
 	{% endblock %}
 
 	{% block content %}
 		<div class="row" style="margin: 4px;">
 			<div class="panel panel-primary col-sm-4" style="background-color: #71AD64; border: 2px solid #4AA14D;">
 				<div class="panel-heading" style="background: #A2E0A3; border: 2px solid #4AA14D;">
-					<h3 class="panel-title" style="text-align: center; color: black;">{{ route.name }}</h3>
+					<h3 class="panel-title" style="text-align: center; color: black;">{{ route.ROUTE_NAME }}</h3>
 				</div>
 				<div class="text-center">
 					<div class="btn-group" roll="group" style="padding: 4px;" align="center">
@@ -24,19 +24,9 @@
 					</div>
 				</div>
 
-				<div class="panel-body">
-					<div class="block">
-						<a href="?region=Johto&name=Route 31">
-							<button class="btn-sm btn-prev" style="color:black;">{{ route.prevRoute }}</button>
-						</a>
-						<a href="?region=Johto&name=Route 30">
-							<button class="btn-sm btn-next" style="color:black;">{{ route.nextRoute }}</button>
-						</a>
-					</div>
-				</div>
+				
 				<div class="panel-body" style="color: black;">
-					<img src="../static/res/kanto2.png" width="auto" height="auto" align="left" style="margin-right: 4px;"></img>
-					{{ route.routeDesc }}
+					{{ route.ROUTE_MINI_DESCRIPTION }}
 				</div>
 				<hr>
 
@@ -63,63 +53,13 @@
 								</tr>
 							</thead>
 							<tbody>
-								{% for poke in route.pokemon %}
+								{% for poke in pokemon %}
 									<tr>
-										<td><img src="{{ url_for('static', filename='res/SPRITES/%s_mini_.png' % poke.name) }}"/></td>
-										<td>{{ poke.name }}</td>
-										<td>{{ poke.area }}</td>
-										<td>{{ poke.levels }}</td>
-										<td>{{ poke.rate }}</td>
-									</tr>
-								{% endfor %}
-							</tbody>
-						</table>
-					</div>
-
-
-					<div role="tabpanel" class="tab-pane fade" id="trainers">
-						<table class="table" style="border: 2px solid #4AA14D; color: #000000" data-toggle="table" data-classes="table table-hover">
-							<thead>
-								<tr>
-									<th data-sortable="true">Trainer</th>
-									<th data-sortable="true">Area</th>
-									<th data-sortable="true">Pokemon</th>
-								</tr>
-							</thead>
-							<tbody>
-								{% for poke in route.trainers %}
-									<tr>
-										<td rowspan="{{ poke.pokemon|length }}">{{ poke.name }}</td>
-										<td rowspan="{{ poke.pokemon|length }}">{{ poke.area }}</td>
-										<td> {{ poke.pokemon[0].name }}
-									</tr>
-									{% for p in poke.pokemon %}
-										{% if loop.index > 1 %}
-											<tr>
-												<td>{{ p.name }}</td>
-											</tr>
-										{% endif %}
-									{% endfor %}
-								{% endfor %}
-							</tbody>
-						</table>
-					</div>
-
-					<div role="tabpanel" class="tab-pane fade" id="items">
-						<table id="item-models" class="table" style="border: 2px solid #4AA14D; color: #000000" data-toggle="table" data-classes="table table-hover">
-							<thead>
-								<tr style="background-color: #71AD64;">
-									<th data-sortable="true">Item</th>
-									<th data-sortable="true">Area</th>
-									<th data-sortable="true">Description</th>
-								</tr>
-							</thead>
-							<tbody>
-								{% for item in route.items %}
-									<tr>
-										<td><a href="../moves/{{ item.name }}"/>{{ item.name }}</td>
-										<td>{{ item.area }}</td>
-										<td>{{ item.description }}</td>
+										<td></td>
+										<td>{{ poke.ROUTE_POKEMON_NAME }}</td>
+										<td>{{ poke.ROUTE_POKEMON_METHOD }}</td>
+										<td>{{ poke.ROUTE_POKEMON_LEVELS }}</td>
+										<td>{{ poke.ROUTE_POKEMON_RATE }}</td>
 									</tr>
 								{% endfor %}
 							</tbody>
