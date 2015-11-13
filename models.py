@@ -286,6 +286,10 @@ class RouteImages(db.Model):
 		self.ROUTE_GEN = gen
 		self.ROUTE_IMG = img
 
+	@staticmethod
+	def get(name):
+		return RouteImages.filter_by(ROUTE_NAME=name);
+
 class RouteItems(db.Model):
 	__tablename__ = "ROUTE_ITEMS"
 
