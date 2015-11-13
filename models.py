@@ -288,7 +288,7 @@ class RouteImages(db.Model):
 
 	@staticmethod
 	def get(name):
-		return RouteImages.filter_by(ROUTE_NAME=name);
+		return RouteImages.query.filter_by(ROUTE_NAME=name);
 
 class RouteItems(db.Model):
 	__tablename__ = "ROUTE_ITEMS"
