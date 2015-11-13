@@ -21,12 +21,15 @@
 						<button type="button" class="btn btn-sm" style="color:black;">Gen II</button>
 						<button type="button" class="btn btn-sm" style="color:black;">Gen III</button>
 						<button type="button" class="btn btn-sm" style="color:black;">Gen IV</button>
+
+						{% for gen in images %}
+						<button type="button" class="btn btn-sm" style="color:black;">{{gen.ROUTE_GEN}}</button>
 					</div>
 				</div>
 
 				
 				<div class="panel-body" style="color: black;">
-					<img src="../SomeScrapingData/RouteIMGS/{{images[0].ROUTE_IMG}}.png" />
+					<img src="../SomeScrapingData/RouteIMGS/{{images[0].ROUTE_IMG}}" />
 					{{ route.ROUTE_MINI_DESCRIPTION }}
 				</div>
 				<hr>
