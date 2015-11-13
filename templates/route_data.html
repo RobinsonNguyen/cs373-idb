@@ -45,7 +45,7 @@
 						<table id="pokemon-models" class="table" style="border: 2px solid #4AA14D; color: #000000" data-toggle="table" data-classes="table table-hover">
 							<thead>
 								<tr>
-									<th width="15%" data-sortable="true"></th>
+									<th width="15%" data-sortable="false"></th>
 									<th width="55%" data-sortable="true">Pokemon</th>
 									<th width="15%" data-sortable="true">Area</th>
 									<th width="15%" data-sortable="true">Levels</th>
@@ -55,7 +55,7 @@
 							<tbody>
 								{% for poke in pokemon %}
 									<tr>
-										<td></td>
+										<td><img src="../static/res/SPRITES/{{poke.ROUTE_POKEMON_NAME}}_mini_.png" /></td>
 										<td>{{ poke.ROUTE_POKEMON_NAME }}</td>
 										<td><img src="../static/res/Methods/{{poke.ROUTE_METHOD_IMG}}" />{{ poke.ROUTE_POKEMON_METHOD }}</td>
 										<td>{{ poke.ROUTE_POKEMON_LEVELS }}</td>
