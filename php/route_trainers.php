@@ -1,7 +1,7 @@
 <?php
 	//connect to mysql
 	$con = mysqli_connect("localhost","root","pokemon","pokemasters") or die('Could not connect: ' . mysqli_error($con));
-
+	$con->set_charset('utf8');
 	$drop = mysqli_prepare($con, 'DROP TABLE IF EXISTS ROUTE_TRAINERS;') or die(mysqli_error($con));
 
 	$create = mysqli_prepare($con, 'CREATE TABLE ROUTE_TRAINERS(ID INT NOT NULL AUTO_INCREMENT, ROUTE_NAME VARCHAR(50) NOT NULL, ROUTE_TRAINER_NAME VARCHAR(50) NOT NULL, ROUTE_TRAINER_GEN VARCHAR(50) NOT NULL, ROUTE_TRAINER_REWARD VARCHAR(50), ROUTE_TRAINER_IMG VARCHAR(256) NOT NULL, PRIMARY KEY(ID));') or die(mysqli_error($con));

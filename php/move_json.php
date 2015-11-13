@@ -1,7 +1,7 @@
 <?php
 	//connect to mysql
 	$con = mysqli_connect("localhost","root","pokemon","pokemasters") or die('Could not connect: ' . mysqli_error($con));
-
+	$con->set_charset('utf8');
 	$drop = mysqli_prepare($con, 'DROP TABLE IF EXISTS ALL_MOVES;') or die(mysqli_error($con));
 
 	$create = mysqli_prepare($con, 'CREATE TABLE ALL_MOVES(MOVE_ID INT, MOVE_NAME VARCHAR(50) NOT NULL, MOVE_TYPE VARCHAR(50), MOVE_CATEGORY VARCHAR(50), MOVE_POWER INT, MOVE_ACCURACY INT, MOVE_PP INT, MOVE_DESCRIPTION BLOB, PRIMARY KEY(MOVE_ID));') or die(mysqli_error($con));

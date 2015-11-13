@@ -1,7 +1,7 @@
 <?php
 	//connect to mysql
 	$con = mysqli_connect("localhost","root","pokemon","pokemasters") or die('Could not connect: ' . mysqli_error($con));
-
+	$con->set_charset('utf8');
 	$drop = mysqli_prepare($con, 'DROP TABLE IF EXISTS ALL_POKEMON;') or die(mysqli_error($con));
 
 	$create = mysqli_prepare($con, 'CREATE TABLE ALL_POKEMON(POKEMON_ID INT NOT NULL, POKEMON_NAME VARCHAR(50) NOT NULL, POKEMON_HP INT NOT NULL, POKEMON_ATK INT NOT NULL, POKEMON_DEF INT NOT NULL, POKEMON_SPATK INT NOT NULL, POKEMON_SPDEF INT NOT NULL, POKEMON_SPD INT NOT NULL, POKEMON_HEIGHT INT, POKEMON_WEIGHT INT, POKEMON_IMG VARCHAR(256) NOT NULL, PRIMARY KEY(POKEMON_ID));') or die(mysqli_error($con));
