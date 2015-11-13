@@ -47,6 +47,7 @@
 				}
 
 				$method = (string)$r['method'];
+				print("$method");
 				$img = $r['methodSprite'];
 
 				//inserting the mothafuckin row bitch
