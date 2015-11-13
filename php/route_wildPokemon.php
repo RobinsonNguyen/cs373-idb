@@ -46,7 +46,7 @@
 					$rate = "At all times: " . $r['rate'][0];
 				}
 
-				$method = $r['method'];
+				$method = (string)$r['method'];
 				$img = $r['methodSprite'];
 
 				//inserting the mothafuckin row bitch
