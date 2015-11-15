@@ -16,8 +16,8 @@ body {
 }
 
 #search {
-	margin: 12px;
-	padding: 10px;
+	margin: 10px;
+	padding: 3px;
 	border: solid 1px #dcdcdc;
 	transition: box-shadow 0.3s, border 0.3s;
 }
