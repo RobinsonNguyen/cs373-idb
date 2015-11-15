@@ -161,8 +161,9 @@ def delete_moves(id):
 # -----
 # search
 # -----
-@app.route('/search/')
-def search():
+@app.route('/search/<term>')
+def search(term):
+    
     return render_template('index.html')
 
 if __name__ == '__main__':
