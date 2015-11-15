@@ -4,7 +4,8 @@ $(document).ready(function() {
 		console.log(e);
 		if(e.which == 13) {
 			term = $(this).val();
-			location = '/search/' + term;
+			encodedTerm = encodeURIComponent(term);
+			location = '/search/' + encodedTerm;
 	    }
 	});
 
