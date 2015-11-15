@@ -1,9 +1,15 @@
 {% extends "base.html" %}
 
 	{% block head %}
-		<title>{{ terms }} - PokeMasters</title>
+		<title>{% for term in terms %} {{term}} {% endfor %} - PokeMasters</title>
 	{% endblock %}
 
 	{% block content %}
-		<h2 style="text-align: center;">Search Results for {{ terms }}</h2>
+		<h2 style="text-align: center;">Search Results for: 
+			{% for term in terms %} 
+				{{term}} 
+				{% if not loop.last %}
+					, 
+				{% endif %} 
+			{% endfor %}</h2>
 	{% endblock %}
