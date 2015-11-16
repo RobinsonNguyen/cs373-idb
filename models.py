@@ -277,7 +277,7 @@ class RouteImages(db.Model):
 	__tablename__ = "ROUTE_IMGS"
 
 	ID = db.Column(db.Integer, primary_key=True)
-	ROUTE_NAME = db.Column(db.VARCHAR(50))
+	ROUTE_NAME = db.Column(db.VARCHAR(50), db.ForeignKey("ALL_ROUTES.ROUTE_NAME"))
 	ROUTE_GEN = db.Column(db.VARCHAR(50))
 	ROUTE_IMG = db.Column(db.VARCHAR(256))
 
