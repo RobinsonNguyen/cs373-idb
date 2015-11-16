@@ -9,7 +9,7 @@ $(document).ready(function(){
 function genI() {
 	var genI = document.getElementsByClassName("genIPokemon");
 	for(i = 0; i < genI.length; i++)
-		genI[i].style.display = "block";
+		genI[i].style.display = "table-row";
 
 	var genII = document.getElementsByClassName("genIIPokemon");
 	for(i = 0; i < genII.length; i++)
@@ -23,5 +23,5 @@ function genII() {
 
 	var genII = document.getElementsByClassName("genIIPokemon");
 	for(i = 0; i < genII.length; i++)
-		genII[i].style.display = "block";
+		genII[i].style.display = "table-row";
 }
