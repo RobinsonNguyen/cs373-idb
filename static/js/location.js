@@ -7,17 +7,21 @@ $(document).ready(function(){
 }); 
 
 function genI() {
-	var genI = document.getElementById("genIPokemon");
-	genI.style.display = "block";
+	var genI = document.getElementsByClassName("genIPokemon");
+	for(i = 0; i < genI.length; i++)
+		genI[i].style.display = "block";
 
-	var genII = document.getElementById("genIIPokemon");
-	genII.style.display = "none";
+	var genII = document.getElementsByClassName("genIIPokemon");
+	for(i = 0; i < genII.length; i++)
+		genII[i].style.display = "none";
 }
 
 function genII() {
-	var genI = document.getElementById("genIPokemon");
-	genI.style.display = "none";
+	var genI = document.getElementsByClassName("genIPokemon");
+	for(i = 0; i < genI.length; i++)
+		genI[i].style.display = "none";
 
-	var genII = document.getElementById("genIIPokemon");
-	genII.style.display = "block";
+	var genII = document.getElementsByClassName("genIIPokemon");
+	for(i = 0; i < genII.length; i++)
+		genII[i].style.display = "block";
 }

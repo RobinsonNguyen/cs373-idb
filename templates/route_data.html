@@ -63,7 +63,7 @@
 							<tbody>
 								{% for poke in pokemon %}
 									{% if poke.ROUTE_POKEMON_GEN == "Generation I" %}
-									<tr id="genIPokemon">
+									<tr class="genIPokemon">
 										<td><img src="../static/res/SPRITES/{{poke.ROUTE_POKEMON_NAME}}_mini_.png" /></td>
 										<td>{{ poke.ROUTE_POKEMON_NAME }}</td>
 										<td><img src="../static/res/Methods/{{poke.ROUTE_METHOD_IMG}}" />{{ poke.ROUTE_POKEMON_METHOD }}</td>
@@ -73,7 +73,7 @@
 									{% endif %}
 
 									{% if poke.ROUTE_POKEMON_GEN == "Generation II" %}
-									<tr id="genIIPokemon" style="display:none;">
+									<tr class="genIIPokemon" style="display:none;">
 										<td><img src="../static/res/SPRITES/{{poke.ROUTE_POKEMON_NAME}}_mini_.png" /></td>
 										<td>{{ poke.ROUTE_POKEMON_NAME }}</td>
 										<td><img src="../static/res/Methods/{{poke.ROUTE_METHOD_IMG}}" />{{ poke.ROUTE_POKEMON_METHOD }}</td>
