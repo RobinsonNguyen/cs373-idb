@@ -18,8 +18,16 @@
 				<div class="text-center">
 					<div class="btn-group" roll="group" style="padding: 4px;" align="center">
 						{% for gen in images %}
-						<button type="button" class="btn btn-sm" style="color:black;">{{gen.ROUTE_GEN}}</button>
+							{% if gen.ROUTE_GEN == "Generation I" %}
+								<button type="button" class="btn btn-sm" style="color:black;" onclick="genI()">Gen I</button>
+							{% endif %}
+
+							{% if gen.ROUTE_GEN == "Generation II" %}
+								<button type="button" class="btn btn-sm" style="color:black;" onclick="genII()">Gen II</button>
+							{% endif %}
 						{% endfor %}
+
+						
 					</div>
 				</div>
 
@@ -55,7 +63,17 @@
 							<tbody>
 								{% for poke in pokemon %}
 									{% if poke.ROUTE_POKEMON_GEN == "Generation I" %}
-									<tr>
+									<tr id="genIPokemon">
+										<td><img src="../static/res/SPRITES/{{poke.ROUTE_POKEMON_NAME}}_mini_.png" /></td>
+										<td>{{ poke.ROUTE_POKEMON_NAME }}</td>
+										<td><img src="../static/res/Methods/{{poke.ROUTE_METHOD_IMG}}" />{{ poke.ROUTE_POKEMON_METHOD }}</td>
+										<td>{{ poke.ROUTE_POKEMON_LEVELS }}</td>
+										<td>{{ poke.ROUTE_POKEMON_RATE }}</td>
+									</tr>
+									{% endif %}
+
+									{% if poke.ROUTE_POKEMON_GEN == "Generation II" %}
+									<tr id="genIIPokemon" style="display:none;">
 										<td><img src="../static/res/SPRITES/{{poke.ROUTE_POKEMON_NAME}}_mini_.png" /></td>
 										<td>{{ poke.ROUTE_POKEMON_NAME }}</td>
 										<td><img src="../static/res/Methods/{{poke.ROUTE_METHOD_IMG}}" />{{ poke.ROUTE_POKEMON_METHOD }}</td>

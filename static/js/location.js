@@ -5,3 +5,19 @@ $(document).ready(function(){
 	});
 
 }); 
+
+function genI() {
+	var genI = document.getElementById("genIPokemon");
+	genI.style.display = "block";
+
+	var genII = document.getElementById("genIIPokemon");
+	genII.style.display = "none";
+}
+
+function genII() {
+	var genI = document.getElementById("genIPokemon");
+	genI.style.display = "none";
+
+	var genII = document.getElementById("genIIPokemon");
+	genII.style.display = "block";
+}
