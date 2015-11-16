@@ -52,10 +52,27 @@
 					<div>
 						<img class="img-responsive center-block" src="../static/res/RouteIMGS/{{images[0].ROUTE_IMG}}"/>
 					</div>
+					<br>
 					{{ route.ROUTE_MAIN_DESCRIPTION }}
 				</div>
 				<hr>
-
+				<div class="panel-body" style="color: black;">
+					<table align="center">
+						<tbody>
+							<tr>
+								<td colspan=3 align="center"><a href="/location/{{ route.ROUTE_NORTH_EXIT }}">{{ route.ROUTE_NORTH_EXIT }}</a></td>
+							</tr>
+							<tr>
+								<td><a href="/locaiton/{{ route.ROUTE_EAST_EXIT }}">{{ route.ROUTE_EAST_EXIT }}</a></td>
+								<td></td>
+								<td><a href="/locaiton/{{ route.ROUTE_WEST_EXIT }}">{{ route.ROUTE_WEST_EXIT }}</a></td>
+							</tr>
+							<tr>
+								<td colspan=3 align="center"><a href="/locaiton/{{ route.ROUTE_SOUTH_EXIT }}">{{ route.ROUTE_SOUTH_EXIT }}</a></td>
+							</tr>
+						</tbody>
+					</table>
+				</div>
 			</div>
 
 			<div class="col-sm-8">
@@ -68,7 +85,7 @@
 				<!-- Tab panes -->
 				<div class="tab-content">
 					<div role="tabpanel" class="tab-pane fade in active" id="pokemon">
-						<table id="pokemon-models" class="table" style="border: 2px solid #4AA14D; color: #000000" data-toggle="table" data-classes="table table-hover">
+						<table id="pokemon-models" class="table" style="border: 2px solid #4AA14D; color: #000000" data-toggle="table" data-pagination="true" data-page-list="[10, 25, 50, 100, ALL]" data-toggle="table" data-classes="table table-hover">
 							<thead>
 								<tr>
 									<th width="15%" data-sortable="false"></th>
@@ -76,69 +93,19 @@
 									<th width="15%" data-sortable="true">Area</th>
 									<th width="15%" data-sortable="true">Levels</th>
 									<th width="15%" data-sortable="true">Rate</th>
+									<th width="15%" data-sortable="true">Generation</th>
 								</tr>
 							</thead>
 							<tbody>
 								{% for poke in pokemon %}
-									{% if poke.ROUTE_POKEMON_GEN == "Generation I" %}
-									<tr class="genIPokemon">
-										<td><img src="../static/res/SPRITES/{{poke.ROUTE_POKEMON_NAME}}_mini_.png" /></td>
-										<td>{{ poke.ROUTE_POKEMON_NAME }}</td>
-										<td><img src="../static/res/Methods/{{poke.ROUTE_METHOD_IMG}}" />{{ poke.ROUTE_POKEMON_METHOD }}</td>
-										<td>{{ poke.ROUTE_POKEMON_LEVELS }}</td>
-										<td>{{ poke.ROUTE_POKEMON_RATE }}</td>
-									</tr>
-									{% endif %}
-
-									{% if poke.ROUTE_POKEMON_GEN == "Generation II" %}
-									<tr class="genIIPokemon" style="display:none;">
-										<td><img src="../static/res/SPRITES/{{poke.ROUTE_POKEMON_NAME}}_mini_.png" /></td>
-										<td>{{ poke.ROUTE_POKEMON_NAME }}</td>
-										<td><img src="../static/res/Methods/{{poke.ROUTE_METHOD_IMG}}" />{{ poke.ROUTE_POKEMON_METHOD }}</td>
-										<td>{{ poke.ROUTE_POKEMON_LEVELS }}</td>
-										<td>{{ poke.ROUTE_POKEMON_RATE }}</td>
-									</tr>
-									{% endif %}
-
-									{% if poke.ROUTE_POKEMON_GEN == "Generation III" %}
-									<tr class="genIIIPokemon" style="display:none;">
-										<td><img src="../static/res/SPRITES/{{poke.ROUTE_POKEMON_NAME}}_mini_.png" /></td>
-										<td>{{ poke.ROUTE_POKEMON_NAME }}</td>
-										<td><img src="../static/res/Methods/{{poke.ROUTE_METHOD_IMG}}" />{{ poke.ROUTE_POKEMON_METHOD }}</td>
-										<td>{{ poke.ROUTE_POKEMON_LEVELS }}</td>
-										<td>{{ poke.ROUTE_POKEMON_RATE }}</td>
-									</tr>
-									{% endif %}
-
-									{% if poke.ROUTE_POKEMON_GEN == "Generation IV" %}
-									<tr class="genIVPokemon" style="display:none;">
-										<td><img src="../static/res/SPRITES/{{poke.ROUTE_POKEMON_NAME}}_mini_.png" /></td>
-										<td>{{ poke.ROUTE_POKEMON_NAME }}</td>
-										<td><img src="../static/res/Methods/{{poke.ROUTE_METHOD_IMG}}" />{{ poke.ROUTE_POKEMON_METHOD }}</td>
-										<td>{{ poke.ROUTE_POKEMON_LEVELS }}</td>
-										<td>{{ poke.ROUTE_POKEMON_RATE }}</td>
-									</tr>
-									{% endif %}
-
-									{% if poke.ROUTE_POKEMON_GEN == "Generation V" %}
-									<tr class="genVPokemon" style="display:none;">
-										<td><img src="../static/res/SPRITES/{{poke.ROUTE_POKEMON_NAME}}_mini_.png" /></td>
-										<td>{{ poke.ROUTE_POKEMON_NAME }}</td>
-										<td><img src="../static/res/Methods/{{poke.ROUTE_METHOD_IMG}}" />{{ poke.ROUTE_POKEMON_METHOD }}</td>
-										<td>{{ poke.ROUTE_POKEMON_LEVELS }}</td>
-										<td>{{ poke.ROUTE_POKEMON_RATE }}</td>
-									</tr>
-									{% endif %}
-
-									{% if poke.ROUTE_POKEMON_GEN == "Generation VI" %}
-									<tr class="genVIPokemon" style="display:none;">
-										<td><img src="../static/res/SPRITES/{{poke.ROUTE_POKEMON_NAME}}_mini_.png" /></td>
-										<td>{{ poke.ROUTE_POKEMON_NAME }}</td>
-										<td><img src="../static/res/Methods/{{poke.ROUTE_METHOD_IMG}}" />{{ poke.ROUTE_POKEMON_METHOD }}</td>
-										<td>{{ poke.ROUTE_POKEMON_LEVELS }}</td>
-										<td>{{ poke.ROUTE_POKEMON_RATE }}</td>
-									</tr>
-									{% endif %}
+								<tr class="genIPokemon">
+									<td><img src="../static/res/SPRITES/{{poke.ROUTE_POKEMON_NAME}}_mini_.png" /></td>
+									<td>{{ poke.ROUTE_POKEMON_NAME }}</td>
+									<td><img src="../static/res/Methods/{{poke.ROUTE_METHOD_IMG}}" />{{ poke.ROUTE_POKEMON_METHOD }}</td>
+									<td>{{ poke.ROUTE_POKEMON_LEVELS }}</td>
+									<td>{{ poke.ROUTE_POKEMON_RATE }}</td>
+									<td>{{ poke.ROUTE_POKEMON_GEN }}</td>
+								</tr>
 								{% endfor %}
 							</tbody>
 						</table>
