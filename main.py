@@ -163,8 +163,8 @@ def delete_moves(id):
 # -----
 @app.route('/search/<term>')
 def search(term):
-
-    return render_template('search.html', terms=term)
+    terms = term.split()
+    return render_template('search.html', terms=terms)
 
 if __name__ == '__main__':
     #create_db()
