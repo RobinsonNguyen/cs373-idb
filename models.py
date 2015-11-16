@@ -342,7 +342,7 @@ class RouteTrainers(db.Model):
 	ID = db.Column(db.Integer, primary_key=True)
 	ROUTE_NAME = db.Column(db.VARCHAR(50))
 	ROUTE_TRAINER_NAME = db.Column(db.VARCHAR(50))
-	ROUTE_TRIANER_GEN = db.Column(db.VARCHAR(50))
+	ROUTE_TRAINER_GEN = db.Column(db.VARCHAR(50))
 	ROUTE_TRAINER_REWARD = db.Column(db.VARCHAR(50))
 	ROUTE_TRAINER_IMG = db.Column(db.VARCHAR(256))
 
