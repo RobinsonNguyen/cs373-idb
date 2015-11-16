@@ -50,7 +50,9 @@
 				
 				<div class="panel-body" style="color: black;">
 					<div>
+						{% if images|length > 0 %}
 						<img class="img-responsive center-block" src="../static/res/RouteIMGS/{{images[0].ROUTE_IMG}}"/>
+						{% endif %}
 					</div>
 					<br>
 					{{ route.ROUTE_MAIN_DESCRIPTION }}
