@@ -54,7 +54,7 @@
 							</thead>
 							<tbody>
 								{% for poke in pokemon %}
-									{% if poke.ROUTE_POKEMON_GEN == "Generation I"}
+									{% if poke.ROUTE_POKEMON_GEN == "Generation I" %}
 									<tr>
 										<td><img src="../static/res/SPRITES/{{poke.ROUTE_POKEMON_NAME}}_mini_.png" /></td>
 										<td>{{ poke.ROUTE_POKEMON_NAME }}</td>
