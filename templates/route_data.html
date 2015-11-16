@@ -50,7 +50,7 @@
 				
 				<div class="panel-body" style="color: black;">
 					<div>
-						{% if images is defined %}
+						{% if images|count != 0 %}
 						<img class="img-responsive center-block" src="../static/res/RouteIMGS/{{images[0].ROUTE_IMG}}"/>
 						{% endif %}
 					</div>
