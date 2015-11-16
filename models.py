@@ -122,8 +122,8 @@ class Routes(db.Model):
 	ROUTE_WEST_EXIT = db.Column(db.VARCHAR(50))
 	ROUTE_ACCESS_TO = db.Column(db.VARCHAR(50))
 	ROUTE_MINI_DESCRIPTION = db.Column(db.VARCHAR(50))
-	ROUTE_MAIN_DESCRIPTION = db.Column(db.BLOB)
-	ROUTE_TRIVIA = db.Column(db.BLOB)
+	ROUTE_MAIN_DESCRIPTION = db.Column(db.TEXT)
+	ROUTE_TRIVIA = db.Column(db.TEXT)
 
 	def __init__(self, name, region, nExit, sExit, eExit, wExit, access, mini, main, trivia):
 		self.ROUTE_NAME = name;
