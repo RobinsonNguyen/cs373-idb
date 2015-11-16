@@ -22,7 +22,7 @@
 		$name = $row['name'];
     	foreach($row['routeImg'] as $r){
 			$gen = $r['gen'];
-			$img = "SomeScrapingData/RouteIMGS/" . $r['imgName'];
+			$img = $r['imgName'];
 
 			//inserting the mothafuckin row bitch
 			mysqli_stmt_execute($st);
