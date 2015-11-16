@@ -5,11 +5,14 @@
 	{% endblock %}
 
 	{% block content %}
-		<h2 style="text-align: center;">Search Results for: 
+		<h2 style="text-align: center;">Search Results for: "
 			{% for term in terms %} 
-				{{term}} 
+				{{term}}
 				{% if not loop.last %}
 					, 
 				{% endif %} 
-			{% endfor %}</h2>
+			{% endfor %}"</h2>
+
+
+		
 	{% endblock %}
