@@ -353,5 +353,8 @@ class RouteTrainers(db.Model):
 		self.ROUTE_TRAINER_REWARD = tReward
 		self.ROUTE_TRAINER_IMG = tImg
 
+	@staticmethod
+	def get(routeName):
+		return RouteTrainers.query.filter_by(ROUTE_NAME=routeName)
 
 

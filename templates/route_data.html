@@ -60,15 +60,15 @@
 					<table align="center">
 						<tbody>
 							<tr>
-								<td colspan=3 align="center"><a href="/location/{{ route.ROUTE_NORTH_EXIT }}">{{ route.ROUTE_NORTH_EXIT }}</a></td>
+								<td colspan=5 align="center"><a href="/location/{{ route.ROUTE_NORTH_EXIT }}">{{ route.ROUTE_NORTH_EXIT }}</a></td>
 							</tr>
 							<tr>
-								<td><a href="/locaiton/{{ route.ROUTE_EAST_EXIT }}">{{ route.ROUTE_EAST_EXIT }}</a></td>
-								<td></td>
-								<td><a href="/locaiton/{{ route.ROUTE_WEST_EXIT }}">{{ route.ROUTE_WEST_EXIT }}</a></td>
+								<td><a href="/location/{{ route.ROUTE_EAST_EXIT }}">{{ route.ROUTE_EAST_EXIT }}</a></td>
+								<td colspan=2></td>
+								<td><a href="/location/{{ route.ROUTE_WEST_EXIT }}">{{ route.ROUTE_WEST_EXIT }}</a></td>
 							</tr>
 							<tr>
-								<td colspan=3 align="center"><a href="/locaiton/{{ route.ROUTE_SOUTH_EXIT }}">{{ route.ROUTE_SOUTH_EXIT }}</a></td>
+								<td colspan=5 align="center"><a href="/location/{{ route.ROUTE_SOUTH_EXIT }}">{{ route.ROUTE_SOUTH_EXIT }}</a></td>
 							</tr>
 						</tbody>
 					</table>
@@ -105,6 +105,23 @@
 									<td>{{ poke.ROUTE_POKEMON_LEVELS }}</td>
 									<td>{{ poke.ROUTE_POKEMON_RATE }}</td>
 									<td>{{ poke.ROUTE_POKEMON_GEN }}</td>
+								</tr>
+								{% endfor %}
+							</tbody>
+						</table>
+					</div>
+
+					<div role="tabpanel" class="tab-pane fade in active" id="trainers">
+						<table id="trainer-models" class="table" style="border: 2px solid #4AA14D; color: #000000" data-toggle="table" data-pagination="true" data-page-list="[10, 25, 50, 100, ALL]" data-toggle="table" data-classes="table table-hover">
+							<thead>
+								<tr>
+									<th width="55%" data-sortable="true">Name</th>
+								</tr>
+							</thead>
+							<tbody>
+								{% for trainer in trainers %}
+								<tr class="genIPokemon">
+									<td>{{ trainer.ROUTE_TRAINER_NAME }}</td>
 								</tr>
 								{% endfor %}
 							</tbody>
