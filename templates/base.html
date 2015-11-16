@@ -20,15 +20,6 @@
   </head>
   <body>
 
-    <script type="text/javascript">
-      (function(w,d,t,u,n,s,e){w['SwiftypeObject']=n;w[n]=w[n]||function(){
-      (w[n].q=w[n].q||[]).push(arguments);};s=d.createElement(t);
-      e=d.getElementsByTagName(t)[0];s.async=1;s.src=u;e.parentNode.insertBefore(s,e);
-      })(window,document,'script','//s.swiftypecdn.com/install/v2/st.js','_st');
-
-      _st('install','tGE35iZHJMjsxdDUvc5Z','2.0.0');
-    </script>
-
     <nav class="navbar navbar-static-top" style="background-color: #555555; border: 0px;">
       <div class="container navbar-left" style="background-color: #555555;">
         <a class="navbar-brand" href="{{ url_for('index') }}"><img alt="PokeMasters" src="../static/res/pokeball.png" style="position: relative; top: 2px"></a>
@@ -38,7 +29,7 @@
           <li><a href="{{ url_for('moves') }}"style="color: white">Moves</a></li>
           <li><a href="{{ url_for('about') }}"style="color: white">About</a></li>
           <li>
-            <input name="search" class="st-default-search-input" placeholder="Search" type="text" id="search" />
+            <input name="search" placeholder="Search" type="text" id="search" />
           </li>
         </ul>
       </div>
