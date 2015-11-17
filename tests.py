@@ -129,14 +129,13 @@ class UnitTestModels(TestCase):
 	# 	# self.assertEqual(allRoutes.routes[2].trainers[0].name, "Bug Catcher Wade")
 	# 	# self.assertEqual(allRoutes.routes[2].items[0].name, "Rest")
 
-	# def test_add_pokemon_1(self):
-	# 	poketest = Pokemon(POKEMON_ID = 0, POKEMON_NAME = "Lazy Fox", POKEMON_HEIGHT = 2)
-	# 	db.session.add(poketest)
-	# 	db.session.commit()
-	# 	test = Pokemon.query.filter_by(POKEMON_ID=0).first()
-	# 	self.assertEqual(test.POKEMON_NAME, "Lazy Fox")
-	# 	self.assertEqual(True,False)
-	# 	db.session.delete(test)
+	def test_add_pokemon_1(self):
+		poketest = Pokemon(POKEMON_ID = 0, POKEMON_NAME = "Lazy Fox", POKEMON_HEIGHT = 2)
+		db.session.add(poketest)
+		db.session.commit()
+		test = Pokemon.query.filter_by(POKEMON_ID=0).first()
+		self.assertEqual(test.POKEMON_NAME, "Lazy Fox")
+		db.session.delete(test)
 
 if __name__ == "__main__" : 
 	main()
