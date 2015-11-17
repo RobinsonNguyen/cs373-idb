@@ -137,9 +137,18 @@ class UnitTestModels(TestCase):
 		db.session.delete(test)
 		db.session.commit()
 
+	def add_pokemon_2(self):
+		poketest = Pokemon("Lazy Turtle",1,2,3,4,5,6,2,2,"nada")
+		db.session.add(poketest)
+		db.session.commit()
+		test = Pokemon.query.filter_by(POKEMON_NAME="Lazy Turtle").first()
+		self.assertEqual(test.POKEMON_NAME, "Lazy Turtle")
+		db.session.delete(test)
+		db.session.commit()
+
 	def add_move_1(self):
 		# movetest = Move("Hiyaahh","Cool","nada",0,0,0,"nada")
-		movetest = Move(MOVE_ID=0,MOVE_NAME="Hiyaahh",)
+		movetest = Move(MOVE_ID=0,MOVE_NAME="Hiyaahh")
 		db.session.add(movetest)
 		db.session.commit()
 		test = Move.query.filter_by(MOVE_NAME="Hiyaahh").first()
