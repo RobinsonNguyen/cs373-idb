@@ -21,14 +21,14 @@ class Move(db.Model):
 	MOVE_PP = db.Column(db.Integer)
 	MOVE_DESCRIPTION = db.Column(db.BLOB)
 	
-	def __init__(self, name, type, category, power, accuracy, pp, description):
-		self.MOVE_NAME = name
-		self.MOVE_TYPE = type
-		self.MOVE_CATEGORY = category
-		self.MOVE_POWER = power
-		self.MOVE_ACCURACY = accuracy
-		self.MOVE_PP = pp
-		self.MOVE_DESCRIPTION = description
+	# def __init__(self, name, type, category, power, accuracy, pp, description):
+	# 	self.MOVE_NAME = name
+	# 	self.MOVE_TYPE = type
+	# 	self.MOVE_CATEGORY = category
+	# 	self.MOVE_POWER = power
+	# 	self.MOVE_ACCURACY = accuracy
+	# 	self.MOVE_PP = pp
+	# 	self.MOVE_DESCRIPTION = description
 		
 	@property
 	def serialize(self):
