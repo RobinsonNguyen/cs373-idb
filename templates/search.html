@@ -6,13 +6,20 @@
 
 	{% block content %}
 		<h2 style="text-align: center;">Search Results for: "
-			{% for term in terms %} 
+			{% for term in terms %}
 				{{term}}
 				{% if not loop.last %}
 					, 
-				{% endif %} 
+				{% endif %}
 			{% endfor %}"</h2>
 
+
+		{% for result in results %} 
+			{{result}}
+			{% if not loop.last %}
+				</br> 
+			{% endif %} 
+		{% endfor %}"
 
 		
 	{% endblock %}
