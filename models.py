@@ -1,13 +1,17 @@
 import json
+import flask.ext.whooshalchemy
 from flask import Flask
 from flask.ext.sqlalchemy import SQLAlchemy
 
 app = Flask(__name__)
 app.config['SQLALCHEMY_DATABASE_URI'] = 'mysql://root:pokemon@localhost/pokemasters'
+
+
 db = SQLAlchemy(app)
 
 class Move(db.Model):
 	__tablename__ = 'ALL_MOVES'
+	__searchable__ = ['MOVE_NAME', 'MOVE_TYPE', 'MOVE_CATEGORY']
 	MOVE_ID = db.Column(db.Integer, primary_key=True)
 	MOVE_NAME = db.Column(db.VARCHAR(50))
 	MOVE_TYPE = db.Column(db.VARCHAR(50))
@@ -17,14 +21,14 @@ class Move(db.Model):
 	MOVE_PP = db.Column(db.Integer)
 	MOVE_DESCRIPTION = db.Column(db.BLOB)
 	
-	# def __init__(self, name, type, category, power, accuracy, pp, description):
-	# 	self.MOVE_NAME = name
-	# 	self.MOVE_TYPE = type
-	# 	self.MOVE_CATEGORY = category
-	# 	self.MOVE_POWER = power
-	# 	self.MOVE_ACCURACY = accuracy
-	# 	self.MOVE_PP = pp
-	# 	self.MOVE_DESCRIPTION = description
+	def __init__(self, name, type, category, power, accuracy, pp, description):
+		self.MOVE_NAME = name
+		self.MOVE_TYPE = type
+		self.MOVE_CATEGORY = category
+		self.MOVE_POWER = power
+		self.MOVE_ACCURACY = accuracy
+		self.MOVE_PP = pp
+		self.MOVE_DESCRIPTION = description
 		
 	@property
 	def serialize(self):
@@ -53,6 +57,7 @@ class Move(db.Model):
 	
 class Pokemon(db.Model):
 	__tablename__ = "ALL_POKEMON"
+	__searchable__ = ['POKEMON_NAME', 'POKEMON_ID']
 	POKEMON_ID = db.Column(db.Integer, primary_key=True)
 	POKEMON_NAME = db.Column(db.VARCHAR(50))
 	POKEMON_HP = db.Column(db.Integer)
@@ -113,6 +118,7 @@ class Pokemon(db.Model):
 
 class Routes(db.Model):
 	__tablename__ = "ALL_ROUTES"
+	__searchable__ = ['ROUTE_NAME', 'ROUTE_REGION', 'ROUTE_NORTH_EXIT', 'ROUTE_SOUTH_EXIT', 'ROUTE_EAST_EXIT', 'ROUTE_WEST_EXIT', 'ROUTE_MINI_DESCRIPTION']
 	ID = db.Column(db.Integer, primary_key=True)
 	ROUTE_NAME = db.Column(db.VARCHAR(50))
 	ROUTE_REGION = db.Column(db.VARCHAR(50))
@@ -122,8 +128,8 @@ class Routes(db.Model):
 	ROUTE_WEST_EXIT = db.Column(db.VARCHAR(50))
 	ROUTE_ACCESS_TO = db.Column(db.VARCHAR(50))
 	ROUTE_MINI_DESCRIPTION = db.Column(db.VARCHAR(50))
-	ROUTE_MAIN_DESCRIPTION = db.Column(db.TEXT)
-	ROUTE_TRIVIA = db.Column(db.TEXT)
+	ROUTE_MAIN_DESCRIPTION = db.Column(db.BLOB)
+	ROUTE_TRIVIA = db.Column(db.BLOB)
 
 	def __init__(self, name, region, nExit, sExit, eExit, wExit, access, mini, main, trivia):
 		self.ROUTE_NAME = name;
@@ -277,7 +283,7 @@ class RouteImages(db.Model):
 	__tablename__ = "ROUTE_IMGS"
 
 	ID = db.Column(db.Integer, primary_key=True)
-	ROUTE_NAME = db.Column(db.VARCHAR(50), db.ForeignKey("ALL_ROUTES.ROUTE_NAME"))
+	ROUTE_NAME = db.Column(db.VARCHAR(50))
 	ROUTE_GEN = db.Column(db.VARCHAR(50))
 	ROUTE_IMG = db.Column(db.VARCHAR(256))
 
@@ -306,10 +312,6 @@ class RouteItems(db.Model):
 		self.ROUTE_ITEM_IMG = iImage
 		self.ROUTE_ITEM_GAMES = iGame
 		self.ROUTE_ITEM_METHOD = iMethod
-
-	@staticmethod
-	def get(routeName):
-		return RouteItems.query.filter_by(ROUTE_NAME=routeName)
 
 class RoutePokemon(db.Model):
 	__tablename__ = "ROUTE_POKEMON"
@@ -346,7 +348,7 @@ class RouteTrainers(db.Model):
 	ID = db.Column(db.Integer, primary_key=True)
 	ROUTE_NAME = db.Column(db.VARCHAR(50))
 	ROUTE_TRAINER_NAME = db.Column(db.VARCHAR(50))
-	ROUTE_TRAINER_GEN = db.Column(db.VARCHAR(50))
+	ROUTE_TRIANER_GEN = db.Column(db.VARCHAR(50))
 	ROUTE_TRAINER_REWARD = db.Column(db.VARCHAR(50))
 	ROUTE_TRAINER_IMG = db.Column(db.VARCHAR(256))
 
@@ -357,8 +359,9 @@ class RouteTrainers(db.Model):
 		self.ROUTE_TRAINER_REWARD = tReward
 		self.ROUTE_TRAINER_IMG = tImg
 
-	@staticmethod
-	def get(routeName):
-		return RouteTrainers.query.filter_by(ROUTE_NAME=routeName)
+flask.ext.whooshalchemy.whoosh_index(app, Move)
+flask.ext.whooshalchemy.whoosh_index(app, Pokemon)
+flask.ext.whooshalchemy.whoosh_index(app, Routes)
+
 
 

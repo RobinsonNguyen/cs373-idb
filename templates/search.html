@@ -6,13 +6,32 @@
 
 	{% block content %}
 		<h2 style="text-align: center;">Search Results for: "
-			{% for term in terms %} 
+			{% for term in terms %}
 				{{term}}
 				{% if not loop.last %}
 					, 
-				{% endif %} 
+				{% endif %}
 			{% endfor %}"</h2>
 
+
+		<h4> Pokemon </h4>
+		{% for pokemon in results['pokemon'] %} 
+			{{pokemon.POKEMON_NAME}}
+			</br> 
+			{{pokemon}}
+		{% endfor %}
+
+		<h4> Moves </h4>
+		{% for move in results['moves'] %} 
+			</br> 
+			{{move}}
+		{% endfor %}
+
+		<h4> Locations </h4>
+		{% for loc in results['routes'] %} 
+			</br> 
+			{{loc}}
+		{% endfor %}
 
 		
 	{% endblock %}
