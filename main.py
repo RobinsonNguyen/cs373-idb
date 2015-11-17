@@ -163,7 +163,7 @@ def delete_moves(id):
 # politicians
 # -----------
 @app.route('/politicians')
-def moves():
+def politicians():
     democratic_politicians = politician_controller()
     return render_template('politicians.html', politicians=democratic_politicians)
 # -----
