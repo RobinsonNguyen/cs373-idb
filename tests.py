@@ -2,7 +2,6 @@
 from unittest import main, TestCase
 from models import Pokemon, Move, Routes
 from models import db
-from flask import Flask
 
 
 class UnitTestModels(TestCase):
@@ -81,59 +80,63 @@ class UnitTestModels(TestCase):
 	# 	self.assertEqual(p.pp, 100)
 	# 	self.assertEqual(p.description, 'A strong punch')
 
-	def test_location_1(self):
-		location = Routes.get('Pallet Town')
-		p = {c.name: getattr(location, c.name) for c in location.__table__.columns}
-		self.assertEqual(p['ID'], 1)
-		self.assertEqual(p['ROUTE_NAME'], 'Pallet Town')
-		self.assertEqual(p['ROUTE_REGION'], 'Kanto')
+	# def test_location_1(self):
+	# 	location = Routes.get('Pallet Town')
+	# 	p = {c.name: getattr(location, c.name) for c in location.__table__.columns}
+	# 	self.assertEqual(p['ID'], 1)
+	# 	self.assertEqual(p['ROUTE_NAME'], 'Pallet Town')
+	# 	self.assertEqual(p['ROUTE_REGION'], 'Kanto')
 
-		# allRoutes = RouteContainer()
-		# self.assertEqual(allRoutes.routes[0].region, "Kanto")
-		# self.assertEqual(allRoutes.routes[0].name, "Route 15")
-		# self.assertEqual(allRoutes.routes[0].nextRoute, "Route 16")
-		# self.assertEqual(allRoutes.routes[0].pokemon[0].name, "Oddish")
-		# self.assertEqual(allRoutes.routes[0].trainers[1].name, "Biker Alex")
-		# self.assertEqual(allRoutes.routes[0].items[0].name, "Rain-dance")
+	# 	# allRoutes = RouteContainer()
+	# 	# self.assertEqual(allRoutes.routes[0].region, "Kanto")
+	# 	# self.assertEqual(allRoutes.routes[0].name, "Route 15")
+	# 	# self.assertEqual(allRoutes.routes[0].nextRoute, "Route 16")
+	# 	# self.assertEqual(allRoutes.routes[0].pokemon[0].name, "Oddish")
+	# 	# self.assertEqual(allRoutes.routes[0].trainers[1].name, "Biker Alex")
+	# 	# self.assertEqual(allRoutes.routes[0].items[0].name, "Rain-dance")
 
-	def test_location_2(self):
-		location = Routes.get_id(1)
-		p = {c.name: getattr(location, c.name) for c in location.__table__.columns}
-		self.assertEqual(p['ID'], 1)
-		self.assertEqual(p['ROUTE_NAME'], 'Pallet Town')
-		self.assertEqual(p['ROUTE_REGION'], 'Kanto')
-		# allRoutes = RouteContainer()
-		# self.assertEqual(allRoutes.routes[1].region, "Johto")
-		# self.assertEqual(allRoutes.routes[1].name, "Route 30")
-		# self.assertEqual(allRoutes.routes[1].prevRoute, "Route 29")
-		# self.assertEqual(allRoutes.routes[1].pokemon[0].name, "Poliwhirl")
-		# self.assertEqual(allRoutes.routes[1].trainers[0].name, "Youngster Joey")
-		# self.assertEqual(allRoutes.routes[1].items[0].name, "Potion")
+	# def test_location_2(self):
+	# 	location = Routes.get_id(1)
+	# 	p = {c.name: getattr(location, c.name) for c in location.__table__.columns}
+	# 	self.assertEqual(p['ID'], 1)
+	# 	self.assertEqual(p['ROUTE_NAME'], 'Pallet Town')
+	# 	self.assertEqual(p['ROUTE_REGION'], 'Kanto')
+	# 	# allRoutes = RouteContainer()
+	# 	# self.assertEqual(allRoutes.routes[1].region, "Johto")
+	# 	# self.assertEqual(allRoutes.routes[1].name, "Route 30")
+	# 	# self.assertEqual(allRoutes.routes[1].prevRoute, "Route 29")
+	# 	# self.assertEqual(allRoutes.routes[1].pokemon[0].name, "Poliwhirl")
+	# 	# self.assertEqual(allRoutes.routes[1].trainers[0].name, "Youngster Joey")
+	# 	# self.assertEqual(allRoutes.routes[1].items[0].name, "Potion")
 
-	def test_location_3(self):
-		locations = Routes.get_all()
-		p = []
-		for route in locations:
-			p.append({c.name: getattr(route, c.name) for c in route.__table__.columns})
-		self.assertEqual(p[0]['ID'], 1)
-		self.assertEqual(p[0]['ROUTE_NAME'], 'Pallet Town')
-		self.assertEqual(p[0]['ROUTE_REGION'], 'Kanto')
-		self.assertEqual(p[1]['ID'], 2)
-		self.assertEqual(p[1]['ROUTE_NAME'], 'Viridian City')
-		self.assertEqual(p[1]['ROUTE_REGION'], 'Kanto')
-		# allRoutes = RouteContainer()
-		# self.assertEqual(allRoutes.routes[2].region, "Johto")
-		# self.assertEqual(allRoutes.routes[2].name, "Route 31")
-		# self.assertEqual(allRoutes.routes[2].nextRoute, "Route 32")
-		# self.assertEqual(allRoutes.routes[2].pokemon[0].name, "Poliwag")
-		# self.assertEqual(allRoutes.routes[2].trainers[0].name, "Bug Catcher Wade")
-		# self.assertEqual(allRoutes.routes[2].items[0].name, "Rest")
+	# def test_location_3(self):
+	# 	locations = Routes.get_all()
+	# 	p = []
+	# 	for route in locations:
+	# 		p.append({c.name: getattr(route, c.name) for c in route.__table__.columns})
+	# 	self.assertEqual(p[0]['ID'], 1)
+	# 	self.assertEqual(p[0]['ROUTE_NAME'], 'Pallet Town')
+	# 	self.assertEqual(p[0]['ROUTE_REGION'], 'Kanto')
+	# 	self.assertEqual(p[1]['ID'], 2)
+	# 	self.assertEqual(p[1]['ROUTE_NAME'], 'Viridian City')
+	# 	self.assertEqual(p[1]['ROUTE_REGION'], 'Kanto')
+	# 	# allRoutes = RouteContainer()
+	# 	# self.assertEqual(allRoutes.routes[2].region, "Johto")
+	# 	# self.assertEqual(allRoutes.routes[2].name, "Route 31")
+	# 	# self.assertEqual(allRoutes.routes[2].nextRoute, "Route 32")
+	# 	# self.assertEqual(allRoutes.routes[2].pokemon[0].name, "Poliwag")
+	# 	# self.assertEqual(allRoutes.routes[2].trainers[0].name, "Bug Catcher Wade")
+	# 	# self.assertEqual(allRoutes.routes[2].items[0].name, "Rest")
 
-	# def test_add_pokemon_1(self):
-	# 	poketest = Pokemon(POKEMON_ID = 0, POKEMON_NAME = "Lazy Fox", POKEMON_HEIGHT = 2)
-	# 	db.session.add(poketest)
-	# 	db.session.commit()
-	# 	db.session.delete(Pokemon.query.filter_by(POKEMON_ID=0).first())
+	def test_add_pokemon_1(self):
+		poketest = Pokemon(POKEMON_ID=0, POKEMON_NAME = "Lazy Fox",POKEMON_HP=1,POKEMON_ATK=2,POKEMON_DEF=3
+		,POKEMON_SPATK=4,POKEMON_SPDEF=5, POKEMON_SPD=6,POKEMON_HEIGHT = 2,POKEMON_WEIGHT=2, POKEMON_IMG="nada")
+
+		db.session.add(poketest)
+		db.session.commit()
+		test = Pokemon.query.filter_by(POKEMON_ID=0).first()
+		self.assertEqual(test.POKEMON_NAME, "Lazy Fox")
+		db.session.delete(test)
 
 if __name__ == "__main__" : 
 	main()
