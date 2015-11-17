@@ -138,7 +138,8 @@ class UnitTestModels(TestCase):
 		db.session.commit()
 
 	def add_move_1(self):
-		movetest = Move("Hiyaahh","Cool","nada",0,0,0,"nada")
+		# movetest = Move("Hiyaahh","Cool","nada",0,0,0,"nada")
+		movetest = Move(MOVE_ID=0,MOVE_NAME="Hiyaahh",)
 		db.session.add(movetest)
 		db.session.commit()
 		test = Move.query.filter_by(MOVE_NAME="Hiyaahh").first()
