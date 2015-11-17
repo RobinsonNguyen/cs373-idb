@@ -359,5 +359,9 @@ class RouteTrainers(db.Model):
 		self.ROUTE_TRAINER_REWARD = tReward
 		self.ROUTE_TRAINER_IMG = tImg
 
+flask.ext.whooshalchemy.whoosh_index(app, Move)
+flask.ext.whooshalchemy.whoosh_index(app, Pokemon)
+flask.ext.whooshalchemy.whoosh_index(app, Routes)
+
 
 
