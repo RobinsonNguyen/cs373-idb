@@ -13,7 +13,7 @@
 		<div class="row" style="margin: 4px;" onload="lowestGen()">
 			<div class="panel panel-primary col-sm-4" style="background-color: #71AD64; border: 2px solid #4AA14D;">
 				<div class="panel-heading" style="background: #A2E0A3; border: 2px solid #4AA14D;">
-					<h3 class="panel-title" style="text-align: center; color: black;">{{ route.ROUTE_NAME }}</h3>
+					<h3 class="panel-title" style="text-align: center; color: black;">{{ route[0].ROUTE_NAME }}</h3>
 				</div>
 				<div class="text-center">
 					<div class="btn-group" roll="group" style="padding: 4px;" align="center">
@@ -52,26 +52,26 @@
 					<div>
 						<img class="img-responsive center-block" src="../static/res/RouteIMGS/{{ route.ROUTE_IMG }}"/>
 						{% for r in routes %}
-							{{ r.ROUTE_IMG }}
+							1
 						{% endfor %}
 					</div>
 					<br>
-					{{ route.ROUTE_MAIN_DESCRIPTION }}
+					{{ route[0].ROUTE_MAIN_DESCRIPTION }}
 				</div>
 				<hr>
 				<div class="panel-body" style="color: black;">
 					<table align="center">
 						<tbody>
 							<tr>
-								<td colspan=5 align="center"><a href="/location/{{ route.ROUTE_NORTH_EXIT }}">{{ route.ROUTE_NORTH_EXIT }}</a></td>
+								<td colspan=5 align="center"><a href="/location/{{ route.ROUTE_NORTH_EXIT }}">{{ route[0].ROUTE_NORTH_EXIT }}</a></td>
 							</tr>
 							<tr>
-								<td><a href="/location/{{ route.ROUTE_EAST_EXIT }}">{{ route.ROUTE_EAST_EXIT }}</a></td>
+								<td><a href="/location/{{ route.ROUTE_EAST_EXIT }}">{{ route[0].ROUTE_EAST_EXIT }}</a></td>
 								<td colspan=2></td>
-								<td><a href="/location/{{ route.ROUTE_WEST_EXIT }}">{{ route.ROUTE_WEST_EXIT }}</a></td>
+								<td><a href="/location/{{ route.ROUTE_WEST_EXIT }}">{{ route[0].ROUTE_WEST_EXIT }}</a></td>
 							</tr>
 							<tr>
-								<td colspan=5 align="center"><a href="/location/{{ route.ROUTE_SOUTH_EXIT }}">{{ route.ROUTE_SOUTH_EXIT }}</a></td>
+								<td colspan=5 align="center"><a href="/location/{{ route.ROUTE_SOUTH_EXIT }}">{{ route[0].ROUTE_SOUTH_EXIT }}</a></td>
 							</tr>
 						</tbody>
 					</table>
@@ -117,7 +117,7 @@
 					</div>
 
 					<div role="tabpanel" class="tab-pane fade in active" id="trainers">
-						<table class="table" style="border: 2px solid #4AA14D; color: #000000" data-toggle="table" data-pagination="true" data-page-list="[10, 25, 50, 100, ALL]" data-toggle="table" data-classes="table table-hover">
+						<table class="table" style="border: 2px solid #4AA14D; color: #000000" data-toggle="table" data-pagination="true" data-page-list="[10, 25, 50, 100, ALL]" data-toggle="table" data-classes="table table-hover" style="display:none">
 							<thead>
 								<tr>
 									<th width="55%" data-sortable="true">Name</th>
