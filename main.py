@@ -170,7 +170,7 @@ def search(query):
 
     for term in terms:
         p_results = Pokemon.query.whoosh_search(term)
-        m_results = Moves.query.whoosh_search(term)
+        m_results = Move.query.whoosh_search(term)
         l_results = Routes.query.whoosh_search(term)
         for p in p_results:
             if not contains(pokemon_results, lambda x: x.id == p.id):
