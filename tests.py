@@ -135,6 +135,7 @@ class UnitTestModels(TestCase):
 		db.session.commit()
 		test = Pokemon.query.filter_by(POKEMON_ID=0).first()
 		self.assertEqual(test.POKEMON_NAME, "Lazy Fox")
+		self.assertEqual(True,False)
 		db.session.delete(test)
 
 if __name__ == "__main__" : 
