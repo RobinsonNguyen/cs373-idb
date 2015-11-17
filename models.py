@@ -19,7 +19,7 @@ class Move(db.Model):
 	MOVE_POWER = db.Column(db.Integer)
 	MOVE_ACCURACY = db.Column(db.Integer)
 	MOVE_PP = db.Column(db.Integer)
-	MOVE_DESCRIPTION = db.Column(db.BLOB)
+	MOVE_DESCRIPTION = db.Column(db.TEXT)
 	
 	# def __init__(self, name, type, category, power, accuracy, pp, description):
 	# 	self.MOVE_NAME = name
