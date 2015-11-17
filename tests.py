@@ -129,9 +129,7 @@ class UnitTestModels(TestCase):
 	# 	# self.assertEqual(allRoutes.routes[2].items[0].name, "Rest")
 
 	def test_add_pokemon_1(self):
-		poketest = Pokemon(POKEMON_ID=0, POKEMON_NAME = "Lazy Fox",POKEMON_HP=1,POKEMON_ATK=2,POKEMON_DEF=3
-		,POKEMON_SPATK=4,POKEMON_SPDEF=5, POKEMON_SPD=6,POKEMON_HEIGHT = 2,POKEMON_WEIGHT=2, POKEMON_IMG="nada")
-
+		poketest = Pokemon(POKEMON_ID=0, POKEMON_NAME = "Lazy Fox",POKEMON_HP=1,POKEMON_ATK=2,POKEMON_DEF=3,POKEMON_SPATK=4,POKEMON_SPDEF=5, POKEMON_SPD=6,POKEMON_HEIGHT = 2,POKEMON_WEIGHT=2,POKEMON_IMG="nada")
 		db.session.add(poketest)
 		db.session.commit()
 		test = Pokemon.query.filter_by(POKEMON_ID=0).first()
