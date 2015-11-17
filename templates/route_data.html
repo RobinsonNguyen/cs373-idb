@@ -51,9 +51,9 @@
 				<div class="panel-body" style="color: black;">
 					<div>
 						<img class="img-responsive center-block" src="../static/res/RouteIMGS/{{ route.ROUTE_IMG }}"/>
-						{{% for r in routes %}}
+						{% for r in routes %}
 							{{ r.ROUTE_IMG }}
-						{{% endfor %}}
+						{% endfor %}
 					</div>
 					<br>
 					{{ route.ROUTE_MAIN_DESCRIPTION }}
