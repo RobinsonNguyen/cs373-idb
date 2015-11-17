@@ -1,10 +1,9 @@
 #!/usr/bin/env python3
 from unittest import main, TestCase
 from models import Pokemon, Move, Routes
-# from pokemonModel import PokemonContainer
-# from movesModel import Moves
-# from routeModel import RouteContainer
-# from models import PokemonContainer, Moves, RouteContainer
+from models import db
+from flask import Flask
+
 
 class UnitTestModels(TestCase):
 	def test_pokemon_1(self):
@@ -129,6 +128,12 @@ class UnitTestModels(TestCase):
 		# self.assertEqual(allRoutes.routes[2].pokemon[0].name, "Poliwag")
 		# self.assertEqual(allRoutes.routes[2].trainers[0].name, "Bug Catcher Wade")
 		# self.assertEqual(allRoutes.routes[2].items[0].name, "Rest")
+
+	# def test_add_pokemon_1(self):
+	# 	poketest = Pokemon(POKEMON_ID = 0, POKEMON_NAME = "Lazy Fox", POKEMON_HEIGHT = 2)
+	# 	db.session.add(poketest)
+	# 	db.session.commit()
+	# 	db.session.delete(Pokemon.query.filter_by(POKEMON_ID=0).first())
 
 if __name__ == "__main__" : 
 	main()
