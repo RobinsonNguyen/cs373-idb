@@ -143,7 +143,7 @@ class Routes(db.Model):
 		
 	@staticmethod
 	def get(name):
-		return Routes.query.join(RouteImages).filter_by(ROUTE_NAME=name)
+		return Routes.query.filter_by(ROUTE_NAME=name).first()
 
 	@staticmethod
 	def get_id(id):

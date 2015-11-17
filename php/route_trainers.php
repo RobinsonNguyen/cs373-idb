@@ -25,7 +25,7 @@
 				$tname = $r['name'];
 				$gen = $r['generation'];
 				$reward = $r['reward'];
-				$img = "SomeScrapingData/TrainerSprites/" . $r['trainerSprite'];
+				$img = $r['trainerSprite'];
 
 				//inserting the mothafuckin row bitch
 				mysqli_stmt_execute($st);
