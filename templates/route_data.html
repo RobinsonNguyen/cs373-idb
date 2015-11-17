@@ -113,11 +113,13 @@
 						</table>
 					</div>
 
-					<div role="tabpanel" class="tab-pane fade in active" id="trainers">
-						<table class="table" style="border: 2px solid #4AA14D; color: #000000" data-toggle="table" data-pagination="true" data-page-list="[10, 25, 50, 100, ALL]" data-toggle="table" data-classes="table table-hover" style="display:none">
+					<div role="tabpanel" class="tab-pane fade in" id="trainers">
+						<table class="table" style="border: 2px solid #4AA14D; color: #000000" data-toggle="table" data-pagination="true" data-page-list="[10, 25, 50, 100, ALL]" data-toggle="table" data-classes="table table-hover">
 							<thead>
 								<tr>
 									<th width="55%" data-sortable="true">Name</th>
+									<th width="55%" data-sortable="true">Reward</th>
+									<th width="55%" data-sortable="true">Generation</th>
 								</tr>
 							</thead>
 							<tbody>
@@ -125,7 +127,7 @@
 								<tr>
 									<td><img src="../static/res/TrainerSprites/{{ trainer.ROUTE_TRAINER_IMG }}"/> {{ trainer.ROUTE_TRAINER_NAME }}</td>
 									<td>{{ trainer.ROUTE_TRAINER_REWARD }}</td>
-									<td>{{ trainer.ROUTE_TRAINER_GENE }}</td>
+									<td>{{ trainer.ROUTE_TRAINER_GEN }}</td>
 								</tr>
 								{% endfor %}
 							</tbody>
