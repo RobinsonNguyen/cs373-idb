@@ -35,7 +35,6 @@ class UnitTestModels(TestCase):
 		p = []
 		for poke in pokemon:
 			p.append({c.name: getattr(poke, c.name) for c in poke.__table__.columns})
-		print("Pokemon is: ", p[0]['POKEMON_ID'])
 		self.assertEqual(p[0]['POKEMON_ID'], 1)
 		self.assertEqual(p[0]['POKEMON_NAME'], 'Bulbasaur')
 		self.assertEqual(p[1]['POKEMON_ID'], 2)
@@ -137,6 +136,16 @@ class UnitTestModels(TestCase):
 		self.assertEqual(test.POKEMON_NAME, "Lazy Fox")
 		db.session.delete(test)
 		db.session.commit()
+
+	def add_move_1(self):
+		movetest = Move("Hiyaahh")
+		db.session.add(movetest)
+		db.session.commit()
+		test = Move.query.filter_by(MOVE_NAME="Hiyaahh").first()
+		self.assertEqual(test.MOVE_NAME, "Hiyaahh")
+		db.session.delete(test)
+		db.session.commit()
+
 
 if __name__ == "__main__" : 
 	main()
