@@ -51,7 +51,9 @@
 				<div class="panel-body" style="color: black;">
 					<div>
 						<img class="img-responsive center-block" src="../static/res/RouteIMGS/{{ route.ROUTE_IMG }}"/>
-						{{ route.ROUTE_IMG }}
+						{{% for r in routes %}}
+							{{ r.ROUTE_IMG }}
+						{{% endfor %}}
 					</div>
 					<br>
 					{{ route.ROUTE_MAIN_DESCRIPTION }}
@@ -79,7 +81,9 @@
 			<div class="col-sm-8">
 				<ul class="nav nav-tabs" role="tablist">
 					<li role="presentation" class="active"><a href="#pokemon" aria-controls="pokemon" role="tab" data-toggle="tab" class="loc-btn" style="border: 2px solid #4AA14D;">Wild Pokemon</a></li>
+
 					<li role="presentation"><a href="#trainers" aria-controls="trainers" role="tab" data-toggle="tab" class="loc-btn" style="border: 2px solid #4AA14D;">Trainers</a></li>
+
 					<li role="presentation"><a href="#items" aria-controls="items" role="tab" data-toggle="tab" class="loc-btn" style="border: 2px solid #4AA14D;">Items</a></li>
 				</ul>
 
@@ -113,7 +117,7 @@
 					</div>
 
 					<div role="tabpanel" class="tab-pane fade in active" id="trainers">
-						<table id="trainer-models" class="table" style="border: 2px solid #4AA14D; color: #000000" data-toggle="table" data-pagination="true" data-page-list="[10, 25, 50, 100, ALL]" data-toggle="table" data-classes="table table-hover">
+						<table class="table" style="border: 2px solid #4AA14D; color: #000000" data-toggle="table" data-pagination="true" data-page-list="[10, 25, 50, 100, ALL]" data-toggle="table" data-classes="table table-hover">
 							<thead>
 								<tr>
 									<th width="55%" data-sortable="true">Name</th>
