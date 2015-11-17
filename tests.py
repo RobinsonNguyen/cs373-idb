@@ -35,6 +35,7 @@ class UnitTestModels(TestCase):
 		p = []
 		for poke in pokemon:
 			p.append({c.name: getattr(poke, c.name) for c in poke.__table__.columns})
+		print(p[0]['POKEMON_ID'])
 		self.assertEqual(p[0]['POKEMON_ID'], 1)
 		self.assertEqual(p[0]['POKEMON_NAME'], 'Bulbasaur')
 		self.assertEqual(p[1]['POKEMON_ID'], 2)
