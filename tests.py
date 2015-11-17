@@ -147,6 +147,7 @@ class UnitTestModels(TestCase):
 	# 	db.session.commit()
 
 	def add_move_1(self):
+		print("IM IN THIS TEST")
 		# movetest = Move("Hiyaahh","Cool","nada",0,0,0,"nada")
 		movetest = Move(MOVE_ID=0,MOVE_NAME="Hiyaahh")
 		db.session.add(movetest)
