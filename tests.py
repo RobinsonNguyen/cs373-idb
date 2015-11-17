@@ -1,8 +1,8 @@
 #!/usr/bin/env python3
 from unittest import main, TestCase
 from models import Pokemon, Move, Routes
-from models import db
-from flask import Flask
+# from models import db
+# from flask import Flask
 
 
 class UnitTestModels(TestCase):
