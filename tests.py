@@ -128,26 +128,25 @@ class UnitTestModels(TestCase):
 	# 	# self.assertEqual(allRoutes.routes[2].trainers[0].name, "Bug Catcher Wade")
 	# 	# self.assertEqual(allRoutes.routes[2].items[0].name, "Rest")
 
-	# def test_add_pokemon_1(self):
-	# 	poketest = Pokemon("Lazy Fox",1,2,3,4,5,6,2,2,"nada")
-	# 	db.session.add(poketest)
-	# 	db.session.commit()
-	# 	test = Pokemon.query.filter_by(POKEMON_NAME="Lazy Fox").first()
-	# 	self.assertEqual(test.POKEMON_NAME, "Lazy Fox")
-	# 	db.session.delete(test)
-	# 	db.session.commit()
+	def test_add_pokemon_1(self):
+		poketest = Pokemon("Lazy Fox",1,2,3,4,5,6,2,2,"nada")
+		db.session.add(poketest)
+		db.session.commit()
+		test = Pokemon.query.filter_by(POKEMON_NAME="Lazy Fox").first()
+		self.assertEqual(test.POKEMON_NAME, "Lazy Fox")
+		db.session.delete(test)
+		db.session.commit()
 
-	# def add_pokemon_2(self):
-	# 	poketest = Pokemon("Lazy Turtle",1,2,3,4,5,6,2,2,"nada")
-	# 	db.session.add(poketest)
-	# 	db.session.commit()
-	# 	test = Pokemon.query.filter_by(POKEMON_NAME="Lazy Turtle").first()
-	# 	self.assertEqual(test.POKEMON_NAME, "Lazy Turtle")
-	# 	db.session.delete(test)
-	# 	db.session.commit()
+	def test_add_pokemon_2(self):
+		poketest = Pokemon("Lazy Turtle",1,2,3,4,5,6,2,2,"nada")
+		db.session.add(poketest)
+		db.session.commit()
+		test = Pokemon.query.filter_by(POKEMON_NAME="Lazy Turtle").first()
+		self.assertEqual(test.POKEMON_NAME, "Lazy Turtle")
+		db.session.delete(test)
+		db.session.commit()
 
-	def add_move_1(self):
-		print("IM IN THIS TEST")
+	def test_add_move_1(self):
 		# movetest = Move("Hiyaahh","Cool","nada",0,0,0,"nada")
 		movetest = Move(MOVE_ID=0,MOVE_NAME="Hiyaahh")
 		db.session.add(movetest)
