@@ -18,29 +18,7 @@
 				<div class="text-center">
 					<div class="btn-group" roll="group" style="padding: 4px;" align="center">
 						{% for gen in images %}
-							{% if gen.ROUTE_GEN == "Generation I" %}
-								<button type="button" class="btn btn-sm" style="color:black;" onclick="genI()">Gen I</button>
-							{% endif %}
-
-							{% if gen.ROUTE_GEN == "Generation II" %}
-								<button type="button" class="btn btn-sm" style="color:black;" onclick="genII()">Gen II</button>
-							{% endif %}
-
-							{% if gen.ROUTE_GEN == "Generation III" %}
-								<button type="button" class="btn btn-sm" style="color:black;" onclick="genIII()">Gen III</button>
-							{% endif %}
-
-							{% if gen.ROUTE_GEN == "Generation IV" %}
-								<button type="button" class="btn btn-sm" style="color:black;" onclick="genIV()">Gen IV</button>
-							{% endif %}
-
-							{% if gen.ROUTE_GEN == "Generation V" %}
-								<button type="button" class="btn btn-sm" style="color:black;" onclick="genV()">Gen V</button>
-							{% endif %}
-
-							{% if gen.ROUTE_GEN == "Generation VI" %}
-								<button type="button" class="btn btn-sm" style="color:black;" onclick="genVI()">Gen VI</button>
-							{% endif %}
+								<button type="button" class="btn btn-sm" style="color:black;">{{ gen.ROUTE_GEN }}</button>
 						{% endfor %}
 
 						
@@ -139,8 +117,8 @@
 							<thead>
 								<tr>
 									<th width="55%" data-sortable="true">Name</th>
-									<th width="55%" data-sortable="true">Method</th>
 									<th width="55%" data-sortable="true">Generation</th>
+									<th width="55%" data-sortable="true">Method</th>
 								</tr>
 							</thead>
 							<tbody>
