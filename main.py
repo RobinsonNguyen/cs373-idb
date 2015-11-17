@@ -182,7 +182,7 @@ def search(query):
             if not contains(loc_results, lambda x: x.id == l.id):
                 loc_results.append(l)
 
-    results = [ pokemon_results, moves_results, loc_results]
+    results = { "pokemon":pokemon_results, "moves":moves_results, "routes":loc_results}
 
     return render_template('search.html', terms=terms, results=results)
 
