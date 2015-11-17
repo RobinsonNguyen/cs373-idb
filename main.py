@@ -35,7 +35,7 @@ def get_test_results():
 @app.route('/location/<name>')
 def location_id(name=None):
     if name is not None:
-        return render_template("route_data.html", route=Routes.get(name), pokemon=RoutePokemon.get(name), images=RouteImages.get(name), trainers=RouteTrainers.get(name), items=RouteItems.get(name))
+        return render_template("route_data.html", route=Routes.get(name), pokemon=RoutePokemon.get(name), images=RouteImages.get(name))
     return render_template('location.html', routes=Routes.get_all())
 
 #=============API==========#
@@ -162,9 +162,29 @@ def delete_moves(id):
 # search
 # -----
 @app.route('/search/<term>')
-def search(term):
-    terms = term.split()
-    return render_template('search.html', terms=terms)
+def search(query):
+    terms = query.split()
+    pokemon_results = []
+    moves_results = []
+    loc_results = []
+
+    for term in terms:
+        p_results = Pokemon.query.whoosh_search(term)
+        m_results = Moves.query.whoosh_search(term)
+        l_results = Routes.query.whoosh_search(term)
+        for p in p_results:
+            if not contains(pokemon_results, lambda x: x.id == p.id):
+                pokemon_results.append(p)
+        for m in m_results:
+            if not contains(moves_results, lambda x: x.id == m.id):
+                moves_results.append(m)
+        for l in l_results:
+            if not contains(loc_results, lambda x: x.id == l.id):
+                loc_results.append(l)
+
+    results = [ pokemon_results, moves_results, loc_results]
+
+    return render_template('search.html', terms=terms, results=results)
 
 if __name__ == '__main__':
     #create_db()
