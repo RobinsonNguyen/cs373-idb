@@ -22,7 +22,7 @@
 		$name = $row['name'];
     	foreach($row['items'] as $r){
 			$iname = $r['name'];
-			$img = "SomeScrapingData/itemSprites/" . $r['item sprite'];
+			$img = $r['item sprite'];
 			$method = $r['item method'];
 			$games = $r['item games'];
 
