@@ -161,7 +161,7 @@ def delete_moves(id):
 # -----
 # search
 # -----
-@app.route('/search/<term>')
+@app.route('/search/<query>')
 def search(query):
     terms = query.split()
     pokemon_results = []
