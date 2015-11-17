@@ -133,6 +133,27 @@
 							</tbody>
 						</table>
 					</div>
+
+					<div role="tabpanel" class="tab-pane fade in" id="items">
+						<table class="table" style="border: 2px solid #4AA14D; color: #000000" data-toggle="table" data-pagination="true" data-page-list="[10, 25, 50, 100, ALL]" data-toggle="table" data-classes="table table-hover">
+							<thead>
+								<tr>
+									<th width="55%" data-sortable="true">Name</th>
+									<th width="55%" data-sortable="true">Method</th>
+									<th width="55%" data-sortable="true">Generation</th>
+								</tr>
+							</thead>
+							<tbody>
+								{% for item in items %}
+								<tr>
+									<td><img src="../static/res/ItemSprites/{{ item.ROUTE_ITEM_IMG }}"/> {{ item.ROUTE_ITEM_NAME }}</td>
+									<td>{{ item.ROUTE_ITEM_METHOD }}</td>
+									<td>{{ item.ROUTE_ITEM_GAMES }}</td>
+								</tr>
+								{% endfor %}
+							</tbody>
+						</table>
+					</div>
 				</div>
 			</div>
 		</div>
