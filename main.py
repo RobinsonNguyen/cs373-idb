@@ -169,18 +169,19 @@ def search(query):
     loc_results = []
 
     for term in terms:
-        p_results = Pokemon.query.whoosh_search(term)
-        m_results = Move.query.whoosh_search(term)
-        l_results = Routes.query.whoosh_search(term)
+        p_results = Pokemon.search(term)
+        #m_results = Move.query.whoosh_search(term)
+        #l_results = Routes.query.whoosh_search(term)
 
         for p in p_results:
                 pokemon_results.append(p)
-        for m in m_results:
-                moves_results.append(m)
-        for l in l_results:
-                loc_results.append(l)
+        # for m in m_results:
+        #         moves_results.append(m)
+        # for l in l_results:
+        #         loc_results.append(l)
 
-    results = { "pokemon":pokemon_results, "moves":moves_results, "routes":loc_results}
+    #results = { "pokemon":pokemon_results, "moves":moves_results, "routes":loc_results}
+    results = { "pokemon":pokemon_results, "moves":{}, "routes":{}}
 
     return render_template('search.html', terms=terms, results=results)
 

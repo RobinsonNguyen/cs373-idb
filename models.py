@@ -99,6 +99,10 @@ class Pokemon(db.Model):
 			'moves' : test()}
 		print(dtest)
 		return dtest
+
+	@staticmethod
+	def search(query):
+		return Pokemon.query.whoosh_search(query)
 	
 	def test(self):
 		return {{'name' : 'Tackle', 'learn_type' : 'level' }}
