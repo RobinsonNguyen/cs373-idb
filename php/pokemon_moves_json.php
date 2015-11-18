@@ -24,6 +24,7 @@
     	foreach($row['moves'] as $r){
 			$mname = $r['name'];
 			$learn = $r['learn_type'];
+			$level = NULL
 			if (array_key_exists('level', $r)){
 				$level = $r['level'];
 			}
