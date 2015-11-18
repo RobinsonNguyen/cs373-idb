@@ -166,7 +166,7 @@ class UnitTestModels(TestCase):
 	def test_API_1(self):
 		r = requests.get("http://pokemasters.me/api/v1.0/pokemon/4/")
 		self.assertEqual(r.json()['pokemon']['POKEMON_NAME'], 'Charmander')
-		self.assertEqual(r.json()['pokemon']['POKEMON_SPATK'], '60')
+		self.assertEqual(r.json()['pokemon']['POKEMON_SPATK'], 60)
 
 	def test_API_2(self):
 		r = requests.get("http://pokemasters.me/api/v1.0/moves/56/")
