@@ -3,7 +3,22 @@ p{
 }
 
 .data{
+	height: auto;
+	display: none;
 	padding-left: 0em;
+}
+
+.show {
+    display: none; 
+}
+.hide:target + .show {
+    display: inline; 
+}
+.hide:target {
+    display: none; 
+}
+.hide:target ~ .list {
+    display:inline; 
 }
 
 .description{
@@ -29,4 +44,25 @@ tr:hover{
 
 h2{
 	color: black;
+}
+
+.hide, .show {
+	width: 30px;
+	height: 30px;
+	border-radius: 30px;
+	font-size: 20px;
+	color: #fff;
+	text-shadow: 0 1px 0 #666;
+	text-align: center;
+	text-decoration: none;
+	box-shadow: 1px 1px 2px #000;
+	background: #cccbbb;
+	opacity: .95;
+	margin-right: 0;
+	float: left;
+	margin-bottom: 25px;
+}
+
+.hide:hover, .show:hover {
+	font-weight: bold;
 }
