@@ -101,10 +101,15 @@ class Pokemon(db.Model):
 
 	@staticmethod
 	def search(query):
+		terms = query.split()
+
 		result = []
 
+		pokemon = Pokemon.query.whoosh_search(query, or_=True)
+		and_results = Pokemon.query.whoosh_search(query)
+
 		#search pokemon table
-		pokemon = Pokemon.query.whoosh_search(query)
+		#pokemon = Pokemon.query.whoosh_search(query)
 
 		for p in pokemon:
 			result.append(p)
