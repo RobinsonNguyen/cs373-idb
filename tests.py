@@ -160,7 +160,7 @@ class UnitTestModels(TestCase):
 	def test_API_1(self):
 		# test = urlopen("http://pokemasters.me/pokemon/Squirtle/")
 		r = requests.get("http://pokemasters.me/api/v1.0/pokemon/4/")
-		print(r.json())
+		print(r.json()['pokemon']['POKEMON_NAME'])
 
 if __name__ == "__main__" : 
 	main()
