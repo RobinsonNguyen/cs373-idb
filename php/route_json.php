@@ -21,6 +21,11 @@
     foreach ($json['routes'] as $row){
 		$route_name = $row['name'];
 		$region_name = $row['region'];
+		$nexit = "";
+		$sexit = "";
+		$eexit = "";
+		$wext = "";
+		$accessto = "";
     	foreach($row['NorthExit'] as $key => $item){
 			$nexit = $item . " ";
 	    }
