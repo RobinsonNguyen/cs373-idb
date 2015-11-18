@@ -1,8 +1,10 @@
 p{
+	color: black;
 	font-size: 1.2em;
 }
 
 .data{
+	display: none;
 	padding-left: 0em;
 }
 
@@ -27,6 +29,10 @@ tr:hover{
 	color: black;
 }
 
-h2{
+h2 h4{
+	color: black;
+}
+
+a{
 	color: black;
 }
