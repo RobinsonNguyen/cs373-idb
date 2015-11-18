@@ -104,6 +104,7 @@ class Pokemon(db.Model):
 	POKEMON_HEIGHT = db.Column(db.Integer)
 	POKEMON_WEIGHT = db.Column(db.Integer)
 	POKEMON_IMG = db.Column(db.VARCHAR(256))
+	POKEMON_EV = db.Column(db.VARCHAR(250))
 	
 	def __init__(self, name, hp, attack, defense, spAttack, spDefense, speed, height, weight, img):
 		self.POKEMON_NAME = name
