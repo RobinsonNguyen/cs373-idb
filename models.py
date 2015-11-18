@@ -84,7 +84,7 @@ class Pokemon(db.Model):
 		self.POKEMON_IMG = img
 		
 	def __repr__(self):
-		return '<name {}>'.format(self.name)
+		return '<name {}>'.format(self.POKEMON_NAME)
 	
 	@property
 	def serialize(self):
