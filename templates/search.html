@@ -32,5 +32,58 @@
 			{{loc}}
 		{% endfor %}
 
+
+		<div class="container col-sm-12">
+			<ul id="search-tabs" class="nav nav-tabs" role="tablist">
+				<li role="presentation" class="active"><a href="#pokemon" aria-controls="pokemon" role="tab" data-toggle="tab">Pokemon</a></li>
+				<li role="presentation" class="active"><a href="#moves" aria-controls="moves" role="tab" data-toggle="tab">Moves</a></li>
+				<li role="presentation"><a href="#locations" aria-controls="locations" role="tab" data-toggle="tab">Locations</a></li>
+			</ul>
+			<div class="tab-content">
+				<div role="tabpanel" class="tab-pane fade in active" id="pokemon">
+					<table class="table table-hover">
+						<thead>
+							<tr>
+								<th>Name</th>
+							</tr>
+						</thead>
+						<tbody>
+							<tr>
+								<td>Test</td>
+							</tr>
+						</tbody>
+					</table>
+				</div>
+				<div role="tabpanel" class="tab-pane fade in active" id="moves">
+					<table class="table table-hover">
+						<thead>
+							<tr>
+								<th>Name</th>
+							</tr>
+						</thead>
+						<tbody>
+							<tr>
+								<td>Test</td>
+							</tr>
+						</tbody>
+					</table>
+				</div>
+				<div role="tabpanel" class="tab-pane fade" id="locations">
+					<table class="table table-hover">
+						<thead>
+							<tr>
+								<th>Name</th>
+							</tr>
+						</thead>
+						<tbody>
+							<tr>
+								<td>Test</td>
+							</tr>
+						</tbody>
+					</table>
+				</div>
+			</div>
+		</div>
+
 		
 	{% endblock %}
