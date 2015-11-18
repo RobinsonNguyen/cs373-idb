@@ -15,7 +15,7 @@
 }
 
 body {
-	background: url(../static/res/location_wallpaper_2.png);
+	background: url(static/res/location_wallpaper_2.png);
 	background-repeat: no-repeat; 
 	background-size:cover;
 }
