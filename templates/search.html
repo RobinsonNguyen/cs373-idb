@@ -28,6 +28,7 @@
 			</ul>
 			<div class="tab-content">
 				<div role="tabpanel" class="tab-pane fade in active" id="pokemon">
+					{% if terms|length > 1 %}
 					<table class="table table-hover">
 						<thead>
 							<tr>
@@ -35,7 +36,7 @@
 							</tr>
 						</thead>
 						<tbody>
-							{% if results['pokemon']['and']|length > 1 %}
+							{% if results['pokemon']['and']|length > 0 %}
 								{% for pokemon in results['pokemon']['and'] %} 
 									<tr>
 										<td>{{pokemon.POKEMON_NAME}}</td>
@@ -55,7 +56,7 @@
 							</tr>
 						</thead>
 						<tbody>
-							{% if results['pokemon']['or']|length > 1 %}
+							{% if results['pokemon']['or']|length > 0 %}
 								{% for pokemon in results['pokemon']['or'] %} 
 									<tr>
 										<td>{{pokemon.POKEMON_NAME}}</td>
@@ -68,6 +69,8 @@
 							{% endif %}
 						</tbody>
 					</table>
+					{% endif %}
+
 				</div>
 				<div role="tabpanel" class="tab-pane fade" id="moves">
 					<table class="table table-hover">
