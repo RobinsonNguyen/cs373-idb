@@ -65,7 +65,7 @@
                                     <img class="img-poke" src="{{ url_for('static', filename='res/SPRITES/%s' % pokemon.POKEMON_IMG) }}" alt="">
                                 </a>
                             </div>
-                            <p> <b>Stats:</b> <a href="#hide1" class="hide">&uarr;</a><a href="#show1" class="show">&darr;</a> </p>
+                            <b>Stats:</b> <a href="#hide" class="hide" id="hide">&uarr;</a><a href="#show" class="show" id="show">&darr;</a>
                             <div class="data">
                                 <p><b>Learns at:</b> {{pokemon.POKEMON_LEVEL_LEARNED}}</p>
                                 <p><b>HP:</b> {{pokemon.POKEMON_HP}}</p>
