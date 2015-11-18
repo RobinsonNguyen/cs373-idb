@@ -4,7 +4,7 @@ $(document).ready(function(){
 		location.href = '/moves/' + e[0].trim();
 	});
 
-	$('.stats-header').click(function(e){
+	$('.stats').click(function(caller){
 	    $(this).children('p').slideToggle('slow');
 	});
 
