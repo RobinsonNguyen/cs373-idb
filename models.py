@@ -9,6 +9,7 @@ app.config['SQLALCHEMY_DATABASE_URI'] = 'mysql://root:pokemon@localhost/pokemast
 
 db = SQLAlchemy(app)
 
+
 class Move(db.Model):
 	__tablename__ = 'ALL_MOVES'
 	__searchable__ = ['MOVE_NAME', 'MOVE_TYPE', 'MOVE_CATEGORY']
@@ -53,7 +54,6 @@ class Move(db.Model):
 	def get_id(id):
 		return Move.query.filter_by(MOVE_ID=id).first()
 		
-
 	
 class Pokemon(db.Model):
 	__tablename__ = "ALL_POKEMON"
@@ -69,7 +69,6 @@ class Pokemon(db.Model):
 	POKEMON_HEIGHT = db.Column(db.Integer)
 	POKEMON_WEIGHT = db.Column(db.Integer)
 	POKEMON_IMG = db.Column(db.VARCHAR(256))
-	
 	
 	def __init__(self, name, hp, attack, defense, spAttack, spDefense, speed, height, weight, img):
 		self.POKEMON_NAME = name
@@ -102,7 +101,22 @@ class Pokemon(db.Model):
 
 	@staticmethod
 	def search(query):
-		return Pokemon.query.whoosh_search(query)
+		result = []
+
+		#search pokemon table
+		pokemon = Pokemon.query.whoosh_search(query)
+
+		for p in pokemon:
+			result.append(p)
+
+		#search evolutions
+		evolutions = Evolutions.query.whoosh_search(query)
+
+		#get pokemon from evolution
+		for evo in evolutions:
+			result.append(Pokemon.query.filter_by(POKEMON_NAME=evo.POKEMON_NAME).first())
+
+		return result
 	
 	def test(self):
 		return {{'name' : 'Tackle', 'learn_type' : 'level' }}
@@ -195,7 +209,7 @@ class Abilities(db.Model):
 
 class Evolutions(db.Model):
 	__tablename__ = "POKEMON_EVOLUTIONS"
-
+	__searchable__ = ['POKEMON_EVOLUTION']
 	ID = db.Column(db.Integer, primary_key=True)
 	POKEMON_ID = db.Column(db.Integer)
 	POKEMON_NAME = db.Column(db.VARCHAR(50))
@@ -373,6 +387,7 @@ class RouteTrainers(db.Model):
 
 flask.ext.whooshalchemy.whoosh_index(app, Move)
 flask.ext.whooshalchemy.whoosh_index(app, Pokemon)
+flask.ext.whooshalchemy.whoosh_index(app, Evolutions)
 flask.ext.whooshalchemy.whoosh_index(app, Routes)
 
 
