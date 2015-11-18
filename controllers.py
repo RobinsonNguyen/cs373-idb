@@ -13,7 +13,7 @@ def politician_controller():
 
 	democratic_politicians = []
 
-	for t in test:
+	for t in politicians:
 		poli = {}
 		for k, v in t.items():
 			if(k == 'first_name'):
