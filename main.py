@@ -171,6 +171,7 @@ def politicians():
 # -----
 @app.route('/search/<query>')
 def search(query):
+    terms = query.split()
     pokemon_results = Pokemon.search(query)
     moves_results = []
     loc_results = []
