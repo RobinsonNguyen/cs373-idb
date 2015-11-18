@@ -48,20 +48,8 @@ h2{
 }
 
 .hide, .show {
-	width: 30px;
-	height: 30px;
-	border-radius: 30px;
 	font-size: 20px;
-	color: #fff;
-	text-shadow: 0 1px 0 #666;
-	text-align: center;
-	text-decoration: none;
-	box-shadow: 1px 1px 2px #000;
-	background: #cccbbb;
-	opacity: .95;
-	margin-right: 0;
-	float: left;
-	margin-bottom: 25px;
+	color: black;
 }
 
 .hide:hover, .show:hover {
