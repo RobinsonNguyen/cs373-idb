@@ -65,13 +65,16 @@
                                     <img class="img-poke" src="{{ url_for('static', filename='res/SPRITES/%s' % pokemon.POKEMON_IMG) }}" alt="">
                                 </a>
                             </div>
-                            <p class="data"><b>Learns at:</b> {{pokemon.POKEMON_LEVEL_LEARNED}}</p>
-                            <p class="data"><b>HP:</b> {{pokemon.POKEMON_HP}}</p>
-                            <p class="data"><b>Attack:</b> {{pokemon.POKEMON_ATK}}</p>
-                            <p class="data"><b>Defense:</b> {{pokemon.POKEMON_DEF}}</p>
-                            <p class="data"><b>Speed:</b> {{pokemon.POKEMON_SPD}}</p>
-                            <p class="data"><b>Special Attack:</b> {{pokemon.POKEMON_SPATK}}</p>
-                            <p class="data"><b>Special Defense:</b> {{pokemon.POKEMON_SPDEF}}</p>
+                            <p class="stats"><b>Stats:</b> <a href="#hide1" class="hide">&uarr;</a><a href="#show1" class="show">&darr;</a></p>
+                            <div class="data">
+                                <p class="data"><b>Learns at:</b> {{pokemon.POKEMON_LEVEL_LEARNED}}</p>
+                                <p class="data"><b>HP:</b> {{pokemon.POKEMON_HP}}</p>
+                                <p class="data"><b>Attack:</b> {{pokemon.POKEMON_ATK}}</p>
+                                <p class="data"><b>Defense:</b> {{pokemon.POKEMON_DEF}}</p>
+                                <p class="data"><b>Speed:</b> {{pokemon.POKEMON_SPD}}</p>
+                                <p class="data"><b>Special Attack:</b> {{pokemon.POKEMON_SPATK}}</p>
+                                <p class="data"><b>Special Defense:</b> {{pokemon.POKEMON_SPDEF}}</p>
+                            </div>
                         </div>
 
                     {% endfor %}
