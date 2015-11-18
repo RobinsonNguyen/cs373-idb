@@ -31,14 +31,28 @@
 					<table class="table table-hover">
 						<thead>
 							<tr>
-								<th> </th>
+								<th> AND results</th>
 							</tr>
 						</thead>
 						<tbody>
-							{% for pokemon in results['pokemon'] %} 
+							{% for pokemon in results['pokemon']['and'] %} 
+								<tr>
+									<td>{{pokemon.POKEMON_NAME}}</td>
+								</tr>
+							{% endfor %}
+						</tbody>
+					</table>
+					<table class="table table-hover">
+						<thead>
 							<tr>
-								<td>{{pokemon.POKEMON_NAME}}</td>
+								<th> OR results</th>
 							</tr>
+						</thead>
+						<tbody>
+							{% for pokemon in results['pokemon']['or'] %} 
+								<tr>
+									<td>{{pokemon.POKEMON_NAME}}</td>
+								</tr>
 							{% endfor %}
 						</tbody>
 					</table>
