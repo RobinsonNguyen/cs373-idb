@@ -4,6 +4,7 @@ p{
 }
 
 .data{
+	display: none;
 	padding-left: 0em;
 }
 
