@@ -16,15 +16,15 @@ def politician_controller():
 	for t in test:
 		poli = {}
 		for k, v in t.items():
-			if(k == 'first_name')
+			if(k == 'first_name'):
 				poli['firstName'] = v
-			if(k == 'last_name')
+			if(k == 'last_name'):
 				poli['last_name'] = v
-			if(k == 'twitter')
+			if(k == 'twitter'):
 				poli['twitter'] = v
-			if(k == 'state')
+			if(k == 'state'):
 				poli['state'] = v
-			if(k == 'birthday')
+			if(k == 'birthday'):
 				poli['birthday'] = v
 		democratic_politicians.append(poli)
 
