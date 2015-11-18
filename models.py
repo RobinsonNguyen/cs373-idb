@@ -12,7 +12,7 @@ db = SQLAlchemy(app)
 
 class Move(db.Model):
 	__tablename__ = 'ALL_MOVES'
-	__searchable__ = ['MOVE_NAME', 'MOVE_TYPE', 'MOVE_CATEGORY']
+	__searchable__ = ['MOVE_NAME', 'MOVE_TYPE', 'MOVE_CATEGORY', 'MOVE_DESCRIPTION']
 	MOVE_ID = db.Column(db.Integer, primary_key=True)
 	MOVE_NAME = db.Column(db.VARCHAR(50))
 	MOVE_TYPE = db.Column(db.VARCHAR(50))
@@ -167,6 +167,21 @@ class Pokemon(db.Model):
 			p = Pokemon.query.filter_by(POKEMON_NAME=evo.POKEMON_NAME).first()
 			if p not in or_results:
 				or_results.append(p)
+
+		#If we search by move name, return all pokemon that can learn that move
+		or_moves = PokemonMoves.query.whoosh_search(query, or_=True)
+		and_moves = PokemonMoves.query.whoosh_search(query)
+
+		#get pokemon from evolution
+		for move in or_moves:
+			m = Pokemon.query.filter_by(POKEMON_NAME=move.POKEMON_NAME).first()
+			if m not in or_results:
+				or_results.append(m)
+
+		for move in and_moves:
+			m = Pokemon.query.filter_by(POKEMON_NAME=move.POKEMON_NAME).first()
+			if m not in or_results:
+				or_results.append(m)
 
 		return and_results, or_results
 	
