@@ -110,10 +110,12 @@ class Pokemon(db.Model):
 		and_pokemon = Pokemon.query.whoosh_search(query)
 
 		for op in or_pokemon:
-			or_results.append(op)
+			if op not in or_results:
+				or_results.append(op)
 
 		for ap in and_pokemon:
-			and_results.append(ap)
+			if ap not in or_results:
+				and_results.append(ap)
 
 		#search evolutions
 		or_evos = Evolutions.query.whoosh_search(query, or_=True)
@@ -121,10 +123,14 @@ class Pokemon(db.Model):
 
 		#get pokemon from evolution
 		for evo in or_evos:
-			or_results.append(Pokemon.query.filter_by(POKEMON_NAME=evo.POKEMON_NAME).first())
+			p = Pokemon.query.filter_by(POKEMON_NAME=evo.POKEMON_NAME).first()
+			if p not in or_results:
+				or_results.append(p)
 
 		for evo in and_evos:
-			and_results.append(Pokemon.query.filter_by(POKEMON_NAME=evo.POKEMON_NAME).first())
+			p = Pokemon.query.filter_by(POKEMON_NAME=evo.POKEMON_NAME).first()
+			if p not in or_results:
+				or_results.append(p)
 
 		return and_results, or_results
 	
@@ -219,7 +225,7 @@ class Abilities(db.Model):
 
 class Evolutions(db.Model):
 	__tablename__ = "POKEMON_EVOLUTIONS"
-	__searchable__ = ['POKEMON_EVOLUTION']
+	__searchable__ = ['POKEMON_EVOLUTION', 'POKEMON_NAME']
 	ID = db.Column(db.Integer, primary_key=True)
 	POKEMON_ID = db.Column(db.Integer)
 	POKEMON_NAME = db.Column(db.VARCHAR(50))
