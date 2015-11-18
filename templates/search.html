@@ -147,7 +147,7 @@
 								{% if results['moves']['or']|length > 0 %}
 									{% for move in results['moves']['or'] %} 
 										<tr>
-											<td>{{pokemon.POKEMON_NAME}}</td>
+											<td>{{move.MOVE_NAME}}</td>
 										</tr>
 									{% endfor %}
 								{% else %}
