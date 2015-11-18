@@ -1,0 +1,40 @@
+{% extends "base.html" %}
+
+	{% block head %}
+		<link rel="stylesheet" type="text/css" href="{{ url_for('static',filename='css/pokemon.css') }}">
+		<script src="{{ url_for('static',filename='js/pokemon.js') }}"></script>
+
+		<title>Pokemon - Politicians</title>
+
+	{% endblock %}
+
+	{% block content %}
+		<h2 style="text-align: center;">Democratic Politicians of the Senate</h2>
+
+		<table
+        data-pagination="true"
+        data-page-list="[10, 25, 50, 100, ALL]"
+		data-toggle="table" 
+		data-classes="table table-hover">
+			<thead>
+				<tr>
+					<th data-sortable="true">First Name</th>
+					<th data-sortable="true">Last Name</th>
+					<th data-sortable="true">Twitter</th>
+					<th data-sortable="true">State</th>
+					<th data-sortable="true">Birthday</th>
+				</tr>
+			</thead>
+			<tbody>
+				{% for pol in politicians %}
+					<tr>
+						<td> {{ pol.firstName }} </td>
+						<td> {{ pol.lastName }} </td>
+						<td> {{ pol.twitter }} </td>
+						<td> {{ pol.state }} </td>
+						<td> {{ pol.birthday }} </td>
+					</tr>
+				{% endfor %}
+			</tbody>
+		</table>
+	{% endblock %}

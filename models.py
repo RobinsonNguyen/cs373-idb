@@ -19,16 +19,16 @@ class Move(db.Model):
 	MOVE_POWER = db.Column(db.Integer)
 	MOVE_ACCURACY = db.Column(db.Integer)
 	MOVE_PP = db.Column(db.Integer)
-	MOVE_DESCRIPTION = db.Column(db.BLOB)
+	MOVE_DESCRIPTION = db.Column(db.TEXT)
 	
-	def __init__(self, name, type, category, power, accuracy, pp, description):
-		self.MOVE_NAME = name
-		self.MOVE_TYPE = type
-		self.MOVE_CATEGORY = category
-		self.MOVE_POWER = power
-		self.MOVE_ACCURACY = accuracy
-		self.MOVE_PP = pp
-		self.MOVE_DESCRIPTION = description
+	# def __init__(self, name, type, category, power, accuracy, pp, description):
+	# 	self.MOVE_NAME = name
+	# 	self.MOVE_TYPE = type
+	# 	self.MOVE_CATEGORY = category
+	# 	self.MOVE_POWER = power
+	# 	self.MOVE_ACCURACY = accuracy
+	# 	self.MOVE_PP = pp
+	# 	self.MOVE_DESCRIPTION = description
 		
 	@property
 	def serialize(self):
@@ -128,8 +128,8 @@ class Routes(db.Model):
 	ROUTE_WEST_EXIT = db.Column(db.VARCHAR(50))
 	ROUTE_ACCESS_TO = db.Column(db.VARCHAR(50))
 	ROUTE_MINI_DESCRIPTION = db.Column(db.VARCHAR(50))
-	ROUTE_MAIN_DESCRIPTION = db.Column(db.BLOB)
-	ROUTE_TRIVIA = db.Column(db.BLOB)
+	ROUTE_MAIN_DESCRIPTION = db.Column(db.TEXT)
+	ROUTE_TRIVIA = db.Column(db.TEXT)
 
 	def __init__(self, name, region, nExit, sExit, eExit, wExit, access, mini, main, trivia):
 		self.ROUTE_NAME = name;
