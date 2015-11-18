@@ -31,7 +31,7 @@
 		$weight = $row['weight'];
 		$ev = "";
 		foreach($row['ev_yield'] as $key => $item){
-			$ev = $item . ", ";
+			$ev = $item . " ";
 	    }
 		$img = $row['name'] . "_regular_.png";
 
