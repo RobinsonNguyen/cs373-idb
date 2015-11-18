@@ -29,47 +29,69 @@
 			<div class="tab-content">
 				<div role="tabpanel" class="tab-pane fade in active" id="pokemon">
 					{% if terms|length > 1 %}
-					<table class="table table-hover">
-						<thead>
-							<tr>
-								<th> AND results</th>
-							</tr>
-						</thead>
-						<tbody>
-							{% if results['pokemon']['and']|length > 0 %}
-								{% for pokemon in results['pokemon']['and'] %} 
-									<tr>
-										<td>{{pokemon.POKEMON_NAME}}</td>
-									</tr>
-								{% endfor %}
-							{% else %}
+						<table class="table table-hover">
+							<thead>
 								<tr>
-									<td>No results found</td>
+									<th> Results containing all search terms</th>
 								</tr>
-							{% endif %}
-						</tbody>
-					</table>
-					<table class="table table-hover">
-						<thead>
-							<tr>
-								<th> OR results</th>
-							</tr>
-						</thead>
-						<tbody>
-							{% if results['pokemon']['or']|length > 0 %}
-								{% for pokemon in results['pokemon']['or'] %} 
+							</thead>
+							<tbody>
+								{% if results['pokemon']['and']|length > 0 %}
+									{% for pokemon in results['pokemon']['and'] %} 
+										<tr>
+											<td>{{pokemon.POKEMON_NAME}}</td>
+										</tr>
+									{% endfor %}
+								{% else %}
 									<tr>
-										<td>{{pokemon.POKEMON_NAME}}</td>
+										<td>No results contain all of the search terms</td>
 									</tr>
-								{% endfor %}
-							{% else %}
+								{% endif %}
+							</tbody>
+						</table>
+						<table class="table table-hover">
+							<thead>
 								<tr>
-									<td>No results found</td>
+									<th> Results containing any search terms</th>
 								</tr>
-							{% endif %}
-						</tbody>
-					</table>
+							</thead>
+							<tbody>
+								{% if results['pokemon']['or']|length > 0 %}
+									{% for pokemon in results['pokemon']['or'] %} 
+										<tr>
+											<td>{{pokemon.POKEMON_NAME}}</td>
+										</tr>
+									{% endfor %}
+								{% else %}
+									<tr>
+										<td>No results show any of the search terms</td>
+									</tr>
+								{% endif %}
+							</tbody>
+						</table>
+					{% else %}
+						<table class="table table-hover">
+							<thead>
+								<tr>
+									<th> </th>
+								</tr>
+							</thead>
+							<tbody>
+								{% if results['pokemon']['or']|length > 0 %}
+									{% for pokemon in results['pokemon']['or'] %} 
+										<tr>
+											<td>{{pokemon.POKEMON_NAME}}</td>
+										</tr>
+									{% endfor %}
+								{% else %}
+									<tr>
+										<td>No results</td>
+									</tr>
+								{% endif %}
+							</tbody>
+						</table>
 					{% endif %}
+
 
 				</div>
 				<div role="tabpanel" class="tab-pane fade" id="moves">
