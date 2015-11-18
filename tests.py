@@ -163,20 +163,20 @@ class UnitTestModels(TestCase):
 	# 	db.session.delete(test)
 	# 	db.session.commit()
 
-	def test_API_1(self):
-		r = requests.get("http://pokemasters.me/api/v1.0/pokemon/4/")
-		self.assertEqual(r.json()['pokemon']['POKEMON_NAME'], 'Charmander')
-		self.assertEqual(r.json()['pokemon']['POKEMON_SPATK'], 60)
+	# def test_API_1(self):
+	# 	r = requests.get("http://pokemasters.me/api/v1.0/pokemon/4/")
+	# 	self.assertEqual(r.json()['pokemon']['POKEMON_NAME'], 'Charmander')
+	# 	self.assertEqual(r.json()['pokemon']['POKEMON_SPATK'], 60)
 
-	def test_API_2(self):
-		r = requests.get("http://pokemasters.me/api/v1.0/moves/56/")
-		self.assertEqual(r.json()['moves']['MOVE_NAME'], 'Hydro-pump')
-		self.assertEqual(r.json()['moves']['MOVE_TYPE'], 'Water')
+	# def test_API_2(self):
+	# 	r = requests.get("http://pokemasters.me/api/v1.0/moves/56/")
+	# 	self.assertEqual(r.json()['moves']['MOVE_NAME'], 'Hydro-pump')
+	# 	self.assertEqual(r.json()['moves']['MOVE_TYPE'], 'Water')
 
-	def test_API_3(self):
-		r = requests.get("http://pokemasters.me/api/v1.0/locations/116/")
-		self.assertEqual(r.json()['location']['ROUTE_ACCESS_TO'],'Olivine City ')
-		self.assertEqual(r.json()['location']['ROUTE_SOUTH_EXIT'], 'Johto Route 47 ')
+	# def test_API_3(self):
+	# 	r = requests.get("http://pokemasters.me/api/v1.0/locations/116/")
+	# 	self.assertEqual(r.json()['location']['ROUTE_ACCESS_TO'],'Olivine City ')
+	# 	self.assertEqual(r.json()['location']['ROUTE_SOUTH_EXIT'], 'Johto Route 47 ')
 		
 
 
