@@ -13,3 +13,9 @@
 	border: 2px solid #4AA14D;
 	color: white;
 }
+
+body {
+	background: url(../static/res/location_wallpaper_2.png);
+	background-repeat: no-repeat; 
+	background-size:cover;
+}
