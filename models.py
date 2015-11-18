@@ -102,6 +102,7 @@ class Pokemon(db.Model):
 
 	@staticmethod
 	def search(query):
+		print(query)
 		return Pokemon.query.whoosh_search(query)
 	
 	def test(self):
