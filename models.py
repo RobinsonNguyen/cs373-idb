@@ -101,8 +101,13 @@ class Pokemon(db.Model):
 
 	@staticmethod
 	def search(query):
+		result = []
+
 		#search pokemon table
-		result = Pokemon.query.whoosh_search(query)
+		pokemon = Pokemon.query.whoosh_search(query)
+
+		for p in pokemon:
+			result.append(p)
 
 		#search evolutions
 		evolutions = Evolutions.query.whoosh_search(query)
