@@ -12,6 +12,7 @@
         <!-- Bootstrap Core JavaScript -->
         <script src="../static/js/bootstrap.min.js"></script>
         <script src="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
+        <script src="http://code.jquery.com/jquery-1.11.3.min.js"></script>
 
         <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
         <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
@@ -66,17 +67,15 @@
                                     <img class="img-poke" src="{{ url_for('static', filename='res/SPRITES/%s' % pokemon.POKEMON_IMG) }}" alt="">
                                 </a>
                             </div>
-                            <div data-role="main" class="ui-content">
-                                <div data-role="collapsible">
-                                    <h4 class="data"><b>Stats:</b></h4>
-                                    <p class="data"><b>Learns at:</b> {{pokemon.POKEMON_LEVEL_LEARNED}}</p>
-                                    <p class="data"><b>HP:</b> {{pokemon.POKEMON_HP}}</p>
-                                    <p class="data"><b>Attack:</b> {{pokemon.POKEMON_ATK}}</p>
-                                    <p class="data"><b>Defense:</b> {{pokemon.POKEMON_DEF}}</p>
-                                    <p class="data"><b>Speed:</b> {{pokemon.POKEMON_SPD}}</p>
-                                    <p class="data"><b>Special Attack:</b> {{pokemon.POKEMON_SPATK}}</p>
-                                    <p class="data"><b>Special Defense:</b> {{pokemon.POKEMON_SPDEF}}</p>
-                                </div>
+                            <div data-role="collapsible">
+                                <h4 class="data"><b>Stats:</b></h4>
+                                <p class="data"><b>Learns at:</b> {{pokemon.POKEMON_LEVEL_LEARNED}}</p>
+                                <p class="data"><b>HP:</b> {{pokemon.POKEMON_HP}}</p>
+                                <p class="data"><b>Attack:</b> {{pokemon.POKEMON_ATK}}</p>
+                                <p class="data"><b>Defense:</b> {{pokemon.POKEMON_DEF}}</p>
+                                <p class="data"><b>Speed:</b> {{pokemon.POKEMON_SPD}}</p>
+                                <p class="data"><b>Special Attack:</b> {{pokemon.POKEMON_SPATK}}</p>
+                                <p class="data"><b>Special Defense:</b> {{pokemon.POKEMON_SPDEF}}</p>
                             </div>
                         </div>
 
