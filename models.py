@@ -65,12 +65,12 @@ class Move(db.Model):
 		and_poke = PokemonMoves.query.whoosh_search(query)
 
 		#get moves from pokemoves
-		for a in or_evos:
+		for a in or_poke:
 			m = Move.query.filter_by(MOVE_NAME=a.POKEMON_MOVE).first()
 			if m not in or_results:
 				or_results.append(m)
 
-		for a in and_evos:
+		for a in and_poke:
 			m = Move.query.filter_by(MOVE_NAME=a.POKEMON_MOVE).first()
 			if m not in or_results:
 				or_results.append(m)
