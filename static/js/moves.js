@@ -5,7 +5,7 @@ $(document).ready(function(){
 	});
 
 	$('.test1').click(function(e){
-	    $(e.target).find('div').slideToggle('slow');
+	    console.log($(e.target).find('div'));
 	});
 
 }); 
