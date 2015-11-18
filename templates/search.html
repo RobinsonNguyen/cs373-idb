@@ -6,34 +6,20 @@
 	{% endblock %}
 
 	{% block content %}
-		<h2 style="text-align: center;">Search Results for: "
+		
+
+	<div class="search-panel">
+
+		<h2 style="text-align: center;">
+			Search Results for: "
 			{% for term in terms %}
 				{{term}}
 				{% if not loop.last %}
 					, 
 				{% endif %}
-			{% endfor %}"</h2>
+			{% endfor %}"
+		</h2>
 
-
-		<h4> Pokemon </h4>
-		{% for pokemon in results['pokemon'] %} 
-			{{pokemon.POKEMON_NAME}}
-			</br>
-		{% endfor %}
-
-		<h4> Moves </h4>
-		{% for move in results['moves'] %} 
-			</br> 
-			{{move}}
-		{% endfor %}
-
-		<h4> Locations </h4>
-		{% for loc in results['routes'] %} 
-			</br> 
-			{{loc}}
-		{% endfor %}
-
-	<div class="search-panel">
 		<div class="container">
 			<ul id="search-tabs" class="nav nav-tabs" role="tablist">
 				<li role="presentation" class="active"><a href="#pokemon" aria-controls="pokemon" role="tab" data-toggle="tab">Pokemon</a></li>
@@ -49,13 +35,15 @@
 							</tr>
 						</thead>
 						<tbody>
+							{% for pokemon in results['pokemon'] %} 
 							<tr>
-								<td>Test</td>
+								<td>{{pokemon.POKEMON_NAME}}</td>
 							</tr>
+							{% endfor %}
 						</tbody>
 					</table>
 				</div>
-				<div role="tabpanel" class="tab-pane fade in active" id="moves">
+				<div role="tabpanel" class="tab-pane fade" id="moves">
 					<table class="table table-hover">
 						<thead>
 							<tr>
