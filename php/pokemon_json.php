@@ -9,7 +9,7 @@
     mysqli_stmt_execute($drop) or die(mysqli_error($con));
     mysqli_stmt_execute($create) or die(mysqli_error($con));
 
-    $st = mysqli_prepare($con, 'INSERT INTO ALL_POKEMON(POKEMON_ID, POKEMON_NAME, POKEMON_HP, POKEMON_ATK, POKEMON_DEF, POKEMON_SPATK, POKEMON_SPDEF, POKEMON_SPD, POKEMON_HEIGHT, POKEMON_WEIGHT, POKEMON_EV, POKEMON_IMG) VALUES(?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)') or die(mysqli_error($con));
+    $st = mysqli_prepare($con, 'INSERT INTO ALL_POKEMON(POKEMON_ID, POKEMON_NAME, POKEMON_HP, POKEMON_ATK, POKEMON_DEF, POKEMON_SPATK, POKEMON_SPDEF, POKEMON_SPD, POKEMON_HEIGHT, POKEMON_WEIGHT, POKEMON_EV, POKEMON_IMG) VALUES(?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)') or die(mysqli_error($con));
 
     mysqli_stmt_bind_param($st, 'isiiiiiiiiss', $id, $name, $hp, $attack, $defense, $spatk, $spdef, $spd, $height, $weight, $ev, $img);
 
