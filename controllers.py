@@ -19,7 +19,7 @@ def politician_controller():
 			if(k == 'first_name'):
 				poli['firstName'] = v
 			if(k == 'last_name'):
-				poli['last_name'] = v
+				poli['lastName'] = v
 			if(k == 'twitter'):
 				poli['twitter'] = v
 			if(k == 'state'):
