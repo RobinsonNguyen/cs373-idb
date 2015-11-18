@@ -6,6 +6,7 @@ $(document).ready(function(){
 
 	$('.stats').click(function(caller){
 	    $(this).children('p').slideToggle('slow');
+	    caller.preventDefault();
 	});
 
 }); 
