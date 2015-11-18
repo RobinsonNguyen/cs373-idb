@@ -2,6 +2,7 @@
 from unittest import main, TestCase
 from models import Pokemon, Move, Routes
 from models import db
+import requests
 
 
 class UnitTestModels(TestCase):
@@ -155,6 +156,11 @@ class UnitTestModels(TestCase):
 		self.assertEqual(test.MOVE_NAME, "Hiyaahh")
 		db.session.delete(test)
 		db.session.commit()
-		
+
+	def test_API_1(self):
+		# test = urlopen("http://pokemasters.me/pokemon/Squirtle/")
+		r = requests.get("http://pokemasters.me/api/v1.0/pokemon/4/")
+		print(r.json())
+
 if __name__ == "__main__" : 
 	main()
