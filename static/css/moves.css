@@ -1,25 +1,9 @@
 p{
 	font-size: 1.2em;
-	color: black;
 }
 
 .data{
-	height: auto;
-	display: none;
 	padding-left: 0em;
-}
-
-.show {
-    display: none; 
-}
-.hide:target + .show {
-    display: inline; 
-}
-.hide:target {
-    display: none; 
-}
-.hide:target ~ .data {
-    display:inline; 
 }
 
 .description{
@@ -44,15 +28,5 @@ tr:hover{
 }
 
 h2{
-	color: black;
-}
-
-.hide, .show {
-	font-size: 20px;
-	color: black;
-}
-
-.hide:hover, .show:hover {
-	font-weight: bold;
 	color: black;
 }
