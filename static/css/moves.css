@@ -18,7 +18,7 @@ p{
 .hide:target {
     display: none; 
 }
-.hide:target ~ .list {
+.hide:target ~ .all_data {
     display:inline; 
 }
 
