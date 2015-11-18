@@ -29,7 +29,7 @@
 		$spd = $row['speed'];
 		$height = $row['height'];
 		$weight = $row['weight'];
-		$ev = "";
+		$ev = NULL;
 		foreach($row['ev_yield'] as $key => $item){
 			$ev = $item . " ";
 	    }

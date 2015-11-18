@@ -54,4 +54,5 @@ h2{
 
 .hide:hover, .show:hover {
 	font-weight: bold;
+	color: black;
 }
