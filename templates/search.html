@@ -22,8 +22,8 @@
 
 		<div class="container">
 			<ul id="search-tabs" class="nav nav-tabs" role="tablist">
-				<li role="presentation" class="active"><a href="#pokemon" aria-controls="pokemon" role="tab" data-toggle="tab">Pokemon ({{results['pokemon']['and']|length}})</a></li>
-				<li role="presentation"><a href="#moves" aria-controls="moves" role="tab" data-toggle="tab">Moves ({{results['moves']['and']|length}})</a></li>
+				<li role="presentation" class="active"><a href="#pokemon" aria-controls="pokemon" role="tab" data-toggle="tab">Pokemon ({{results['pokemon']['or']|length}})</a></li>
+				<li role="presentation"><a href="#moves" aria-controls="moves" role="tab" data-toggle="tab">Moves ({{results['moves']['or']|length}})</a></li>
 				<li role="presentation"><a href="#locations" aria-controls="locations" role="tab" data-toggle="tab">Locations (0)</a></li>
 			</ul>
 			<div class="tab-content">
