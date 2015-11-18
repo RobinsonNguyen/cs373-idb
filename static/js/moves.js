@@ -5,7 +5,7 @@ $(document).ready(function(){
 	});
 
 	$('.stats').click(function(e){
-	    $(e).slideToggle('slow');
+	    $(this).find('.data').slideToggle('slow');
 	});
 
 }); 

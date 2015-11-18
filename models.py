@@ -41,6 +41,41 @@ class Move(db.Model):
             'accuracy' : self.MOVE_ACCURACY,
             'pp' : self.MOVE_PP,
             'description' : self.MOVE_DESCRIPTION}
+
+    @staticmethod
+	def search(query):
+		terms = query.split()
+
+		or_results = []
+		and_results = []
+
+		or_moves = Move.query.whoosh_search(query, or_=True)
+		and_moves = Move.query.whoosh_search(query)
+
+		for op in or_moves:
+			if op not in or_results:
+				or_results.append(op)
+
+		for ap in and_moves:
+			if ap not in or_results:
+				and_results.append(ap)
+
+		#search poke moves
+		or_poke = PokemonMoves.query.whoosh_search(query, or_=True)
+		and_poke = PokemonMoves.query.whoosh_search(query)
+
+		#get moves from pokemoves
+		for evo in or_evos:
+			p = Pokemon.query.filter_by(POKEMON_NAME=evo.POKEMON_NAME).first()
+			if p not in or_results:
+				or_results.append(p)
+
+		for evo in and_evos:
+			p = Pokemon.query.filter_by(POKEMON_NAME=evo.POKEMON_NAME).first()
+			if p not in or_results:
+				or_results.append(p)
+
+		return and_results, or_results
 		
 	@staticmethod
 	def get_all():
@@ -278,6 +313,7 @@ class Locations(db.Model):
 
 class PokemonMoves(db.Model):
 	__tablename__ = "POKEMON_MOVES"
+	__searchable__ = ['POKEMON_NAME', 'POKEMON_MOVE']
 
 	ID = db.Column(db.Integer, primary_key=True)
 	POKEMON_ID = db.Column(db.Integer, db.ForeignKey("ALL_POKEMON.POKEMON_ID"))
@@ -403,8 +439,9 @@ class RouteTrainers(db.Model):
 
 flask.ext.whooshalchemy.whoosh_index(app, Move)
 flask.ext.whooshalchemy.whoosh_index(app, Pokemon)
-flask.ext.whooshalchemy.whoosh_index(app, Evolutions)
 flask.ext.whooshalchemy.whoosh_index(app, Routes)
+flask.ext.whooshalchemy.whoosh_index(app, Evolutions)
+flask.ext.whooshalchemy.whoosh_index(app, PokemonMoves)
 
 
 
