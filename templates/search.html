@@ -95,18 +95,69 @@
 
 				</div>
 				<div role="tabpanel" class="tab-pane fade" id="moves">
-					<table class="table table-hover">
-						<thead>
-							<tr>
-								<th> </th>
-							</tr>
-						</thead>
-						<tbody>
-							<tr>
-								<td> </td>
-							</tr>
-						</tbody>
-					</table>
+					{% if terms|length > 1 %}
+						<table class="table table-hover">
+							<thead>
+								<tr>
+									<th> Results containing all search terms</th>
+								</tr>
+							</thead>
+							<tbody>
+								{% if results['moves']['and']|length > 0 %}
+									{% for move in results['moves']['and'] %} 
+										<tr>
+											<td>{{move.MOVE_NAME}}</td>
+										</tr>
+									{% endfor %}
+								{% else %}
+									<tr>
+										<td>No results contain all of the search terms</td>
+									</tr>
+								{% endif %}
+							</tbody>
+						</table>
+						<table class="table table-hover">
+							<thead>
+								<tr>
+									<th> Results containing any search terms</th>
+								</tr>
+							</thead>
+							<tbody>
+								{% if results['moves']['or']|length > 0 %}
+									{% for move in results['moves']['or'] %} 
+										<tr>
+											<td>{{move.MOVE_NAME}}</td>
+										</tr>
+									{% endfor %}
+								{% else %}
+									<tr>
+										<td>No results show any of the search terms</td>
+									</tr>
+								{% endif %}
+							</tbody>
+						</table>
+					{% else %}
+						<table class="table table-hover">
+							<thead>
+								<tr>
+									<th>Results</th>
+								</tr>
+							</thead>
+							<tbody>
+								{% if results['moves']['or']|length > 0 %}
+									{% for move in results['moves']['or'] %} 
+										<tr>
+											<td>{{pokemon.POKEMON_NAME}}</td>
+										</tr>
+									{% endfor %}
+								{% else %}
+									<tr>
+										<td>No results</td>
+									</tr>
+								{% endif %}
+							</tbody>
+						</table>
+					{% endif %}
 				</div>
 				<div role="tabpanel" class="tab-pane fade" id="locations">
 					<table class="table table-hover">

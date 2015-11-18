@@ -5,7 +5,7 @@ $(document).ready(function(){
 	});
 
 	$('.stats-header').click(function(e){
-	    $(e.target).parent().find('.stats-data').slideToggle('slow');
+	    $(this).children('p').slideToggle('slow');
 	});
 
 }); 

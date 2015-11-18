@@ -58,25 +58,23 @@
                     <div class="row">
                     {% for pokemon in p %}
 
-                        <div class="col-lg-2 thumb">
+                        <div class="col-lg-2 thumb stats">
                             <div align="center">
                                 <a class="poke-data" href="../../pokemon/{{pokemon.POKEMON_NAME}}">
                                     <h2>{{pokemon.POKEMON_NAME}}</h2>
                                     <img class="img-poke" src="{{ url_for('static', filename='res/SPRITES/%s' % pokemon.POKEMON_IMG) }}" alt="">
                                 </a>
                             </div>
-                            <div class="stats-container">
-                                <h4 class="stats-header"><a href="#"><b>Stats:</b></a></h4>
-                                <div class="stats-data">
-                                    <p><b>Learns at:</b> {{pokemon.POKEMON_LEVEL_LEARNED}}</p>
-                                    <p><b>HP:</b> {{pokemon.POKEMON_HP}}</p>
-                                    <p><b>Attack:</b> {{pokemon.POKEMON_ATK}}</p>
-                                    <p><b>Defense:</b> {{pokemon.POKEMON_DEF}}</p>
-                                    <p><b>Speed:</b> {{pokemon.POKEMON_SPD}}</p>
-                                    <p><b>Special Attack:</b> {{pokemon.POKEMON_SPATK}}</p>
-                                    <p><b>Special Defense:</b> {{pokemon.POKEMON_SPDEF}}</p>
-                                </div>
-                            </div>
+
+                            <h4 class=""><a href="#"><b>Stats:</b></a></h4>
+                            <p><b>Learns at:</b> {{pokemon.POKEMON_LEVEL_LEARNED}}</p>
+                            <p><b>HP:</b> {{pokemon.POKEMON_HP}}</p>
+                            <p><b>Attack:</b> {{pokemon.POKEMON_ATK}}</p>
+                            <p><b>Defense:</b> {{pokemon.POKEMON_DEF}}</p>
+                            <p><b>Speed:</b> {{pokemon.POKEMON_SPD}}</p>
+                            <p><b>Special Attack:</b> {{pokemon.POKEMON_SPATK}}</p>
+                            <p><b>Special Defense:</b> {{pokemon.POKEMON_SPDEF}}</p>
+
                         </div>
 
                     {% endfor %}
