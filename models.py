@@ -317,6 +317,10 @@ class RouteItems(db.Model):
 		self.ROUTE_ITEM_GAMES = iGame
 		self.ROUTE_ITEM_METHOD = iMethod
 
+	@staticmethod
+	def get(routeName):
+		return RouteItems.query.filter_by(ROUTE_NAME=routeName)
+
 class RoutePokemon(db.Model):
 	__tablename__ = "ROUTE_POKEMON"
 
@@ -362,6 +366,10 @@ class RouteTrainers(db.Model):
 		self.ROUTE_TRAINER_GEN = tGen
 		self.ROUTE_TRAINER_REWARD = tReward
 		self.ROUTE_TRAINER_IMG = tImg
+
+	@staticmethod
+	def get(routeName):
+		return RouteTrainers.query.filter_by(ROUTE_NAME=routeName)
 
 flask.ext.whooshalchemy.whoosh_index(app, Move)
 flask.ext.whooshalchemy.whoosh_index(app, Pokemon)
