@@ -50,13 +50,12 @@ def rebuild_index(model):
 
     log("Rebuilt {0} {1} search index entries.".format(str(entry_count), model.__name__))
 
-        
-
 if __name__ == "__main__":
     model_list = [Move,
                   Pokemon,
                   Routes,
-                  Evolutions]
+                  Evolutions,
+                  PokemonMoves]
 
     for model in model_list:
         rebuild_index(model)

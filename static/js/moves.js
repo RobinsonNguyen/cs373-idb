@@ -9,8 +9,3 @@ $(document).ready(function(){
 	});
 
 }); 
-
-function collapse(caller) {
-	console.log("test");
-	caller.style.height = "500px";
-}
