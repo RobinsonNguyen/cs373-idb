@@ -35,7 +35,7 @@
 							</tr>
 						</thead>
 						<tbody>
-							{% if results['pokemon']['and']|length > 1 %}
+							{% if results['pokemon']['and']|length > 0 %}
 								{% for pokemon in results['pokemon']['and'] %} 
 									<tr>
 										<td>{{pokemon.POKEMON_NAME}}</td>
@@ -55,7 +55,7 @@
 							</tr>
 						</thead>
 						<tbody>
-							{% if results['pokemon']['or']|length > 1 %}
+							{% if results['pokemon']['or']|length > 0 %}
 								{% for pokemon in results['pokemon']['or'] %} 
 									<tr>
 										<td>{{pokemon.POKEMON_NAME}}</td>
