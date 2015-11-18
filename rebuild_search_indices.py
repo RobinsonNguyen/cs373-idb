@@ -55,7 +55,8 @@ def rebuild_index(model):
 if __name__ == "__main__":
     model_list = [Move,
                   Pokemon,
-                  Routes]
+                  Routes,
+                  Evolutions]
 
     for model in model_list:
         rebuild_index(model)
