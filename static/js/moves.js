@@ -4,8 +4,8 @@ $(document).ready(function(){
 		location.href = '/moves/' + e[0].trim();
 	});
 
-	$('.test1').click(function(e){
-	    console.log($(e.target).find('div'));
+	$('.stats-header').click(function(e){
+	    $(e.target).siblings('.stats-data').slideToggle('slow');
 	});
 
 }); 
