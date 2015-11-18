@@ -2,6 +2,7 @@
 
 	{% block head %}
 		<title>{% for term in terms %} {{term}} {% endfor %} - PokeMasters</title>
+		<link rel="stylesheet" type="text/css" href="{{ url_for('static',filename='css/search.css') }}">
 	{% endblock %}
 
 	{% block content %}
@@ -32,11 +33,11 @@
 			{{loc}}
 		{% endfor %}
 
-
-		<div class="container col-sm-12">
+	<div class="search-panel">
+		<div class="container">
 			<ul id="search-tabs" class="nav nav-tabs" role="tablist">
 				<li role="presentation" class="active"><a href="#pokemon" aria-controls="pokemon" role="tab" data-toggle="tab">Pokemon</a></li>
-				<li role="presentation" class="active"><a href="#moves" aria-controls="moves" role="tab" data-toggle="tab">Moves</a></li>
+				<li role="presentation"><a href="#moves" aria-controls="moves" role="tab" data-toggle="tab">Moves</a></li>
 				<li role="presentation"><a href="#locations" aria-controls="locations" role="tab" data-toggle="tab">Locations</a></li>
 			</ul>
 			<div class="tab-content">
@@ -84,6 +85,7 @@
 				</div>
 			</div>
 		</div>
+	</div>
 
 		
 	{% endblock %}
