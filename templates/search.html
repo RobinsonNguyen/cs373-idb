@@ -35,11 +35,17 @@
 							</tr>
 						</thead>
 						<tbody>
-							{% for pokemon in results['pokemon']['and'] %} 
+							{% if results['pokemon']['and']|length > 1 %}
+								{% for pokemon in results['pokemon']['and'] %} 
+									<tr>
+										<td>{{pokemon.POKEMON_NAME}}</td>
+									</tr>
+								{% endfor %}
+							{% else %}
 								<tr>
-									<td>{{pokemon.POKEMON_NAME}}</td>
+									<td>No results found</td>
 								</tr>
-							{% endfor %}
+							{% endif %}
 						</tbody>
 					</table>
 					<table class="table table-hover">
@@ -49,11 +55,17 @@
 							</tr>
 						</thead>
 						<tbody>
-							{% for pokemon in results['pokemon']['or'] %} 
+							{% if results['pokemon']['or']|length > 1 %}
+								{% for pokemon in results['pokemon']['or'] %} 
+									<tr>
+										<td>{{pokemon.POKEMON_NAME}}</td>
+									</tr>
+								{% endfor %}
+							{% else %}
 								<tr>
-									<td>{{pokemon.POKEMON_NAME}}</td>
+									<td>No results found</td>
 								</tr>
-							{% endfor %}
+							{% endif %}
 						</tbody>
 					</table>
 				</div>
