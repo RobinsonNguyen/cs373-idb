@@ -1,5 +1,6 @@
 from flask import Flask, render_template, abort, request, jsonify
 from models import *
+from controllers import *
 from db import create_db
 
 import subprocess
@@ -158,6 +159,13 @@ def delete_moves(id):
     return jsonify({'result': True})
 '''
 
+# -----------
+# politicians
+# -----------
+@app.route('/politicians')
+def politicians():
+    democratic_politicians = politician_controller()
+    return render_template('politicians.html', politicians=democratic_politicians)
 # -----
 # search
 # -----
