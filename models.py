@@ -101,22 +101,32 @@ class Pokemon(db.Model):
 
 	@staticmethod
 	def search(query):
-		result = []
+		terms = query.split()
 
-		#search pokemon table
-		pokemon = Pokemon.query.whoosh_search(query)
+		or_results = []
+		and_results = []
 
-		for p in pokemon:
-			result.append(p)
+		or_pokemon = Pokemon.query.whoosh_search(query, or_=True)
+		and_pokemon = Pokemon.query.whoosh_search(query)
+
+		for op in or_pokemon:
+			or_results.append(op)
+
+		for ap in and_pokemon:
+			and_results.append(ap)
 
 		#search evolutions
-		evolutions = Evolutions.query.whoosh_search(query)
+		or_evos = Evolutions.query.whoosh_search(query, or_=True)
+		and_evos = Evolutions.query.whoosh_search(query)
 
 		#get pokemon from evolution
-		for evo in evolutions:
-			result.append(Pokemon.query.filter_by(POKEMON_NAME=evo.POKEMON_NAME).first())
+		for evo in or_evos:
+			or_results.append(Pokemon.query.filter_by(POKEMON_NAME=evo.POKEMON_NAME).first())
 
-		return result
+		for evo in and_evos:
+			and_results.append(Pokemon.query.filter_by(POKEMON_NAME=evo.POKEMON_NAME).first())
+
+		return and_results, or_results
 	
 	def test(self):
 		return {{'name' : 'Tackle', 'learn_type' : 'level' }}

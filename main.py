@@ -172,21 +172,11 @@ def politicians():
 @app.route('/search/<query>')
 def search(query):
     terms = query.split()
-    pokemon_results = []
+    pokemon_and, pokemon_or = Pokemon.search(query)
     moves_results = []
     loc_results = []
 
-    for term in terms:
-        p_results = Pokemon.search(term)
-        #m_results = Move.query.whoosh_search(term)
-        #l_results = Routes.query.whoosh_search(term)
-
-        for p in p_results:
-                pokemon_results.append(p)
-        # for m in m_results:
-        #         moves_results.append(m)
-        # for l in l_results:
-        #         loc_results.append(l)
+    pokemon_results = {"and":pokemon_and, "or": pokemon_or}
 
     #results = { "pokemon":pokemon_results, "moves":moves_results, "routes":loc_results}
     results = { "pokemon":pokemon_results, "moves":{}, "routes":{}}
