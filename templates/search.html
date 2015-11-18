@@ -28,6 +28,7 @@
 			</ul>
 			<div class="tab-content">
 				<div role="tabpanel" class="tab-pane fade in active" id="pokemon">
+					{% if terms|length > 1 %}
 					<table class="table table-hover">
 						<thead>
 							<tr>
@@ -68,6 +69,8 @@
 							{% endif %}
 						</tbody>
 					</table>
+					{% endif %}
+
 				</div>
 				<div role="tabpanel" class="tab-pane fade" id="moves">
 					<table class="table table-hover">
