@@ -174,13 +174,10 @@ def search(query):
         l_results = Routes.query.whoosh_search(term)
 
         for p in p_results:
-            if not contains(pokemon_results, lambda x: x.POKEMON_ID == p.POKEMON_ID):
                 pokemon_results.append(p)
         for m in m_results:
-            if not contains(moves_results, lambda x: x.id == m.id):
                 moves_results.append(m)
         for l in l_results:
-            if not contains(loc_results, lambda x: x.id == l.id):
                 loc_results.append(l)
 
     results = { "pokemon":pokemon_results, "moves":moves_results, "routes":loc_results}
