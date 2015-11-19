@@ -171,18 +171,23 @@ def politicians():
 # -----
 @app.route('/search/<query>')
 def search(query):
-	terms = query.split()
+	#terms = query.split()
 	pokemon_and, pokemon_or = Pokemon.search(query)
-	moves_and, moves_or = Move.search(query)
-	location_and, location_or = Routes.search(query)
+	#moves_and, moves_or = Move.search(query)
+	#location_and, location_or = Routes.search(query)
 
-	pokemon_results = {"and":pokemon_and, "or": pokemon_or}
-	moves_results = {"and":moves_and, "or": moves_or}
-	location_results = {"and":location_and, "or":location_or}
+    #search term can be: Pokemon's Name, Pokemon's Type, A Move the Pokemon Learns,
+        #The Location of the Pokemon, and/or The Pokemon's Evolution
+	#pokemon_results = { "and":pokemon_and, "or": pokemon_or }
 
-	results = { "pokemon":pokemon_results, "moves":moves_results, "locations":location_results}
+	#moves_results = { "and":moves_and, "or": moves_or }
 
-	return render_template('search.html', query=query, terms=terms, results=results)
+	#location_results = { "and":location_and, "or":location_or }
+
+	#results = { "pokemon":pokemon_results, "moves":moves_results, "locations":location_results}
+
+	#return render_template('search.html', query=query, terms=terms, results=results)
+    return render_template('index.html')
 
 if __name__ == '__main__':
     #create_db()
