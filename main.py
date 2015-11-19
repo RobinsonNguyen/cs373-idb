@@ -172,7 +172,7 @@ def politicians():
 @app.route('/search/<query>')
 def search(query):
 	#terms = query.split()
-	pokemon_and, pokemon_or = Pokemon.search(query)
+	#pokemon_and, pokemon_or = Pokemon.search(query)
 	#moves_and, moves_or = Move.search(query)
 	#location_and, location_or = Routes.search(query)
 
