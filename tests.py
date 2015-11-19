@@ -52,7 +52,7 @@ class UnitTestModels(TestCase):
 		self.assertEqual(p['POKEMON_SPATK'], 20)
 		self.assertEqual(p['POKEMON_SPDEF'], 20)
 		self.assertEqual(p['POKEMON_SPD'], 50)
-		self.assertEqual(p['POKEMON_EV'], 'SPD: 1')
+		self.assertEqual(p['POKEMON_EV'], 'SPD: 1 ')
 
 	def test_pokemon_5(self):
 		pokemon = Pokemon.get_id(373)
@@ -65,9 +65,9 @@ class UnitTestModels(TestCase):
 		self.assertEqual(p['POKEMON_SPATK'], 110)
 		self.assertEqual(p['POKEMON_SPDEF'], 80)
 		self.assertEqual(p['POKEMON_SPD'], 100)
-		self.assertEqual(p['POKEMON_EV'], 'ATK: 3')
+		self.assertEqual(p['POKEMON_EV'], 'ATK: 3 ')
 
-	def test_pokemon_5(self):
+	def test_pokemon_6(self):
 		pokemon = Pokemon.get_id(218)
 		p = {c.name: getattr(pokemon, c.name) for c in pokemon.__table__.columns}
 		self.assertEqual(p['POKEMON_ID'], 218)
@@ -78,9 +78,9 @@ class UnitTestModels(TestCase):
 		self.assertEqual(p['POKEMON_SPATK'], 70)
 		self.assertEqual(p['POKEMON_SPDEF'], 40)
 		self.assertEqual(p['POKEMON_SPD'], 20)
-		self.assertEqual(p['POKEMON_EV'], 'SPATK: 1')
+		self.assertEqual(p['POKEMON_EV'], 'SPATK: 1 ')
 
-	def test_pokemon_6(self):
+	def test_pokemon_7(self):
 		pokemon = Pokemon.get_id(74)
 		p = {c.name: getattr(pokemon, c.name) for c in pokemon.__table__.columns}
 		self.assertEqual(p['POKEMON_ID'], 74)
@@ -91,7 +91,7 @@ class UnitTestModels(TestCase):
 		self.assertEqual(p['POKEMON_SPATK'], 30)
 		self.assertEqual(p['POKEMON_SPDEF'], 30)
 		self.assertEqual(p['POKEMON_SPD'], 20)
-		self.assertEqual(p['POKEMON_EV'], 'DEF: 1')
+		self.assertEqual(p['POKEMON_EV'], 'DEF: 1 ')
 
 	def test_moves_1(self):
 		move = Move.get_id(1)
@@ -283,7 +283,7 @@ class UnitTestModels(TestCase):
 		self.assertEqual(r.json()['pokemon']['POKEMON_NAME'], 'Charmander')
 		self.assertEqual(r.json()['pokemon']['POKEMON_ATK'], 52)
 		self.assertEqual(r.json()['pokemon']['POKEMON_DEF'], 43)
-		self.assertEqual(r.json()['pokemon']['POKEMON_EV'], 'SPD: 1')
+		self.assertEqual(r.json()['pokemon']['POKEMON_EV'], 'SPD: 1 ')
 		self.assertEqual(r.json()['pokemon']['POKEMON_HP'], 39)
 		self.assertEqual(r.json()['pokemon']['POKEMON_ID'], 4)
 		self.assertEqual(r.json()['pokemon']['POKEMON_SPATK'], 60)
@@ -308,7 +308,7 @@ class UnitTestModels(TestCase):
 		self.assertEqual(r.json()['pokemon']['POKEMON_NAME'], 'Mudkip')
 		self.assertEqual(r.json()['pokemon']['POKEMON_ATK'], 70)
 		self.assertEqual(r.json()['pokemon']['POKEMON_DEF'], 50)
-		self.assertEqual(r.json()['pokemon']['POKEMON_EV'], 'ATK: 1')
+		self.assertEqual(r.json()['pokemon']['POKEMON_EV'], 'ATK: 1 ')
 		self.assertEqual(r.json()['pokemon']['POKEMON_HP'], 50)
 		self.assertEqual(r.json()['pokemon']['POKEMON_ID'], 258)
 		self.assertEqual(r.json()['pokemon']['POKEMON_SPATK'], 50)
@@ -358,7 +358,7 @@ class UnitTestModels(TestCase):
 		self.assertEqual(r.json()['location']['ROUTE_NAME'],'Battle Tower (Generation II)')
 		self.assertEqual(r.json()['location']['ROUTE_ACCESS_TO'],'Olivine City ')
 		self.assertEqual(r.json()['location']['ROUTE_REGION'],'Johto')
-		self.assertEqual(r.json()['location']['ROUTE_SOUTH_EXIT'], 'Johto Route 47 ')
+		self.assertEqual(r.json()['location']['ROUTE_SOUTH_EXIT'], '')
 		self.assertEqual(r.json()['location']['ROUTE_WEST_EXIT'], 'Ecruteak City ')
 
 	def test_location_API_2(self):
