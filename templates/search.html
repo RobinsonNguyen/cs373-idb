@@ -159,8 +159,8 @@
 								</tr>
 							</thead>
 							<tbody>
-								{% if results['pokemon']['or']|length > 0 %}
-									{% for triple in results['pokemon']['or'] %} 
+								{% if results['moves']['and']|length > 0 %}
+									{% for triple in results['moves']['and'] %} 
 
 										<tr class="search-row">
 											<td>{{triple[0].MOVE_NAME}}</td>
@@ -192,8 +192,8 @@
 								</tr>
 							</thead>
 							<tbody>
-								{% if results['pokemon']['or']|length > 0 %}
-									{% for triple in results['pokemon']['or'] %} 
+								{% if results['moves']['or']|length > 0 %}
+									{% for triple in results['moves']['or'] %} 
 
 										<tr class="search-row">
 											<td>{{triple[0].MOVE_NAME}}</td>
@@ -226,8 +226,8 @@
 								</tr>
 							</thead>
 							<tbody>
-								{% if results['pokemon']['or']|length > 0 %}
-									{% for triple in results['pokemon']['or'] %} 
+								{% if results['moves']['or']|length > 0 %}
+									{% for triple in results['moves']['or'] %} 
 
 										<tr class="search-row">
 											<td>{{triple[0].MOVE_NAME}}</td>
