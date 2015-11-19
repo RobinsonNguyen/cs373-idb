@@ -293,7 +293,15 @@
 										<tr class="search-row">
 											<td>{{triple[0].ROUTE_NAME}}</td>
 											{% if triple[1] == "NAME" %}
-											<td>Name is {{triple[0].ROUTE_NAME}}</td>
+												{% for term in terms %}
+													{% if term.lower() in triple[0].ROUTE_NAME.lower().split(' ') %}
+													<td>Route Name is: {{triple[0].ROUTE_NAME}}</td>
+													{% elif term.lower() == triple[0].ROUTE_REGION.lower() %}
+													<td>In Region: {{ triple[0].ROUTE_REGION }}</td>
+													{% else %}
+													<td>Connected to: {{ triple[0].ROUTE_NAME }}</td>
+													{% endif %}
+												{% endfor %}
 											{% elif triple[1] == "POKEMON"%}
 											<td>You can find {{ triple[2].POKEMON_NAME }} here</td>
 											{% else %}
@@ -326,7 +334,15 @@
 										<tr class="search-row">
 											<td>{{triple[0].ROUTE_NAME}}</td>
 											{% if triple[1] == "NAME" %}
-											<td>Name is {{triple[0].ROUTE_NAME}}</td>
+												{% for term in terms %}
+													{% if term.lower() in triple[0].ROUTE_NAME.lower().split(' ') %}
+													<td>Route Name is: {{triple[0].ROUTE_NAME}}</td>
+													{% elif term.lower() == triple[0].ROUTE_REGION.lower() %}
+													<td>In Region: {{ triple[0].ROUTE_REGION }}</td>
+													{% else %}
+													<td>Connected to: {{ triple[0].ROUTE_NAME }}</td>
+													{% endif %}
+												{% endfor %}
 											{% elif triple[1] == "POKEMON"%}
 											<td>You can find {{ triple[2].POKEMON_NAME }} here</td>
 											{% else %}
@@ -360,7 +376,15 @@
 										<tr class="search-row">
 											<td>{{triple[0].ROUTE_NAME}}</td>
 											{% if triple[1] == "NAME" %}
-											<td>Name is {{triple[0].ROUTE_NAME}}</td>
+												{% for term in terms %}
+													{% if term.lower() in triple[0].ROUTE_NAME.lower().split(' ') %}
+													<td>Route Name is: {{triple[0].ROUTE_NAME}}</td>
+													{% elif term.lower() == triple[0].ROUTE_REGION.lower() %}
+													<td>In Region: {{ triple[0].ROUTE_REGION }}</td>
+													{% else %}
+													<td>Connected to: {{ triple[0].ROUTE_NAME }}</td>
+													{% endif %}
+												{% endfor %}
 											{% elif triple[1] == "POKEMON"%}
 											<td>You can find {{ triple[2].POKEMON_NAME }} here</td>
 											{% else %}
