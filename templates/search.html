@@ -172,6 +172,7 @@
 													<td>Type is: {{triple[0].MOVE_TYPE}}</td>
 													{% elif term in triple[0].MOVE_CATEGORY %}
 													<td>Move is: {{triple[0].MOVE_CATEGORY}}</td>
+													{% endif %}
 												{% endfor %}
 											{% elif triple[1] == "POKEMON"%}
 											<td>{{ triple[2].POKEMON_NAME }} Learns this Move</td>
