@@ -10,6 +10,27 @@ app.config['SQLALCHEMY_DATABASE_URI'] = 'mysql://root:pokemon@localhost/pokemast
 db = SQLAlchemy(app)
 
 
+#This function is borrowed from 'Free Spirits'
+def parse_query(query):
+    """
+    Helper method to parse the queries
+    This function is invoked in Move, Pokemon, and Route's search functions
+    """
+    terms = query.lower().split()
+    query = "\"" + query.lower() + "\""
+    and_term = ""
+    or_term = ""
+
+    for i, term in enumerate(terms):
+        if i != 0:
+            and_term += " AND " + term
+            or_term += " OR " + term
+        else:
+            and_term += term
+            or_term += term
+
+    return (and_term, or_term)
+
 class Move(db.Model):
 	__tablename__ = 'ALL_MOVES'
 	__searchable__ = ['MOVE_NAME', 'MOVE_TYPE', 'MOVE_CATEGORY', 'MOVE_DESCRIPTION']
@@ -44,13 +65,13 @@ class Move(db.Model):
 
 	@staticmethod
 	def search(query):
-		terms = query.split()
+		and_term, or_term = parse_query(query)
 
 		or_results = []
 		and_results = []
 
-		or_moves = Move.query.whoosh_search(query, or_=True)
-		and_moves = Move.query.whoosh_search(query)
+		or_moves = Move.query.whoosh_search(or_term, or_=True)
+		and_moves = Move.query.whoosh_search(and_term)
 
 		for op in or_moves:
 			if op not in or_results:
@@ -61,8 +82,8 @@ class Move(db.Model):
 				and_results.append(ap)
 
 		#search poke moves
-		or_poke = PokemonMoves.query.whoosh_search(query, or_=True)
-		and_poke = PokemonMoves.query.whoosh_search(query)
+		or_poke = PokemonMoves.query.whoosh_search(or_term, or_=True)
+		and_poke = PokemonMoves.query.whoosh_search(and_term)
 
 		#get moves from pokemoves
 		for a in or_poke:
@@ -137,13 +158,13 @@ class Pokemon(db.Model):
 
 	@staticmethod
 	def search(query):
-		terms = query.split()
+		and_term, or_term = parse_query(query)
 
 		or_results = []
 		and_results = []
 
-		or_pokemon = Pokemon.query.whoosh_search(query, or_=True)
-		and_pokemon = Pokemon.query.whoosh_search(query)
+		or_pokemon = Pokemon.query.whoosh_search(or_term, or_=True)
+		and_pokemon = Pokemon.query.whoosh_search(and_term)
 
 		for op in or_pokemon:
 			if op not in or_results:
@@ -154,8 +175,8 @@ class Pokemon(db.Model):
 				and_results.append(ap)
 
 		#search evolutions
-		or_evos = Evolutions.query.whoosh_search(query, or_=True)
-		and_evos = Evolutions.query.whoosh_search(query)
+		or_evos = Evolutions.query.whoosh_search(or_term, or_=True)
+		and_evos = Evolutions.query.whoosh_search(and_term)
 
 		#get pokemon from evolution
 		for evo in or_evos:
@@ -169,8 +190,8 @@ class Pokemon(db.Model):
 				and_results.append(p)
 
 		#If we search by move name, return all pokemon that can learn that move
-		or_moves = PokemonMoves.query.whoosh_search(query, or_=True)
-		and_moves = PokemonMoves.query.whoosh_search(query)
+		or_moves = PokemonMoves.query.whoosh_search(or_term, or_=True)
+		and_moves = PokemonMoves.query.whoosh_search(and_term)
 
 		#get pokemon from evolution
 		for move in or_moves:
@@ -184,8 +205,8 @@ class Pokemon(db.Model):
 				or_results.append(m)
 				
 		#Find route pokemon with given location  
-		or_locs = RoutePokemon.query.whoosh_search(query, or_=True)
-		and_locs = RoutePokemon.query.whoosh_search(query)
+		or_locs = RoutePokemon.query.whoosh_search(or_term, or_=True)
+		and_locs = RoutePokemon.query.whoosh_search(and_term)
 
 		#get pokemon from evolution
 		for loc in or_locs:
@@ -202,8 +223,8 @@ class Pokemon(db.Model):
 
 
 		#Search the type table
-		or_types = Types.query.whoosh_search(query, or_=True)
-		and_types = Types.query.whoosh_search(query)
+		or_types = Types.query.whoosh_search(or_term, or_=True)
+		and_types = Types.query.whoosh_search(and_term)
 
 		#get pokemon from evolution
 		for typ in or_types:
@@ -263,13 +284,13 @@ class Routes(db.Model):
 		
 	@staticmethod
 	def search(query):
-		terms = query.split()
+		and_term, or_term = parse_query(query)
 
 		or_results = []
 		and_results = []
 
 		or_routes = Routes.query.whoosh_search(query, or_=True)
-		and_routes = Routes.query.whoosh_search(query)
+		and_routes = Routes.query.whoosh_search(and_term)
 
 		for op in or_routes:
 			if op not in or_results:
@@ -280,8 +301,8 @@ class Routes(db.Model):
 				and_results.append(ap)
 
 		#search routes
-		or_loc = RoutePokemon.query.whoosh_search(query, or_=True)
-		and_loc = RoutePokemon.query.whoosh_search(query)
+		or_loc = RoutePokemon.query.whoosh_search(or_term, or_=True)
+		and_loc = RoutePokemon.query.whoosh_search(and_term)
 
 		#get routes from Routes
 		for a in or_loc:
@@ -295,8 +316,8 @@ class Routes(db.Model):
 				or_results.append(r)
 				
 		#search Pokemon
-		or_poke = Pokemon.query.whoosh_search(query, or_=True)
-		and_poke = Pokemon.query.whoosh_search(query)
+		or_poke = Pokemon.query.whoosh_search(or_term, or_=True)
+		and_poke = Pokemon.query.whoosh_search(and_term)
 
 		#get pokemon from RoutePokemon
 		for a in or_poke:
