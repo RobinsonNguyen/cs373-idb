@@ -33,6 +33,7 @@ def get_test_results():
 # --------	 
 @app.route('/location/')
 @app.route('/locations/')
+@app.route('/locations/<name>')
 @app.route('/location/<name>')
 def location_id(name=None):
     if name is not None:

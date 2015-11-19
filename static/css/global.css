@@ -1,5 +1,6 @@
 .table tbody tr > td {
   background-color: #F3FFFD;
+  vertical-align: middle;
 }
 
 .table thead tr > th {
@@ -8,6 +9,10 @@
 
 .table-hover tbody tr:hover > td {
   background-color: #71AD64 ;
+}
+
+.table-hover {
+	cursor: pointer; 
 }
 
 tr {

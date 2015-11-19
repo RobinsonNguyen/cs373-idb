@@ -5,13 +5,13 @@
 	{% endblock %}
 
 	{% block content %}
-		<div class="row">
+		<div class="row" style="margin:25px;">
 			<div class="panel panel-primary col-sm-2" style="margin:0px; padding:0px;">
 				<div class="panel-heading" align="center"><b>{{ route.ROUTE_NAME }}</b></div>
 				<div class="text-center">
 					<div class="btn-group" roll="group" style="padding: 4px;" align="center">
 						{% for gen in images %}
-								<button type="button" class="btn btn-sm" style="color:black;">{{ gen.ROUTE_GEN }}</button>
+								<button type="button" class="btn btn-sm" style="color:black; background-color:opaque;">{{ gen.ROUTE_GEN }}</button>
 						{% endfor %}
 					</div>
 				</div>
