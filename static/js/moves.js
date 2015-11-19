@@ -9,4 +9,9 @@ $(document).ready(function(){
 	    caller.preventDefault();
 	});
 
+	$('.pkCollapse').click(function(caller){
+	    $(this).children('.row').slideToggle('slow');
+	    caller.preventDefault();
+	});
+
 }); 
