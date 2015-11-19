@@ -92,7 +92,7 @@
 							<tbody>
 								{% if results['pokemon']['or']|length > 0 %}
 									{% for triple in results['pokemon']['or'] %} 
-										{% if string(triple[1]) == string("NAME") %}
+										{% if triple[1] == "NAME" %}
 										<tr class="search-row">
 											<td>testing</td>
 										</tr>
