@@ -75,11 +75,11 @@ class Move(db.Model):
 
 		for op in or_moves:
 			if op not in or_results:
-				or_results.append(op)
+				or_results.append( [op, "NAME", None] )
 
 		for ap in and_moves:
 			if ap not in and_results:
-				and_results.append(ap)
+				and_results.append( [ap, "NAME", None] )
 
 		#search poke moves
 		or_poke = PokemonMoves.query.whoosh_search(or_term, or_=True)
@@ -89,12 +89,12 @@ class Move(db.Model):
 		for a in or_poke:
 			m = Move.query.filter_by(MOVE_NAME=a.POKEMON_MOVE).first()
 			if m not in or_results:
-				or_results.append(m)
+				or_results.append( [m, "POKEMON", a] )
 
 		for a in and_poke:
 			m = Move.query.filter_by(MOVE_NAME=a.POKEMON_MOVE).first()
 			if m not in and_results:
-				and_results.append(m)
+				and_results.append( [m, "POKEMON", a] )
 
 		return and_results, or_results
 		
