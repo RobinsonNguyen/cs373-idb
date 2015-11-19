@@ -170,11 +170,11 @@ class Pokemon(db.Model):
 
 		for op in or_pokemon:
 			if op not in or_results:
-				or_results.append( [op, "NAME", None] )
+				or_results.append( op )
 
 		for ap in and_pokemon:
 			if ap not in and_results:
-				and_results.append( [ap, "NAME", None] )
+				and_results.append( ap )
 
 		# #search evolutions
 		# or_evos = Evolutions.query.whoosh_search(or_term, or_=True)
