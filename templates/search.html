@@ -36,9 +36,9 @@
 							</thead>
 							<tbody>
 								{% if results['pokemon']['and']|length > 0 %}
-									{% for pokemon in results['pokemon']['and'] %} 
+									{% for triple in results['pokemon']['and'] %} 
 										<tr class="search-row">
-											<td>{{pokemon.POKEMON_NAME}}</td>
+											<td>{{triple[0].POKEMON_NAME}}</td>
 										</tr>
 									{% endfor %}
 								{% else %}
@@ -60,9 +60,9 @@
 							</thead>
 							<tbody>
 								{% if results['pokemon']['or']|length > 0 %}
-									{% for pokemon in results['pokemon']['or'] %} 
+									{% for triple in results['pokemon']['or'] %} 
 										<tr class="search-row">
-											<td>{{pokemon.POKEMON_NAME}}</td>
+											<td>{{triple[0].POKEMON_NAME}}</td>
 										</tr>
 									{% endfor %}
 								{% else %}
@@ -85,9 +85,11 @@
 							</thead>
 							<tbody>
 								{% if results['pokemon']['or']|length > 0 %}
-									{% for pokemon in results['pokemon']['or'] %} 
+									{% for triple in results['pokemon']['or'] %} 
 										<tr class="search-row">
-											<td>{{pokemon.POKEMON_NAME}}</td>
+											<td>
+												{{triple[0].POKEMON_NAME}}
+											</td>
 										</tr>
 									{% endfor %}
 								{% else %}
@@ -114,9 +116,9 @@
 							</thead>
 							<tbody>
 								{% if results['moves']['and']|length > 0 %}
-									{% for move in results['moves']['and'] %} 
+									{% for triple in results['moves']['and'] %} 
 										<tr class="search-row">
-											<td>{{move.MOVE_NAME}}</td>
+											<td>{{triple[0].MOVE_NAME}}</td>
 										</tr>
 									{% endfor %}
 								{% else %}
@@ -138,9 +140,9 @@
 							</thead>
 							<tbody>
 								{% if results['moves']['or']|length > 0 %}
-									{% for move in results['moves']['or'] %} 
+									{% for triple in results['moves']['or'] %} 
 										<tr class="search-row">
-											<td>{{move.MOVE_NAME}}</td>
+											<td>{{triple[0].MOVE_NAME}}</td>
 										</tr>
 									{% endfor %}
 								{% else %}
@@ -163,9 +165,9 @@
 							</thead>
 							<tbody>
 								{% if results['moves']['or']|length > 0 %}
-									{% for move in results['moves']['or'] %} 
+									{% for triple in results['moves']['or'] %} 
 										<tr class="search-row">
-											<td>{{move.MOVE_NAME}}</td>
+											<td>{{triple[0].MOVE_NAME}}</td>
 										</tr>
 									{% endfor %}
 								{% else %}
@@ -191,9 +193,9 @@
 							</thead>
 							<tbody>
 								{% if results['locations']['and']|length > 0 %}
-									{% for loc in results['locations']['and'] %} 
+									{% for triple in results['locations']['and'] %} 
 										<tr class="search-row">
-											<td>{{loc.ROUTE_NAME}}</td>
+											<td>{{triple[0].ROUTE_NAME}}</td>
 										</tr>
 									{% endfor %}
 								{% else %}
@@ -215,9 +217,9 @@
 							</thead>
 							<tbody>
 								{% if results['locations']['or']|length > 0 %}
-									{% for loc in results['locations']['or'] %} 
+									{% for triple in results['locations']['or'] %} 
 										<tr class="search-row">
-											<td>{{loc.ROUTE_NAME}}</td>
+											<td>{{triple[0].ROUTE_NAME}}</td>
 										</tr>
 									{% endfor %}
 								{% else %}
@@ -240,9 +242,9 @@
 							</thead>
 							<tbody>
 								{% if results['locations']['or']|length > 0 %}
-									{% for loc in results['locations']['or'] %} 
+									{% for triple in results['locations']['or'] %} 
 										<tr class="search-row">
-											<td>{{loc.ROUTE_NAME}}</td>
+											<td>{{triple[0].ROUTE_NAME}}</td>
 										</tr>
 									{% endfor %}
 								{% else %}
