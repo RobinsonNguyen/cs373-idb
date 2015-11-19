@@ -55,7 +55,9 @@ if __name__ == "__main__":
                   Pokemon,
                   Routes,
                   Evolutions,
-                  PokemonMoves]
+                  PokemonMoves,
+                  Types,
+                  RoutePokemon]
 
     for model in model_list:
         rebuild_index(model)

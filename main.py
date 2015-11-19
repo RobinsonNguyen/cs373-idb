@@ -180,7 +180,6 @@ def search(query):
 	moves_results = {"and":moves_and, "or": moves_or}
 	location_results = {"and":location_and, "or":location_or}
 
-	#results = { "pokemon":pokemon_results, "moves":moves_results, "routes":loc_results}
 	results = { "pokemon":pokemon_results, "moves":moves_results, "locations":location_results}
 
 	return render_template('search.html', terms=terms, results=results)

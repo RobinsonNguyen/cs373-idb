@@ -200,6 +200,22 @@ class Pokemon(db.Model):
 				if r not in and_results:
 					and_results.append(r)
 
+
+		#Search the type table
+		or_types = Types.query.whoosh_search(query, or_=True)
+		and_types = Types.query.whoosh_search(query)
+
+		#get pokemon from evolution
+		for typ in or_types:
+			t = Pokemon.query.filter_by(POKEMON_NAME=typ.POKEMON_NAME).first()
+			if t not in or_results:
+				or_results.append(t)
+
+		for typ in and_types:
+			t = Pokemon.query.filter_by(POKEMON_NAME=typ.POKEMON_NAME).first()
+			if t not in or_results:
+				or_results.append(t)
+
 		return and_results, or_results
 	
 	def test(self):
@@ -365,6 +381,7 @@ class Evolutions(db.Model):
 
 class Types(db.Model):
 	__tablename__ = "POKEMON_TYPES"
+	__searchable__ = ['POKEMON_TYPE']
 
 	ID = db.Column(db.Integer, primary_key=True)
 	POKEMON_ID = db.Column(db.Integer)
@@ -527,6 +544,7 @@ flask.ext.whooshalchemy.whoosh_index(app, Routes)
 flask.ext.whooshalchemy.whoosh_index(app, Evolutions)
 flask.ext.whooshalchemy.whoosh_index(app, PokemonMoves)
 flask.ext.whooshalchemy.whoosh_index(app, RoutePokemon)
+flask.ext.whooshalchemy.whoosh_index(app, Types)
 
 
 
