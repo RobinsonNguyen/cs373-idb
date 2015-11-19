@@ -65,7 +65,7 @@ class UnitTestModels(TestCase):
 		self.assertEqual(p['POKEMON_SPATK'], 110)
 		self.assertEqual(p['POKEMON_SPDEF'], 80)
 		self.assertEqual(p['POKEMON_SPD'], 100)
-		self.assertEqual(p['POKEMON_EV'], 'ATK: 3')
+		self.assertEqual(p['POKEMON_EV'], 'ATK: 3 ')
 
 	def test_pokemon_6(self):
 		pokemon = Pokemon.get_id(218)
