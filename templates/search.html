@@ -3,6 +3,7 @@
 	{% block head %}
 		<title>{% for term in terms %} {{term}} {% endfor %} - PokeMasters</title>
 		<link rel="stylesheet" type="text/css" href="{{ url_for('static',filename='css/search.css') }}">
+		<script src="{{ url_for('static',filename='js/search.js') }}"></script>
 	{% endblock %}
 
 	{% block content %}
@@ -29,14 +30,14 @@
 								data-toggle="table" 
 								data-classes="table table-hover">
 							<thead>
-								<tr>
+								<tr class="search-row">
 									<th> Results containing all search terms</th>
 								</tr>
 							</thead>
 							<tbody>
 								{% if results['pokemon']['and']|length > 0 %}
 									{% for pokemon in results['pokemon']['and'] %} 
-										<tr>
+										<tr class="search-row">
 											<td>{{pokemon.POKEMON_NAME}}</td>
 										</tr>
 									{% endfor %}
@@ -53,14 +54,14 @@
 								data-toggle="table" 
 								data-classes="table table-hover">
 							<thead>
-								<tr>
+								<tr class="search-row">
 									<th> Results containing any search terms</th>
 								</tr>
 							</thead>
 							<tbody>
 								{% if results['pokemon']['or']|length > 0 %}
 									{% for pokemon in results['pokemon']['or'] %} 
-										<tr>
+										<tr class="search-row">
 											<td>{{pokemon.POKEMON_NAME}}</td>
 										</tr>
 									{% endfor %}
@@ -78,14 +79,14 @@
 								data-toggle="table" 
 								data-classes="table table-hover">
 							<thead>
-								<tr>
+								<tr class="search-row">
 									<th>Results</th>
 								</tr>
 							</thead>
 							<tbody>
 								{% if results['pokemon']['or']|length > 0 %}
 									{% for pokemon in results['pokemon']['or'] %} 
-										<tr>
+										<tr class="search-row">
 											<td>{{pokemon.POKEMON_NAME}}</td>
 										</tr>
 									{% endfor %}
@@ -107,14 +108,14 @@
 								data-toggle="table" 
 								data-classes="table table-hover">
 							<thead>
-								<tr>
+								<tr class="search-row">
 									<th> Results containing all search terms</th>
 								</tr>
 							</thead>
 							<tbody>
 								{% if results['moves']['and']|length > 0 %}
 									{% for move in results['moves']['and'] %} 
-										<tr>
+										<tr class="search-row">
 											<td>{{move.MOVE_NAME}}</td>
 										</tr>
 									{% endfor %}
@@ -131,14 +132,14 @@
 								data-toggle="table" 
 								data-classes="table table-hover">
 							<thead>
-								<tr>
+								<tr class="search-row">
 									<th> Results containing any search terms</th>
 								</tr>
 							</thead>
 							<tbody>
 								{% if results['moves']['or']|length > 0 %}
 									{% for move in results['moves']['or'] %} 
-										<tr>
+										<tr class="search-row">
 											<td>{{move.MOVE_NAME}}</td>
 										</tr>
 									{% endfor %}
@@ -156,14 +157,14 @@
 								data-toggle="table" 
 								data-classes="table table-hover">
 							<thead>
-								<tr>
+								<tr class="search-row">
 									<th>Results</th>
 								</tr>
 							</thead>
 							<tbody>
 								{% if results['moves']['or']|length > 0 %}
 									{% for move in results['moves']['or'] %} 
-										<tr>
+										<tr class="search-row">
 											<td>{{move.MOVE_NAME}}</td>
 										</tr>
 									{% endfor %}
@@ -184,14 +185,14 @@
 								data-toggle="table" 
 								data-classes="table table-hover">
 							<thead>
-								<tr>
+								<tr class="search-row">
 									<th> Results containing all search terms</th>
 								</tr>
 							</thead>
 							<tbody>
 								{% if results['locations']['and']|length > 0 %}
 									{% for loc in results['locations']['and'] %} 
-										<tr>
+										<tr class="search-row">
 											<td>{{loc.ROUTE_NAME}}</td>
 										</tr>
 									{% endfor %}
@@ -208,14 +209,14 @@
 								data-toggle="table" 
 								data-classes="table table-hover">
 							<thead>
-								<tr>
+								<tr class="search-row">
 									<th> Results containing any search terms</th>
 								</tr>
 							</thead>
 							<tbody>
 								{% if results['locations']['or']|length > 0 %}
 									{% for loc in results['locations']['or'] %} 
-										<tr>
+										<tr class="search-row">
 											<td>{{loc.ROUTE_NAME}}</td>
 										</tr>
 									{% endfor %}
@@ -233,14 +234,14 @@
 								data-toggle="table" 
 								data-classes="table table-hover">
 							<thead>
-								<tr>
+								<tr class="search-row">
 									<th>Results</th>
 								</tr>
 							</thead>
 							<tbody>
 								{% if results['locations']['or']|length > 0 %}
 									{% for loc in results['locations']['or'] %} 
-										<tr>
+										<tr class="search-row">
 											<td>{{loc.ROUTE_NAME}}</td>
 										</tr>
 									{% endfor %}
