@@ -1,5 +1,6 @@
 .table tbody tr > td {
   background-color: #F3FFFD;
+  vertical-align: middle;
 }
 
 .table thead tr > th {
