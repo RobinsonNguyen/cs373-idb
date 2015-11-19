@@ -182,7 +182,7 @@ def search(query):
 
 	results = { "pokemon":pokemon_results, "moves":moves_results, "locations":location_results}
 
-	return render_template('search.html', terms=terms, results=results)
+	return render_template('search.html', query=query, terms=terms, results=results)
 
 if __name__ == '__main__':
     #create_db()

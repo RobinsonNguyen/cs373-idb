@@ -3,6 +3,7 @@
 	{% block head %}
 		<title>{% for term in terms %} {{term}} {% endfor %} - PokeMasters</title>
 		<link rel="stylesheet" type="text/css" href="{{ url_for('static',filename='css/search.css') }}">
+		<script src="{{ url_for('static',filename='js/search.js') }}"></script>
 	{% endblock %}
 
 	{% block content %}
@@ -11,13 +12,7 @@
 	<div class="search-panel">
 
 		<h2 style="text-align: center;">
-			Search Results for: "
-			{% for term in terms %}
-				{{term}}
-				{% if not loop.last %}
-					, 
-				{% endif %}
-			{% endfor %}"
+			Search Results for: {{query}}
 		</h2>
 
 		<div class="container">
@@ -29,16 +24,20 @@
 			<div class="tab-content">
 				<div role="tabpanel" class="tab-pane fade in active" id="pokemon">
 					{% if terms|length > 1 %}
-						<table class="table table-hover">
+						<table 	id="pokemon-models"
+								data-pagination="true"
+						        data-page-list="[10, 25, 50, 100, ALL]"
+								data-toggle="table" 
+								data-classes="table table-hover">
 							<thead>
-								<tr>
+								<tr class="search-row">
 									<th> Results containing all search terms</th>
 								</tr>
 							</thead>
 							<tbody>
 								{% if results['pokemon']['and']|length > 0 %}
 									{% for pokemon in results['pokemon']['and'] %} 
-										<tr>
+										<tr class="search-row">
 											<td>{{pokemon.POKEMON_NAME}}</td>
 										</tr>
 									{% endfor %}
@@ -49,37 +48,45 @@
 								{% endif %}
 							</tbody>
 						</table>
-						<table class="table table-hover">
+						<table 	id="pokemon-models"
+								data-pagination="true"
+						        data-page-list="[10, 25, 50, 100, ALL]"
+								data-toggle="table" 
+								data-classes="table table-hover">
 							<thead>
-								<tr>
+								<tr class="search-row">
 									<th> Results containing any search terms</th>
 								</tr>
 							</thead>
 							<tbody>
 								{% if results['pokemon']['or']|length > 0 %}
 									{% for pokemon in results['pokemon']['or'] %} 
-										<tr>
+										<tr class="search-row">
 											<td>{{pokemon.POKEMON_NAME}}</td>
 										</tr>
 									{% endfor %}
 								{% else %}
 									<tr>
-										<td>No results show any of the search terms</td>
+										<td>No results contain any of the search terms</td>
 									</tr>
 								{% endif %}
 							</tbody>
 						</table>
 					{% else %}
-						<table class="table table-hover">
+						<table 	id="pokemon-models"
+								data-pagination="true"
+						        data-page-list="[10, 25, 50, 100, ALL]"
+								data-toggle="table" 
+								data-classes="table table-hover">
 							<thead>
-								<tr>
+								<tr class="search-row">
 									<th>Results</th>
 								</tr>
 							</thead>
 							<tbody>
 								{% if results['pokemon']['or']|length > 0 %}
 									{% for pokemon in results['pokemon']['or'] %} 
-										<tr>
+										<tr class="search-row">
 											<td>{{pokemon.POKEMON_NAME}}</td>
 										</tr>
 									{% endfor %}
@@ -95,16 +102,20 @@
 				</div>
 				<div role="tabpanel" class="tab-pane fade" id="moves">
 					{% if terms|length > 1 %}
-						<table class="table table-hover">
+						<table 	id="moves-models"
+								data-pagination="true"
+						        data-page-list="[10, 25, 50, 100, ALL]"
+								data-toggle="table" 
+								data-classes="table table-hover">
 							<thead>
-								<tr>
+								<tr class="search-row">
 									<th> Results containing all search terms</th>
 								</tr>
 							</thead>
 							<tbody>
 								{% if results['moves']['and']|length > 0 %}
 									{% for move in results['moves']['and'] %} 
-										<tr>
+										<tr class="search-row">
 											<td>{{move.MOVE_NAME}}</td>
 										</tr>
 									{% endfor %}
@@ -115,37 +126,45 @@
 								{% endif %}
 							</tbody>
 						</table>
-						<table class="table table-hover">
+						<table 	id="moves-models"
+								data-pagination="true"
+						        data-page-list="[10, 25, 50, 100, ALL]"
+								data-toggle="table" 
+								data-classes="table table-hover">
 							<thead>
-								<tr>
+								<tr class="search-row">
 									<th> Results containing any search terms</th>
 								</tr>
 							</thead>
 							<tbody>
 								{% if results['moves']['or']|length > 0 %}
 									{% for move in results['moves']['or'] %} 
-										<tr>
+										<tr class="search-row">
 											<td>{{move.MOVE_NAME}}</td>
 										</tr>
 									{% endfor %}
 								{% else %}
 									<tr>
-										<td>No results show any of the search terms</td>
+										<td>No results contain any of the search terms</td>
 									</tr>
 								{% endif %}
 							</tbody>
 						</table>
 					{% else %}
-						<table class="table table-hover">
+						<table 	id="moves-models"
+								data-pagination="true"
+						        data-page-list="[10, 25, 50, 100, ALL]"
+								data-toggle="table" 
+								data-classes="table table-hover">
 							<thead>
-								<tr>
+								<tr class="search-row">
 									<th>Results</th>
 								</tr>
 							</thead>
 							<tbody>
 								{% if results['moves']['or']|length > 0 %}
 									{% for move in results['moves']['or'] %} 
-										<tr>
+										<tr class="search-row">
 											<td>{{move.MOVE_NAME}}</td>
 										</tr>
 									{% endfor %}
@@ -160,16 +179,20 @@
 				</div>
 				<div role="tabpanel" class="tab-pane fade" id="locations">
 					{% if terms|length > 1 %}
-						<table class="table table-hover">
+						<table 	id="routes-models"
+								data-pagination="true"
+						        data-page-list="[10, 25, 50, 100, ALL]"
+								data-toggle="table" 
+								data-classes="table table-hover">
 							<thead>
-								<tr>
+								<tr class="search-row">
 									<th> Results containing all search terms</th>
 								</tr>
 							</thead>
 							<tbody>
 								{% if results['locations']['and']|length > 0 %}
 									{% for loc in results['locations']['and'] %} 
-										<tr>
+										<tr class="search-row">
 											<td>{{loc.ROUTE_NAME}}</td>
 										</tr>
 									{% endfor %}
@@ -180,37 +203,45 @@
 								{% endif %}
 							</tbody>
 						</table>
-						<table class="table table-hover">
+						<table 	id="routes-models"
+								data-pagination="true"
+						        data-page-list="[10, 25, 50, 100, ALL]"
+								data-toggle="table" 
+								data-classes="table table-hover">
 							<thead>
-								<tr>
+								<tr class="search-row">
 									<th> Results containing any search terms</th>
 								</tr>
 							</thead>
 							<tbody>
 								{% if results['locations']['or']|length > 0 %}
 									{% for loc in results['locations']['or'] %} 
-										<tr>
+										<tr class="search-row">
 											<td>{{loc.ROUTE_NAME}}</td>
 										</tr>
 									{% endfor %}
 								{% else %}
 									<tr>
-										<td>No results show any of the search terms</td>
+										<td>No results contain any of the search terms</td>
 									</tr>
 								{% endif %}
 							</tbody>
 						</table>
 					{% else %}
-						<table class="table table-hover">
+						<table 	id="routes-models"
+								data-pagination="true"
+						        data-page-list="[10, 25, 50, 100, ALL]"
+								data-toggle="table" 
+								data-classes="table table-hover">
 							<thead>
-								<tr>
+								<tr class="search-row">
 									<th>Results</th>
 								</tr>
 							</thead>
 							<tbody>
 								{% if results['locations']['or']|length > 0 %}
 									{% for loc in results['locations']['or'] %} 
-										<tr>
+										<tr class="search-row">
 											<td>{{loc.ROUTE_NAME}}</td>
 										</tr>
 									{% endfor %}
