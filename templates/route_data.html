@@ -6,8 +6,8 @@
 
 	{% block content %}
 		<div class="row">
-			<div class="panel panel-primary col-sm-4">
-				<div class="panel-heading">{{ route.ROUTE_NAME }}</div>
+			<div class="panel panel-primary col-sm-3">
+				<div class="panel-heading" align="center"><h3><b>{{ route.ROUTE_NAME }}</b></h3></div>
 				<div class="text-center">
 					<div class="btn-group" roll="group" style="padding: 4px;" align="center">
 						{% for gen in images %}
@@ -35,7 +35,7 @@
 							</tr>
 							<tr>
 								<td width="30%"><a href="/location/{{ route.ROUTE_EAST_EXIT }}">{{ route.ROUTE_EAST_EXIT }}</a></td>
-								<td width="40%"2>{{ route.ROUTE_NAME }}</td>
+								<td width="40%"2 align="center">{{ route.ROUTE_NAME }}</td>
 								<td width="30%"><a href="/location/{{ route.ROUTE_WEST_EXIT }}">{{ route.ROUTE_WEST_EXIT }}</a></td>
 							</tr>
 							<tr>
@@ -60,7 +60,7 @@
 				<!-- Tab panes -->
 				<div class="tab-content">
 					<div role="tabpanel" class="tab-pane fade in active" id="pokemon">
-						<table id="pokemon-models" class="table" data-toggle="table" data-pagination="true" data-page-list="[10, 25, 50, 100, ALL]" data-toggle="table" data-classes="table table-hover">
+						<table id="route-pokemon-models" class="table" data-toggle="table" data-pagination="true" data-page-list="[10, 25, 50, 100, ALL]" data-toggle="table" data-classes="table table-hover">
 							<thead>
 								<tr>
 									<th width="15%" data-sortable="false"></th>

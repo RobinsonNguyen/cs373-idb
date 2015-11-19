@@ -31,6 +31,15 @@ tr {
     color: black;
 }
 
+.nav.navbar-nav > li > a:hover {
+	background-color: #aaaaaa;
+	color: black;
+}
+
+.nav.navbar-nav > li > a{
+	color: white;
+}
+
 .panel {
     background-color: #F3FFFD;
 }
