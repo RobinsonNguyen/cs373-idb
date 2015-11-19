@@ -86,31 +86,37 @@
 								data-classes="table table-hover">
 							<thead>
 								<tr class="search-row">
-									<th>Results</th>
+									<th>Name</th>
+									<th>Context</th>
 								</tr>
 							</thead>
 							<tbody>
 								{% if results['pokemon']['or']|length > 0 %}
 									{% for triple in results['pokemon']['or'] %} 
+
+										<tr class="search-row">
+											<td>{{triple[0].POKEMON_NAME}}</td>
+										</tr>
+
 										{% if triple[1] == "NAME" %}
 										<tr class="search-row">
 											<td>Got from Name</td>
 										</tr>
 										{% elif triple[1] == "EVOLUTION"%}
 										<tr class="search-row">
-											<td>Got from evolution</td>
+											<td>Evolves into: {{ triple[2].POKEMON_NAME }}</td>
 										</tr>
 										{% elif triple[1] == "MOVE"%}
 										<tr class="search-row">
-											<td>Got from Move</td>
+											<td>Learns: {{ triple[2].MOVE_NAME }}</td>
 										</tr>
 										{% elif triple[1] == "ROUTE"%}
 										<tr class="search-row">
-											<td>Got from Route</td>
+											<td>Can be found in {{triple[2].ROUTE_NAME}}</td>
 										</tr>
 										{% elif triple[1] == "TYPE"%}
 										<tr class="search-row">
-											<td>Got from Type</td>
+											<td>Type: {{triple[2].TYPE_NAME}}</td>
 										</tr>
 										{% else %}
 										<tr class="search-row">

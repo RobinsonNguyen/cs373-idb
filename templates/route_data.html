@@ -1,27 +1,18 @@
 {% extends "base.html" %}
 
 	{% block head %}
-		<link rel="stylesheet" type="text/css" href="../static/css/location.css">
-		<link rel="stylesheet" type="text/css" href="../static/css/route.css">
-		<script src="../static/js/location.js"></script>
-		<script src="{{ url_for('static',filename='js/route.js') }}"></script>
-
 		<title>{{route.ROUTE_NAME}} (Route) - PokeMasters</title>
 	{% endblock %}
 
 	{% block content %}
-		<div class="row" style="margin: 4px;">
-			<div class="panel panel-primary col-sm-4" style="background-color: #71AD64; border: 2px solid #4AA14D;">
-				<div class="panel-heading" style="background: #A2E0A3; border: 2px solid #4AA14D;">
-					<h3 class="panel-title" style="text-align: center; color: black;">{{ route.ROUTE_NAME }}</h3>
-				</div>
+		<div class="row">
+			<div class="panel panel-primary col-sm-4">
+				<div class="panel-heading">{{ route.ROUTE_NAME }}</div>
 				<div class="text-center">
 					<div class="btn-group" roll="group" style="padding: 4px;" align="center">
 						{% for gen in images %}
 								<button type="button" class="btn btn-sm" style="color:black;">{{ gen.ROUTE_GEN }}</button>
 						{% endfor %}
-
-						
 					</div>
 				</div>
 
@@ -61,15 +52,15 @@
 				<ul class="nav nav-tabs" role="tablist">
 					<li role="presentation" class="active"><a href="#pokemon" aria-controls="pokemon" role="tab" data-toggle="tab">Wild Pokemon</a></li>
 
-					<li role="presentation"><a href="#trainers" aria-controls="trainers" role="tab" data-toggle="tab" class="loc-btn" style="border: 2px solid #4AA14D;">Trainers</a></li>
+					<li role="presentation"><a href="#trainers" aria-controls="trainers" role="tab" data-toggle="tab">Trainers</a></li>
 
-					<li role="presentation"><a href="#items" aria-controls="items" role="tab" data-toggle="tab" class="loc-btn" style="border: 2px solid #4AA14D;">Items</a></li>
+					<li role="presentation"><a href="#items" aria-controls="items" role="tab" data-toggle="tab">Items</a></li>
 				</ul>
 
 				<!-- Tab panes -->
 				<div class="tab-content">
 					<div role="tabpanel" class="tab-pane fade in active" id="pokemon">
-						<table id="pokemon-models" class="table" style="border: 2px solid #4AA14D; color: #000000" data-toggle="table" data-pagination="true" data-page-list="[10, 25, 50, 100, ALL]" data-toggle="table" data-classes="table table-hover">
+						<table id="pokemon-models" class="table" data-toggle="table" data-pagination="true" data-page-list="[10, 25, 50, 100, ALL]" data-toggle="table" data-classes="table table-hover">
 							<thead>
 								<tr>
 									<th width="15%" data-sortable="false"></th>
@@ -96,7 +87,7 @@
 					</div>
 
 					<div role="tabpanel" class="tab-pane fade in" id="trainers">
-						<table class="table" style="border: 2px solid #4AA14D; color: #000000" data-toggle="table" data-pagination="true" data-page-list="[10, 25, 50, 100, ALL]" data-toggle="table" data-classes="table table-hover">
+						<table class="table" data-toggle="table" data-pagination="true" data-page-list="[10, 25, 50, 100, ALL]" data-toggle="table" data-classes="table table-hover">
 							<thead>
 								<tr>
 									<th width="55%" data-sortable="true">Name</th>
@@ -117,7 +108,7 @@
 					</div>
 
 					<div role="tabpanel" class="tab-pane fade in" id="items">
-						<table class="table" style="border: 2px solid #4AA14D; color: #000000" data-toggle="table" data-pagination="true" data-page-list="[10, 25, 50, 100, ALL]" data-toggle="table" data-classes="table table-hover">
+						<table class="table" data-toggle="table" data-pagination="true" data-page-list="[10, 25, 50, 100, ALL]" data-toggle="table" data-classes="table table-hover">
 							<thead>
 								<tr>
 									<th width="55%" data-sortable="true">Name</th>
@@ -139,11 +130,4 @@
 				</div>
 			</div>
 		</div>
-
-		<script>
-			$('#myTabs a').click(function (e) {
-				e.preventDefault()
-				$(this).tab('show')
-			})
-		</script>
 	{% endblock %}
