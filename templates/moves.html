@@ -50,35 +50,37 @@
 
             {% if pokemonLVL[0] is defined %}
 
-                <div class="col-lg-12 pkCollapse">
-                    <h1><a href="#">Pokemon who learn through level up:</a></h1>
+                <div class="col-lg-12">
+                    <h1>Pokemon who learn through level up:</h1>
+                </div>
 
                 {% for p in pokemonLVL | batch(6) %}
                     <div class="row">
                     {% for pokemon in p %}
 
-                        <div class="col-lg-2 thumb stats">
+                        <div class="col-lg-2 thumb">
                             <div align="center">
                                 <a class="poke-data" href="../../pokemon/{{pokemon.POKEMON_NAME}}">
                                     <h2>{{pokemon.POKEMON_NAME}}</h2>
                                     <img class="img-poke" src="{{ url_for('static', filename='res/SPRITES/%s' % pokemon.POKEMON_IMG) }}" alt="">
                                 </a>
                             </div>
-                            <h4 class=""><a href="#">Stats:</a></h4>
-                            <p class="data"><b>Learns at:</b> {{pokemon.POKEMON_LEVEL_LEARNED}}</p>
-                            <p class="data"><b>HP:</b> {{pokemon.POKEMON_HP}}</p>
-                            <p class="data"><b>Attack:</b> {{pokemon.POKEMON_ATK}}</p>
-                            <p class="data"><b>Defense:</b> {{pokemon.POKEMON_DEF}}</p>
-                            <p class="data"><b>Speed:</b> {{pokemon.POKEMON_SPD}}</p>
-                            <p class="data"><b>Special Attack:</b> {{pokemon.POKEMON_SPATK}}</p>
-                            <p class="data"><b>Special Defense:</b> {{pokemon.POKEMON_SPDEF}}</p>
+                            <div class="stats">
+                                <h4 class=""><a href="#">Stats:</a></h4>
+                                <p class="data"><b>Learns at:</b> {{pokemon.POKEMON_LEVEL_LEARNED}}</p>
+                                <p class="data"><b>HP:</b> {{pokemon.POKEMON_HP}}</p>
+                                <p class="data"><b>Attack:</b> {{pokemon.POKEMON_ATK}}</p>
+                                <p class="data"><b>Defense:</b> {{pokemon.POKEMON_DEF}}</p>
+                                <p class="data"><b>Speed:</b> {{pokemon.POKEMON_SPD}}</p>
+                                <p class="data"><b>Special Attack:</b> {{pokemon.POKEMON_SPATK}}</p>
+                                <p class="data"><b>Special Defense:</b> {{pokemon.POKEMON_SPDEF}}</p>
+                            </div>
                         </div>
 
                     {% endfor %}
                     </div>
                 {% endfor %}
-                </div>
-                <hr>
+
             {% endif %}
 
 
@@ -101,13 +103,15 @@
                                     <img class="img-poke" src="{{ url_for('static', filename='res/SPRITES/%s' % pokemon.POKEMON_IMG) }}" alt="">
                                 </a>
                             </div>
-                            <h4 class=""><a href="#">Stats:</a></h4>
-                            <p class="data"><b>HP:</b> {{pokemon.POKEMON_HP}}</p>
-                            <p class="data"><b>Attack:</b> {{pokemon.POKEMON_ATK}}</p>
-                            <p class="data"><b>Defense:</b> {{pokemon.POKEMON_DEF}}</p>
-                            <p class="data"><b>Speed:</b> {{pokemon.POKEMON_SPD}}</p>
-                            <p class="data"><b>Special Attack:</b> {{pokemon.POKEMON_SPATK}}</p>
-                            <p class="data"><b>Special Defense:</b> {{pokemon.POKEMON_SPDEF}}</p>
+                            <div class="stats">
+                                <h4 class=""><a href="#">Stats:</a></h4>
+                                <p class="data"><b>HP:</b> {{pokemon.POKEMON_HP}}</p>
+                                <p class="data"><b>Attack:</b> {{pokemon.POKEMON_ATK}}</p>
+                                <p class="data"><b>Defense:</b> {{pokemon.POKEMON_DEF}}</p>
+                                <p class="data"><b>Speed:</b> {{pokemon.POKEMON_SPD}}</p>
+                                <p class="data"><b>Special Attack:</b> {{pokemon.POKEMON_SPATK}}</p>
+                                <p class="data"><b>Special Defense:</b> {{pokemon.POKEMON_SPDEF}}</p>
+                            </div>
                         </div>
 
                     {% endfor %}
@@ -135,13 +139,15 @@
                                     <img class="img-poke" src="{{ url_for('static', filename='res/SPRITES/%s' % pokemon.POKEMON_IMG) }}" alt="">
                                 </a>
                             </div>
-                            <h4 class=""><a href="#">Stats:</a></h4>
-                            <p class="data"><b>HP:</b> {{pokemon.POKEMON_HP}}</p>
-                            <p class="data"><b>Attack:</b> {{pokemon.POKEMON_ATK}}</p>
-                            <p class="data"><b>Defense:</b> {{pokemon.POKEMON_DEF}}</p>
-                            <p class="data"><b>Speed:</b> {{pokemon.POKEMON_SPD}}</p>
-                            <p class="data"><b>Special Attack:</b> {{pokemon.POKEMON_SPATK}}</p>
-                            <p class="data"><b>Special Defense:</b> {{pokemon.POKEMON_SPDEF}}</p>
+                            <div class="stats">
+                                <h4 class=""><a href="#">Stats:</a></h4>
+                                <p class="data"><b>HP:</b> {{pokemon.POKEMON_HP}}</p>
+                                <p class="data"><b>Attack:</b> {{pokemon.POKEMON_ATK}}</p>
+                                <p class="data"><b>Defense:</b> {{pokemon.POKEMON_DEF}}</p>
+                                <p class="data"><b>Speed:</b> {{pokemon.POKEMON_SPD}}</p>
+                                <p class="data"><b>Special Attack:</b> {{pokemon.POKEMON_SPATK}}</p>
+                                <p class="data"><b>Special Defense:</b> {{pokemon.POKEMON_SPDEF}}</p>
+                            </div>
                         </div>
 
                     {% endfor %}
@@ -169,13 +175,15 @@
                                     <img class="img-poke" src="{{ url_for('static', filename='res/SPRITES/%s' % pokemon.POKEMON_IMG) }}" alt="">
                                 </a>
                             </div>
-                            <h4 class=""><a href="#">Stats:</a></h4>
-                            <p class="data"><b>HP:</b> {{pokemon.POKEMON_HP}}</p>
-                            <p class="data"><b>Attack:</b> {{pokemon.POKEMON_ATK}}</p>
-                            <p class="data"><b>Defense:</b> {{pokemon.POKEMON_DEF}}</p>
-                            <p class="data"><b>Speed:</b> {{pokemon.POKEMON_SPD}}</p>
-                            <p class="data"><b>Special Attack:</b> {{pokemon.POKEMON_SPATK}}</p>
-                            <p class="data"><b>Special Defense:</b> {{pokemon.POKEMON_SPDEF}}</p>
+                            <div class="stats">
+                                <h4 class=""><a href="#">Stats:</a></h4>
+                                <p class="data"><b>HP:</b> {{pokemon.POKEMON_HP}}</p>
+                                <p class="data"><b>Attack:</b> {{pokemon.POKEMON_ATK}}</p>
+                                <p class="data"><b>Defense:</b> {{pokemon.POKEMON_DEF}}</p>
+                                <p class="data"><b>Speed:</b> {{pokemon.POKEMON_SPD}}</p>
+                                <p class="data"><b>Special Attack:</b> {{pokemon.POKEMON_SPATK}}</p>
+                                <p class="data"><b>Special Defense:</b> {{pokemon.POKEMON_SPDEF}}</p>
+                            </div>
                         </div>
 
                     {% endfor %}
