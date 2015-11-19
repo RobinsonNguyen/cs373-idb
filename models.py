@@ -176,20 +176,20 @@ class Pokemon(db.Model):
 			if ap not in and_results:
 				and_results.append( [ap, "NAME", None] )
 
-		# #search evolutions
-		# or_evos = Evolutions.query.whoosh_search(or_term, or_=True)
-		# and_evos = Evolutions.query.whoosh_search(and_term)
+		#search evolutions
+		or_evos = Evolutions.query.whoosh_search(or_term, or_=True)
+		and_evos = Evolutions.query.whoosh_search(and_term)
 
-		# #get pokemon from evolution
-		# for evo in or_evos:
-		# 	p = Pokemon.query.filter_by(POKEMON_NAME=evo.POKEMON_NAME).first()
-		# 	if p not in or_results:
-		# 		or_results.append( [p, "EVOLUTION", evo] )
+		#get pokemon from evolution
+		for evo in or_evos:
+			p = Pokemon.query.filter_by(POKEMON_NAME=evo.POKEMON_NAME).first()
+			if p not in or_results:
+				or_results.append( [p, "EVOLUTION", evo] )
 
-		# for evo in and_evos:
-		# 	p = Pokemon.query.filter_by(POKEMON_NAME=evo.POKEMON_NAME).first()
-		# 	if p not in and_results:
-		# 		and_results.append( [p, "EVOLUTION", evo] )
+		for evo in and_evos:
+			p = Pokemon.query.filter_by(POKEMON_NAME=evo.POKEMON_NAME).first()
+			if p not in and_results:
+				and_results.append( [p, "EVOLUTION", evo] )
 
 		# #If we search by move name, return all pokemon that can learn that move
 		# or_moves = PokemonMoves.query.whoosh_search(or_term, or_=True)
