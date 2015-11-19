@@ -165,16 +165,20 @@ class Pokemon(db.Model):
 		or_results = []
 		and_results = []
 
+		seen = []
+
 		or_pokemon = Pokemon.query.whoosh_search(or_term, or_=True)
 		and_pokemon = Pokemon.query.whoosh_search(and_term)
 
 		for op in or_pokemon:
-			if op not in or_results:
+			if op not in seen:
 				or_results.append( [op, "NAME", None] )
+				seen.append(op)
 
 		for ap in and_pokemon:
-			if ap not in and_results:
+			if ap not in seen:
 				and_results.append( [ap, "NAME", None] )
+				seen.append(ap)
 
 		#search evolutions
 		or_evos = Evolutions.query.whoosh_search(or_term, or_=True)
@@ -183,13 +187,15 @@ class Pokemon(db.Model):
 		#get pokemon from evolution
 		for evo in or_evos:
 			p = Pokemon.query.filter_by(POKEMON_NAME=evo.POKEMON_NAME).first()
-			if p not in or_results:
+			if p not in seen:
 				or_results.append( [p, "EVOLUTION", evo] )
+				seen.append(p)
 
 		for evo in and_evos:
 			p = Pokemon.query.filter_by(POKEMON_NAME=evo.POKEMON_NAME).first()
-			if p not in and_results:
+			if p not in seen:
 				and_results.append( [p, "EVOLUTION", evo] )
+				seen.append(p)
 
 		#If we search by move name, return all pokemon that can learn that move
 		or_moves = PokemonMoves.query.whoosh_search(or_term, or_=True)
@@ -198,13 +204,15 @@ class Pokemon(db.Model):
 		#get pokemon from move
 		for move in or_moves:
 			m = Pokemon.query.filter_by(POKEMON_NAME=move.POKEMON_NAME).first()
-			if m not in or_results:
+			if m not in seen:
 				or_results.append( [m, "MOVE", move] )
+				seen.append(m)
 
 		for move in and_moves:
 			m = Pokemon.query.filter_by(POKEMON_NAME=move.POKEMON_NAME).first()
-			if m not in and_results:
+			if m not in seen:
 				and_results.append( [m, "MOVE", move] )
+				seen.append(m)
 				
 		#Find route pokemon with given location  
 		or_locs = RoutePokemon.query.whoosh_search(or_term, or_=True)
@@ -214,14 +222,16 @@ class Pokemon(db.Model):
 		for loc in or_locs:
 			m = Pokemon.query.filter_by(POKEMON_NAME=loc.ROUTE_POKEMON_NAME)
 			for r in m:
-				if r not in or_results:
+				if r not in seen:
 					or_results.append( [r, "ROUTE", loc] )
+					seen.append(r)
 
 		for loc in and_locs:
 			m = Pokemon.query.filter_by(POKEMON_NAME=loc.ROUTE_POKEMON_NAME)
 			for r in m:
-				if r not in and_results:
+				if r not in seen:
 					and_results.append( [r, "ROUTE", loc] )
+					seen.append(r)
 
 
 		#Search the type table
@@ -231,13 +241,15 @@ class Pokemon(db.Model):
 		#get pokemon from type
 		for typ in or_types:
 			t = Pokemon.query.filter_by(POKEMON_NAME=typ.POKEMON_NAME).first()
-			if t not in or_results:
+			if t not in seen:
 				or_results.append( [t, "TYPE", typ] )
+				seen.append(t)
 
 		for typ in and_types:
 			t = Pokemon.query.filter_by(POKEMON_NAME=typ.POKEMON_NAME).first()
-			if t not in and_results:
+			if t not in seen:
 				and_results.append( [t, "TYPE", typ] )
+				seen.append(t)
 
 		return and_results, or_results
 	
