@@ -4,7 +4,7 @@
 		<link rel="stylesheet" type="text/css" href="{{ url_for('static',filename='css/pokemon.css') }}">
 		<script src="{{ url_for('static',filename='js/pokemon.js') }}"></script>
 
-		<title>{{ pokemon.name }} (Pokemon) - Pokemasters</title>
+		<title>{{ pokemon.POKEMON_NAME }} (Pokemon) - Pokemasters</title>
 
 	{% endblock %}
 
@@ -21,6 +21,7 @@
 					<div id="type-panel" class="inner-panel panel panel-success">
 			    		<div class="panel-heading"><b>Type</b></div>
 	    				<div class="panel-body">
+	    					{{pokemon.POKEMON_EV}}
 	    					{% for t in types %}
 	    						{{ t.POKEMON_TYPE }}
 								{% if not loop.last %}
