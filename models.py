@@ -33,7 +33,7 @@ def parse_query(query):
 
 class Move(db.Model):
 	__tablename__ = 'ALL_MOVES'
-	__searchable__ = ['MOVE_NAME', 'MOVE_TYPE', 'MOVE_CATEGORY', 'MOVE_DESCRIPTION']
+	__searchable__ = ['MOVE_NAME', 'MOVE_TYPE', 'MOVE_CATEGORY']
 	MOVE_ID = db.Column(db.Integer, primary_key=True)
 	MOVE_NAME = db.Column(db.VARCHAR(50))
 	MOVE_TYPE = db.Column(db.VARCHAR(50))
