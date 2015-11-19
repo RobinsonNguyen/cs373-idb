@@ -11,13 +11,7 @@
 	<div class="search-panel">
 
 		<h2 style="text-align: center;">
-			Search Results for: "
-			{% for term in terms %}
-				{{term}}
-				{% if not loop.last %}
-					, 
-				{% endif %}
-			{% endfor %}"
+			Search Results for: {{terms}}
 		</h2>
 
 		<div class="container">

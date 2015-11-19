@@ -78,7 +78,7 @@ class Move(db.Model):
 				or_results.append(op)
 
 		for ap in and_moves:
-			if ap not in or_results:
+			if ap not in and_results:
 				and_results.append(ap)
 
 		#search poke moves
@@ -93,8 +93,8 @@ class Move(db.Model):
 
 		for a in and_poke:
 			m = Move.query.filter_by(MOVE_NAME=a.POKEMON_MOVE).first()
-			if m not in or_results:
-				or_results.append(m)
+			if m not in and_results:
+				and_results.append(m)
 
 		return and_results, or_results
 		
@@ -171,7 +171,7 @@ class Pokemon(db.Model):
 				or_results.append(op)
 
 		for ap in and_pokemon:
-			if ap not in or_results:
+			if ap not in and_results:
 				and_results.append(ap)
 
 		#search evolutions
@@ -201,8 +201,8 @@ class Pokemon(db.Model):
 
 		for move in and_moves:
 			m = Pokemon.query.filter_by(POKEMON_NAME=move.POKEMON_NAME).first()
-			if m not in or_results:
-				or_results.append(m)
+			if m not in and_results:
+				and_results.append(m)
 				
 		#Find route pokemon with given location  
 		or_locs = RoutePokemon.query.whoosh_search(or_term, or_=True)
@@ -234,8 +234,8 @@ class Pokemon(db.Model):
 
 		for typ in and_types:
 			t = Pokemon.query.filter_by(POKEMON_NAME=typ.POKEMON_NAME).first()
-			if t not in or_results:
-				or_results.append(t)
+			if t not in and_results:
+				and_results.append(t)
 
 		return and_results, or_results
 	
@@ -289,7 +289,7 @@ class Routes(db.Model):
 		or_results = []
 		and_results = []
 
-		or_routes = Routes.query.whoosh_search(query, or_=True)
+		or_routes = Routes.query.whoosh_search(or_term, or_=True)
 		and_routes = Routes.query.whoosh_search(and_term)
 
 		for op in or_routes:
@@ -297,7 +297,7 @@ class Routes(db.Model):
 				or_results.append(op)
 
 		for ap in and_routes:
-			if ap not in or_results:
+			if ap not in and_results:
 				and_results.append(ap)
 
 		#search routes
@@ -312,8 +312,8 @@ class Routes(db.Model):
 
 		for a in and_loc:
 			r = Routes.query.filter_by(ROUTE_NAME=a.ROUTE_NAME).first()
-			if r not in or_results:
-				or_results.append(r)
+			if r not in and_results:
+				and_results.append(r)
 				
 		#search Pokemon
 		or_poke = Pokemon.query.whoosh_search(or_term, or_=True)
@@ -328,8 +328,8 @@ class Routes(db.Model):
 
 		for a in and_poke:
 			r = RoutePokemon.query.filter_by(ROUTE_POKEMON_NAME=a.POKEMON_NAME).first()
-			if r not in or_results:
-				or_results.append(r)
+			if r not in and_results:
+				and_results.append(r)
 
 		return and_results, or_results
 
