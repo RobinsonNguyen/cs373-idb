@@ -275,7 +275,7 @@ class Pokemon(db.Model):
 
 class Routes(db.Model):
 	__tablename__ = "ALL_ROUTES"
-	__searchable__ = ['ROUTE_NAME']
+	__searchable__ = ['ROUTE_NAME', 'ROUTE_REGION', 'ROUTE_NORTH_EXIT', 'ROUTE_SOUTH_EXIT', 'ROUTE_EAST_EXIT' ,'ROUTE_WEST_EXIT']
 	ID = db.Column(db.Integer, primary_key=True)
 	ROUTE_NAME = db.Column(db.VARCHAR(50))
 	ROUTE_REGION = db.Column(db.VARCHAR(50))
@@ -304,6 +304,8 @@ class Routes(db.Model):
 	def search(query):
 		and_term, or_term = parse_query(query)
 
+		seen = []
+
 		or_results = []
 		and_results = []
 
@@ -311,12 +313,14 @@ class Routes(db.Model):
 		and_routes = Routes.query.whoosh_search(and_term)
 
 		for op in or_routes:
-			if op not in or_results:
-				or_results.append(op)
+			if op not in seen:
+				or_results.append( [op, "NAME", None] )
+				seen.append(op)
 
 		for ap in and_routes:
-			if ap not in and_results:
-				and_results.append(ap)
+			if ap not in seen:
+				and_results.append( [ap, "NAME", None] )
+				seen.append(ap)
 
 		#search routes
 		or_loc = RoutePokemon.query.whoosh_search(or_term, or_=True)
@@ -325,29 +329,15 @@ class Routes(db.Model):
 		#get routes from Routes
 		for a in or_loc:
 			r = Routes.query.filter_by(ROUTE_NAME=a.ROUTE_NAME).first()
-			if r not in or_results:
-				or_results.append(r)
+			if r not in seen:
+				or_results.append( [r, "POKEMON", a] )
+				seen.append(r)
 
 		for a in and_loc:
 			r = Routes.query.filter_by(ROUTE_NAME=a.ROUTE_NAME).first()
-			if r not in and_results:
-				and_results.append(r)
-				
-		#search Pokemon
-		or_poke = Pokemon.query.whoosh_search(or_term, or_=True)
-		and_poke = Pokemon.query.whoosh_search(and_term)
-
-		#get pokemon from RoutePokemon
-		for a in or_poke:
-			r = RoutePokemon.query.filter_by(ROUTE_POKEMON_NAME=a.POKEMON_NAME)
-			for a in r:
-				if a not in or_results:
-					or_results.append(a)
-
-		for a in and_poke:
-			r = RoutePokemon.query.filter_by(ROUTE_POKEMON_NAME=a.POKEMON_NAME).first()
-			if r not in and_results:
-				and_results.append(r)
+			if r not in seen:
+				and_results.append( [r, "POKEMON", a] )
+				seen.append(r)
 
 		return and_results, or_results
 
