@@ -99,13 +99,13 @@
 											{% if triple[1] == "NAME" %}
 											<td>Got from Name</td>
 											{% elif triple[1] == "EVOLUTION"%}
-											<td>Evolves into: {{ triple[2].POKEMON_NAME }}</td>
+											<td>Evolves into: {{ triple[2].POKEMON_EVOLUTION }}</td>
 											{% elif triple[1] == "MOVE"%}
 											<td>Learns: {{ triple[2].MOVE_NAME }}</td>
 											{% elif triple[1] == "ROUTE"%}
 											<td>Can be found in {{triple[2].ROUTE_NAME}}</td>
 											{% elif triple[1] == "TYPE"%}
-											<td>Type: {{triple[2].TYPE_NAME}}</td>
+											<td>Type: {{triple[2].POKEMON_TYPE}}</td>
 											{% else %}
 											<td>??????</td>
 											{% endif %}
