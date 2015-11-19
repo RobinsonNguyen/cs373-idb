@@ -165,8 +165,8 @@ class Pokemon(db.Model):
 
 		for evo in and_evos:
 			p = Pokemon.query.filter_by(POKEMON_NAME=evo.POKEMON_NAME).first()
-			if p not in or_results:
-				or_results.append(p)
+			if p not in and_results:
+				and_results.append(p)
 
 		#If we search by move name, return all pokemon that can learn that move
 		or_moves = PokemonMoves.query.whoosh_search(query, or_=True)
@@ -182,6 +182,23 @@ class Pokemon(db.Model):
 			m = Pokemon.query.filter_by(POKEMON_NAME=move.POKEMON_NAME).first()
 			if m not in or_results:
 				or_results.append(m)
+				
+		#Find route pokemon with given location  
+		or_locs = RoutePokemon.query.whoosh_search(query, or_=True)
+		and_locs = RoutePokemon.query.whoosh_search(query)
+
+		#get pokemon from evolution
+		for loc in or_locs:
+			m = Pokemon.query.filter_by(POKEMON_NAME=loc.ROUTE_POKEMON_NAME)
+			for r in m:
+				if r not in or_results:
+					or_results.append(r)
+
+		for loc in and_locs:
+			m = Pokemon.query.filter_by(POKEMON_NAME=loc.ROUTE_POKEMON_NAME)
+			for r in m:
+				if r not in and_results:
+					and_results.append(r)
 
 		return and_results, or_results
 	
@@ -203,7 +220,7 @@ class Pokemon(db.Model):
 
 class Routes(db.Model):
 	__tablename__ = "ALL_ROUTES"
-	__searchable__ = ['ROUTE_NAME', 'ROUTE_REGION', 'ROUTE_NORTH_EXIT', 'ROUTE_SOUTH_EXIT', 'ROUTE_EAST_EXIT', 'ROUTE_WEST_EXIT', 'ROUTE_MINI_DESCRIPTION']
+	__searchable__ = ['ROUTE_NAME']
 	ID = db.Column(db.Integer, primary_key=True)
 	ROUTE_NAME = db.Column(db.VARCHAR(50))
 	ROUTE_REGION = db.Column(db.VARCHAR(50))
@@ -227,6 +244,57 @@ class Routes(db.Model):
 		self.ROUTE_MINI_DESCRIPTION = mini;
 		self.ROUTE_MAIN_DESCRIPTION = main;
 		self.ROUTE_TRIVIA = trivia;
+		
+	@staticmethod
+	def search(query):
+		terms = query.split()
+
+		or_results = []
+		and_results = []
+
+		or_routes = Routes.query.whoosh_search(query, or_=True)
+		and_routes = Routes.query.whoosh_search(query)
+
+		for op in or_routes:
+			if op not in or_results:
+				or_results.append(op)
+
+		for ap in and_routes:
+			if ap not in or_results:
+				and_results.append(ap)
+
+		#search routes
+		or_loc = RoutePokemon.query.whoosh_search(query, or_=True)
+		and_loc = RoutePokemon.query.whoosh_search(query)
+
+		#get routes from Routes
+		for a in or_loc:
+			r = Routes.query.filter_by(ROUTE_NAME=a.ROUTE_NAME).first()
+			if r not in or_results:
+				or_results.append(r)
+
+		for a in and_loc:
+			r = Routes.query.filter_by(ROUTE_NAME=a.ROUTE_NAME).first()
+			if r not in or_results:
+				or_results.append(r)
+				
+		#search Pokemon
+		or_poke = Pokemon.query.whoosh_search(query, or_=True)
+		and_poke = Pokemon.query.whoosh_search(query)
+
+		#get pokemon from RoutePokemon
+		for a in or_poke:
+			r = RoutePokemon.query.filter_by(ROUTE_POKEMON_NAME=a.POKEMON_NAME)
+			for a in r:
+				if a not in or_results:
+					or_results.append(a)
+
+		for a in and_poke:
+			r = RoutePokemon.query.filter_by(ROUTE_POKEMON_NAME=a.POKEMON_NAME).first()
+			if r not in or_results:
+				or_results.append(r)
+
+		return and_results, or_results
 
 	@staticmethod
 	def get_all():
@@ -405,7 +473,7 @@ class RouteItems(db.Model):
 
 class RoutePokemon(db.Model):
 	__tablename__ = "ROUTE_POKEMON"
-
+	__searchable__ = ['ROUTE_NAME', 'ROUTE_POKEMON_NAME']
 	ID = db.Column(db.Integer, primary_key=True)
 	ROUTE_NAME = db.Column(db.VARCHAR(50))
 	ROUTE_POKEMON_NAME = db.Column(db.VARCHAR(50))
@@ -458,6 +526,7 @@ flask.ext.whooshalchemy.whoosh_index(app, Pokemon)
 flask.ext.whooshalchemy.whoosh_index(app, Routes)
 flask.ext.whooshalchemy.whoosh_index(app, Evolutions)
 flask.ext.whooshalchemy.whoosh_index(app, PokemonMoves)
+flask.ext.whooshalchemy.whoosh_index(app, RoutePokemon)
 
 
 

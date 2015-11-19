@@ -171,18 +171,19 @@ def politicians():
 # -----
 @app.route('/search/<query>')
 def search(query):
-    terms = query.split()
-    pokemon_and, pokemon_or = Pokemon.search(query)
-    moves_and, moves_or = Move.search(query)
-    loc_results = []
+	terms = query.split()
+	pokemon_and, pokemon_or = Pokemon.search(query)
+	moves_and, moves_or = Move.search(query)
+	location_and, location_or = Routes.search(query)
 
-    pokemon_results = {"and":pokemon_and, "or": pokemon_or}
-    moves_results = {"and":moves_and, "or": moves_or}
+	pokemon_results = {"and":pokemon_and, "or": pokemon_or}
+	moves_results = {"and":moves_and, "or": moves_or}
+	location_results = {"and":location_and, "or":location_or}
 
-    #results = { "pokemon":pokemon_results, "moves":moves_results, "routes":loc_results}
-    results = { "pokemon":pokemon_results, "moves":moves_results, "routes":{}}
+	#results = { "pokemon":pokemon_results, "moves":moves_results, "routes":loc_results}
+	results = { "pokemon":pokemon_results, "moves":moves_results, "locations":location_results}
 
-    return render_template('search.html', terms=terms, results=results)
+	return render_template('search.html', terms=terms, results=results)
 
 if __name__ == '__main__':
     #create_db()

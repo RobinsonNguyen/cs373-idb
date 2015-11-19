@@ -24,7 +24,7 @@
 			<ul id="search-tabs" class="nav nav-tabs" role="tablist">
 				<li role="presentation" class="active"><a href="#pokemon" aria-controls="pokemon" role="tab" data-toggle="tab">Pokemon ({{results['pokemon']['or']|length}})</a></li>
 				<li role="presentation"><a href="#moves" aria-controls="moves" role="tab" data-toggle="tab">Moves ({{results['moves']['or']|length}})</a></li>
-				<li role="presentation"><a href="#locations" aria-controls="locations" role="tab" data-toggle="tab">Locations (0)</a></li>
+				<li role="presentation"><a href="#locations" aria-controls="locations" role="tab" data-toggle="tab">Locations ({{results['locations']['or']|length}})</a></li>
 			</ul>
 			<div class="tab-content">
 				<div role="tabpanel" class="tab-pane fade in active" id="pokemon">
@@ -159,18 +159,69 @@
 					{% endif %}
 				</div>
 				<div role="tabpanel" class="tab-pane fade" id="locations">
-					<table class="table table-hover">
-						<thead>
-							<tr>
-								<th>Name</th>
-							</tr>
-						</thead>
-						<tbody>
-							<tr>
-								<td>Test</td>
-							</tr>
-						</tbody>
-					</table>
+					{% if terms|length > 1 %}
+						<table class="table table-hover">
+							<thead>
+								<tr>
+									<th> Results containing all search terms</th>
+								</tr>
+							</thead>
+							<tbody>
+								{% if results['locations']['and']|length > 0 %}
+									{% for loc in results['locations']['and'] %} 
+										<tr>
+											<td>{{loc.ROUTE_NAME}}</td>
+										</tr>
+									{% endfor %}
+								{% else %}
+									<tr>
+										<td>No results contain all of the search terms</td>
+									</tr>
+								{% endif %}
+							</tbody>
+						</table>
+						<table class="table table-hover">
+							<thead>
+								<tr>
+									<th> Results containing any search terms</th>
+								</tr>
+							</thead>
+							<tbody>
+								{% if results['locations']['or']|length > 0 %}
+									{% for loc in results['locations']['or'] %} 
+										<tr>
+											<td>{{loc.ROUTE_NAME}}</td>
+										</tr>
+									{% endfor %}
+								{% else %}
+									<tr>
+										<td>No results show any of the search terms</td>
+									</tr>
+								{% endif %}
+							</tbody>
+						</table>
+					{% else %}
+						<table class="table table-hover">
+							<thead>
+								<tr>
+									<th>Results</th>
+								</tr>
+							</thead>
+							<tbody>
+								{% if results['locations']['or']|length > 0 %}
+									{% for loc in results['locations']['or'] %} 
+										<tr>
+											<td>{{loc.ROUTE_NAME}}</td>
+										</tr>
+									{% endfor %}
+								{% else %}
+									<tr>
+										<td>No results</td>
+									</tr>
+								{% endif %}
+							</tbody>
+						</table>
+					{% endif %}
 				</div>
 			</div>
 		</div>
