@@ -11,7 +11,7 @@
 	<div class="search-panel">
 
 		<h2 style="text-align: center;">
-			Search Results for: {{terms}}
+			Search Results for: {{query}}
 		</h2>
 
 		<div class="container">
@@ -23,7 +23,11 @@
 			<div class="tab-content">
 				<div role="tabpanel" class="tab-pane fade in active" id="pokemon">
 					{% if terms|length > 1 %}
-						<table class="table table-hover">
+						<table 	id="pokemon-models"
+								data-pagination="true"
+						        data-page-list="[10, 25, 50, 100, ALL]"
+								data-toggle="table" 
+								data-classes="table table-hover">
 							<thead>
 								<tr>
 									<th> Results containing all search terms</th>
@@ -43,7 +47,11 @@
 								{% endif %}
 							</tbody>
 						</table>
-						<table class="table table-hover">
+						<table 	id="pokemon-models"
+								data-pagination="true"
+						        data-page-list="[10, 25, 50, 100, ALL]"
+								data-toggle="table" 
+								data-classes="table table-hover">
 							<thead>
 								<tr>
 									<th> Results containing any search terms</th>
@@ -58,13 +66,17 @@
 									{% endfor %}
 								{% else %}
 									<tr>
-										<td>No results show any of the search terms</td>
+										<td>No results contain any of the search terms</td>
 									</tr>
 								{% endif %}
 							</tbody>
 						</table>
 					{% else %}
-						<table class="table table-hover">
+						<table 	id="pokemon-models"
+								data-pagination="true"
+						        data-page-list="[10, 25, 50, 100, ALL]"
+								data-toggle="table" 
+								data-classes="table table-hover">
 							<thead>
 								<tr>
 									<th>Results</th>
@@ -89,7 +101,11 @@
 				</div>
 				<div role="tabpanel" class="tab-pane fade" id="moves">
 					{% if terms|length > 1 %}
-						<table class="table table-hover">
+						<table 	id="moves-models"
+								data-pagination="true"
+						        data-page-list="[10, 25, 50, 100, ALL]"
+								data-toggle="table" 
+								data-classes="table table-hover">
 							<thead>
 								<tr>
 									<th> Results containing all search terms</th>
@@ -109,7 +125,11 @@
 								{% endif %}
 							</tbody>
 						</table>
-						<table class="table table-hover">
+						<table 	id="moves-models"
+								data-pagination="true"
+						        data-page-list="[10, 25, 50, 100, ALL]"
+								data-toggle="table" 
+								data-classes="table table-hover">
 							<thead>
 								<tr>
 									<th> Results containing any search terms</th>
@@ -124,13 +144,17 @@
 									{% endfor %}
 								{% else %}
 									<tr>
-										<td>No results show any of the search terms</td>
+										<td>No results contain any of the search terms</td>
 									</tr>
 								{% endif %}
 							</tbody>
 						</table>
 					{% else %}
-						<table class="table table-hover">
+						<table 	id="moves-models"
+								data-pagination="true"
+						        data-page-list="[10, 25, 50, 100, ALL]"
+								data-toggle="table" 
+								data-classes="table table-hover">
 							<thead>
 								<tr>
 									<th>Results</th>
@@ -154,7 +178,11 @@
 				</div>
 				<div role="tabpanel" class="tab-pane fade" id="locations">
 					{% if terms|length > 1 %}
-						<table class="table table-hover">
+						<table 	id="routes-models"
+								data-pagination="true"
+						        data-page-list="[10, 25, 50, 100, ALL]"
+								data-toggle="table" 
+								data-classes="table table-hover">
 							<thead>
 								<tr>
 									<th> Results containing all search terms</th>
@@ -174,7 +202,11 @@
 								{% endif %}
 							</tbody>
 						</table>
-						<table class="table table-hover">
+						<table 	id="routes-models"
+								data-pagination="true"
+						        data-page-list="[10, 25, 50, 100, ALL]"
+								data-toggle="table" 
+								data-classes="table table-hover">
 							<thead>
 								<tr>
 									<th> Results containing any search terms</th>
@@ -189,13 +221,17 @@
 									{% endfor %}
 								{% else %}
 									<tr>
-										<td>No results show any of the search terms</td>
+										<td>No results contain any of the search terms</td>
 									</tr>
 								{% endif %}
 							</tbody>
 						</table>
 					{% else %}
-						<table class="table table-hover">
+						<table 	id="routes-models"
+								data-pagination="true"
+						        data-page-list="[10, 25, 50, 100, ALL]"
+								data-toggle="table" 
+								data-classes="table table-hover">
 							<thead>
 								<tr>
 									<th>Results</th>
