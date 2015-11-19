@@ -94,11 +94,27 @@
 									{% for triple in results['pokemon']['or'] %} 
 										{% if triple[1] == "NAME" %}
 										<tr class="search-row">
-											<td>testing</td>
+											<td>Got from Name</td>
+										</tr>
+										{% elif triple[1] == "EVOLUTION"%}
+										<tr class="search-row">
+											<td>Got from evolution</td>
+										</tr>
+										{% elif triple[1] == "MOVE"%}
+										<tr class="search-row">
+											<td>Got from Move</td>
+										</tr>
+										{% elif triple[1] == "ROUTE"%}
+										<tr class="search-row">
+											<td>Got from Route</td>
+										</tr>
+										{% elif triple[1] == "TYPE"%}
+										<tr class="search-row">
+											<td>Got from Type</td>
 										</tr>
 										{% else %}
 										<tr class="search-row">
-											<td>{{triple[0].POKEMON_NAME}}</td>
+											<td>??????</td>
 										</tr>
 										{% endif %}
 									{% endfor %}
