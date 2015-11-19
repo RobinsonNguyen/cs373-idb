@@ -21,13 +21,18 @@
 					<div id="type-panel" class="inner-panel panel panel-success">
 			    		<div class="panel-heading"><b>Type</b></div>
 	    				<div class="panel-body">
-	    					{{pokemon.POKEMON_EV}}
 	    					{% for t in types %}
 	    						{{ t.POKEMON_TYPE }}
 								{% if not loop.last %}
 									/
 								{% endif %}
 	    					{% endfor %}
+	    				</div>
+					</div>
+					<div id="ev-panel" class="inner-panel panel panel-success">
+			    		<div class="panel-heading"><b>EV Gains</b></div>
+	    				<div class="panel-body">
+	    						{{ pokemon.POKEMON_EV }}
 	    				</div>
 					</div>
 					<div id="egg-panel" class="inner-panel panel panel-success">
