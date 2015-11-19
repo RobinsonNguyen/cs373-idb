@@ -96,33 +96,20 @@
 
 										<tr class="search-row">
 											<td>{{triple[0].POKEMON_NAME}}</td>
-										</tr>
-
-										{% if triple[1] == "NAME" %}
-										<tr class="search-row">
+											{% if triple[1] == "NAME" %}
 											<td>Got from Name</td>
-										</tr>
-										{% elif triple[1] == "EVOLUTION"%}
-										<tr class="search-row">
+											{% elif triple[1] == "EVOLUTION"%}
 											<td>Evolves into: {{ triple[2].POKEMON_NAME }}</td>
-										</tr>
-										{% elif triple[1] == "MOVE"%}
-										<tr class="search-row">
+											{% elif triple[1] == "MOVE"%}
 											<td>Learns: {{ triple[2].MOVE_NAME }}</td>
-										</tr>
-										{% elif triple[1] == "ROUTE"%}
-										<tr class="search-row">
+											{% elif triple[1] == "ROUTE"%}
 											<td>Can be found in {{triple[2].ROUTE_NAME}}</td>
-										</tr>
-										{% elif triple[1] == "TYPE"%}
-										<tr class="search-row">
+											{% elif triple[1] == "TYPE"%}
 											<td>Type: {{triple[2].TYPE_NAME}}</td>
-										</tr>
-										{% else %}
-										<tr class="search-row">
+											{% else %}
 											<td>??????</td>
+											{% endif %}
 										</tr>
-										{% endif %}
 									{% endfor %}
 								{% else %}
 									<tr>
