@@ -11,6 +11,10 @@
   background-color: #71AD64 ;
 }
 
+.table-hover {
+	cursor: pointer; 
+}
+
 tr {
     color: black;
 }
