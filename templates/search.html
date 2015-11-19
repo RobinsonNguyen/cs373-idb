@@ -37,9 +37,15 @@
 							<tbody>
 								{% if results['pokemon']['and']|length > 0 %}
 									{% for triple in results['pokemon']['and'] %} 
+										{% if string(triple[1]) == string("NAME") %}
+										<tr class="search-row">
+											<td>testing</td>
+										</tr>
+										{% else %}
 										<tr class="search-row">
 											<td>{{triple[0].POKEMON_NAME}}</td>
 										</tr>
+										{% endif %}
 									{% endfor %}
 								{% else %}
 									<tr>
@@ -87,9 +93,11 @@
 								{% if results['pokemon']['or']|length > 0 %}
 									{% for triple in results['pokemon']['or'] %} 
 										<tr class="search-row">
-											<td>
-												{{triple[0].POKEMON_NAME}}
-											</td>
+											<td>testing</td>
+										</tr>
+										{% else %}
+										<tr class="search-row">
+											<td>{{triple[0].POKEMON_NAME}}</td>
 										</tr>
 									{% endfor %}
 								{% else %}
