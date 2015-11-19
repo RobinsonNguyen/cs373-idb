@@ -7,7 +7,7 @@
 	{% block content %}
 		<div class="row">
 			<div class="panel panel-primary col-sm-4">
-				<div class="panel-heading">{{ route.ROUTE_NAME }}</div>
+				<div class="panel-heading" align="center"><h1><b>{{ route.ROUTE_NAME }}</b></h1></div>
 				<div class="text-center">
 					<div class="btn-group" roll="group" style="padding: 4px;" align="center">
 						{% for gen in images %}
@@ -35,7 +35,7 @@
 							</tr>
 							<tr>
 								<td width="30%"><a href="/location/{{ route.ROUTE_EAST_EXIT }}">{{ route.ROUTE_EAST_EXIT }}</a></td>
-								<td width="40%"2>{{ route.ROUTE_NAME }}</td>
+								<td width="40%"2 align="center">{{ route.ROUTE_NAME }}</td>
 								<td width="30%"><a href="/location/{{ route.ROUTE_WEST_EXIT }}">{{ route.ROUTE_WEST_EXIT }}</a></td>
 							</tr>
 							<tr>
