@@ -10,7 +10,7 @@ $(document).ready(function(){
 	});
 
 	$('.pkCollapse').click(function(caller){
-	    $(this).children('div').slideToggle('slow');
+	    $(this).children('.row').slideToggle('slow');
 	    caller.preventDefault();
 	});
 
