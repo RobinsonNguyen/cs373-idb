@@ -160,8 +160,6 @@ class Pokemon(db.Model):
 	def search(query):
 		and_term, or_term = parse_query(query)
 
-		#list of triples (Pokemon, "Where the search showed up", Other Table Entry)
-
 		or_results = []
 		and_results = []
 
