@@ -8,6 +8,10 @@ p{
 	padding-left: 0em;
 }
 
+.move_data{
+	padding-left: 0em;
+}
+
 .description{
 	padding-left: 4em;
 }
@@ -35,4 +39,8 @@ h2 h4{
 
 a{
 	color: black;
+}
+
+a:hover{
+	font-style: italic;
 }
