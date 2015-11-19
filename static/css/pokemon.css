@@ -1,7 +1,3 @@
-body {
-    background-color: #4A9EA1; 
-}
-
 .left-panel {
     float: left;
     width: calc(20% - 10px);
@@ -42,7 +38,7 @@ body {
 }
 
 .panel {
-    background-color: #A2E0A3;
+    background-color: #F3FFFD;
 }
 
 .pokemon-row:hover { 
@@ -50,9 +46,7 @@ body {
     color: black;
 }
 
-.poke-img {
-    background-color: white;
-}
+
 
 tr {
     color: black;
@@ -73,18 +67,6 @@ tr {
 .nav-tabs > li.active > a:hover{
     background-color: #71AD64 ;
     color: black;
-}
-
-.table tbody tr > td {
-  background-color: #A2E0A3;
-}
-
-.table thead tr > th {
-  background-color: #71AD64;
-}
-
-.table-hover tbody tr:hover > td {
-  background-color: #71AD64 ;
 }
 
 .poke-panel {

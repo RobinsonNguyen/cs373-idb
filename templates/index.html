@@ -6,12 +6,11 @@
 	{% endblock %}
 
 	{% block content %}
-		<div class="col-sm-12" style="max-height: calc(80%)" algin="center">
-			<img src="../static/res/Pokemon_Logo.png" style="max-width: 100%"/>
-		</div>
-
-		<div align="center">
-			<video src="../static/res/splash.webm" autoplay>
+		<div align="center" style="overflow-y: hidden;">
+			<video src="../static/res/splash.webm" autoplay style="position:relative; top:0px; height:calc(100% - 50px);">
 			</video>
+			<div style="position:fixed; top:25px; left:50%;width:50%">
+				<img src="../static/res/Pokemon_Logo.png" style="max-width: 50%; display:block; margin:auto; opacity:1;"/>
+			</div>
 		</div>
 	{% endblock %}
