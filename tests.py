@@ -278,8 +278,8 @@ class UnitTestModels(TestCase):
 	# # 	db.session.commit()
 
 	def test_pokemon_API_1(self):
-		r = requests.get("http://pokemasters.me/api/v1.0/pokemon/4/")
-		# self.assertEqual(r.status_code, 200)
+		r = requests.get("http://pokemasters.me/api/v1.0/pokemon/4/", auth=('root','pokemon'))
+		self.assertEqual(r.status_code, 200)
 		self.assertEqual(r.json()['pokemon']['POKEMON_NAME'], 'Charmander')
 		self.assertEqual(r.json()['pokemon']['POKEMON_ATK'], 52)
 		self.assertEqual(r.json()['pokemon']['POKEMON_DEF'], 43)
