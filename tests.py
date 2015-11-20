@@ -41,185 +41,185 @@ class UnitTestModels(TestCase):
 		self.assertEqual(p[1]['POKEMON_ID'], 2)
 		self.assertEqual(p[1]['POKEMON_NAME'], 'Ivysaur')
 
-	# def test_pokemon_4(self):
-	# 	pokemon = Pokemon.get_id(13)
-	# 	p = {c.name: getattr(pokemon, c.name) for c in pokemon.__table__.columns}
-	# 	self.assertEqual(p['POKEMON_ID'], 13)
-	# 	self.assertEqual(p['POKEMON_NAME'], 'Weedle')
-	# 	self.assertEqual(p['POKEMON_HP'], 40)
-	# 	self.assertEqual(p['POKEMON_ATK'], 35)
-	# 	self.assertEqual(p['POKEMON_DEF'], 30)
-	# 	self.assertEqual(p['POKEMON_SPATK'], 20)
-	# 	self.assertEqual(p['POKEMON_SPDEF'], 20)
-	# 	self.assertEqual(p['POKEMON_SPD'], 50)
-	# 	self.assertEqual(p['POKEMON_EV'], 'SPD: 1 ')
+	def test_pokemon_4(self):
+		pokemon = Pokemon.get_id(13)
+		p = {c.name: getattr(pokemon, c.name) for c in pokemon.__table__.columns}
+		self.assertEqual(p['POKEMON_ID'], 13)
+		self.assertEqual(p['POKEMON_NAME'], 'Weedle')
+		self.assertEqual(p['POKEMON_HP'], 40)
+		self.assertEqual(p['POKEMON_ATK'], 35)
+		self.assertEqual(p['POKEMON_DEF'], 30)
+		self.assertEqual(p['POKEMON_SPATK'], 20)
+		self.assertEqual(p['POKEMON_SPDEF'], 20)
+		self.assertEqual(p['POKEMON_SPD'], 50)
+		self.assertEqual(p['POKEMON_EV'], 'SPD: 1 ')
 
-	# def test_pokemon_5(self):
-	# 	pokemon = Pokemon.get_id(373)
-	# 	p = {c.name: getattr(pokemon, c.name) for c in pokemon.__table__.columns}
-	# 	self.assertEqual(p['POKEMON_ID'], 373)
-	# 	self.assertEqual(p['POKEMON_NAME'], 'Salamence')
-	# 	self.assertEqual(p['POKEMON_HP'], 95)
-	# 	self.assertEqual(p['POKEMON_ATK'], 135)
-	# 	self.assertEqual(p['POKEMON_DEF'], 80)
-	# 	self.assertEqual(p['POKEMON_SPATK'], 110)
-	# 	self.assertEqual(p['POKEMON_SPDEF'], 80)
-	# 	self.assertEqual(p['POKEMON_SPD'], 100)
-	# 	self.assertEqual(p['POKEMON_EV'], 'ATK: 3 ')
+	def test_pokemon_5(self):
+		pokemon = Pokemon.get_id(373)
+		p = {c.name: getattr(pokemon, c.name) for c in pokemon.__table__.columns}
+		self.assertEqual(p['POKEMON_ID'], 373)
+		self.assertEqual(p['POKEMON_NAME'], 'Salamence')
+		self.assertEqual(p['POKEMON_HP'], 95)
+		self.assertEqual(p['POKEMON_ATK'], 135)
+		self.assertEqual(p['POKEMON_DEF'], 80)
+		self.assertEqual(p['POKEMON_SPATK'], 110)
+		self.assertEqual(p['POKEMON_SPDEF'], 80)
+		self.assertEqual(p['POKEMON_SPD'], 100)
+		self.assertEqual(p['POKEMON_EV'], 'ATK: 3 ')
 
-	# def test_pokemon_6(self):
-	# 	pokemon = Pokemon.get_id(218)
-	# 	p = {c.name: getattr(pokemon, c.name) for c in pokemon.__table__.columns}
-	# 	self.assertEqual(p['POKEMON_ID'], 218)
-	# 	self.assertEqual(p['POKEMON_NAME'], 'Slugma')
-	# 	self.assertEqual(p['POKEMON_HP'], 40)
-	# 	self.assertEqual(p['POKEMON_ATK'], 40)
-	# 	self.assertEqual(p['POKEMON_DEF'], 40)
-	# 	self.assertEqual(p['POKEMON_SPATK'], 70)
-	# 	self.assertEqual(p['POKEMON_SPDEF'], 40)
-	# 	self.assertEqual(p['POKEMON_SPD'], 20)
-	# 	self.assertEqual(p['POKEMON_EV'], 'SPATK: 1 ')
+	def test_pokemon_6(self):
+		pokemon = Pokemon.get_id(218)
+		p = {c.name: getattr(pokemon, c.name) for c in pokemon.__table__.columns}
+		self.assertEqual(p['POKEMON_ID'], 218)
+		self.assertEqual(p['POKEMON_NAME'], 'Slugma')
+		self.assertEqual(p['POKEMON_HP'], 40)
+		self.assertEqual(p['POKEMON_ATK'], 40)
+		self.assertEqual(p['POKEMON_DEF'], 40)
+		self.assertEqual(p['POKEMON_SPATK'], 70)
+		self.assertEqual(p['POKEMON_SPDEF'], 40)
+		self.assertEqual(p['POKEMON_SPD'], 20)
+		self.assertEqual(p['POKEMON_EV'], 'SPATK: 1 ')
 
-	# def test_pokemon_7(self):
-	# 	pokemon = Pokemon.get_id(74)
-	# 	p = {c.name: getattr(pokemon, c.name) for c in pokemon.__table__.columns}
-	# 	self.assertEqual(p['POKEMON_ID'], 74)
-	# 	self.assertEqual(p['POKEMON_NAME'], 'Geodude')
-	# 	self.assertEqual(p['POKEMON_HP'], 40)
-	# 	self.assertEqual(p['POKEMON_ATK'], 80)
-	# 	self.assertEqual(p['POKEMON_DEF'], 100)
-	# 	self.assertEqual(p['POKEMON_SPATK'], 30)
-	# 	self.assertEqual(p['POKEMON_SPDEF'], 30)
-	# 	self.assertEqual(p['POKEMON_SPD'], 20)
-	# 	self.assertEqual(p['POKEMON_EV'], 'DEF: 1 ')
+	def test_pokemon_7(self):
+		pokemon = Pokemon.get_id(74)
+		p = {c.name: getattr(pokemon, c.name) for c in pokemon.__table__.columns}
+		self.assertEqual(p['POKEMON_ID'], 74)
+		self.assertEqual(p['POKEMON_NAME'], 'Geodude')
+		self.assertEqual(p['POKEMON_HP'], 40)
+		self.assertEqual(p['POKEMON_ATK'], 80)
+		self.assertEqual(p['POKEMON_DEF'], 100)
+		self.assertEqual(p['POKEMON_SPATK'], 30)
+		self.assertEqual(p['POKEMON_SPDEF'], 30)
+		self.assertEqual(p['POKEMON_SPD'], 20)
+		self.assertEqual(p['POKEMON_EV'], 'DEF: 1 ')
 
-	# def test_moves_1(self):
-	# 	move = Move.get_id(1)
-	# 	p = {c.name: getattr(move, c.name) for c in move.__table__.columns}
-	# 	self.assertEqual(p['MOVE_ID'], 1)
-	# 	self.assertEqual(p['MOVE_NAME'], 'Pound')
-	# 	self.assertEqual(p['MOVE_POWER'], 40)
-	# 	self.assertEqual(p['MOVE_ACCURACY'], 100)
-	# 	self.assertEqual(p['MOVE_PP'], 35)
+	def test_moves_1(self):
+		move = Move.get_id(1)
+		p = {c.name: getattr(move, c.name) for c in move.__table__.columns}
+		self.assertEqual(p['MOVE_ID'], 1)
+		self.assertEqual(p['MOVE_NAME'], 'Pound')
+		self.assertEqual(p['MOVE_POWER'], 40)
+		self.assertEqual(p['MOVE_ACCURACY'], 100)
+		self.assertEqual(p['MOVE_PP'], 35)
 
-	# def test_moves_2(self):
-	# 	move = Move.get('Pound')
-	# 	p = {c.name: getattr(move, c.name) for c in move.__table__.columns}
-	# 	self.assertEqual(p['MOVE_ID'], 1)
-	# 	self.assertEqual(p['MOVE_NAME'], 'Pound')
-	# 	self.assertEqual(p['MOVE_POWER'], 40)
-	# 	self.assertEqual(p['MOVE_ACCURACY'], 100)
-	# 	self.assertEqual(p['MOVE_PP'], 35)
+	def test_moves_2(self):
+		move = Move.get('Pound')
+		p = {c.name: getattr(move, c.name) for c in move.__table__.columns}
+		self.assertEqual(p['MOVE_ID'], 1)
+		self.assertEqual(p['MOVE_NAME'], 'Pound')
+		self.assertEqual(p['MOVE_POWER'], 40)
+		self.assertEqual(p['MOVE_ACCURACY'], 100)
+		self.assertEqual(p['MOVE_PP'], 35)
 
-	# def test_moves_3(self):
-	# 	moves = Move.get_all()
-	# 	p = []
-	# 	for move in moves:
-	# 		p.append({c.name: getattr(move, c.name) for c in move.__table__.columns})
-	# 	self.assertEqual(p[0]['MOVE_ID'], 1)
-	# 	self.assertEqual(p[0]['MOVE_NAME'], 'Pound')
-	# 	self.assertEqual(p[1]['MOVE_ID'], 2)
-	# 	self.assertEqual(p[1]['MOVE_NAME'], 'Karate-chop')
+	def test_moves_3(self):
+		moves = Move.get_all()
+		p = []
+		for move in moves:
+			p.append({c.name: getattr(move, c.name) for c in move.__table__.columns})
+		self.assertEqual(p[0]['MOVE_ID'], 1)
+		self.assertEqual(p[0]['MOVE_NAME'], 'Pound')
+		self.assertEqual(p[1]['MOVE_ID'], 2)
+		self.assertEqual(p[1]['MOVE_NAME'], 'Karate-chop')
 
-	# def test_moves_4(self):
-	# 	move = Move.get('Water-pulse')
-	# 	p = {c.name: getattr(move, c.name) for c in move.__table__.columns}
-	# 	self.assertEqual(p['MOVE_ID'], 352)
-	# 	self.assertEqual(p['MOVE_NAME'], 'Water-pulse')
-	# 	self.assertEqual(p['MOVE_TYPE'], 'Water')
-	# 	self.assertEqual(p['MOVE_CATEGORY'], 'Special')
-	# 	self.assertEqual(p['MOVE_POWER'], 60)
-	# 	self.assertEqual(p['MOVE_ACCURACY'], 100)
-	# 	self.assertEqual(p['MOVE_PP'], 20)
-	# 	self.assertEqual(p['MOVE_DESCRIPTION'],'Inflicts regular damage.  Has a 20% chance to confuse the target.')
+	def test_moves_4(self):
+		move = Move.get('Water-pulse')
+		p = {c.name: getattr(move, c.name) for c in move.__table__.columns}
+		self.assertEqual(p['MOVE_ID'], 352)
+		self.assertEqual(p['MOVE_NAME'], 'Water-pulse')
+		self.assertEqual(p['MOVE_TYPE'], 'Water')
+		self.assertEqual(p['MOVE_CATEGORY'], 'Special')
+		self.assertEqual(p['MOVE_POWER'], 60)
+		self.assertEqual(p['MOVE_ACCURACY'], 100)
+		self.assertEqual(p['MOVE_PP'], 20)
+		self.assertEqual(p['MOVE_DESCRIPTION'],'Inflicts regular damage.  Has a 20% chance to confuse the target.')
 
-	# def test_moves_4(self):
-	# 	move = Move.get('Rock-tomb')
-	# 	p = {c.name: getattr(move, c.name) for c in move.__table__.columns}
-	# 	self.assertEqual(p['MOVE_ID'], 317)
-	# 	self.assertEqual(p['MOVE_NAME'], 'Rock-tomb')
-	# 	self.assertEqual(p['MOVE_TYPE'], 'Rock')
-	# 	self.assertEqual(p['MOVE_CATEGORY'], 'Physical')
-	# 	self.assertEqual(p['MOVE_POWER'], 50)
-	# 	self.assertEqual(p['MOVE_ACCURACY'], 80)
-	# 	self.assertEqual(p['MOVE_PP'], 10)
-	# 	self.assertEqual(p['MOVE_DESCRIPTION'],"Inflicts regular damage.  Has a 100% chance to lower the target's Speed by one stage.")
+	def test_moves_4(self):
+		move = Move.get('Rock-tomb')
+		p = {c.name: getattr(move, c.name) for c in move.__table__.columns}
+		self.assertEqual(p['MOVE_ID'], 317)
+		self.assertEqual(p['MOVE_NAME'], 'Rock-tomb')
+		self.assertEqual(p['MOVE_TYPE'], 'Rock')
+		self.assertEqual(p['MOVE_CATEGORY'], 'Physical')
+		self.assertEqual(p['MOVE_POWER'], 50)
+		self.assertEqual(p['MOVE_ACCURACY'], 80)
+		self.assertEqual(p['MOVE_PP'], 10)
+		self.assertEqual(p['MOVE_DESCRIPTION'],"Inflicts regular damage.  Has a 100% chance to lower the target's Speed by one stage.")
 
-	# def test_moves_5(self):
-	# 	move = Move.get('Aurora-beam')
-	# 	p = {c.name: getattr(move, c.name) for c in move.__table__.columns}
-	# 	self.assertEqual(p['MOVE_ID'], 62)
-	# 	self.assertEqual(p['MOVE_NAME'], 'Aurora-beam')
-	# 	self.assertEqual(p['MOVE_TYPE'], 'Ice')
-	# 	self.assertEqual(p['MOVE_CATEGORY'], 'Special')
-	# 	self.assertEqual(p['MOVE_POWER'], 65)
-	# 	self.assertEqual(p['MOVE_ACCURACY'], 100)
-	# 	self.assertEqual(p['MOVE_PP'], 20)
-	# 	self.assertEqual(p['MOVE_DESCRIPTION'],"Inflicts regular damage.  Has a 10% chance to lower the target's Attack by one stage.")
+	def test_moves_5(self):
+		move = Move.get('Aurora-beam')
+		p = {c.name: getattr(move, c.name) for c in move.__table__.columns}
+		self.assertEqual(p['MOVE_ID'], 62)
+		self.assertEqual(p['MOVE_NAME'], 'Aurora-beam')
+		self.assertEqual(p['MOVE_TYPE'], 'Ice')
+		self.assertEqual(p['MOVE_CATEGORY'], 'Special')
+		self.assertEqual(p['MOVE_POWER'], 65)
+		self.assertEqual(p['MOVE_ACCURACY'], 100)
+		self.assertEqual(p['MOVE_PP'], 20)
+		self.assertEqual(p['MOVE_DESCRIPTION'],"Inflicts regular damage.  Has a 10% chance to lower the target's Attack by one stage.")
 
-	# def test_moves_6(self):
-	# 	move = Move.get('Psychic')
-	# 	p = {c.name: getattr(move, c.name) for c in move.__table__.columns}
-	# 	self.assertEqual(p['MOVE_ID'], 94)
-	# 	self.assertEqual(p['MOVE_NAME'], 'Psychic')
-	# 	self.assertEqual(p['MOVE_TYPE'], 'Psychic')
-	# 	self.assertEqual(p['MOVE_CATEGORY'], 'Special')
-	# 	self.assertEqual(p['MOVE_POWER'], 90)
-	# 	self.assertEqual(p['MOVE_ACCURACY'], 100)
-	# 	self.assertEqual(p['MOVE_PP'], 10)
-	# 	self.assertEqual(p['MOVE_DESCRIPTION'],"Inflicts regular damage.  Has a 10% chance to lower the target's Special Defense by one stage.")
+	def test_moves_6(self):
+		move = Move.get('Psychic')
+		p = {c.name: getattr(move, c.name) for c in move.__table__.columns}
+		self.assertEqual(p['MOVE_ID'], 94)
+		self.assertEqual(p['MOVE_NAME'], 'Psychic')
+		self.assertEqual(p['MOVE_TYPE'], 'Psychic')
+		self.assertEqual(p['MOVE_CATEGORY'], 'Special')
+		self.assertEqual(p['MOVE_POWER'], 90)
+		self.assertEqual(p['MOVE_ACCURACY'], 100)
+		self.assertEqual(p['MOVE_PP'], 10)
+		self.assertEqual(p['MOVE_DESCRIPTION'],"Inflicts regular damage.  Has a 10% chance to lower the target's Special Defense by one stage.")
 
 
-	# def test_location_1(self):
-	# 	location = Routes.get('Pallet Town')
-	# 	p = {c.name: getattr(location, c.name) for c in location.__table__.columns}
-	# 	self.assertEqual(p['ID'], 1)
-	# 	self.assertEqual(p['ROUTE_NAME'], 'Pallet Town')
-	# 	self.assertEqual(p['ROUTE_REGION'], 'Kanto')
+	def test_location_1(self):
+		location = Routes.get('Pallet Town')
+		p = {c.name: getattr(location, c.name) for c in location.__table__.columns}
+		self.assertEqual(p['ID'], 1)
+		self.assertEqual(p['ROUTE_NAME'], 'Pallet Town')
+		self.assertEqual(p['ROUTE_REGION'], 'Kanto')
 
-	# def test_location_2(self):
-	# 	location = Routes.get_id(1)
-	# 	p = {c.name: getattr(location, c.name) for c in location.__table__.columns}
-	# 	self.assertEqual(p['ID'], 1)
-	# 	self.assertEqual(p['ROUTE_NAME'], 'Pallet Town')
-	# 	self.assertEqual(p['ROUTE_REGION'], 'Kanto')
+	def test_location_2(self):
+		location = Routes.get_id(1)
+		p = {c.name: getattr(location, c.name) for c in location.__table__.columns}
+		self.assertEqual(p['ID'], 1)
+		self.assertEqual(p['ROUTE_NAME'], 'Pallet Town')
+		self.assertEqual(p['ROUTE_REGION'], 'Kanto')
 
-	# def test_location_3(self):
-	# 	locations = Routes.get_all()
-	# 	p = []
-	# 	for route in locations:
-	# 		p.append({c.name: getattr(route, c.name) for c in route.__table__.columns})
-	# 	self.assertEqual(p[0]['ID'], 1)
-	# 	self.assertEqual(p[0]['ROUTE_NAME'], 'Pallet Town')
-	# 	self.assertEqual(p[0]['ROUTE_REGION'], 'Kanto')
-	# 	self.assertEqual(p[1]['ID'], 2)
-	# 	self.assertEqual(p[1]['ROUTE_NAME'], 'Viridian City')
-	# 	self.assertEqual(p[1]['ROUTE_REGION'], 'Kanto')
+	def test_location_3(self):
+		locations = Routes.get_all()
+		p = []
+		for route in locations:
+			p.append({c.name: getattr(route, c.name) for c in route.__table__.columns})
+		self.assertEqual(p[0]['ID'], 1)
+		self.assertEqual(p[0]['ROUTE_NAME'], 'Pallet Town')
+		self.assertEqual(p[0]['ROUTE_REGION'], 'Kanto')
+		self.assertEqual(p[1]['ID'], 2)
+		self.assertEqual(p[1]['ROUTE_NAME'], 'Viridian City')
+		self.assertEqual(p[1]['ROUTE_REGION'], 'Kanto')
 
-	# def test_location_4(self):
-	# 	location = Routes.get_id(26)
-	# 	p = {c.name: getattr(location, c.name) for c in location.__table__.columns}
-	# 	self.assertEqual(p['ID'], 26)
-	# 	self.assertEqual(p['ROUTE_NAME'], 'Kanto Route 15')
-	# 	self.assertEqual(p['ROUTE_REGION'], 'Kanto')
-	# 	self.assertEqual(p['ROUTE_WEST_EXIT'], 'Fuchsia City ')
+	def test_location_4(self):
+		location = Routes.get_id(26)
+		p = {c.name: getattr(location, c.name) for c in location.__table__.columns}
+		self.assertEqual(p['ID'], 26)
+		self.assertEqual(p['ROUTE_NAME'], 'Kanto Route 15')
+		self.assertEqual(p['ROUTE_REGION'], 'Kanto')
+		self.assertEqual(p['ROUTE_WEST_EXIT'], 'Fuchsia City ')
 
-	# def test_location_5(self):
-	# 	location = Routes.get_id(52)
-	# 	p = {c.name: getattr(location, c.name) for c in location.__table__.columns}
-	# 	self.assertEqual(p['ID'], 52)
-	# 	self.assertEqual(p['ROUTE_NAME'], 'Rock Tunnel')
-	# 	self.assertEqual(p['ROUTE_REGION'], 'Kanto')
-	# 	self.assertEqual(p['ROUTE_WEST_EXIT'], 'Kanto Route 7 ')
+	def test_location_5(self):
+		location = Routes.get_id(52)
+		p = {c.name: getattr(location, c.name) for c in location.__table__.columns}
+		self.assertEqual(p['ID'], 52)
+		self.assertEqual(p['ROUTE_NAME'], 'Rock Tunnel')
+		self.assertEqual(p['ROUTE_REGION'], 'Kanto')
+		self.assertEqual(p['ROUTE_WEST_EXIT'], 'Kanto Route 7 ')
 
-	# def test_location_6(self):
-	# 	location = Routes.get_id(279)
-	# 	p = {c.name: getattr(location, c.name) for c in location.__table__.columns}
-	# 	self.assertEqual(p['ID'], 279)
-	# 	self.assertEqual(p['ROUTE_NAME'], 'Sinnoh Route 224')
-	# 	self.assertEqual(p['ROUTE_REGION'], 'Sinnoh')
-	# 	self.assertEqual(p['ROUTE_NORTH_EXIT'], 'Seabreak Path ')
-	# 	self.assertEqual(p['ROUTE_WEST_EXIT'], 'Victory Road (Sinnoh) ')
+	def test_location_6(self):
+		location = Routes.get_id(279)
+		p = {c.name: getattr(location, c.name) for c in location.__table__.columns}
+		self.assertEqual(p['ID'], 279)
+		self.assertEqual(p['ROUTE_NAME'], 'Sinnoh Route 224')
+		self.assertEqual(p['ROUTE_REGION'], 'Sinnoh')
+		self.assertEqual(p['ROUTE_NORTH_EXIT'], 'Seabreak Path ')
+		self.assertEqual(p['ROUTE_WEST_EXIT'], 'Victory Road (Sinnoh) ')
 
 	# # def test_add_pokemon_1(self):
 	# # 	poketest = Pokemon("Lazy Fox",1,2,3,4,5,6,2,2,"nada")
