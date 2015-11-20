@@ -1,0 +1,74 @@
+{% extends "base.html" %}
+
+    {% block head %}
+
+        <title>{{move.MOVE_NAME}} (Move) - PokeMaster</title>
+
+        <!-- Custom CSS -->
+        <link href="../static/css/thumbnail-gallery.css" rel="stylesheet">
+        <link href="../static/css/moves.css" rel="stylesheet">
+
+        <script src="{{ url_for('static',filename='js/moves.js') }}"></script>
+        <!-- Bootstrap Core JavaScript -->
+        <script src="../static/js/bootstrap.min.js"></script>
+
+        <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+        <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+        <!--[if lt IE 9]>
+            <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+            <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+        <![endif]-->
+
+    {% endblock %}
+
+    {% block content %}
+
+    <!-- Page Content -->
+    <div class="container">
+
+
+        <H1>About Pokemon</H1>
+        <br>
+        <h2>Finding Pokemon</h2>
+        <hr>
+        <p>&ensp;&ensp;&ensp;One of the main objectives of the Pokemon series is to catch all of the Pokemon in order to fill in the encyclopedia the player has called the Pokedex. Once a player finds a Pokemon, he must then capture it so data about that Pokemon can be automatically captured in their Pokedex. Our website will have a Pokedex page for every single Pokemon in the game, and will contain the locations that that Pokemon can be found in for each of the Pokemon games. You can come to our website in order to see on which Route or Location you can find a Pokemon, and the method that that Pokemon is found in a route. When you first enter a route, you have no in-game information about which Pokemon can be found there. In the game, walking in a certain area will yield a percentage chance to find a Pokemon. Some Pokemon are very rare while others are very common, so in order to save time and help trainers complete their Pokedex, you can visit our site in order to find out which Pokemon can be caught in which Locations. Our Location page will list every Pokemon that can be found in that Location so that you can be confident you are not wasting your time by continuously finding Wild Pokemon in order to see if the Location actually contains a rare Pokemon you simply have not encountered yet. So, whether looking for a specific Pokemon to complete their Pokedex or looking to make sure you have caught all available Pokemon in a route before continuing with their journey, you will be able to quickly and conveniently find the information you are looking for on our site.</p>
+        <br>
+        <h1>WalkThrough</h1>
+        <br>
+        <h2>Beating Routes</h2>
+        <hr>
+        <p>&ensp;&ensp;&ensp;In the Pokemon series, you will generally walk through Locations in order to get past them to challenge 8 Gyms, where you have to defeat the leader in a Pokemon battle in order to progress your adventure. On our website, you can go to the location you are currently at and find a list of the trainers that will challenge you on the route as well as the Pokemon Team that those trainers will use. Our site will list the level and the Pokemon that those trainers will use, so in order to prepare for battle, you can select Pokemon that will have a particularly strong advantage against those teams so as to increase your chance of success in making it through the route. In Pokemon, there exists a battle mechanic called "type advantage". For example, Water-Pokemon are strong against Fire-Pokemon since water puts out fire. Because our site will list the Pokemon that each trainer and gym leader will have, you can choose to use Pokemon with a "type advantage" against those opponents, allowing you to claim victory more easily. You can come to our website as a walkthrough in order to help you get past these locations.</p>
+        <br>
+        <h2>Items</h2>
+        <hr>
+        <p>&ensp;&ensp;&ensp;In the Pokemon franchise, players are required to seek out some items that they need in order to advance through the storyline of the game. Almost all the time, these items are located in cities or routes. Our Location page will display all the items that can be found on a route, so that you can look to see where you need to go in order to obtain a certain item in order to save time or if you were having difficulty finding it in the first place. Also, there are moves that can only be taught to Pokemon if the player first finds their location in the game. These moves are called HMs (hidden machines) or TMs (technical machines), which are frequently placed in hidden locations on routes and in cities that the player first needs to thoroughly explore before you can find. Depending on the move, TMs are essential to raising Pokemon, and HMs are necessary in order to proceed through the game. Whether the item is a necessary key-item you need to progress through the game, a one-time-use item that can make your journey easier, or a TM or HM, you can come to our site in order to obtain that information.</p>
+        <br>
+        <h2>Raising Pokemon</h2>
+        <hr>
+        <p>&ensp;&ensp;&ensp;Another objective in the Pokemon franchise is to raise a strong Pokemon team so as to battle other players and win. Raising Pokemon plays a very heavy role in whether or not a player can become victorious during a Pokemon battle. The players need to make sure their Pokemon learns the right moves as they level up, and that their team, overall, has a good breadth of move-types (such as water or fire) in order to have the greatest chance of being able to strike an enemy Pokemon with a move-type it is disadvantageous to. This will result in a "super-effective" hit, which will score twice the damage as a regularly effective one.</p>
+        <br>
+        <h2>Moves</h2>
+        <hr>
+        <p>&ensp;&ensp;&ensp;Our website will list all of the moves a Pokemon is capable of learning and the means through which they can learn those moves. You can come to our website before putting in the long effort of raising a Pokemon Team so that you can decide on which Pokemon is right for your team. Being able to tell which Pokemon can learn which move is essential to doing that. By visiting our page, you can see the level at which Pokemon may naturally learn moves, or whether an in-game item must be used in order to teach that Pokemon a certain move. After knowing which Pokemon can learn which moves, you can plan your ideal team and proceed to raise that team.</p>
+        <br>
+        <h2>EV</h2>
+        <hr>
+        <p>&ensp;&ensp;&ensp;While raising Pokemon, there is an in-game mechanic called "EV", or, "Effort Value" that influence the basic stats that a Pokemon has as it levels up. For example, if a you wanted to raise a Pokemon to have a high DEF (Defense) stat, you would need to search for a Pokemon that yields a high amount of DEF points when defeated. You can visit our website in order to see what EV points each Pokemon yields when defeated, which will be listed in our Pokemon Pokedex page we have for each Pokemon. In the Pokemon franchise, usually, evolved-Pokemon yield more EV points than non evolved-Pokemon. Since Pokemon require a high level to evolve, most evolved-Pokemon are not very common in the wild. Enemy Trainers that a player encounters during their adventure, however, usually have Pokemon that are at a substantially higher level than that of the Pokemon found in the surrounding wilderness. If you were searching for an evolved-Pokemon in order to defeat it, you should be inclined to see which Pokemon an enemy trainer has. Our website will have, on our Pokemon Pokedex page, locations and trainers that have that Pokemon, as well as the location of those trainers. So you should visit our site in order to find the location of Pokemon that yield the right category of EV points you are looking for as well as the Pokemon that can yield the most of those points, thus reducing the amount of time you have to spend searching and fighting the right Pokemon in order to raise your own Pokemon with the stats you desire.</p>
+        <br>
+        <h2>Evolution chains</h2>
+        <p>&ensp;&ensp;&ensp;Evolution, one of the fundamental concepts of the Pokemon franchise, is when a Pokemon meets a certain condition, they transform into a more powerful version of themselves, with greater stats than they had before. There are many different ways to evolve a Pokemon. Most evolve through leveling them up to a specific level, but some Pokemon need to have an item applied to them or need to level up in a certain in-game location in order to evolve. Our Pokemon pokedex page will list the Evolution Chain (which Pokemon evolves into which) for that Pokemon as well as the method required to evolve that Pokemon. You can come to our site in order to look up the Pokemon you have and see if your Pokemon will naturally evolve through time by leveling up, or if some other means you did not know about previously is required to evolve your Pokemon.</p>
+
+
+        <!-- Footer -->
+        <footer>
+            <div class="row">
+                <div class="col-lg-12">
+                    <p>Copyright &copy; Your Website 2015</p>
+                </div>
+            </div>
+        </footer>
+
+    </div>
+    <!-- /.container -->
+
+{% endblock %}
