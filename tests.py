@@ -284,7 +284,7 @@ class UnitTestModels(TestCase):
 		# poke = data['pokemon']
 		# self.assertEqual(url.getcode(), 200)
 		# r = requests.get('http://www.pokemasters.me/api/v1.0/pokemon/4/')
-		r = requests.get('pokemasters.me/api/v1.0/pokemon/4/')
+		r = requests.get('http://pokemasters.me/api/v1.0/pokemon/4/')
 		self.assertEqual(r.status_code, 200)
 		# self.assertEqual(r.json()['pokemon']['POKEMON_NAME'], 'Charmander')
 		# self.assertEqual(r.json()['pokemon']['POKEMON_ATK'], 52)
