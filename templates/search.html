@@ -291,9 +291,9 @@
 										<tr class="search-row">
 											<td>{{triple[0].ROUTE_NAME}}</td>
 											{% if triple[1] == "NAME" %}
-											<td>Name is {{triple[0].ROUTE_NAME}}</td>
+											<td>Name is <strong>{{triple[0].ROUTE_NAME}}</strong></td>
 											{% elif triple[1] == "POKEMON"%}
-											<td>You can find {{ triple[2].POKEMON_NAME }} here</td>
+											<td>You can find <strong>{{ triple[2].ROUTE_POKEMON_NAME }}</strong> here</td>
 											{% else %}
 											<td> - </td>
 											{% endif %}
@@ -324,9 +324,9 @@
 										<tr class="search-row">
 											<td>{{triple[0].ROUTE_NAME}}</td>
 											{% if triple[1] == "NAME" %}
-											<td>Name is {{triple[0].ROUTE_NAME}}</td>
+											<td>Name is <strong>{{triple[0].ROUTE_NAME}}</strong></td>
 											{% elif triple[1] == "POKEMON"%}
-											<td>You can find {{ triple[2].POKEMON_NAME }} here</td>
+											<td>You can find <strong>{{ triple[2].ROUTE_POKEMON_NAME }}</strong> here</td>
 											{% else %}
 											<td> - </td>
 											{% endif %}
@@ -358,9 +358,9 @@
 										<tr class="search-row">
 											<td>{{triple[0].ROUTE_NAME}}</td>
 											{% if triple[1] == "NAME" %}
-											<td>Name is {{triple[0].ROUTE_NAME}}</td>
+											<td>Name is <strong>{{triple[0].ROUTE_NAME}}</strong></td>
 											{% elif triple[1] == "POKEMON"%}
-											<td>You can find {{ triple[2].POKEMON_NAME }} here</td>
+											<td>You can find <strong>{{ triple[2].ROUTE_POKEMON_NAME }}</strong> here</td>
 											{% else %}
 											<td> - </td>
 											{% endif %}
