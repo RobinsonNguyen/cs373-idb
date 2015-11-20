@@ -278,7 +278,7 @@ class UnitTestModels(TestCase):
 	# # 	db.session.commit()
 
 	def test_pokemon_API_1(self):
-		r = requests.get("http://pokemasters.me/api/v1.0/pokemon/4/")
+		r = requests.get('pokemasters.me/api/v1.0/pokemon/4/')
 		self.assertEqual(True,True)
 		# self.assertEqual(r.status_code, 200)
 		# self.assertEqual(r.json()['pokemon']['POKEMON_NAME'], 'Charmander')
