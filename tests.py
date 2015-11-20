@@ -2,8 +2,7 @@
 from unittest import main, TestCase
 from models import Pokemon, Move, Routes
 from models import db
-import requests
-
+import urllib2
 
 class UnitTestModels(TestCase):
 	def test_pokemon_1(self):
@@ -278,8 +277,13 @@ class UnitTestModels(TestCase):
 	# # 	db.session.commit()
 
 	def test_pokemon_API_1(self):
-		r = requests.get('http://www.pokemasters.me/api/v1.0/pokemon/4/')
-		self.assertEqual(r.status_code, 200)
+		req = urllib2.Request("http://www.pokemasters.me/api/v1.0/pokemon/4/")
+		url = urllib2.urlopen(req)
+		data = json.load(url)
+		poke = data['pokemon']
+		self.assertEqual(url.getcode(), 200)
+		# r = requests.get('http://www.pokemasters.me/api/v1.0/pokemon/4/')
+		# self.assertEqual(r.status_code, 200)
 		# self.assertEqual(r.json()['pokemon']['POKEMON_NAME'], 'Charmander')
 		# self.assertEqual(r.json()['pokemon']['POKEMON_ATK'], 52)
 		# self.assertEqual(r.json()['pokemon']['POKEMON_DEF'], 43)

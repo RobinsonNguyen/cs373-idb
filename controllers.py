@@ -3,8 +3,6 @@ import urllib2
 import subprocess
 
 def politician_controller():
-	#politician_url = urllib.request.urlopen("http://politicianhub.me/api/v1/legislators")
-	#politicians = json.load(politician_url.read().decode('utf-8'))
 
 	req = urllib2.Request("http://politicianhub.me/api/v1/legislators")
 	url = urllib2.urlopen(req)
