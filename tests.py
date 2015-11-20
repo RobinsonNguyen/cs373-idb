@@ -3,6 +3,7 @@ from unittest import main, TestCase
 from models import Pokemon, Move, Routes
 from models import db
 import urllib2
+import requests
 
 class UnitTestModels(TestCase):
 	def test_pokemon_1(self):
