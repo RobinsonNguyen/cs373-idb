@@ -72,6 +72,10 @@ def update_locations(id):
 def delete_locations(id):
     return jsonify({'result': True})
 '''
+
+@app.route('/about_pokemon')
+def aboutPokemon():
+    return render_template('about_pokemon.html')
 	
 # -------
 # pokemon
